@@ -1,0 +1,6 @@
+case,path,start_sample,eval_samples,nrmse_pct,mae_N,rmse_N,h_norm_mean,h_norm_max
+RLF_RMS10mm_4Hz,D:\OneDrive - mail.scut.edu.cn\Matlab\CDCTest\Parsed_Card_force_wide\4_Random_LF_Current\RLF_RMS10mm_4Hz.csv,0,5000,3.3514075366725127,39.27968978881836,50.66222381591797,0.848110556602478,2.014580249786377
+RLF_RMS15mm_3Hzslow,D:\OneDrive - mail.scut.edu.cn\Matlab\CDCTest\Parsed_Card_force_wide\4_Random_LF_Current\RLF_RMS15mm_3Hzslow.csv,0,5000,4.58867204606048,45.626705169677734,65.93508911132812,0.8782222867012024,2.5302419662475586
+RLF_RMS18mm_3Hzslow,D:\OneDrive - mail.scut.edu.cn\Matlab\CDCTest\Parsed_Card_force_wide\4_Random_LF_Current\RLF_RMS18mm_3Hzslow.csv,0,5000,13.485609388288186,161.74819946289062,170.5659942626953,1.021025538444519,2.629300117492676
+RLF_RMS2mm_7Hz,D:\OneDrive - mail.scut.edu.cn\Matlab\CDCTest\Parsed_Card_force_wide\4_Random_LF_Current\RLF_RMS2mm_7Hz.csv,0,5000,5.9125175143658195,22.195518493652344,27.69541358947754,0.46674832701683044,1.0976482629776
+RLF_RMS5mm_7Hz,D:\OneDrive - mail.scut.edu.cn\Matlab\CDCTest\Parsed_Card_force_wide\4_Random_LF_Current\RLF_RMS5mm_7Hz.csv,0,5000,3.730804596133272,36.26091384887695,48.87764358520508,0.7550411820411682,2.008679151535034

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\AA02Train\train_legacy_repro.py", line 17, in <module>
+    import pandas as pd
+  File "C:\Users\user\.conda\envs\myenvPINN_test\Lib\site-packages\pandas\__init__.py", line 62, in <module>
+    from pandas.core.api import (
+  File "C:\Users\user\.conda\envs\myenvPINN_test\Lib\site-packages\pandas\core\api.py", line 9, in <module>
+    from pandas.core.dtypes.dtypes import (
+  File "C:\Users\user\.conda\envs\myenvPINN_test\Lib\site-packages\pandas\core\dtypes\dtypes.py", line 47, in <module>
+    from pandas.errors import PerformanceWarning
+  File "C:\Users\user\.conda\envs\myenvPINN_test\Lib\site-packages\pandas\errors\__init__.py", line 6, in <module>
+    import ctypes
+  File "C:\Users\user\.conda\envs\myenvPINN_test\Lib\ctypes\__init__.py", line 8, in <module>
+    from _ctypes import Union, Structure, Array
+ImportError: DLL load failed while importing _ctypes: 出现了内部错误。

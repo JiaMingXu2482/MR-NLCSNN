@@ -1,0 +1,2 @@
+epoch,train_loss,monitor_nrmse_pct,all_val_mean_nrmse_pct,all_val_max_nrmse_pct,monitor_h_mean,monitor_h_max,lr,epoch_seconds
+1,0.15635309,139.329480,93.992782,150.723553,0.248109,0.452861,0.00099994953,1227.079

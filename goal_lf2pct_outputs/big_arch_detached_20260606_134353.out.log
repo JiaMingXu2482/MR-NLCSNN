@@ -1,0 +1,255 @@
+[*] Legacy split | train=151, val=7 (LF held-out random current)
+[*] Normalization pre-scan uses train only files
+[*] Legacy pre-scan on 151 files
+[*] Legacy scalers | x_ref=279.394, x_scale=63.436, di_scale=139.483, f_scale=5986.750
+[*] Preloaded train: 151 files | 992,362 samples | approx 0.026 GB tensors
+[*] Legacy repro session: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_240_epochs_20260606_134356
+[*] Device=cuda | model NFL=119, hidden=256, h_dim=12, extra_dynamic_nfl=True, direct_nfl_output=True, slow_gain_nfl=True
+[*] epochs=240, chunk_len=500, warmup=50, val_warmup_ms=200, lr=0.0008, strict_mask=False, file_batch_size=32, length_buckets=True, h_norm_w=0, dh_norm_w=0, p2p_loss_power=2
+[*] point weights: neg_force=1.5, high_force>0N x1, near_zero_v<0mm/s x1, combo x1
+[*] include_step=True, include_hf=True, use_resume_norm=False
+[*] validation monitor: every=0, start_seconds=15, max_seconds=5, time_every_seconds=7200, all_val_every=0, all_val_max_files=all, validate_all_on_epoch1=True, periodic_every=10
+E[001/240] loss=0.000033 | monitor skipped | all_val mean=15.72% max=25.54% | ||h|| mean=nan max=nan | lr=0.0008 | 707.5s
+E[002/240] loss=0.000029 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 536.0s
+E[003/240] loss=0.000025 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 519.5s
+E[004/240] loss=0.000023 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 510.2s
+E[005/240] loss=0.000020 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 501.8s
+E[006/240] loss=0.000024 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 471.1s
+E[007/240] loss=0.000021 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 481.1s
+E[008/240] loss=0.000020 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 464.1s
+E[009/240] loss=0.000018 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 483.3s
+E[010/240] loss=0.000017 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 460.5s
+E[011/240] loss=0.000017 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 458.2s
+E[012/240] loss=0.000022 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 449.9s
+E[013/240] loss=0.000018 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 447.7s
+E[014/240] loss=0.000018 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 446.9s
+E[015/240] loss=0.000016 | monitor RMS10mm_3Hz=9.18% | all_val mean=9.17% max=10.49% | ||h|| mean=0.465 max=0.758 | lr=0.0008 | 607.2s
+E[016/240] loss=0.000017 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.5s
+E[017/240] loss=0.000015 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.3s
+E[018/240] loss=0.000016 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.1s
+E[019/240] loss=0.000015 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.7s
+E[020/240] loss=0.000014 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 431.3s
+E[021/240] loss=0.000018 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.8s
+E[022/240] loss=0.000015 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 435.0s
+E[023/240] loss=0.000013 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 431.1s
+E[024/240] loss=0.000012 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 442.5s
+E[025/240] loss=0.000014 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.1s
+E[026/240] loss=0.000014 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 440.6s
+E[027/240] loss=0.000014 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.7s
+E[028/240] loss=0.000012 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.1s
+E[029/240] loss=0.000011 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.0s
+E[030/240] loss=0.000013 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.9s
+E[031/240] loss=0.000013 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.2s
+E[032/240] loss=0.000010 | monitor RMS10mm_3Hz=9.32% | all_val mean=8.10% max=10.24% | ||h|| mean=0.508 max=0.762 | lr=0.0008 | 605.7s
+E[033/240] loss=0.000013 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.0s
+E[034/240] loss=0.000013 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.6s
+E[035/240] loss=0.000012 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.6s
+E[036/240] loss=0.000009 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.5s
+E[037/240] loss=0.000012 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.7s
+E[038/240] loss=0.000012 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.7s
+E[039/240] loss=0.000010 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.2s
+E[040/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.3s
+E[041/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.8s
+E[042/240] loss=0.000011 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.8s
+E[043/240] loss=0.000009 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.2s
+E[044/240] loss=0.000009 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.7s
+E[045/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 442.6s
+E[046/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 442.1s
+E[047/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.2s
+E[048/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.4s
+E[049/240] loss=0.000009 | monitor RMS10mm_3Hz=6.15% | all_val mean=6.47% max=7.12% | ||h|| mean=0.651 max=0.867 | lr=0.0008 | 603.2s
+E[050/240] loss=0.000012 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.9s
+E[051/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.0s
+E[052/240] loss=0.000009 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 441.6s
+E[053/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 435.2s
+E[054/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 470.2s
+E[055/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 468.3s
+E[056/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 468.5s
+E[057/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 467.1s
+E[058/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.5s
+E[059/240] loss=0.000009 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.9s
+E[060/240] loss=0.000015 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.7s
+E[061/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 450.0s
+E[062/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.9s
+E[063/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.4s
+E[064/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 435.4s
+E[065/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.5s
+E[066/240] loss=0.000007 | monitor RMS10mm_3Hz=5.80% | all_val mean=5.90% max=6.56% | ||h|| mean=0.416 max=0.748 | lr=0.0008 | 604.8s
+E[067/240] loss=0.000009 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.9s
+E[068/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 444.1s
+E[069/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.0s
+E[070/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.0s
+E[071/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.1s
+E[072/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.2s
+E[073/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.1s
+E[074/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.9s
+E[075/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.7s
+E[076/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.6s
+E[077/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.8s
+E[078/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 447.2s
+E[079/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 440.0s
+E[080/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 452.9s
+E[081/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.7s
+E[082/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.1s
+E[083/240] loss=0.000005 | monitor RMS10mm_3Hz=8.40% | all_val mean=6.79% max=8.95% | ||h|| mean=0.369 max=0.760 | lr=0.0008 | 602.6s
+E[084/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 447.7s
+E[085/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.4s
+E[086/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 446.3s
+E[087/240] loss=0.000007 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.6s
+E[088/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.5s
+E[089/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.2s
+E[090/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.5s
+E[091/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.3s
+E[092/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.9s
+E[093/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.8s
+E[094/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.4s
+E[095/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.4s
+E[096/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 438.6s
+E[097/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.0s
+E[098/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.2s
+E[099/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.3s
+E[100/240] loss=0.000004 | monitor RMS10mm_3Hz=7.43% | all_val mean=6.42% max=7.43% | ||h|| mean=0.399 max=0.767 | lr=0.0008 | 583.7s
+E[101/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 426.9s
+E[102/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.6s
+E[103/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.1s
+E[104/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.0s
+E[105/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.5s
+E[106/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.1s
+E[107/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.8s
+E[108/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.9s
+E[109/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.3s
+E[110/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.3s
+E[111/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.2s
+E[112/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 430.2s
+E[113/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.9s
+E[114/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.1s
+E[115/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.8s
+E[116/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 426.8s
+E[117/240] loss=0.000002 | monitor RMS10mm_3Hz=7.12% | all_val mean=5.65% max=7.24% | ||h|| mean=0.365 max=0.802 | lr=0.0008 | 583.7s
+E[118/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.7s
+E[119/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.9s
+E[120/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.7s
+E[121/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 437.1s
+E[122/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 425.2s
+E[123/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.6s
+E[124/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.9s
+E[125/240] loss=0.000008 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 426.5s
+E[126/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 430.1s
+E[127/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 430.3s
+E[128/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.0s
+E[129/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.7s
+E[130/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.7s
+E[131/240] loss=0.000005 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.1s
+E[132/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.5s
+E[133/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 426.9s
+E[134/240] loss=0.000002 | monitor RMS10mm_3Hz=6.98% | all_val mean=5.66% max=6.98% | ||h|| mean=0.398 max=0.754 | lr=0.0008 | 580.7s
+E[135/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.4s
+E[136/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.2s
+E[137/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.1s
+E[138/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.0s
+E[139/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 425.9s
+E[140/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.1s
+E[141/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.3s
+E[142/240] loss=0.000006 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.4s
+E[143/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 428.5s
+E[144/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 426.4s
+E[145/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 425.7s
+E[146/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.5s
+E[147/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.3s
+E[148/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.0s
+E[149/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 427.1s
+E[150/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 425.6s
+E[151/240] loss=0.000002 | monitor RMS10mm_3Hz=4.52% | all_val mean=5.01% max=5.76% | ||h|| mean=0.347 max=0.769 | lr=0.0008 | 581.6s
+E[152/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 425.6s
+E[153/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.3s
+E[154/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 453.1s
+E[155/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.2s
+E[156/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 444.3s
+E[157/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.8s
+E[158/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.4s
+E[159/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.4s
+E[160/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.6s
+E[161/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.4s
+E[162/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.5s
+E[163/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.5s
+E[164/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.7s
+E[165/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.0s
+E[166/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.7s
+E[167/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.7s
+E[168/240] loss=0.000002 | monitor RMS10mm_3Hz=8.75% | all_val mean=6.06% max=8.75% | ||h|| mean=0.342 max=0.788 | lr=0.0008 | 591.5s
+E[169/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 434.1s
+E[170/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.9s
+E[171/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.4s
+E[172/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 456.4s
+E[173/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 458.0s
+E[174/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 456.4s
+E[175/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 457.3s
+E[176/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 459.6s
+E[177/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 445.7s
+E[178/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 441.3s
+E[179/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 442.5s
+E[180/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 441.0s
+E[181/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 446.0s
+E[182/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 440.8s
+E[183/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 443.1s
+E[184/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.6s
+E[185/240] loss=0.000002 | monitor RMS10mm_3Hz=6.74% | all_val mean=6.13% max=7.52% | ||h|| mean=0.339 max=0.697 | lr=0.0008 | 593.0s
+E[186/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.0s
+E[187/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 436.7s
+E[188/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.9s
+E[189/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.2s
+E[190/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.8s
+E[191/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 431.7s
+E[192/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 430.3s
+E[193/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 430.8s
+E[194/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 430.9s
+E[195/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.4s
+E[196/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 433.0s
+E[197/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 431.2s
+E[198/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.8s
+E[199/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 431.4s
+E[200/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.0s
+E[201/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 432.0s
+E[202/240] loss=0.000004 | monitor RMS10mm_3Hz=4.67% | all_val mean=4.60% max=5.30% | ||h|| mean=0.347 max=0.789 | lr=0.0008 | 596.5s
+E[203/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 431.5s
+E[204/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 429.6s
+E[205/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 431.1s
+E[206/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 430.7s
+E[207/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 439.7s
+E[208/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 447.7s
+E[209/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 457.0s
+E[210/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 455.3s
+E[211/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 457.9s
+E[212/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 456.7s
+E[213/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 454.1s
+E[214/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 496.5s
+E[215/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 469.5s
+E[216/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 449.8s
+E[217/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 460.1s
+E[218/240] loss=0.000002 | monitor RMS10mm_3Hz=3.28% | all_val mean=4.27% max=5.63% | ||h|| mean=0.322 max=0.797 | lr=0.0008 | 672.8s
+E[219/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 506.1s
+E[220/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 501.8s
+E[221/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 475.5s
+E[222/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 470.7s
+E[223/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 469.8s
+E[224/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 455.7s
+E[225/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 456.0s
+E[226/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 456.4s
+E[227/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 456.1s
+E[228/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 474.6s
+E[229/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 481.6s
+E[230/240] loss=0.000003 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 484.2s
+E[231/240] loss=0.000004 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 496.2s
+E[232/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 526.1s
+E[233/240] loss=0.000001 | monitor RMS10mm_3Hz=4.96% | all_val mean=4.35% max=5.05% | ||h|| mean=0.311 max=0.701 | lr=0.0008 | 709.4s
+E[234/240] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 455.9s
+E[235/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 489.1s
+E[236/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 561.5s
+E[237/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 518.4s
+E[238/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 512.4s
+E[239/240] loss=0.000002 | monitor skipped | ||h|| mean=nan max=nan | lr=0.0008 | 479.7s
+E[240/240] loss=0.000004 | monitor RMS10mm_3Hz=4.39% | all_val mean=4.17% max=5.70% | ||h|| mean=0.320 max=0.668 | lr=0.0008 | 653.3s
+[*] Legacy repro training complete.
+[*] Last checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_240_epochs_20260606_134356\nlcsnn_legacy_last.pth
+[*] Best monitor checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_240_epochs_20260606_134356\nlcsnn_legacy_best_monitor.pth | 3.28%
+[*] Best all-val checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_240_epochs_20260606_134356\nlcsnn_legacy_best_all_val.pth | 4.17%

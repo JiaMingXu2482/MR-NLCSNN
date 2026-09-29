@@ -1,0 +1,181 @@
+[*] Legacy split | train=151, val=7 (LF held-out random current)
+[*] Normalization cfg restored from resume checkpoint; case P2P scanned on train files
+[*] Legacy scalers | x_ref=279.394, x_scale=63.436, di_scale=139.483, f_scale=5986.750
+[*] Preloaded train: 151 files | 992,362 samples | approx 0.026 GB tensors
+[*] Case weights active for train: min=1.000, max=3.000, mean=1.040
+[*] Resumed legacy weights from: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_120_epochs_20260607_201138\nlcsnn_legacy_best_all_val.pth
+[*] Resume checkpoint score: 3.69%
+[*] Resume checkpoint epoch: 117
+[*] Resumed optimizer state.
+[*] Resumed scheduler state.
+[*] Resume LR override: 5e-05
+[*] Legacy repro session: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_160_epochs_20260608_195655
+[*] Device=cuda | model NFL=119, hidden=256, h_dim=12, extra_dynamic_nfl=True, direct_nfl_output=True, slow_gain_nfl=True
+[*] epochs=160, chunk_len=500, warmup=200, warmup_once=True, train_window_seconds=5, train_window_random=False, val_warmup_ms=200, lr=5e-05, strict_mask=False, file_batch_size=32, length_buckets=True, h_norm_w=0, dh_norm_w=0, p2p_loss_power=2, gain_loss_w=0.001, std_gain_loss_w=0.002
+[*] point weights: neg_force=1.5, high_force>0N x1, near_zero_v<0mm/s x1, combo x1
+[*] include_step=True, include_hf=True, use_resume_norm=True
+[*] validation monitor: every=0, start_seconds=15, max_seconds=5, time_every_seconds=7200, all_val_every=0, all_val_max_files=all, validate_all_on_epoch1=True, periodic_every=10
+E[001/160] loss=0.000001 | monitor skipped | all_val mean=3.68% max=4.85% | ||h|| mean=nan max=nan | lr=5e-05 | 295.1s
+E[002/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 134.0s
+E[003/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 136.7s
+E[004/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 133.1s
+E[005/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 133.0s
+E[006/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 133.5s
+E[007/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 133.4s
+E[008/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 133.4s
+E[009/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 136.4s
+E[010/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 139.9s
+E[011/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 137.4s
+E[012/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 137.7s
+E[013/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 141.4s
+E[014/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 137.1s
+E[015/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 139.0s
+E[016/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 136.6s
+E[017/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 144.3s
+E[018/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 140.4s
+E[019/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 152.9s
+E[020/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 140.2s
+E[021/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 140.1s
+E[022/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 142.1s
+E[023/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 142.9s
+E[024/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 132.9s
+E[025/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 141.9s
+E[026/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 149.2s
+E[027/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 141.6s
+E[028/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 146.9s
+E[029/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 143.4s
+E[030/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 149.8s
+E[031/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 146.1s
+E[032/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 144.9s
+E[033/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 147.4s
+E[034/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 142.4s
+E[035/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 146.2s
+E[036/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 141.6s
+E[037/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 129.5s
+E[038/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.7s
+E[039/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 127.4s
+E[040/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.6s
+E[041/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.3s
+E[042/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.3s
+E[043/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.2s
+E[044/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.8s
+E[045/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.2s
+E[046/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.5s
+E[047/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.3s
+E[048/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.6s
+E[049/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.4s
+E[050/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.9s
+E[051/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.9s
+E[052/160] loss=0.000001 | monitor RMS10mm_3Hz=2.70% | all_val mean=3.81% max=5.18% | ||h|| mean=0.360 max=0.685 | lr=5e-05 | 283.4s
+E[053/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.4s
+E[054/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.5s
+E[055/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.0s
+E[056/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.4s
+E[057/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.7s
+E[058/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.2s
+E[059/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.4s
+E[060/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.5s
+E[061/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.7s
+E[062/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.3s
+E[063/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.2s
+E[064/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.5s
+E[065/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 127.2s
+E[066/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.7s
+E[067/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.0s
+E[068/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.5s
+E[069/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.4s
+E[070/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.7s
+E[071/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.3s
+E[072/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.3s
+E[073/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 119.7s
+E[074/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 119.9s
+E[075/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 119.5s
+E[076/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 119.7s
+E[077/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 119.9s
+E[078/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 119.6s
+E[079/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 119.5s
+E[080/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 124.5s
+E[081/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 128.9s
+E[082/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 128.8s
+E[083/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 133.9s
+E[084/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 139.7s
+E[085/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 140.9s
+E[086/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 137.9s
+E[087/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 137.0s
+E[088/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 133.7s
+E[089/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 129.5s
+E[090/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 128.4s
+E[091/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 128.2s
+E[092/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 129.3s
+E[093/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.2s
+E[094/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.9s
+E[095/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.0s
+E[096/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.6s
+E[097/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.6s
+E[098/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.9s
+E[099/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.5s
+E[100/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 124.9s
+E[101/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.8s
+E[102/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.7s
+E[103/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.8s
+E[104/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.5s
+E[105/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.3s
+E[106/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.2s
+E[107/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 125.3s
+E[108/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 126.0s
+E[109/160] loss=0.000001 | monitor RMS10mm_3Hz=2.68% | all_val mean=3.83% max=5.17% | ||h|| mean=0.396 max=0.694 | lr=5e-05 | 286.5s
+E[110/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 121.7s
+E[111/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 121.7s
+E[112/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 121.5s
+E[113/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.0s
+E[114/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 121.6s
+E[115/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.0s
+E[116/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 121.8s
+E[117/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.5s
+E[118/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.8s
+E[119/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.6s
+E[120/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.1s
+E[121/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.8s
+E[122/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.7s
+E[123/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.2s
+E[124/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.9s
+E[125/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.9s
+E[126/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.1s
+E[127/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.9s
+E[128/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.2s
+E[129/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.1s
+E[130/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.3s
+E[131/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.1s
+E[132/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.1s
+E[133/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.0s
+E[134/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.0s
+E[135/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.7s
+E[136/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.9s
+E[137/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.2s
+E[138/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.0s
+E[139/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.1s
+E[140/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.9s
+E[141/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.0s
+E[142/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.1s
+E[143/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.8s
+E[144/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.6s
+E[145/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.3s
+E[146/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.2s
+E[147/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.3s
+E[148/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.0s
+E[149/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.8s
+E[150/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.0s
+E[151/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.2s
+E[152/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.7s
+E[153/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.0s
+E[154/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.9s
+E[155/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.9s
+E[156/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.9s
+E[157/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.0s
+E[158/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 122.8s
+E[159/160] loss=0.000001 | monitor skipped | ||h|| mean=nan max=nan | lr=5e-05 | 123.1s
+E[160/160] loss=0.000001 | monitor RMS10mm_3Hz=2.68% | all_val mean=3.85% max=5.26% | ||h|| mean=0.425 max=0.709 | lr=5e-05 | 282.1s
+[*] Legacy repro training complete.
+[*] Last checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_160_epochs_20260608_195655\nlcsnn_legacy_last.pth
+[*] Best monitor checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_160_epochs_20260608_195655\nlcsnn_legacy_best_monitor.pth | 2.68%
+[*] Best all-val checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\legacy_repro_160_epochs_20260608_195655\nlcsnn_legacy_best_all_val.pth | 3.68%

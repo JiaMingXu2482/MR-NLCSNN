@@ -1,0 +1,16 @@
+[*] Legacy split | train=1, val=1 (3_Random_HF_Current)
+[*] Normalization pre-scan uses train+val files
+[*] Legacy pre-scan on 2 files
+[*] Legacy scalers | x_ref=252.776, x_scale=15.596, di_scale=128.166, f_scale=615.810
+[*] Preloaded train: 1 files | 2,419 samples | approx 0.000 GB tensors
+[*] Legacy repro session: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\plain_launcher_smoke_settle\legacy_repro_1_epochs_20260609_021233
+[*] Device=cpu | model NFL=55, hidden=160, h_dim=6, extra_dynamic_nfl=False, direct_nfl_output=False, slow_gain_nfl=False, hysteresis_gain_nfl=False
+[*] epochs=1, chunk_len=32, warmup=4, warmup_once=False, train_window_seconds=0, train_window_random=True, val_warmup_ms=200, lr=0.001, strict_mask=False, file_batch_size=1, length_buckets=True, h_norm_w=0, dh_norm_w=0, p2p_loss_power=2, gain_loss_w=0, std_gain_loss_w=0
+[*] point weights: neg_force=1.5, high_force>0N x1, near_zero_v<0mm/s x1, combo x1
+[*] include_step=False, include_hf=False, use_resume_norm=False
+[*] validation monitor: every=0, start_seconds=0, max_seconds=0.1, time_every_seconds=0, all_val_every=0, all_val_max_files=all, validate_all_on_epoch1=True, periodic_every=0
+E[001/1] loss=0.000021 | monitor aRMS10mm_2Hz=38.14% | all_val mean=38.14% max=38.14% | ||h|| mean=0.005 max=0.010 | lr=0.001 | 6.0s
+[*] Legacy repro training complete.
+[*] Last checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\plain_launcher_smoke_settle\legacy_repro_1_epochs_20260609_021233\nlcsnn_legacy_last.pth
+[*] Best monitor checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\plain_launcher_smoke_settle\legacy_repro_1_epochs_20260609_021233\nlcsnn_legacy_best_monitor.pth | 38.14%
+[*] Best all-val checkpoint: D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\goal_lf2pct_outputs\plain_launcher_smoke_settle\legacy_repro_1_epochs_20260609_021233\nlcsnn_legacy_best_all_val.pth | 38.14%

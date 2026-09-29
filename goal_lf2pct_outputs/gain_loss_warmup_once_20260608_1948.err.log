@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\OneDrive - mail.scut.edu.cn\Python\MR-NLCSNN\AA02Train\train_legacy_repro.py", line 16, in <module>
+    import matplotlib
+  File "C:\Users\user\.conda\envs\myenvPINN_test\Lib\site-packages\matplotlib\__init__.py", line 161, in <module>
+    from . import _api, _version, cbook, _docstring, rcsetup
+  File "C:\Users\user\.conda\envs\myenvPINN_test\Lib\site-packages\matplotlib\cbook.py", line 32, in <module>
+    from matplotlib import _api, _c_internal_utils
+ImportError: DLL load failed while importing _c_internal_utils: 出现了内部错误。
