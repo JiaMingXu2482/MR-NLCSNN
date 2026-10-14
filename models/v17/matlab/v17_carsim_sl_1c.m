@@ -3,7 +3,7 @@ function F = v17_carsim_sl_1c(u, cid)
 %   （头注释略，与之前一致）
 
 persistent net sts t_prevs v_prevs a_filts f_filts ...
-           notch_x1 notch_x2 notch_y1 notch_y2 v_filts
+           notch_x1 notch_x2 notch_y1 notch_y2 v_filts x_filts
 
 NC = 4;
 
@@ -12,7 +12,8 @@ V_EPS = 5;
 P_EPS = 50;
 TAU_ACCEL = 0.02;
 TAU_F = 0.003;
-TAU_V = 0.03;   % 新增 2026-10-14：速度输入一阶滞后，压 CarSim cmpRD 闭环抖动
+TAU_V = 0.03;
+TAU_X = 0.01;    % 新增 2026-10-14：x 输入轻滤波，约 15Hz 截止，去车轮跳动纹波   % 新增 2026-10-14：速度输入一阶滞后，压 CarSim cmpRD 闭环抖动
 
 % 新增：陷波滤波器参数
 F_NOTCH = 10;   % 中心频率 Hz，如实测共振不在10Hz就改这里
@@ -33,6 +34,7 @@ if isempty(net)
     notch_y1 = zeros(1, NC);
     notch_y2 = zeros(1, NC);
     v_filts = zeros(1, NC);
+    x_filts = zeros(1, NC);
 end
 
 t      = u(1);
@@ -54,6 +56,19 @@ else
 end
 
 x_rig = net.norm.x_ref - cmpD;
+
+% 新增 2026-10-14：x 输入轻滤波
+% cmpD 的 10Hz 车轮跳动纹波直接进 GRU 是残余抖动的另一通路。
+% TAU_X=10ms（约 15Hz 截止）：只去纹波，主运动（<2Hz）几乎无影响。
+if first_step
+    x_filts(cid) = x_rig;
+else
+    alpha_x = 1 - exp(-dt / TAU_X);
+    x_rig = (1 - alpha_x) * x_filts(cid) + alpha_x * x_rig;
+    if ~isfinite(x_rig), x_rig = x_filts(cid); end
+    x_filts(cid) = x_rig;
+end
+
 v_rig = -cmpRD;
 
 % 新增 2026-10-14：速度输入低通
