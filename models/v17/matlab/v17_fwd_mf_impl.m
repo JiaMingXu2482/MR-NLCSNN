@@ -58,13 +58,6 @@ else
 end
 t_prevs(cid) = t;
 
-% First-step: seed ie_buf with the actual initial Ie instead of zeros,
-% otherwise Ie_filt starts at 0 and the force spikes until the buffer fills.
-if first_step
-    Ie_init = 1 - min(abs(I_cmd) / 1.6, 1);
-    st_iebuf(:, cid) = ones(net.lag_kmax, 1) * Ie_init;
-end
-
 n = net.norm;
 x_rig = n.x_ref - cmpD;
 v_rig = -cmpRD;
@@ -79,6 +72,29 @@ else
 end
 v_prevs(cid) = v_rig;
 a_filts(cid) = a_rig;
+
+% First-step warmup: pre-roll 200 steps with the initial inputs so the
+% GRU hidden state and ie_buf settle. Training skipped the first 1000
+% samples because the zero state is out-of-distribution; without warmup
+% the force spikes at t=0.
+if first_step
+    Ie_init = 1 - min(abs(I_cmd) / 1.6, 1);
+    u_warm = [(x_rig - n.x_ref) / n.x_scale; ...
+              v_rig / n.v_scale; ...
+              a_rig / n.a_scale; ...
+              I_cmd / n.i_scale; ...
+              0; ...
+              (Temp_C - n.t_ref) / n.t_scale];
+    h_w = zeros(2, 16);
+    buf_w = ones(net.lag_kmax, 1) * Ie_init;
+    for kw = 1:200
+        nfl_w = build_nfl_v12(net, u_warm);
+        h_w = gru_step_masked(net, nfl_w, h_w);
+        buf_w = [buf_w(2:end); Ie_init];
+    end
+    st_h(:, :, cid) = h_w;
+    st_iebuf(:, cid) = buf_w;
+end
 
 % ---- forward step (matches v17_damper_step, 1 ms substeps) ----
 u = [(x_rig - n.x_ref) / n.x_scale; ...
