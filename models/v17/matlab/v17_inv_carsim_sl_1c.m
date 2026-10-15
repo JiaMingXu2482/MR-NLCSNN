@@ -43,7 +43,7 @@ function y = v17_inv_carsim_sl_1c(u, cid)
 %   and ci->nfl->GRU paths (~15 N wiggles), so plain bisection can lock
 %   onto a wrong root and the state feedback then latches it at a rail.
 %   We now evaluate the EXACT single-step map (full nfl with ci, GRU
-%   re-step, true ie_buf lag) on a 17-point Ie grid and pick the best
+%   re-step, true ie_buf lag) on a 9-point Ie grid and pick the best
 %   root, tie-broken toward the previous Ie (continuity) within TOL_F.
 %
 %   Reset between runs:  clear v17_inv_carsim_sl_1c   (resets all 4 corners)
@@ -52,7 +52,7 @@ persistent net sts t_prevs I_prevs Ie_prevs v_prevs a_filts
 
 MAX_I = 1.6;
 SLEW  = 160;
-N_GRID = 17;    % exact-map grid over Ie in [0,1] (validated on CarSim data)
+N_GRID = 9;     % exact-map grid over Ie in [0,1]
               % 9 pts validated 2026-10-15: resolves the ~15 N wiggle, 2x faster)
 TOL_F  = 15;    % tie-break tolerance [N]: covers the ~15 N map wiggle
 NC    = 4;
