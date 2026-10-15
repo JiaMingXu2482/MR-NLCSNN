@@ -75,6 +75,11 @@ end
 t_prevs(cid) = t;
 max_dI = SLEW * dt;
 
+% First-step: seed ie_buf with the actual initial Ie instead of zeros.
+if first_step
+    st_iebuf(:, cid) = ones(net.lag_kmax, 1) * Ie_prev;
+end
+
 n = net.norm;
 
 % CarSim -> rig sign convention (matches v17_fwd_raw_sl_1c)
