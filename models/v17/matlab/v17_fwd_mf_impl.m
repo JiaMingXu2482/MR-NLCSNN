@@ -58,6 +58,13 @@ else
 end
 t_prevs(cid) = t;
 
+% First-step: seed ie_buf with the actual initial Ie instead of zeros,
+% otherwise Ie_filt starts at 0 and the force spikes until the buffer fills.
+if first_step
+    Ie_init = 1 - min(abs(I_cmd) / 1.6, 1);
+    st_iebuf(:, cid) = ones(net.lag_kmax, 1) * Ie_init;
+end
+
 n = net.norm;
 x_rig = n.x_ref - cmpD;
 v_rig = -cmpRD;
