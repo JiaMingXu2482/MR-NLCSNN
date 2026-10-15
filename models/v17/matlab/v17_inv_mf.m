@@ -192,19 +192,32 @@ net.s_fast_W1=S.s_fast_W1; net.s_fast_b1=S.s_fast_b1;
 net.s_fast_W2=S.s_fast_W2; net.s_fast_b2=S.s_fast_b2;
 
 % ---- MonotonicG: PositiveLinear weights = softplus(w_raw) ----
-net.k_skip = S.cfg.g_k_skip;
-net.G_c_W1=softplus_stable(S.G_c_Wr1); net.G_c_b1=S.G_c_b1;
-net.G_c_W2=softplus_stable(S.G_c_Wr2); net.G_c_b2=S.G_c_b2;
-net.G_c_W3=softplus_stable(S.G_c_Wr3); net.G_c_b3=S.G_c_b3;
-net.G_s_W1=softplus_stable(S.G_s_Wr1); net.G_s_b1=S.G_s_b1;
-net.G_s_W2=softplus_stable(S.G_s_Wr2); net.G_s_b2=S.G_s_b2;
-net.G_s_W3=softplus_stable(S.G_s_Wr3); net.G_s_b3=S.G_s_b3;
-net.G_c_f0   = monoG_raw_cg(net,'c',0);
-net.G_c_gref = (monoG_raw_cg(net,'c',S.cfg.g_i_ref)-net.G_c_f0) ...
-                + net.k_skip*S.cfg.g_i_ref;
-net.G_s_f0   = monoG_raw_cg(net,'s',0);
-net.G_s_gref = (monoG_raw_cg(net,'s',S.cfg.g_i_ref)-net.G_s_f0) ...
-                + net.k_skip*S.cfg.g_i_ref;
+% NOTE: compute G f0/gref from LOCAL copies; do not pass `net` to a
+% function before all its fields are assigned (codegen forbids adding
+% fields after the struct has been read/used).
+k_skip = S.cfg.g_k_skip;
+g_i_ref = S.cfg.g_i_ref;
+Gc_W1=softplus_stable(S.G_c_Wr1); Gc_b1=S.G_c_b1;
+Gc_W2=softplus_stable(S.G_c_Wr2); Gc_b2=S.G_c_b2;
+Gc_W3=softplus_stable(S.G_c_Wr3); Gc_b3=S.G_c_b3;
+Gs_W1=softplus_stable(S.G_s_Wr1); Gs_b1=S.G_s_b1;
+Gs_W2=softplus_stable(S.G_s_Wr2); Gs_b2=S.G_s_b2;
+Gs_W3=softplus_stable(S.G_s_Wr3); Gs_b3=S.G_s_b3;
+Gc_f0 = monoG_raw_w(Gc_W1,Gc_b1,Gc_W2,Gc_b2,Gc_W3,Gc_b3,0);
+Gc_gref = (monoG_raw_w(Gc_W1,Gc_b1,Gc_W2,Gc_b2,Gc_W3,Gc_b3,g_i_ref)-Gc_f0) ...
+          + k_skip*g_i_ref;
+Gs_f0 = monoG_raw_w(Gs_W1,Gs_b1,Gs_W2,Gs_b2,Gs_W3,Gs_b3,0);
+Gs_gref = (monoG_raw_w(Gs_W1,Gs_b1,Gs_W2,Gs_b2,Gs_W3,Gs_b3,g_i_ref)-Gs_f0) ...
+          + k_skip*g_i_ref;
+net.G_c_W1=Gc_W1; net.G_c_b1=Gc_b1;
+net.G_c_W2=Gc_W2; net.G_c_b2=Gc_b2;
+net.G_c_W3=Gc_W3; net.G_c_b3=Gc_b3;
+net.G_s_W1=Gs_W1; net.G_s_b1=Gs_b1;
+net.G_s_W2=Gs_W2; net.G_s_b2=Gs_b2;
+net.G_s_W3=Gs_W3; net.G_s_b3=Gs_b3;
+net.k_skip=k_skip;
+net.G_c_f0=Gc_f0; net.G_c_gref=Gc_gref;
+net.G_s_f0=Gs_f0; net.G_s_gref=Gs_gref;
 
 % ---- CurrentLag reversed kernel ----
 K = double(S.cfg.lag_kmax);
@@ -219,17 +232,11 @@ net.cfg    = S.cfg;
 end
 
 
-function f = monoG_raw_cg(net, which, Ie)
+function f = monoG_raw_w(W1,b1,W2,b2,W3,b3,Ie)
 %#codegen
-if which == 'c'
-    z1 = tanh(net.G_c_W1*Ie + net.G_c_b1);
-    z2 = tanh(net.G_c_W2*z1 + net.G_c_b2);
-    f  = net.G_c_W3*z2 + net.G_c_b3;
-else
-    z1 = tanh(net.G_s_W1*Ie + net.G_s_b1);
-    z2 = tanh(net.G_s_W2*z1 + net.G_s_b2);
-    f  = net.G_s_W3*z2 + net.G_s_b3;
-end
+z1 = tanh(W1*Ie + b1);
+z2 = tanh(W2*z1 + b2);
+f  = W3*z2 + b3;
 end
 
 
