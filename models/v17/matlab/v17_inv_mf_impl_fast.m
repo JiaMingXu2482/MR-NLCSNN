@@ -137,25 +137,29 @@ errs_local = abs(Fs_local - F_des_rig);
 [best_err_local, best_gi_local] = min(errs_local);
 
 use_fallback = best_err_local > TOL_F;
+% Fixed-size arrays for codegen: always 1x9, use first n_pts entries.
+Ies = zeros(1, N_GRID);
+Fs = zeros(1, N_GRID);
 if use_fallback
     % Head was off: full 9-pt grid
     Ies = linspace(0, 1, N_GRID);
-    Fs = zeros(1, N_GRID);
     for gi = 1:N_GRID
         Fs(gi) = force_of_Ie_exact(net, Ies(gi), x_rig, v_rig, a_rig, Temp_C, st);
     end
+    n_pts = N_GRID;
 else
-    Ies = Ies_local;
-    Fs = Fs_local;
+    Ies(1:N_LOCAL) = Ies_local;
+    Fs(1:N_LOCAL) = Fs_local;
+    n_pts = N_LOCAL;
 end
-Flo_rig = min(Fs);
-Fhi_rig = max(Fs);
+Flo_rig = min(Fs(1:n_pts));
+Fhi_rig = max(Fs(1:n_pts));
 Fd_clip = min(max(F_des_rig, Flo_rig), Fhi_rig);
-errs = abs(Fs - F_des_rig);
+errs = abs(Fs(1:n_pts) - F_des_rig);
 best_err = min(errs);
 best_gi = 1;
 best_score = inf;
-for gi = 1:numel(Ies)
+for gi = 1:n_pts
     if errs(gi) <= best_err + TOL_F
         score = abs(Ies(gi) - Ie_prev);
         if score < best_score
