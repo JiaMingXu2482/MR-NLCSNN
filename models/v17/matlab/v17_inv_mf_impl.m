@@ -75,10 +75,7 @@ end
 t_prevs(cid) = t;
 max_dI = SLEW * dt;
 
-% First-step: seed ie_buf with the actual initial Ie instead of zeros.
-if first_step
-    st_iebuf(:, cid) = ones(net.lag_kmax, 1) * Ie_prev;
-end
+
 
 n = net.norm;
 
@@ -97,6 +94,26 @@ end
 v_prevs(cid) = v_rig;
 a_filts(cid) = a_rig;
 F_des_rig = -Fd_N;
+
+% First-step warmup: pre-roll 200 steps with initial inputs to settle
+% GRU hidden state and ie_buf (zero state is out-of-distribution).
+if first_step
+    u_warm = [(x_rig - n.x_ref) / n.x_scale; ...
+              v_rig / n.v_scale; ...
+              a_rig / n.a_scale; ...
+              I_prev / n.i_scale; ...
+              0; ...
+              (Temp_C - n.t_ref) / n.t_scale];
+    h_w = zeros(2, 16);
+    buf_w = ones(net.lag_kmax, 1) * Ie_prev;
+    for kw = 1:200
+        nfl_w = build_nfl_v12(net, u_warm);
+        h_w = gru_step_masked(net, nfl_w, h_w);
+        buf_w = [buf_w(2:end); Ie_prev];
+    end
+    st_h(:, :, cid) = h_w;
+    st_iebuf(:, cid) = buf_w;
+end
 
 % ---- exact-map grid solver ----
 st_h_c = st_h(:, :, cid);
