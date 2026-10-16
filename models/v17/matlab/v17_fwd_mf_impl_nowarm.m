@@ -1,4 +1,4 @@
-function F = v17_fwd_mf_impl_nowarm(t, Temp_C, cmpD, cmpRD, cid)
+function F = v17_fwd_mf_impl_nowarm(t, Temp_C, cmpD, cmpRD, I_cmd, cid)
 %V17_FWD_MF  v17 RAW forward damper model, ONE corner, for MATLAB Function block.
 %   %#codegen compatible. Build MEX per block for speed.
 %
@@ -77,7 +77,7 @@ a_filts(cid) = a_rig;
 % GRU hidden state and ie_buf settle. Training skipped the first 1000
 % samples because the zero state is out-of-distribution; without warmup
 % the force spikes at t=0.
-if false  % NOWARM: disabled for closed-loop test
+if false  % NOWARM disabled
     Ie_init = 1 - min(abs(I_cmd) / 1.6, 1);
     u_warm = [(x_rig - n.x_ref) / n.x_scale; ...
               v_rig / n.v_scale; ...
