@@ -1,1 +1,118 @@
-IiIiTkxDU05OIHYzIOKAlCBwaHlzaWNzLU5GTCArIGNhdXNhbCBUQ04uCgp2MiDnmoQgUks0IOW+queOr+WcqCBDUFUg5LiK5aSq5oWiICg1NjEgc3RlcC5maWxlL3MsIOWNlei9riAxNTEg5YiG6ZKfKSwg5peg5rOV5YGa6LaF5Y+C5pWw6LCD5LyY44CCCnYzIOS/neeVmee7j+i/h+mqjOivgeeahOeJqeeQhiBORkwg54m55b6B5bqTLCDmiorlvqrnjq/pmpDnirbmgIHmjaLmiJDlm6Dmnpzml7bluo/ljbfnp68gKFRDTik6CgogIC0g5pe26Ze057u05bqm5a6M5YWo5bm26KGMLCDorq3nu4PliqDpgJ/nuqYgMTAwIOWAjSwg5Y+v5Lul55yf5q2j6LCD6LaF5Y+C5pWwOwogIC0g5Zug5p6cICjlj6rnnIvov4fljrspLCDlj6/lrp7ml7bpg6jnvbIsIOS4juaOp+WItuWZqCAxa0h6IOmDqOe9suS4gOiHtDsKICAtIOaEn+WPl+mHjiAxMDIzIOeCuSAofjFzIEAxa0h6KSwg6KaG55uW5pyA5oWiIDFIeiDlt6XlhrXnmoTljYrkuKrlkajmnJ/ku6XkuIosCiAgICDotrPku6XmjZXmjYnlh4/mjK/lmajov5/mu57lm57nur/orrDlv4bjgIIKCui+k+WFpTogMzUg57u06Z2Z5oCBIE5GTCAodjIg55qEIDc1IOe7tOWOu+aOiSBoIOebuOWFs+mhuSkgKyDml7bpl7Tnu7TjgIIK6L6T5Ye6OiDmr4/ml7bliLvlipsgKOW9kuS4gOWMlinjgIIKIiIiCmltcG9ydCB0b3JjaAppbXBvcnQgdG9yY2gubm4gYXMgbm4KCgpkZWYgc3RhdGljX25mbCh1KToKICAgICIiIuWQkemHj+WMlumdmeaAgSBORkwgKOaXoCBoIOmhuSnjgIJ1OiAoLi4uLCA2KSAtPiAoLi4uLCAzNSnjgIIKCiAgICB4LHYsYSxpLGRpLHQgPSB1Wy4uLiwwLi41XSwg5LiOIHYyIOW9kuS4gOWMluS4gOiHtOOAggogICAgIiIiCiAgICB4ID0gdVsuLi4sIDA6MV07IHYgPSB1Wy4uLiwgMToyXTsgYSA9IHVbLi4uLCAyOjNdCiAgICBpID0gdVsuLi4sIDM6NF07IGRpID0gdVsuLi4sIDQ6NV07IHQgPSB1Wy4uLiwgNTo2XQogICAgdl9hYnMgPSB0b3JjaC5hYnModikKICAgIHZfcG9zID0gdG9yY2gucmVsdSh2KQogICAgdl9uZWcgPSAtdG9yY2gucmVsdSgtdikKICAgIHNnbl92ID0gdG9yY2gudGFuaCg1MC4wICogdikKCiAgICBraW4gPSB0b3JjaC5jYXQoW3YsIHggKiB2LCB2ICogaSwgdiAqIHRdLCBkaW09LTEpICAgICAgICAgICAgICAgICAgICAgICAjIDQKICAgIHJlYm91bmQgPSB0b3JjaC5jYXQoW3RvcmNoLnRhbmgoMi4wICogdl9wb3MpLAogICAgICAgICAgICAgICAgICAgICAgICAgdG9yY2gudGFuaCg1MC4wICogdl9wb3MpLAogICAgICAgICAgICAgICAgICAgICAgICAgaSAqIHRvcmNoLnRhbmgoNS4wICogdl9wb3MpXSwgZGltPS0xKSAgICAgICAgICAgICAgIyAzCiAgICBjb21wcmVzc2lvbiA9IHRvcmNoLmNhdChbdl9uZWcgKiB2X2Ficywgdl9uZWcgKiogMywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhICogdl9uZWcsIGkgKiB2X25lZyAqIHZfYWJzXSwgZGltPS0xKSAgICAgICAgIyA0CiAgICBjdXJyX2R5biA9IHRvcmNoLmNhdChbZGkgKiB2LCBkaSAqIGEsIHRvcmNoLmFicyhkaSkgKiBpXSwgZGltPS0xKSAgICAgICMgMwogICAgYXV4ID0gdG9yY2guY2F0KFtzZ25fdiwgaSAqIHNnbl92LCB4ICoqIDIsIHggKiogMywgYSAqIGldLCBkaW09LTEpICAgICAjIDUKICAgIGhmX2R5biA9IHRvcmNoLmNhdChbdG9yY2guYWJzKGEpLCBhICogdiwKICAgICAgICAgICAgICAgICAgICAgICAgdG9yY2guYWJzKGEpICogc2duX3YsIGkgKiB0b3JjaC5hYnMoYSldLCBkaW09LTEpICAgIyA0CiAgICB4X2FicyA9IHRvcmNoLmFicyh4KQogICAgc2xvd19nYXRlID0gdG9yY2guZXhwKC10b3JjaC5jbGFtcCg4MC4wICogdl9hYnMsIG1heD0zMC4wKSkKICAgIHNsb3cgPSB0b3JjaC5jYXQoW3Nsb3dfZ2F0ZSwgeCAqIHNsb3dfZ2F0ZSwgeF9hYnMgKiBzbG93X2dhdGUsCiAgICAgICAgICAgICAgICAgICAgICBpICogeCAqIHNsb3dfZ2F0ZSwgaSAqIHhfYWJzICogc2xvd19nYXRlLAogICAgICAgICAgICAgICAgICAgICAgc2duX3YgKiB4X2Fic10sIGRpbT0tMSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIDYKICAgIHJldHVybiB0b3JjaC5jYXQoW3UsIGtpbiwgcmVib3VuZCwgY29tcHJlc3Npb24sIGN1cnJfZHluLAogICAgICAgICAgICAgICAgICAgICAgYXV4LCBoZl9keW4sIHNsb3ddLCBkaW09LTEpICAgICAgICAgICAgICAgICAgICAgICAgICAjIDM1CgoKU1RBVElDX05GTF9ESU0gPSAzNQoKCmNsYXNzIENhdXNhbENvbnYxZChubi5Nb2R1bGUpOgogICAgIiIi5bem5aGr5YWF5Zug5p6c5Y2356ev44CCIiIiCiAgICBkZWYgX19pbml0X18oc2VsZiwgaW5fY2gsIG91dF9jaCwga2VybmVsLCBkaWxhdGlvbik6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygpCiAgICAgICAgc2VsZi5wYWQgPSAoa2VybmVsIC0gMSkgKiBkaWxhdGlvbgogICAgICAgIHNlbGYuY29udiA9IG5uLkNvbnYxZChpbl9jaCwgb3V0X2NoLCBrZXJuZWwsIGRpbGF0aW9uPWRpbGF0aW9uKQogICAgICAgIG5uLmluaXQua2FpbWluZ19ub3JtYWxfKHNlbGYuY29udi53ZWlnaHQsIG5vbmxpbmVhcml0eT0icmVsdSIpCiAgICAgICAgbm4uaW5pdC56ZXJvc18oc2VsZi5jb252LmJpYXMpCgogICAgZGVmIGZvcndhcmQoc2VsZiwgeCk6CiAgICAgICAgcmV0dXJuIHNlbGYuY29udihubi5mdW5jdGlvbmFsLnBhZCh4LCAoc2VsZi5wYWQsIDApKSkKCgpjbGFzcyBUQ05CbG9jayhubi5Nb2R1bGUpOgogICAgIiIi5q6L5beu5omp5byg5Zug5p6c5Y2356ev5Z2XOiBjb252IC0+IHJlbHUgLT4gY29udiAtPiAoK+aui+W3rikgLT4gcmVsdeOAgiIiIgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGNoLCBrZXJuZWwsIGRpbGF0aW9uLCBkcm9wb3V0PTAuMCk6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygpCiAgICAgICAgc2VsZi5jMSA9IENhdXNhbENvbnYxZChjaCwgY2gsIGtlcm5lbCwgZGlsYXRpb24pCiAgICAgICAgc2VsZi5jMiA9IENhdXNhbENvbnYxZChjaCwgY2gsIGtlcm5lbCwgZGlsYXRpb24pCiAgICAgICAgc2VsZi5kcm9wID0gbm4uRHJvcG91dChkcm9wb3V0KSBpZiBkcm9wb3V0ID4gMCBlbHNlIG5uLklkZW50aXR5KCkKCiAgICBkZWYgZm9yd2FyZChzZWxmLCB4KToKICAgICAgICB5ID0gdG9yY2gucmVsdShzZWxmLmMxKHgpKQogICAgICAgIHkgPSBzZWxmLmRyb3AoeSkKICAgICAgICB5ID0gc2VsZi5jMih5KQogICAgICAgIHJldHVybiB0b3JjaC5yZWx1KHggKyB5KQoKCmNsYXNzIE5MQ1NOTl92Myhubi5Nb2R1bGUpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGNoYW5uZWxzPTY0LCBsZXZlbHM9OSwga2VybmVsPTMsIGRyb3BvdXQ9MC4wKToKICAgICAgICBzdXBlcigpLl9faW5pdF9fKCkKICAgICAgICBzZWxmLnJlY2VwdGl2ZV9maWVsZCA9IDEgKyAyICogKGtlcm5lbCAtIDEpICogc3VtKDIgKiogaSBmb3IgaSBpbiByYW5nZShsZXZlbHMpKQogICAgICAgIHNlbGYuaW5fcHJvaiA9IENhdXNhbENvbnYxZChTVEFUSUNfTkZMX0RJTSwgY2hhbm5lbHMsIDEsIDEpCiAgICAgICAgc2VsZi5ibG9ja3MgPSBubi5TZXF1ZW50aWFsKCpbCiAgICAgICAgICAgIFRDTkJsb2NrKGNoYW5uZWxzLCBrZXJuZWwsIDIgKiogaSwgZHJvcG91dCkgZm9yIGkgaW4gcmFuZ2UobGV2ZWxzKQogICAgICAgIF0pCiAgICAgICAgc2VsZi5vdXRfcHJvaiA9IG5uLkNvbnYxZChjaGFubmVscywgMSwgMSkKICAgICAgICBubi5pbml0Lnplcm9zXyhzZWxmLm91dF9wcm9qLmJpYXMpCiAgICAgICAgcHJpbnQoZiJbKl0gTkxDU05OX3YzOiBzdGF0aWNORkw9e1NUQVRJQ19ORkxfRElNfSAtPiBjaD17Y2hhbm5lbHN9ICIKICAgICAgICAgICAgICBmInh7bGV2ZWxzfSAoaz17a2VybmVsfSkgLT4gUkY9e3NlbGYucmVjZXB0aXZlX2ZpZWxkfSIpCgogICAgZGVmIGZvcndhcmQoc2VsZiwgdSk6CiAgICAgICAgIiIidTogKEIsIEwsIDYpIOW9kuS4gOWMlui+k+WFpSAtPiAoQiwgTCkg5b2S5LiA5YyW5Yqb44CCIiIiCiAgICAgICAgbmZsID0gc3RhdGljX25mbCh1KSAgICAgICAgICAgICAgICAgICAgICAgIyAoQiwgTCwgMzUpCiAgICAgICAgeCA9IG5mbC50cmFuc3Bvc2UoMSwgMikgICAgICAgICAgICAgICAgICAgIyAoQiwgMzUsIEwpCiAgICAgICAgeCA9IHRvcmNoLnJlbHUoc2VsZi5pbl9wcm9qKHgpKQogICAgICAgIHggPSBzZWxmLmJsb2Nrcyh4KQogICAgICAgIHJldHVybiBzZWxmLm91dF9wcm9qKHgpLnNxdWVlemUoMSkgICAgICAgICMgKEIsIEwpCgogICAgQHRvcmNoLm5vX2dyYWQoKQogICAgZGVmIHByZWRpY3RfZmlsZShzZWxmLCB1KToKICAgICAgICAiIiLljZXmlofku7blvIDnjq/mjqjnkIbjgIJ1OiAoTCwgNikgLT4gKEwsKSBudW1weeOAgiIiIgogICAgICAgIHNlbGYuZXZhbCgpCiAgICAgICAgcCA9IHNlbGYuZm9yd2FyZCh1LnVuc3F1ZWV6ZSgwKSkuc3F1ZWV6ZSgwKS5jcHUoKS5udW1weSgpCiAgICAgICAgc2VsZi50cmFpbigpCiAgICAgICAgcmV0dXJuIHAK
+"""NLCSNN v3 — physics-NFL + causal TCN (with LayerNorm for stability).
+
+v2 的 RK4 循环在 CPU 上太慢 (561 step.file/s, 单轮 151 分钟), 无法做超参数调优。
+v3 保留经过验证的物理 NFL 特征库, 把循环隐状态换成因果时序卷积 (TCN):
+
+  - 时间维度完全并行, 训练加速约 450 倍, 可以真正调超参数;
+  - 因果 (只看过去), 可实时部署, 与控制器 1kHz 部署一致;
+  - 感受野 1023 点 (~1s @1kHz), 覆盖最慢 1Hz 工况的半个周期以上。
+  - LayerNorm 稳定深层残差卷积 (v3.1 修复: 无归一化时训练爆炸)。
+
+输入: 35 维静态 NFL (v2 的 75 维去掉 h 相关项) + 时间维。
+输出: 每时刻力 (归一化)。
+"""
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+
+def static_nfl(u):
+    """向量化静态 NFL (无 h 项)。u: (..., 6) -> (..., 35)。"""
+    x = u[..., 0:1]; v = u[..., 1:2]; a = u[..., 2:3]
+    i = u[..., 3:4]; di = u[..., 4:5]; t = u[..., 5:6]
+    v_abs = torch.abs(v)
+    v_pos = torch.relu(v)
+    v_neg = -torch.relu(-v)
+    sgn_v = torch.tanh(50.0 * v)
+
+    kin = torch.cat([v, x * v, v * i, v * t], dim=-1)                       # 4
+    rebound = torch.cat([torch.tanh(2.0 * v_pos),
+                         torch.tanh(50.0 * v_pos),
+                         i * torch.tanh(5.0 * v_pos)], dim=-1)              # 3
+    compression = torch.cat([v_neg * v_abs, v_neg ** 3,
+                             a * v_neg, i * v_neg * v_abs], dim=-1)        # 4
+    curr_dyn = torch.cat([di * v, di * a, torch.abs(di) * i], dim=-1)      # 3
+    aux = torch.cat([sgn_v, i * sgn_v, x ** 2, x ** 3, a * i], dim=-1)     # 5
+    hf_dyn = torch.cat([torch.abs(a), a * v,
+                        torch.abs(a) * sgn_v, i * torch.abs(a)], dim=-1)   # 4
+    x_abs = torch.abs(x)
+    slow_gate = torch.exp(-torch.clamp(80.0 * v_abs, max=30.0))
+    slow = torch.cat([slow_gate, x * slow_gate, x_abs * slow_gate,
+                      i * x * slow_gate, i * x_abs * slow_gate,
+                      sgn_v * x_abs], dim=-1)                              # 6
+    return torch.cat([u, kin, rebound, compression, curr_dyn,
+                      aux, hf_dyn, slow], dim=-1)                          # 35
+
+
+STATIC_NFL_DIM = 35
+
+
+class CausalConv1d(nn.Module):
+    def __init__(self, in_ch, out_ch, kernel, dilation):
+        super().__init__()
+        self.pad = (kernel - 1) * dilation
+        self.conv = nn.Conv1d(in_ch, out_ch, kernel, dilation=dilation)
+        nn.init.kaiming_normal_(self.conv.weight, nonlinearity="relu")
+        nn.init.zeros_(self.conv.bias)
+
+    def forward(self, x):
+        return self.conv(F.pad(x, (self.pad, 0)))
+
+
+class TCNBlock(nn.Module):
+    """WaveNet 风格门控残差块:
+    filter=tanh(conv_f(x)), gate=sigmoid(conv_g(x)), z=filter*gate;
+    z -> 1x1 conv -> (+残差). 门控提供乘性交互, 适合学状态相关的迟滞物理。
+    (v3.2: 从 ReLU 残差块升级, 改善泛化)"""
+    def __init__(self, ch, kernel, dilation, dropout=0.0):
+        super().__init__()
+        self.cf = CausalConv1d(ch, ch, kernel, dilation)
+        self.cg = CausalConv1d(ch, ch, kernel, dilation)
+        self.ln = nn.LayerNorm(ch)
+        self.proj = nn.Conv1d(ch, ch, 1)
+        nn.init.kaiming_normal_(self.proj.weight, nonlinearity="relu")
+        nn.init.zeros_(self.proj.bias)
+        self.drop = nn.Dropout(dropout) if dropout > 0 else nn.Identity()
+
+    def forward(self, x):
+        # x: (B, ch, L)
+        f = self.cf(x).transpose(1, 2)         # (B, L, ch)
+        g = self.cg(x).transpose(1, 2)
+        z = torch.tanh(f) * torch.sigmoid(g)   # 门控乘性交互
+        z = self.drop(z).transpose(1, 2)       # (B, ch, L)
+        z = self.proj(z)
+        z = self.ln(z.transpose(1, 2)).transpose(1, 2)
+        return x + z                           # 纯残差 (无末端 ReLU, 保信息)
+
+
+class NLCSNN_v3(nn.Module):
+    def __init__(self, channels=64, levels=9, kernel=3, dropout=0.0):
+        super().__init__()
+        self.receptive_field = 1 + 2 * (kernel - 1) * sum(2 ** i for i in range(levels))
+        self.in_proj = CausalConv1d(STATIC_NFL_DIM, channels, 1, 1)
+        self.in_ln = nn.LayerNorm(channels)
+        self.blocks = nn.Sequential(*[
+            TCNBlock(channels, kernel, 2 ** i, dropout) for i in range(levels)
+        ])
+        self.out_ln = nn.LayerNorm(channels)
+        self.out_proj = nn.Conv1d(channels, 1, 1)
+        nn.init.zeros_(self.out_proj.weight)
+        nn.init.zeros_(self.out_proj.bias)
+        print(f"[*] NLCSNN_v3(gated): staticNFL={STATIC_NFL_DIM} -> ch={channels} "
+              f"x{levels} (k={kernel}) -> RF={self.receptive_field}", flush=True)
+
+    def forward(self, u):
+        """u: (B, L, 6) 归一化输入 -> (B, L) 归一化力。"""
+        nfl = static_nfl(u)                       # (B, L, 35)
+        x = nfl.transpose(1, 2)                   # (B, 35, L)
+        x = torch.relu(self.in_ln(self.in_proj(x).transpose(1, 2)).transpose(1, 2))
+        x = self.blocks(x)
+        x = self.out_ln(x.transpose(1, 2)).transpose(1, 2)
+        return self.out_proj(x).squeeze(1)        # (B, L)
+
+    @torch.no_grad()
+    def predict_file(self, u):
+        self.eval()
+        p = self.forward(u.unsqueeze(0)).squeeze(0).cpu().numpy()
+        self.train()
+        return p
