@@ -151,7 +151,7 @@ def physics_estimate_zero(d_f, f_f, seg, dt=DT):
     return neutral, preload, "physics-estimate"
 
 
-def process_file(row, candidate):
+def process_file(row, candidate, *, raw_override=None):
     input_path = Path(row["output_path"])
     category = row["category"]
     condition_key = row["condition_key"]
@@ -162,7 +162,9 @@ def process_file(row, candidate):
     if not input_path.exists():
         return None, {"error": "missing_archive_csv"}
 
-    raw = read_raw_csv(input_path)
+    # Optional raw-column alignment precedes ALL filtering, detection and zeroing.
+    # Legacy callers retain the original behavior.
+    raw = read_raw_csv(input_path) if raw_override is None else raw_override
     if raw.shape[1] <= 8:
         return None, {"error": f"not_enough_columns:{raw.shape[1]}"}
 

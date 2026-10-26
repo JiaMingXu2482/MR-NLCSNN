@@ -1,0 +1,24 @@
+{
+  "schema": "v19_split_v1",
+  "validation_stems": [
+    "RLF_RMS10mm_2Hz_r1", "RLF_RMS15mm_3Hz", "RLF_RMS10mm_4Hz",
+    "SH_10mm_1.66Hz_1A_r1", "SH_30mm_1.66Hz_0A_r1",
+    "SR_RMS10mm_1.66Hz_0A", "RHF_RMS10mm_4Hz",
+    "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+    "SH_5mm_6.62Hz_0.4A_r1", "SH_5mm_6.62Hz_0.4A_r2",
+    "SH_10mm_6.62Hz_0.4A_r1", "SH_10mm_6.62Hz_0.4A_r2"
+  ],
+  "final_test_stems": [
+    "SH_5mm_6.62Hz_0A_r1", "SH_5mm_6.62Hz_0A_r2",
+    "SH_5mm_6.62Hz_0.8A_r1", "SH_5mm_6.62Hz_0.8A_r2", "SH_5mm_6.62Hz_1.6A",
+    "SH_10mm_6.62Hz_0A_r1", "SH_10mm_6.62Hz_0A_r2",
+    "SH_10mm_6.62Hz_0.8A_r1", "SH_10mm_6.62Hz_0.8A_r2", "SH_10mm_6.62Hz_1.6A"
+  ],
+  "exclude_stems": [
+    "RLF_RMS10mm_2Hz_r2", "RLF_RMS2mm_5Hz", "RLF_RMS2mm_5Hz11",
+    "RLF_RMS2mm_7Hz", "RLF_RMS5mm_5Hz", "RLF_RMS5mm_5Hz11",
+    "RLF_RMS5mm_6Hz", "RLF_RMS5mm_6Hzslow", "RLF_RMS5mm_7Hz"
+  ],
+  "grouping": "Strip _rN; close groups over identical raw SHA256; reject validation/test overlap. Keep one canonical file per hash.",
+  "caveat": "Prospective v19 holdout only: legacy models/delay investigation may have seen these files. Not a newly acquired blind external test."
+}
