@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-27",
+  "base_commit": "cac96e8f85491e731a0030c268f8c9f814b06953",
+  "supplied_patch_sha256": "39cc96ef19cae733695364e20fa2da3b0ba359bb47850ab60516c1569a2c4a04",
+  "patched_runner_sha256": "c9a6fdf303e3962a2a5de36ef50107583a6017e677caa1a9cbdaa53521097460",
+  "original_tests_after_supplied_patch": {
+    "test_v19_model": {"methods": 12, "passed": 12},
+    "test_v19_data": {"methods": 4, "passed": 4}
+  },
+  "new_bd_tests_against_patched_source": {
+    "methods": 4,
+    "passed": 4,
+    "checks": ["exact NFL feature removal", "input/head sizes and parameter counts", "B observer dI is dead and current is causal", "step/chunk consistency and shared-map inverse"]
+  },
+  "training_started_only_after_tests": true,
+  "data_manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "manifest_records": 301,
+  "training_files": 259,
+  "validation_files": 16,
+  "final_test_csvs_extracted_or_opened": 0,
+  "training_device": "local NVIDIA GeForce RTX 4060 Ti, float32, no AMP or TF32",
+  "baseline_source_overwritten": false,
+  "github_push": false
+}

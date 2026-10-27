@@ -1,0 +1,10 @@
+{
+  "arm": "B",
+  "epoch": 30,
+  "file_index": 259,
+  "files": 259,
+  "file": "SH_50mm_0.83Hz_0.4A_r2",
+  "elapsed_seconds": 6.822896199999377,
+  "best_epoch": 27,
+  "best_pooled_nrmse_pct": 10.474851123596554
+}

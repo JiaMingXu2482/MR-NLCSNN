@@ -1,0 +1,27 @@
+{
+  "source_commit": "cac96e8f85491e731a0030c268f8c9f814b06953",
+  "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "manifest_count": 301,
+  "train_files": 259,
+  "validation_files": 16,
+  "sealed_final_test_members": [
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_10mm_6.62Hz_0A_r1.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_10mm_6.62Hz_0A_r2.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_10mm_6.62Hz_0.8A_r1.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_10mm_6.62Hz_0.8A_r2.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_10mm_6.62Hz_1.6A.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_5mm_6.62Hz_0A_r1.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_5mm_6.62Hz_0A_r2.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_5mm_6.62Hz_0.8A_r1.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_5mm_6.62Hz_0.8A_r2.csv",
+    "Parsed_v19_F42_I42/1_Steady_Harmonic/SH_5mm_6.62Hz_1.6A.csv"
+  ],
+  "runner_original_sha256": "19bf4342c52845b6a623aba1ada002bade9174245953fba35ae679a48ac0429d",
+  "runner_patched_sha256": "c9a6fdf303e3962a2a5de36ef50107583a6017e677caa1a9cbdaa53521097460",
+  "patch_sha256": "39cc96ef19cae733695364e20fa2da3b0ba359bb47850ab60516c1569a2c4a04",
+  "g0_sha256": "2d5d5188027c763bba30a53cf2f2fd25b99149b6e7ea26f94d4760da8de82ff2",
+  "split_sha256": "fa2fef92182ebcd77ec9ff6d95b06505243c0d1462041fda4cb7ff1952664ecd",
+  "split_spec_sha256": "9e18de18ad53c24f00f5957642676d16821fcb69d15b4954ffcf9a58493f9448",
+  "split_comparison": "JSON equal; split_spec.json omits the terminal newline of v19_split.json",
+  "note": "Final-test members listed only; not decompressed/read/extracted. No training yet."
+}

@@ -1,0 +1,25 @@
+{
+  "platform": "LOCAL PC CPU; NOT S32/NI measurement",
+  "cpu": "Intel64 Family 6 Model 151 Stepping 5, GenuineIntel",
+  "torch_version": "2.11.0+cu128",
+  "threads": 1,
+  "precision": "float32",
+  "measured_operation": "prepare + forward force_at + commit; inverse excluded",
+  "warmup_iterations": 100,
+  "one_corner": {
+    "iterations": 1000,
+    "mean_ms": 1.2422971000000007,
+    "p50_ms": 1.1212,
+    "p95_ms": 1.8147,
+    "p99_ms": 2.1491,
+    "max_ms": 3.5999
+  },
+  "four_corners_sequential": {
+    "iterations": 1000,
+    "mean_ms": 4.8699844999999975,
+    "p50_ms": 4.6863,
+    "p95_ms": 6.1349,
+    "p99_ms": 7.0038,
+    "max_ms": 12.9985
+  }
+}

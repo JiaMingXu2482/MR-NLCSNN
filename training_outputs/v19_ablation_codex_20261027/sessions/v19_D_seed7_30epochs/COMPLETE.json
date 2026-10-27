@@ -1,0 +1,35 @@
+{
+  "arm": "D",
+  "epochs": 30,
+  "best_epoch": 22,
+  "best_pooled_nrmse_pct": 9.43658142458234,
+  "hf_nrmse_pct_at_best": 6.255000973673345,
+  "parameter_count": 18401,
+  "best_checkpoint_sha256": "a8235a6fdaef382ba1718d02b67d63a95b5f6c399e8105e207d53621fe39f812",
+  "final_test_read": false,
+  "pc_cpu_timing": {
+    "platform": "LOCAL PC CPU; NOT S32/NI measurement",
+    "cpu": "Intel64 Family 6 Model 151 Stepping 5, GenuineIntel",
+    "torch_version": "2.11.0+cu128",
+    "threads": 1,
+    "precision": "float32",
+    "measured_operation": "prepare + forward force_at + commit; inverse excluded",
+    "warmup_iterations": 100,
+    "one_corner": {
+      "iterations": 1000,
+      "mean_ms": 1.211256500000001,
+      "p50_ms": 1.0943,
+      "p95_ms": 1.8075,
+      "p99_ms": 2.0934,
+      "max_ms": 3.4679
+    },
+    "four_corners_sequential": {
+      "iterations": 1000,
+      "mean_ms": 4.805353200000002,
+      "p50_ms": 4.6146,
+      "p95_ms": 6.18,
+      "p99_ms": 6.7885,
+      "max_ms": 7.4815
+    }
+  }
+}

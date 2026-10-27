@@ -1,0 +1,98 @@
+--- train_bd_local.py
++++ train_a_local.py
+@@ -1,4 +1,4 @@
+-"""Local B/D Stage-1-only runner. No final-test loading, no A, no warm-start.
++"""Local A Stage-1-only runner, newly authorized. No final-test loading or warm-start.
+ Uses Muse-patched source for data/sample/loss; separate files and sessions only.
+ """
+ import os
+@@ -16,7 +16,21 @@
+ import torch
+ from AA02Train import train_v19 as upstream
+ from mr_nlcsnn.v19_protocol import set_stage,forward_loss
+-from model_v19_bd import NLCSNN_v19_BD,INPUTS,FEATURES
++from mr_nlcsnn.model_v19 import NLCSNN_v19
++
++INPUTS={'A':['x','v','a','I','dI','T']}
++FEATURES={'A':['x','v','a','I','dI','T','v_kin','xv','vI','vT',
++    'tanh2vp','tanhvp','I_tanhvp','vn_abs_v','vn3','a_vn','I_vn_abs_v',
++    'dI_v','dI_a','abs_dI_I','sign_v','I_sign_v','x2','x3','a_I',
++    'abs_a','a_v','abs_a_sign_v','I_abs_a','slow','x_slow','abs_x_slow',
++    'I_x_slow','I_abs_x_slow','sign_v_abs_x']}
++
++def build_model(arm='A',**config):
++    if arm!='A': raise ValueError('This runner is A-only')
++    model=NLCSNN_v19(**config)
++    # Metadata only; no module, weight, input, or execution changes.
++    model.arm='A'; model.nfl_dim=35
++    return model
+ 
+ BINS=((0,10),(10,50),(50,100),(100,None))
+ 
+@@ -30,7 +44,9 @@
+ def save_checkpoint(path,obj):
+     temporary=path.with_suffix('.tmp'); torch.save(obj,temporary); temporary.replace(path)
+ 
+-def compact(u,arm): return u[...,[0,1,3,4,5] if arm=='B' else [0,1,3,5]]
++def compact(u,arm):
++    if arm!='A' or u.shape[-1]!=6: raise ValueError('A requires all six input channels')
++    return u
+ 
+ def sample(item,norm,arm,device):
+     u,f,valid=upstream.sample(item,norm)
+@@ -70,7 +86,7 @@
+         history_protocol='strict-past measured applied current; teacher-forced Stage 1')
+ 
+ def provenance():
+-    paths=[Path(__file__),HERE/'model_v19_bd.py',SOURCE/'AA02Train/train_v19.py',
++    paths=[Path(__file__),HERE/'train_bd_local.py',SOURCE/'AA02Train/train_v19.py',
+         SOURCE/'mr_nlcsnn/model_v19.py',SOURCE/'mr_nlcsnn/v19_protocol.py',
+         DATA/'alignment_manifest.json',DATA/'COMPLETE.json',G0,
+         RUNTIME/'pack/AA02Train/v19_split.json',
+@@ -104,8 +120,8 @@
+                 start=time.perf_counter_ns()
+                 for corner in range(corners):
+                     ctx,h=model.prepare(motion,states[corner])
+-                    model.force_at(ctx,motion[:,2:3])
+-                    states[corner]=model.commit(h,states[corner],motion[:,2])
++                    model.force_at(ctx,motion[:,3:4])
++                    states[corner]=model.commit(h,states[corner],motion[:,3])
+                 elapsed=(time.perf_counter_ns()-start)/1e6
+                 if k>=100: samples.append(elapsed)
+         ordered=sorted(samples)
+@@ -122,7 +138,7 @@
+     hashes=provenance()
+     random.seed(7); torch.manual_seed(7)
+     if device.type=='cuda': torch.cuda.manual_seed_all(7)
+-    model=NLCSNN_v19_BD(arm).to(device)
++    model=build_model(arm).to(device)
+     parameters=set_stage(model,1)
+     optimizer=torch.optim.AdamW(parameters,lr=3e-4,weight_decay=1e-4)
+     train=list(train_items); start_epoch=0; best_score=float('inf'); best_epoch=0
+@@ -154,7 +170,7 @@
+             norm_cfg=norm,device=str(device),training_hardware=torch.cuda.get_device_name(0) if device.type=='cuda' else platform.processor(),
+             torch_version=str(torch.__version__),python_version=sys.version,precision='float32; no AMP; no TF32',
+             deterministic_algorithms=True,cpu_threads=torch.get_num_threads(),
+-            note='B observer dI is zero. B/D comparison is dead-channel removal, not dI information.'))
++            note='A uses the unchanged full-input model_v19.py; observer dI remains zero as defined upstream.'))
+     if (folder/'COMPLETE.json').exists():
+         print(f'{arm} already complete',flush=True); return
+     print(f'START arm={arm} device={device} params={sum(p.numel() for p in model.parameters())} epoch={start_epoch+1}',flush=True)
+@@ -198,7 +214,7 @@
+             source_hashes=hashes,data_manifest_sha256=EXPECTED,metrics=metrics))
+         print(f'{arm} E{epoch:02d} pooled={score:.6f}% HF={metrics["hf_nrmse_pct"]:.6f}% best={best_score:.6f}%@{best_epoch} seconds={metrics["seconds"]:.1f}',flush=True)
+     chosen=torch.load(folder/'best.pth',map_location='cpu',weights_only=True)
+-    selected=NLCSNN_v19_BD(**chosen['model_cfg']); selected.load_state_dict(chosen['state_dict'])
++    selected=build_model(**chosen['model_cfg']); selected.load_state_dict(chosen['state_dict'])
+     timing=cpu_benchmark(selected,validation,norm)
+     write_json(folder/'pc_cpu_timing.json',timing)
+     write_json(folder/'COMPLETE.json',dict(arm=arm,epochs=30,best_epoch=best_epoch,
+@@ -209,7 +225,7 @@
+ 
+ def main():
+     parser=argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('--arms',nargs='+',choices=('B','D'),default=['B','D'])
++    parser.add_argument('--arms',nargs='+',choices=('A',),default=['A'])
+     parser.add_argument('--device',choices=('cpu','cuda'),default='cuda')
+     parser.add_argument('--resume',action='store_true')
+     args=parser.parse_args()

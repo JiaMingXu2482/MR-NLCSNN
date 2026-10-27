@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": [
+    "B/D source and protocol hashes unchanged",
+    "A seed7 state_dict exactly equals unmodified upstream model",
+    "all six inputs retained and 35 NFL features",
+    "sequence forward exactly equals upstream",
+    "step inference uses current column3 and matches sequence"
+  ],
+  "actual_parameters": 21041,
+  "source_hashes": {
+    "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\train_a_local.py": "f7750737acf2d19a87da302582a41ffc0da1a8fcffb19e09a8f83b63424002a0",
+    "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\train_bd_local.py": "4192166b092c87e22d02b5070f168a11dcc258223a873decb2e047b4f04af9f8",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\source\\AA02Train\\train_v19.py": "c9a6fdf303e3962a2a5de36ef50107583a6017e677caa1a9cbdaa53521097460",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\source\\mr_nlcsnn\\model_v19.py": "bccf832d298180089a78b58c68b9b3fb4b926094c9d28db8af24573a4290906c",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\source\\mr_nlcsnn\\v19_protocol.py": "87165df0ea093620f93951fdf9fefea6ffd04d6b479465c9d3eec9a99109c927",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\pack\\Parsed_v19_F42_I42\\alignment_manifest.json": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\pack\\Parsed_v19_F42_I42\\COMPLETE.json": "8ead6607c203af71a4c090fdc8efe198ed2bf87f33618523612e7e8a56fd4c45",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\pack\\training_outputs\\v19_g0\\g0_report_F42_I42.json": "2d5d5188027c763bba30a53cf2f2fd25b99149b6e7ea26f94d4760da8de82ff2",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\pack\\AA02Train\\v19_split.json": "fa2fef92182ebcd77ec9ff6d95b06505243c0d1462041fda4cb7ff1952664ecd",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\pack\\training_outputs\\v19_g0\\runner_fixes_diff.txt": "39cc96ef19cae733695364e20fa2da3b0ba359bb47850ab60516c1569a2c4a04"
+  },
+  "final_test_read": false
+}
