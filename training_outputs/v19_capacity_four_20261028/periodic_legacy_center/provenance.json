@@ -1,0 +1,66 @@
+{
+  "models": {
+    "D": {
+      "checkpoint": "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\sessions\\v19_capacity_four_balanced_300_20261028\\D\\final.pth",
+      "sha256": "f8c45d37f00ce22c55128f2b4d38553c3c75bb2a2562ce0b6625db9f657fec59",
+      "norm_cfg": {
+        "x_ref": 281.06649017333984,
+        "x_scale": 62.03949737548828,
+        "f_scale": 7662.43017578125,
+        "v_scale": 1000.0,
+        "a_scale": 50000.0,
+        "i_scale": 1.6,
+        "t_ref": 40.0,
+        "t_scale": 40.0
+      }
+    },
+    "A": {
+      "checkpoint": "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\sessions\\v19_capacity_four_balanced_300_20261028\\A\\final.pth",
+      "sha256": "3a407a77e8f0b9167282fdbfc77923dac23fcd0430fa498432e36e31f97423c7",
+      "norm_cfg": {
+        "x_ref": 281.06649017333984,
+        "x_scale": 62.03949737548828,
+        "f_scale": 7662.43017578125,
+        "v_scale": 1000.0,
+        "a_scale": 50000.0,
+        "i_scale": 1.6,
+        "t_ref": 40.0,
+        "t_scale": 40.0
+      }
+    },
+    "A_GRU": {
+      "checkpoint": "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\sessions\\v19_capacity_four_balanced_300_20261028\\A_GRU\\final.pth",
+      "sha256": "e60293a770e265fecb2c1c3945749e9d6cb7c0d55fbe9ddea36a5076153f0509",
+      "norm_cfg": {
+        "x_ref": 281.06649017333984,
+        "x_scale": 62.03949737548828,
+        "f_scale": 7662.43017578125,
+        "v_scale": 1000.0,
+        "a_scale": 50000.0,
+        "i_scale": 1.6,
+        "t_ref": 40.0,
+        "t_scale": 40.0
+      }
+    },
+    "A_MLP": {
+      "checkpoint": "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\sessions\\v19_capacity_four_balanced_300_20261028\\A_MLP\\final.pth",
+      "sha256": "851843e5d06f753a28cf19f4dd8c28aa52f38d41c29d00486f417527df78fb8a",
+      "norm_cfg": {
+        "x_ref": 281.06649017333984,
+        "x_scale": 62.03949737548828,
+        "f_scale": 7662.43017578125,
+        "v_scale": 1000.0,
+        "a_scale": 50000.0,
+        "i_scale": 1.6,
+        "t_ref": 40.0,
+        "t_scale": 40.0
+      }
+    }
+  },
+  "script_sha256": "74a63f7fe7f11bbea3b61f697d90ccc033a1254affc1c6e5ab5f58032bc23437",
+  "parameter_updates": 0,
+  "force_projection": false,
+  "force_gain": 1,
+  "final_test_access": false,
+  "inputs": "Analytic sine x,v,a; fixed current; 1kHz; position center279.1375mm"
+}

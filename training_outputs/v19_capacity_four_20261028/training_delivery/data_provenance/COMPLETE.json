@@ -1,0 +1,6 @@
+{
+  "manifest_sha256": "e3a8c984f6415beeabfab05b8178ec32b2172e2542570d41110dffeb1b1c1ced",
+  "train_files": 248,
+  "validation_files": 16,
+  "final_test_read": false
+}

@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "arms": [
+    "D",
+    "A",
+    "A_GRU",
+    "A_MLP"
+  ],
+  "final_test_read": false
+}

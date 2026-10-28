@@ -1,0 +1,96 @@
+{
+  "groups": [
+    {
+      "category": "SH",
+      "files": 186,
+      "zero_sources": {
+        "static-window-start": 168,
+        "static-window-end": 18
+      },
+      "raw_status": {
+        "exact_hash_and_reproduction": 186
+      },
+      "offset_min_N": -262.9632538884298,
+      "offset_max_N": -151.0665305940505,
+      "physics_fallback_active_mean": 0,
+      "trimmed_delta_abs_median_N": 2.9370618868918257,
+      "trimmed_delta_abs_max_N": 6.793025094002161,
+      "trimmed_delta_abs_gt10N": 0
+    },
+    {
+      "category": "ST",
+      "files": 30,
+      "zero_sources": {
+        "static-window-start": 26,
+        "static-window-end": 3,
+        "auto-baseline-override": 1
+      },
+      "raw_status": {
+        "exact_hash_and_reproduction": 30
+      },
+      "offset_min_N": -265.2418908808436,
+      "offset_max_N": -188.03187667946872,
+      "physics_fallback_active_mean": 0,
+      "trimmed_delta_abs_median_N": 0.3455359389472079,
+      "trimmed_delta_abs_max_N": 1.2674811831803936,
+      "trimmed_delta_abs_gt10N": 0
+    },
+    {
+      "category": "SR",
+      "files": 17,
+      "zero_sources": {
+        "static-window-start": 17
+      },
+      "raw_status": {
+        "exact_hash_and_reproduction": 17
+      },
+      "offset_min_N": -173.06842731278255,
+      "offset_max_N": -119.6279598269005,
+      "physics_fallback_active_mean": 0,
+      "trimmed_delta_abs_median_N": 3.00112536555514,
+      "trimmed_delta_abs_max_N": 6.879957726043841,
+      "trimmed_delta_abs_gt10N": 0
+    },
+    {
+      "category": "RLF",
+      "files": 18,
+      "zero_sources": {
+        "static-window-start": 9,
+        "physics-estimate": 9
+      },
+      "raw_status": {
+        "exact_hash_and_reproduction": 18
+      },
+      "offset_min_N": -243.5647712311252,
+      "offset_max_N": -168.96550906214327,
+      "physics_fallback_active_mean": 0,
+      "trimmed_delta_abs_median_N": 2.741154149593058,
+      "trimmed_delta_abs_max_N": 5.135729853825126,
+      "trimmed_delta_abs_gt10N": 0
+    },
+    {
+      "category": "RHF",
+      "files": 8,
+      "zero_sources": {
+        "static-window-start": 8
+      },
+      "raw_status": {
+        "exact_hash_and_reproduction": 8
+      },
+      "offset_min_N": -214.0540333940568,
+      "offset_max_N": -163.3356108152485,
+      "physics_fallback_active_mean": 0,
+      "trimmed_delta_abs_median_N": 2.8112769592798372,
+      "trimmed_delta_abs_max_N": 6.166968648095121,
+      "trimmed_delta_abs_gt10N": 0
+    }
+  ],
+  "files": 259,
+  "validation_or_final_csv_read": false,
+  "training_started": false,
+  "data_modified": false,
+  "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "script_sha256": "d264f72b0718f01a280101870772c688b4b70f7f06fb79c26bce95671c5b4196",
+  "diagnostic_trim": "200 samples at each baseline edge, only windows>=600; not a proposed automatic correction",
+  "caveat": "Different offsets or nonzero dynamic means alone do not prove a bias error; initial physical preload and history may differ."
+}

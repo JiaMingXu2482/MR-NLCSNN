@@ -1,0 +1,33 @@
+C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_subclasses\functional_tensor.py:307: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+START A_MLP step=0/74400 parameters=45377
+A_MLP E10/300 loss=0.0077068
+A_MLP E20/300 loss=0.0048276
+A_MLP E30/300 loss=0.0031662
+A_MLP E40/300 loss=0.0039175
+A_MLP E50/300 loss=0.0029353
+A_MLP E60/300 loss=0.0028812
+A_MLP E70/300 loss=0.0026169
+A_MLP E80/300 loss=0.0023985
+A_MLP E90/300 loss=0.0019856
+A_MLP E100/300 loss=0.0023086
+A_MLP E110/300 loss=0.0021165
+A_MLP E120/300 loss=0.0019769
+A_MLP E130/300 loss=0.0018996
+A_MLP E140/300 loss=0.0017777
+A_MLP E150/300 loss=0.0016802
+A_MLP E160/300 loss=0.0018022
+A_MLP E170/300 loss=0.0014801
+A_MLP E180/300 loss=0.0014485
+A_MLP E190/300 loss=0.0014964
+A_MLP E200/300 loss=0.0014623
+A_MLP E210/300 loss=0.0014007
+A_MLP E220/300 loss=0.0013669
+A_MLP E230/300 loss=0.0013073
+A_MLP E240/300 loss=0.0012340
+A_MLP E250/300 loss=0.0011994
+A_MLP E260/300 loss=0.0011682
+A_MLP E270/300 loss=0.0010690
+A_MLP E280/300 loss=0.0011364
+A_MLP E290/300 loss=0.0010998
+A_MLP E300/300 loss=0.0010218

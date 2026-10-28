@@ -1,0 +1,8 @@
+{
+  "status": "trained_not_validated",
+  "updates": 74400,
+  "epochs": 300,
+  "final_sha256": "a3adfe2508b4f90ced896c807ec5d26e065a2b918ded6ca3ecb7689202ebfc63",
+  "seen_scored_samples": 632902888,
+  "training_seconds": 7417.7887872993015
+}

@@ -1,0 +1,12 @@
+{
+  "checkpoints": {
+    "D": "f8c45d37f00ce22c55128f2b4d38553c3c75bb2a2562ce0b6625db9f657fec59",
+    "A": "3a407a77e8f0b9167282fdbfc77923dac23fcd0430fa498432e36e31f97423c7",
+    "A_GRU": "e60293a770e265fecb2c1c3945749e9d6cb7c0d55fbe9ddea36a5076153f0509",
+    "A_MLP": "851843e5d06f753a28cf19f4dd8c28aa52f38d41c29d00486f417527df78fb8a"
+  },
+  "data_manifest_sha256": "e3a8c984f6415beeabfab05b8178ec32b2172e2542570d41110dffeb1b1c1ced",
+  "script_sha256": "b3b6dbf08cd31852555b138744075c4b15b5fc22394d538035627efa1f52e092",
+  "training_updates": 0,
+  "final_test_read": false
+}

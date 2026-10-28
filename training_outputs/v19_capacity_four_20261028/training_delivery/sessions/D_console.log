@@ -1,0 +1,33 @@
+C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_subclasses\functional_tensor.py:307: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+START D step=0/74400 parameters=18401
+D E10/300 loss=0.0075362
+D E20/300 loss=0.0050260
+D E30/300 loss=0.0037658
+D E40/300 loss=0.0035665
+D E50/300 loss=0.0034273
+D E60/300 loss=0.0032744
+D E70/300 loss=0.0029827
+D E80/300 loss=0.0027802
+D E90/300 loss=0.0023237
+D E100/300 loss=0.0027396
+D E110/300 loss=0.0024964
+D E120/300 loss=0.0024507
+D E130/300 loss=0.0023766
+D E140/300 loss=0.0022487
+D E150/300 loss=0.0021961
+D E160/300 loss=0.0022413
+D E170/300 loss=0.0020666
+D E180/300 loss=0.0019047
+D E190/300 loss=0.0020131
+D E200/300 loss=0.0021183
+D E210/300 loss=0.0019712
+D E220/300 loss=0.0020062
+D E230/300 loss=0.0018737
+D E240/300 loss=0.0017779
+D E250/300 loss=0.0017283
+D E260/300 loss=0.0017366
+D E270/300 loss=0.0015786
+D E280/300 loss=0.0017349
+D E290/300 loss=0.0016729
+D E300/300 loss=0.0015882

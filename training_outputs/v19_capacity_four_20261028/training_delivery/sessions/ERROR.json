@@ -1,0 +1,4 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\train_capacity_four.py\", line 188, in manage\n    if failed: raise RuntimeError('Worker failures; inspect logs: '+str(failed))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Worker failures; inspect logs: {'A_GRU': 1}\n",
+  "time": 1793162601.7109072
+}

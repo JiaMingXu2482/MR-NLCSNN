@@ -1,0 +1,50 @@
+C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_subclasses\functional_tensor.py:307: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+START A_GRU step=0/74400 parameters=32897
+A_GRU E10/300 loss=0.0081592
+A_GRU E20/300 loss=0.0059432
+A_GRU E30/300 loss=0.0037887
+A_GRU E40/300 loss=0.0035979
+A_GRU E50/300 loss=0.0033017
+A_GRU E60/300 loss=0.0029764
+A_GRU E70/300 loss=0.0027862
+Traceback (most recent call last):
+  File "D:\OneDrive - mail.scut.edu.cn\周报\4.6\4.7All\DLC_0.85_100\PMPC\SUV_DLC_PMPC\Simulink_Model\scratchpad\v19_bd_local_20261027\train_capacity_four.py", line 201, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "D:\OneDrive - mail.scut.edu.cn\周报\4.6\4.7All\DLC_0.85_100\PMPC\SUV_DLC_PMPC\Simulink_Model\scratchpad\v19_bd_local_20261027\train_capacity_four.py", line 199, in main
+    if args.worker: train(cfgpath,cfg,args.worker,args.resume)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive - mail.scut.edu.cn\周报\4.6\4.7All\DLC_0.85_100\PMPC\SUV_DLC_PMPC\Simulink_Model\scratchpad\v19_bd_local_20261027\train_capacity_four.py", line 98, in train
+    base.write_json(folder/'progress.json',dict(status='training',arm=arm,epoch=epoch,updates=step,total_updates=total,validation_performed=False))
+  File "D:\OneDrive - mail.scut.edu.cn\周报\4.6\4.7All\DLC_0.85_100\PMPC\SUV_DLC_PMPC\Simulink_Model\scratchpad\v19_bd_local_20261027\train_a_local.py", line 42, in write_json
+    temporary.replace(path)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1188, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] 拒绝访问。: 'D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\sessions\\v19_capacity_four_balanced_300_20261028\\A_GRU\\progress.json.tmp' -> 'D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\sessions\\v19_capacity_four_balanced_300_20261028\\A_GRU\\progress.json'
+C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_subclasses\functional_tensor.py:307: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+START A_GRU step=17360/74400 parameters=32897
+A_GRU E80/300 loss=0.0026578
+A_GRU E90/300 loss=0.0021560
+A_GRU E100/300 loss=0.0024625
+A_GRU E110/300 loss=0.0021953
+A_GRU E120/300 loss=0.0020452
+A_GRU E130/300 loss=0.0020745
+A_GRU E140/300 loss=0.0018179
+A_GRU E150/300 loss=0.0018076
+A_GRU E160/300 loss=0.0019353
+A_GRU E170/300 loss=0.0016214
+A_GRU E180/300 loss=0.0015141
+A_GRU E190/300 loss=0.0016342
+A_GRU E200/300 loss=0.0016179
+A_GRU E210/300 loss=0.0014730
+A_GRU E220/300 loss=0.0015124
+A_GRU E230/300 loss=0.0013795
+A_GRU E240/300 loss=0.0013360
+A_GRU E250/300 loss=0.0012661
+A_GRU E260/300 loss=0.0012399
+A_GRU E270/300 loss=0.0011138
+A_GRU E280/300 loss=0.0012389
+A_GRU E290/300 loss=0.0011688
+A_GRU E300/300 loss=0.0010810

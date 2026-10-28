@@ -1,0 +1,246 @@
+55c55,69
+<         if len(values) <= 2000 or not torch.isfinite(values).all():
+---
+>         # Muse fix 2026-10-27 (blocking, recorded in v19_g0/runner_fixes_diff.txt):
+>         # (a) Parsed current is SIGNED (sensor polarity varies by file: 82/194
+>         #     train+validation SH files have mean current -nominal, |mean| matches
+>         #     nominal within 0.05 A for all 194). Physical damper current is a
+>         #     magnitude (0-1.6 A, unipolar), and the legacy v14 model used
+>         #     |I| throughout (_current_pair). Range-check the MAGNITUDE here;
+>         #     sample() converts to magnitude below. The old [0,1.6] check
+>         #     rejected every negative-polarity file, so training could not start.
+>         # (b) Edge guard (see edge_guard): files shorter than 2000 samples
+>         #     (68 train+validation files, 3.07% of train samples; all short
+>         #     bursts of ~2 cycles) cannot meet a 1000-sample guard on both ends.
+>         #     Rejecting them would also gut final_test (6/10 files short,
+>         #     including all 1.6 A files). Short files get a capped 100-sample
+>         #     guard instead; long files keep the 1000-sample guard exactly.
+>         if len(values) < 200 or not torch.isfinite(values).all():
+57,59c71,79
+<         # Reject material range errors, tolerate small zero-phase filter overshoot.
+<         if values[:,3].min() < -0.03 or values[:,3].max() > 1.63:
+<             raise ValueError('current outside [0,1.6] A tolerance: '+str(path))
+---
+>         # Tolerance raised 2026-10-27 from 1.63 to 2.10 A after measurement:
+>         # 56 train+validation files exceed 1.63 A, max 2.011 A, with spikes
+>         # clustered at current step edges (zero-phase SOS filter overshoot on
+>         # 0->1.6 A steps; e.g. RHF_RMS10mm_2Hz: 123/7262 samples >1.63, max
+>         # 1.84 A). sample() clamps magnitude to 1.6 A, so overshoot is treated
+>         # as full current, not as a higher physical level. 2.10 A still rejects
+>         # gross channel/scale errors while passing all measured files.
+>         if values[:,3].abs().max() > 2.10:
+>             raise ValueError('current magnitude outside [0,2.1] A tolerance: '+str(path))
+73a94,101
+> def edge_guard(n):
+>     """Edge guard in samples. Long files keep the planned 1000-sample (1 s)
+>     guard on both ends. Short files (<2000 samples, ~2-cycle bursts) get at
+>     most 100 samples, so they still contribute valid samples instead of an
+>     empty mask. See the read_dataset note above for the evidence."""
+>     return 1000 if n > 2000 else min(100, n // 4)
+> 
+> 
+77c105
+<                      v[:,2]/50000, (v[:,3]/1.6).clamp(0,1),
+---
+>                      v[:,2]/50000, (v[:,3].abs()/1.6).clamp(0,1),
+81c109,111
+<     valid[:,:1000] = False; valid[:,-1000:] = False
+---
+>     guard = edge_guard(v.shape[0])
+>     if guard:
+>         valid[:,:guard] = False; valid[:,-guard:] = False
+204a235,239
+>     p.add_argument('--resume', type=Path, default=None,
+>                    help='Resume a v19 session directory (its latest.pth). '
+>                         '--epochs is the TOTAL epoch count for the session, '
+>                         'not additional epochs. --output/--checkpoint/--warm-start '
+>                         'must not be passed with --resume.')
+223c258,272
+<     if not a.g0_report or not a.output or not 1 <= a.epochs <= 500:
+---
+>     # --- Strict v19 resume (local Muse addition, 2026-10-27; NOT part of Codex cac96e8).
+>     # --epochs is the TOTAL epoch count for the session. LR factor is recomputed
+>     # from (epoch, total) at each epoch, so resuming with an UNCHANGED total is
+>     # schedule-identical to an uninterrupted run; resuming with a LARGER total
+>     # stretches the cosine schedule from the resume point onward (documented in
+>     # the resume record) and is therefore NOT bit-identical to the original-total
+>     # run. Resume never loads a legacy v14 checkpoint as a v19 checkpoint:
+>     # it only loads this runner's own latest.pth in the same session directory.
+>     if a.resume is not None:
+>         if a.output is not None or a.checkpoint is not None or a.warm_start is not None:
+>             p.error('--resume takes the session directory as output; do not pass --output/--checkpoint/--warm-start')
+>         if not a.g0_report or not 1 <= a.epochs <= 500:
+>             p.error('reviewed --g0-report and 1..500 total epochs required with --resume')
+>         a.output = a.resume
+>     elif not a.g0_report or not a.output or not 1 <= a.epochs <= 500:
+231,232c280,285
+<     if a.output.exists():
+<         raise ValueError('output exists; never overwrite a training session')
+---
+>     runner_sha256 = digest(Path(__file__))
+>     if a.resume is None:
+>         if a.output.exists():
+>             raise ValueError('output exists; never overwrite a training session')
+>     elif not a.output.is_dir() or not (a.output/'latest.pth').exists() or not (a.output/'run_config.json').exists():
+>         raise ValueError('resume directory must contain latest.pth and run_config.json')
+236,243c289,309
+<     transfer = {}
+<     if a.stage == 1:
+<         model = NLCSNN_v19(init_tau_ms=a.tau_ms)
+<         if a.checkpoint:
+<             p.error('Stage 1 uses --warm-start, not --checkpoint')
+<         if a.warm_start:
+<             transfer = warm_transfer(model, torch.load(a.warm_start, map_location='cpu', weights_only=True))
+<         ref, scale = None, None
+---
+>     transfer = {}; start_epoch = 0; best_score = float('inf'); resume_record = None
+>     if a.resume is None:
+>         if a.stage == 1:
+>             model = NLCSNN_v19(init_tau_ms=a.tau_ms)
+>             if a.checkpoint:
+>                 p.error('Stage 1 uses --warm-start, not --checkpoint')
+>             if a.warm_start:
+>                 transfer = warm_transfer(model, torch.load(a.warm_start, map_location='cpu', weights_only=True))
+>             ref, scale = None, None
+>         else:
+>             if not a.checkpoint or a.warm_start:
+>                 p.error('Stage 2/3 require --checkpoint and no --warm-start')
+>             model, ckpt = load_v19(a.checkpoint)
+>             if ckpt['stage'] != a.stage-1 or ckpt['data_manifest_sha256'] != manifest_hash or ckpt['norm_cfg'] != norm:
+>                 raise ValueError('stage/data/normalization mismatch')
+>             ref = NLCSNN_v19(**ckpt['model_cfg'])
+>             ref.load_state_dict(ckpt['reference_state_dict']); ref.eval()
+>             for par in ref.parameters(): par.requires_grad_(False)
+>             scale = ckpt['sensitivity_scale_N_per_A']
+>             if a.stage == 3 and a.inverse_mode != ckpt['inverse_mode']:
+>                 raise ValueError('Stage 3 must keep selected Stage-2 objective')
+245,255c311,343
+<         if not a.checkpoint or a.warm_start:
+<             p.error('Stage 2/3 require --checkpoint and no --warm-start')
+<         model, ckpt = load_v19(a.checkpoint)
+<         if ckpt['stage'] != a.stage-1 or ckpt['data_manifest_sha256'] != manifest_hash or ckpt['norm_cfg'] != norm:
+<             raise ValueError('stage/data/normalization mismatch')
+<         ref = NLCSNN_v19(**ckpt['model_cfg'])
+<         ref.load_state_dict(ckpt['reference_state_dict']); ref.eval()
+<         for par in ref.parameters(): par.requires_grad_(False)
+<         scale = ckpt['sensitivity_scale_N_per_A']
+<         if a.stage == 3 and a.inverse_mode != ckpt['inverse_mode']:
+<             raise ValueError('Stage 3 must keep selected Stage-2 objective')
+---
+>         orig_config = json.loads((a.output/'run_config.json').read_text(encoding='utf-8'))
+>         if orig_config.get('stage') != a.stage or orig_config.get('inverse_mode') != a.inverse_mode:
+>             raise ValueError('resume stage/inverse_mode must match the original session')
+>         if orig_config.get('seed') != a.seed:
+>             raise ValueError('resume seed must match the original session seed')
+>         if str(a.data) not in (orig_config.get('data'),) and Path(orig_config.get('data','')).resolve() != a.data.resolve():
+>             raise ValueError('resume data directory must match the original session')
+>         latest = torch.load(a.output/'latest.pth', map_location='cpu', weights_only=True)
+>         if latest.get('stage3_rejected'):
+>             raise ValueError('session was terminated by the Stage-3 gate; it cannot be resumed')
+>         if latest.get('architecture') != NLCSNN_v19.architecture or latest.get('stage') != a.stage:
+>             raise ValueError('latest.pth is not a v19 checkpoint for this stage')
+>         if latest.get('runner_sha256') != runner_sha256:
+>             raise ValueError('runner file changed since the session started; refusing silent code change mid-training')
+>         if latest.get('data_manifest_sha256') != manifest_hash or latest.get('norm_cfg') != norm:
+>             raise ValueError('resume data/normalization mismatch')
+>         if latest.get('inverse_mode') != a.inverse_mode:
+>             raise ValueError('resume inverse_mode must match the session')
+>         model = NLCSNN_v19(**latest['model_cfg'])
+>         model.load_state_dict(latest['state_dict'])
+>         if a.stage == 1:
+>             ref, scale = None, None
+>         else:
+>             ref = NLCSNN_v19(**latest['model_cfg'])
+>             ref.load_state_dict(latest['reference_state_dict']); ref.eval()
+>             for par in ref.parameters(): par.requires_grad_(False)
+>             scale = latest['sensitivity_scale_N_per_A']
+>         start_epoch = int(latest['epoch'])
+>         if start_epoch >= a.epochs:
+>             raise ValueError(f'session already at epoch {start_epoch}; --epochs (total) must exceed it')
+>         resume_record = dict(resumed_from_epoch=start_epoch, total_epochs=a.epochs,
+>                              runner_sha256=runner_sha256, original_run_config=orig_config.get('warm_transfer'),
+>                              note='LR cosine recomputed with the resumed total; identical to uninterrupted run only if total unchanged')
+260,267c348,397
+<     best_score = float('inf'); rollback = copy.deepcopy(model.state_dict())
+<     a.output.mkdir(parents=True)
+<     config = {k:str(v) if isinstance(v,Path) else v for k,v in vars(a).items()}
+<     config.update(warm_transfer=transfer, warm_sha256=digest(a.warm_start) if a.warm_start else None,
+<                   parameter_count=sum(q.numel() for q in model.parameters()), batch='one full file',
+<                   augmentation='none; current labels and observer history remain clean')
+<     (a.output/'run_config.json').write_text(json.dumps(config,indent=2),encoding='utf-8')
+<     for epoch in range(1,a.epochs+1):
+---
+>     rollback = copy.deepcopy(model.state_dict())
+>     if a.resume is None:
+>         a.output.mkdir(parents=True)
+>         config = {k:str(v) if isinstance(v,Path) else v for k,v in vars(a).items()}
+>         config.update(warm_transfer=transfer, warm_sha256=digest(a.warm_start) if a.warm_start else None,
+>                       parameter_count=sum(q.numel() for q in model.parameters()), batch='one full file',
+>                       augmentation='none; current labels and observer history remain clean',
+>                       runner_sha256=runner_sha256)
+>         (a.output/'run_config.json').write_text(json.dumps(config,indent=2),encoding='utf-8')
+>     else:
+>         # Restore optimizer/RNG/best/rollback AFTER optimizer creation; best.pth
+>         # is the only best-state store, latest.pth carries the rest.
+>         # Muse fix 2026-10-27 (resume-test failure): the epoch loop calls
+>         # random.shuffle(train) at each epoch start, and random.shuffle is a
+>         # Fisher-Yates in-place permutation whose result depends on the
+>         # STARTING order as well as the RNG state. Restoring the RNG state
+>         # alone is NOT enough: a resumed run starts from read_dataset order
+>         # while an uninterrupted run starts epoch N+1 from epoch N's shuffled
+>         # order, so the file order (and hence gradients) diverge. Measured
+>         # 2026-10-27: resumed epoch 2 pooled 43.0339% / train_loss 0.074023
+>         # vs uninterrupted epoch 2 pooled 42.8504% / train_loss 0.076448.
+>         # latest.pth therefore also carries the train list order at the end
+>         # of the completed epoch; restore it here so the next shuffle starts
+>         # from exactly the same order as an uninterrupted run. Sessions whose
+>         # latest.pth predates this capture are refused (strict, not silent).
+>         optimizer.load_state_dict(latest['optimizer_state_dict'])
+>         random.setstate(latest['random_state']); torch.set_rng_state(latest['torch_rng_state'])
+>         if 'train_order' not in latest:
+>             raise ValueError('latest.pth predates train-order capture; cannot resume strictly (restart the session)')
+>         _by_name = {it['name']: it for it in train}
+>         if set(_by_name) != set(latest['train_order']) or len(_by_name) != len(latest['train_order']):
+>             raise ValueError('train-order names do not match the current dataset; cannot resume strictly')
+>         train = [_by_name[n] for n in latest['train_order']]
+>         if a.stage == 3:
+>             if 'rollback_state_dict' not in latest:
+>                 raise ValueError('Stage-3 session predates rollback capture; cannot resume safely')
+>             rollback = copy.deepcopy(latest['rollback_state_dict'])
+>         best_path = a.output/'best.pth'
+>         if best_path.exists():
+>             best_ckpt = torch.load(best_path, map_location='cpu', weights_only=True)
+>             bm = best_ckpt.get('metrics') or {}
+>             bs = bm.get('pooled_nrmse_pct') if a.stage == 1 else bm.get('inv_mae_A' if a.inverse_mode == 'true' else 'teacher_mae_A')
+>             if bs is not None:
+>                 best_score = float(bs)
+>         stamp = time.strftime('%Y%m%d_%H%M%S')
+>         (a.output/f'resume_{start_epoch+1}_to_{a.epochs}_{stamp}.json').write_text(
+>             json.dumps(resume_record, indent=2, ensure_ascii=False), encoding='utf-8')
+>         print(f'RESUMED session={a.output} from epoch {start_epoch} to total {a.epochs} '
+>               f'(best_score={best_score})', flush=True)
+>     for epoch in range(start_epoch+1,a.epochs+1):
+304a435,445
+>             # Terminal marker: a rejected Stage-3 session must NOT be resumed
+>             # (resuming would re-attempt the rejected epoch from a stale state).
+>             torch.save(dict(architecture=model.architecture, state_dict=copy.deepcopy(model.state_dict()),
+>                 model_cfg=model.config, norm_cfg=norm, stage=a.stage, inverse_mode=a.inverse_mode,
+>                 epoch=epoch, metrics=metrics, data_manifest_sha256=manifest_hash,
+>                 reference_state_dict=ref.state_dict() if ref is not None else None,
+>                 sensitivity_scale_N_per_A=scale, optimizer_state_dict=optimizer.state_dict(),
+>                 random_state=random.getstate(), torch_rng_state=torch.get_rng_state(),
+>                 train_order=[it['name'] for it in train],
+>                 runner_sha256=runner_sha256, rollback_state_dict=copy.deepcopy(rollback),
+>                 stage3_rejected=True), a.output/'latest.pth')
+316a458,468
+>         # Strict-resume checkpoint: saved AFTER the epoch's metrics/best update,
+>         # so latest.pth always represents a completed epoch, never a half epoch.
+>         torch.save(dict(architecture=model.architecture, state_dict=copy.deepcopy(model.state_dict()),
+>             model_cfg=model.config, norm_cfg=norm, stage=a.stage, inverse_mode=a.inverse_mode,
+>             epoch=epoch, metrics=metrics, data_manifest_sha256=manifest_hash,
+>             reference_state_dict=copy.deepcopy(model.state_dict()) if a.stage == 1 else ref.state_dict(),
+>             sensitivity_scale_N_per_A=scale, optimizer_state_dict=optimizer.state_dict(),
+>             random_state=random.getstate(), torch_rng_state=torch.get_rng_state(),
+>             train_order=[it['name'] for it in train],
+>             runner_sha256=runner_sha256, rollback_state_dict=copy.deepcopy(rollback),
+>             stage3_rejected=False), a.output/'latest.pth')

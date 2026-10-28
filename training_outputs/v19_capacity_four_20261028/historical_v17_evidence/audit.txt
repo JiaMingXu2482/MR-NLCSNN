@@ -1,0 +1,49 @@
+AUDIT=D:\OneDrive - mail.scut.edu.cn\周报\10.12\forward4_runs\raw_audit_20261021_190430
+FORWARD=D:\OneDrive - mail.scut.edu.cn\周报\10.12\v17_fwd_mf_impl.m
+CORE=D:\OneDrive - mail.scut.edu.cn\周报\10.12\v17_pmpc_package\v17_pmpc_package\v17_damper_step.m
+WEIGHTS=D:\OneDrive - mail.scut.edu.cn\周报\10.12\v17_pmpc_package\v17_pmpc_package\v17_weights.mat
+       x_ref: 279.1375
+     x_scale: 63.9665
+     v_scale: 1000
+     a_scale: 50000
+     i_scale: 1.6000
+    di_scale: 142.5170
+       t_ref: 40
+     t_scale: 40
+     f_scale: 5.7286e+03
+
+
+REPLAY original_damper: wrapper_vs_reference_max=2.13162820728e-14 N, logged_vs_wrapper_max=1.65201186064e-13 N
+dt range 0.000999999999998 0.001
+through 0.01s maxX=0.002 maxV=0.549 maxActualA_g=0.007 workJ= 0.000014 0.000000 0.000014 0.000000
+through 0.05s maxX=0.059 maxV=1.918 maxActualA_g=0.007 workJ= 0.001460 0.000075 0.001465 0.000107
+through 0.10s maxX=0.180 maxV=2.817 maxActualA_g=0.007 workJ= 0.006377 0.001092 0.006564 0.001541
+through 0.20s maxX=0.396 maxV=3.239 maxActualA_g=0.007 workJ= 0.013352 0.009547 0.015080 0.013765
+through 0.30s maxX=0.666 maxV=3.332 maxActualA_g=0.007 workJ= 0.015020 0.021512 0.015925 0.031518
+through 0.50s maxX=1.066 maxV=3.332 maxActualA_g=0.007 workJ= 0.020585 0.032504 0.019606 0.046120
+through 1.00s maxX=1.341 maxV=3.332 maxActualA_g=0.007 workJ= 0.020880 0.035911 0.019821 0.049221
+through 2.00s maxX=1.386 maxV=3.332 maxActualA_g=0.007 workJ= 0.020882 0.036013 0.019823 0.049320
+early dxdt_vs_v_RMS_mm_s= 0.005488 0.002561 0.005285 0.003162
+
+REPLAY replace_raw_x4: wrapper_vs_reference_max=9.09494701773e-13 N, logged_vs_wrapper_max=6.8212102633e-13 N
+dt range 0.000999999999998 0.001
+through 0.01s maxX=0.033 maxV=6.071 maxActualA_g=0.039 workJ= -0.000652 -0.001369 -0.000652 -0.001371
+through 0.05s maxX=0.111 maxV=8.261 maxActualA_g=0.045 workJ= 0.002314 -0.001562 0.002329 -0.001427
+through 0.10s maxX=0.239 maxV=20.836 maxActualA_g=0.077 workJ= 0.001781 -0.012838 0.002021 -0.012372
+through 0.20s maxX=2.592 maxV=143.942 maxActualA_g=0.285 workJ= -0.044828 -1.677986 -0.048750 -1.637463
+through 0.30s maxX=9.847 maxV=427.685 maxActualA_g=0.817 workJ= -0.442649 -10.244026 -0.466968 -10.172909
+through 0.50s maxX=32.492 maxV=711.319 maxActualA_g=2.581 workJ= -9.095859 -35.801105 -9.357670 -35.903337
+through 1.00s maxX=40.350 maxV=711.319 maxActualA_g=4.669 workJ= -15.022607 -43.719263 -15.013461 -43.836945
+through 2.00s maxX=44.175 maxV=711.319 maxActualA_g=5.098 workJ= -32.960393 -48.055415 -32.811381 -48.802793
+early dxdt_vs_v_RMS_mm_s= 12.355545 15.438393 12.385303 15.432898
+PERIODIC aMode=1 f=1Hz amp=5mm final1sWork=2.40463773 J passive=0.86009546 b=1.54454227 hRepeatDiff=2.22e-16
+PERIODIC aMode=1 f=5Hz amp=5mm final1sWork=15.98145196 J passive=26.29762214 b=-10.31617018 hRepeatDiff=8.327e-16
+PERIODIC aMode=1 f=8Hz amp=5mm final1sWork=-119.53929099 J passive=35.15188293 b=-154.69117392 hRepeatDiff=1.86e-15
+PERIODIC aMode=1 f=12Hz amp=5mm final1sWork=-291.91993258 J passive=41.71540065 b=-333.63533323 hRepeatDiff=7.754e-15
+PERIODIC aMode=1 f=20Hz amp=5mm final1sWork=6.06610196 J passive=106.55045976 b=-100.48435781 hRepeatDiff=4.496e-14
+PERIODIC aMode=2 f=1Hz amp=5mm final1sWork=2.39506294 J passive=0.85796621 b=1.53709673 hRepeatDiff=2.22e-16
+PERIODIC aMode=2 f=5Hz amp=5mm final1sWork=15.73433487 J passive=23.89605384 b=-8.16171897 hRepeatDiff=5.551e-16
+PERIODIC aMode=2 f=8Hz amp=5mm final1sWork=-31.69035407 J passive=33.35413111 b=-65.04448518 hRepeatDiff=1.013e-15
+PERIODIC aMode=2 f=12Hz amp=5mm final1sWork=-27.79633552 J passive=55.35672322 b=-83.15305874 hRepeatDiff=4.535e-13
+PERIODIC aMode=2 f=20Hz amp=5mm final1sWork=66.71273544 J passive=199.23357213 b=-132.52083668 hRepeatDiff=3.335e-07
+AUDIT_DONE=D:\OneDrive - mail.scut.edu.cn\周报\10.12\forward4_runs\raw_audit_20261021_190430

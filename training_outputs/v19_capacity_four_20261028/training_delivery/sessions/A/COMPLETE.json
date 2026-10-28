@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "category_nrmse_pct": {
+    "SH": 4.102522250104916,
+    "ST": 5.155463745450041,
+    "SR": 25.765953031358684,
+    "RLF": 21.172749901472223,
+    "RHF": 12.269546154778038
+  },
+  "pooled_nrmse_pct": 7.538328913947548,
+  "hf_nrmse_pct": 3.4720096120621484,
+  "random_macro_nrmse_pct": 19.736083029202984,
+  "primary_metric_scope": "15 verified initial-static-reference validation files",
+  "verified_primary_pooled_nrmse_pct": 7.0587611718514225,
+  "secondary_all16_pooled_nrmse_pct": 7.538328913947548,
+  "final_test_read": false,
+  "parameter_count": 21041
+}

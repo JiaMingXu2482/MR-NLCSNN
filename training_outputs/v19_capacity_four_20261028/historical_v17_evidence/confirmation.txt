@@ -1,0 +1,27 @@
+GOLDEN_FORWARD_MAX_ERROR_N=2.99682028526e-07 PASS=1
+GOLDEN_MACRO_MAX_ERROR_N=2.99346083921e-07 PASS=1
+T=30 A=0.1 f=2 final1sWork=0.00682251J hRepeat=2e-09 maxForce=18.09N
+T=30 A=0.1 f=8 final1sWork=-0.00354367J hRepeat=2.26e-09 maxForce=37.80N
+T=30 A=0.1 f=12 final1sWork=-0.04455838J hRepeat=2.6e-09 maxForce=34.22N
+T=30 A=0.5 f=2 final1sWork=0.14119912J hRepeat=2.3e-09 maxForce=68.15N
+T=30 A=0.5 f=8 final1sWork=-0.13581440J hRepeat=2.58e-09 maxForce=103.19N
+T=30 A=0.5 f=12 final1sWork=-0.98069747J hRepeat=3.62e-09 maxForce=98.17N
+T=30 A=1 f=2 final1sWork=0.43302990J hRepeat=2.29e-09 maxForce=92.10N
+T=30 A=1 f=8 final1sWork=-0.89639223J hRepeat=4.12e-10 maxForce=161.96N
+T=30 A=1 f=12 final1sWork=-4.07979166J hRepeat=3.08e-10 maxForce=143.88N
+T=30 A=5 f=2 final1sWork=9.30222262J hRepeat=2.05e-12 maxForce=347.20N
+T=30 A=5 f=8 final1sWork=-119.53929099J hRepeat=1.28e-15 maxForce=2025.86N
+T=30 A=5 f=12 final1sWork=-291.91993258J hRepeat=6.37e-15 maxForce=1721.34N
+T=40 A=0.1 f=2 final1sWork=0.00624827J hRepeat=3.8e-11 maxForce=22.05N
+T=40 A=0.1 f=8 final1sWork=-0.00502927J hRepeat=4.21e-11 maxForce=28.80N
+T=40 A=0.1 f=12 final1sWork=-0.04879237J hRepeat=4.95e-11 maxForce=28.55N
+T=40 A=0.5 f=2 final1sWork=0.14880703J hRepeat=4.41e-11 maxForce=65.56N
+T=40 A=0.5 f=8 final1sWork=-0.19342313J hRepeat=4.08e-11 maxForce=99.25N
+T=40 A=0.5 f=12 final1sWork=-1.11044377J hRepeat=5.89e-11 maxForce=88.44N
+T=40 A=1 f=2 final1sWork=0.45307155J hRepeat=4.34e-11 maxForce=87.64N
+T=40 A=1 f=8 final1sWork=-1.46516002J hRepeat=2.91e-12 maxForce=203.94N
+T=40 A=1 f=12 final1sWork=-5.34878079J hRepeat=1.87e-12 maxForce=193.59N
+T=40 A=5 f=2 final1sWork=9.28498191J hRepeat=1.06e-14 maxForce=342.38N
+T=40 A=5 f=8 final1sWork=-120.71305733J hRepeat=2.41e-15 maxForce=2021.69N
+T=40 A=5 f=12 final1sWork=-327.90542084J hRepeat=7.55e-15 maxForce=1850.42N
+RAW_REAR_L2_DOMINANT_0p15_TO_2S_HZ=13.5062

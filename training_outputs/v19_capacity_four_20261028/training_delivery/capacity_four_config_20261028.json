@@ -1,0 +1,27 @@
+{
+  "session_root": "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\sessions\\v19_capacity_four_balanced_300_20261028",
+  "data_path": "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\Parsed_v19_F42_I42_initial_static_20261028",
+  "data_manifest_sha256": "e3a8c984f6415beeabfab05b8178ec32b2172e2542570d41110dffeb1b1c1ced",
+  "data_review_approved": true,
+  "epochs": 300,
+  "train_files": 248,
+  "validation_files": 16,
+  "verified_validation_files": 15,
+  "secondary_unverified_validation": [
+    "RLF_RMS15mm_3Hz"
+  ],
+  "seed": 7,
+  "sampling": {
+    "SH": 0.25,
+    "ST": 0.15,
+    "SR": 0.2,
+    "RLF": 0.2,
+    "RHF": 0.2
+  },
+  "optimization": "AdamW lr3e-4 wd1e-4 clip1; warmup5epochs then cosine to3e-6 at300; identical for all four cold starts",
+  "loss": "unchanged file-p2p normalized MSE, negative-force1.5, ST3",
+  "validation_policy": "After all four arms train300epochs; verified15 primary, all16 and unverified1 secondary",
+  "history_di": "A arms recompute causal (I[t-1]-I[t-2])/dt, normalized by1600A/s; D omits a/dI",
+  "original_data_unchanged": true,
+  "final_test_access": false
+}

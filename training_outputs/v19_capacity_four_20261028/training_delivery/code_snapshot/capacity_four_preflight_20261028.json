@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "model_checks": 5,
+  "train_files": 248,
+  "normalization": {
+    "x_ref": 281.06649017333984,
+    "x_scale": 62.03949737548828,
+    "f_scale": 7662.43017578125,
+    "v_scale": 1000.0,
+    "a_scale": 50000.0,
+    "i_scale": 1.6,
+    "t_ref": 40.0,
+    "t_scale": 40.0
+  },
+  "models": [
+    {
+      "arm": "D",
+      "total_parameters": 18401,
+      "stage1_parameters": 15088,
+      "longest_train_file": "ST_50mm_Vel0.13_step5_0_1.6A_r3",
+      "sequence_samples": 50035,
+      "peak_allocated_bytes": 232036864
+    },
+    {
+      "arm": "A",
+      "total_parameters": 21041,
+      "stage1_parameters": 17200,
+      "longest_train_file": "ST_50mm_Vel0.13_step5_0_1.6A_r3",
+      "sequence_samples": 50035,
+      "peak_allocated_bytes": 246788096
+    },
+    {
+      "arm": "A_GRU",
+      "total_parameters": 32897,
+      "stage1_parameters": 28288,
+      "longest_train_file": "ST_50mm_Vel0.13_step5_0_1.6A_r3",
+      "sequence_samples": 50035,
+      "peak_allocated_bytes": 337308672
+    },
+    {
+      "arm": "A_MLP",
+      "total_parameters": 45377,
+      "stage1_parameters": 35392,
+      "longest_train_file": "ST_50mm_Vel0.13_step5_0_1.6A_r3",
+      "sequence_samples": 50035,
+      "peak_allocated_bytes": 290114048
+    }
+  ],
+  "schedule_counts": {
+    "SR": 14880,
+    "RHF": 14880,
+    "SH": 18600,
+    "ST": 11160,
+    "RLF": 14880
+  },
+  "total_updates_per_arm": 74400,
+  "source_hashes": {
+    "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\capacity_four_config_20261028.json": "3c6e7c03a6a8dea9d4dd35eedde75ba4612987618c072205df51876cb26de4e5",
+    "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\train_capacity_four.py": "42f8d5d19432999c87a8b41f02d631a257d9a40870c86f6cb49fe482a39051ec",
+    "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\model_v19_capacity.py": "04ce83d140c948b10c730465d357c760d24be0516ed16b56a9c81be27496c65b",
+    "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\model_v19_bd.py": "605f9ab8a7bfa2f43987c114d35b6dbb0d36f345e607a9d1559fdae75574632a",
+    "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\train_a_local.py": "f7750737acf2d19a87da302582a41ffc0da1a8fcffb19e09a8f83b63424002a0",
+    "D:\\OneDrive - mail.scut.edu.cn\\周报\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\train_bd_local.py": "4192166b092c87e22d02b5070f168a11dcc258223a873decb2e047b4f04af9f8",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\source\\AA02Train\\train_v19.py": "c9a6fdf303e3962a2a5de36ef50107583a6017e677caa1a9cbdaa53521097460",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\source\\mr_nlcsnn\\model_v19.py": "bccf832d298180089a78b58c68b9b3fb4b926094c9d28db8af24573a4290906c",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\v19_bd_runtime_20261027\\source\\mr_nlcsnn\\v19_protocol.py": "87165df0ea093620f93951fdf9fefea6ffd04d6b479465c9d3eec9a99109c927"
+  },
+  "data_manifest_sha256": "e3a8c984f6415beeabfab05b8178ec32b2172e2542570d41110dffeb1b1c1ced",
+  "validation_evaluated": false,
+  "final_test_read": false,
+  "cuda_total_memory_bytes": 8585216000,
+  "optimizer_steps": 0
+}

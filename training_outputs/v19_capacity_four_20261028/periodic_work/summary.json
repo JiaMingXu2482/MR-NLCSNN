@@ -1,0 +1,26 @@
+{
+  "D": {
+    "cases": 426,
+    "negative_cases": 0,
+    "minimum_individual_cycle_J": 0.0013525040976019567,
+    "max_cycle_work_relative_spread": 0.004144205144056687
+  },
+  "A": {
+    "cases": 426,
+    "negative_cases": 0,
+    "minimum_individual_cycle_J": 0.0018617854663541542,
+    "max_cycle_work_relative_spread": 0.0016336454252462982
+  },
+  "A_GRU": {
+    "cases": 426,
+    "negative_cases": 0,
+    "minimum_individual_cycle_J": 0.0022919301221133023,
+    "max_cycle_work_relative_spread": 0.0012126716943858572
+  },
+  "A_MLP": {
+    "cases": 426,
+    "negative_cases": 0,
+    "minimum_individual_cycle_J": 0.0016780086444433632,
+    "max_cycle_work_relative_spread": 0.0014344889955870384
+  }
+}
