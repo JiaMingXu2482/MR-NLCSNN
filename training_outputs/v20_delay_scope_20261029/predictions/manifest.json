@@ -1,0 +1,572 @@
+{
+  "checkpoints": {
+    "A": {
+      "path": "D:\\v20_data\\v20_runs_20261029\\A\\best.pth",
+      "sha256": "670c90f3423b48e91a92275c344703f5feebff966a80d6ce13c326d727f13639",
+      "epoch": 126,
+      "norm_cfg": {
+        "x_ref": 279.1340026855469,
+        "x_scale": 63.970001220703125,
+        "f_scale": 7664.259765625,
+        "v_scale": 1000.0,
+        "a_scale": 50000.0,
+        "i_scale": 1.6,
+        "t_ref": 40.0,
+        "t_scale": 40.0
+      },
+      "arch": "raw_gru"
+    },
+    "E": {
+      "path": "D:\\v20_data\\v20_runs_20261029\\E\\best.pth",
+      "sha256": "19f0ca63b00fabd010d7e3cd868cf0292723314f16c21a4acbd50a4d72fdfc29",
+      "epoch": 127,
+      "norm_cfg": {
+        "x_ref": 279.1340026855469,
+        "x_scale": 63.970001220703125,
+        "f_scale": 7664.259765625,
+        "v_scale": 1000.0,
+        "a_scale": 50000.0,
+        "i_scale": 1.6,
+        "t_ref": 40.0,
+        "t_scale": 40.0
+      },
+      "arch": "nfl_small_gru"
+    }
+  },
+  "files": [
+    {
+      "file": "ST_10mm_Vel0.05",
+      "split": "train",
+      "curve": "A",
+      "n": 4076,
+      "path": "ST_10mm_Vel0.05__A.f32",
+      "sha256": "7792b9e90718ca12c55dd2a32f26b8aa3efc48f372b3f72160e7857cb62b2899"
+    },
+    {
+      "file": "ST_10mm_Vel0.13",
+      "split": "train",
+      "curve": "A",
+      "n": 1568,
+      "path": "ST_10mm_Vel0.13__A.f32",
+      "sha256": "a78ffc4347a8d644d674aa7bad92b88604fd3b362d18aa9a565552979b2aba7e"
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "split": "validation",
+      "curve": "A",
+      "n": 10780,
+      "path": "ST_10mm_Vel0.13_step5_0_1.6A_r1__A.f32",
+      "sha256": "7201eb2f3a506fb236a5d5b2d8f9d263f64e4e68883797ff0839ac8a2221f202"
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "split": "validation",
+      "curve": "A",
+      "n": 10785,
+      "path": "ST_10mm_Vel0.13_step5_0_1.6A_r2__A.f32",
+      "sha256": "b586bf63f1bad140dc68c5950fbc88ff3d17e954e6f4ad0e680554014018ef02"
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "split": "validation",
+      "curve": "A",
+      "n": 10779,
+      "path": "ST_10mm_Vel0.13_step5_0_1.6A_r3__A.f32",
+      "sha256": "ed16894f673058dddfd83218ac162dcaca62a047612d0d7ef989037ac797ce9f"
+    },
+    {
+      "file": "ST_10mm_Vel0.26",
+      "split": "train",
+      "curve": "A",
+      "n": 2350,
+      "path": "ST_10mm_Vel0.26__A.f32",
+      "sha256": "e0f31e86bd76e9a39c684eea12613be76e742edd441692df8b2f7d27c068783d"
+    },
+    {
+      "file": "ST_20mm_Vel0.13_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "A",
+      "n": 20584,
+      "path": "ST_20mm_Vel0.13_step5_0_1.6A_r1__A.f32",
+      "sha256": "6ebc050c74367a919df61323924bca3000628da6fcdf1a36427484cd9f2be9ea"
+    },
+    {
+      "file": "ST_20mm_Vel0.13_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "A",
+      "n": 20584,
+      "path": "ST_20mm_Vel0.13_step5_0_1.6A_r2__A.f32",
+      "sha256": "6932341fe0353db6441cccd6fbfd0d7f80ec248898e535673cbe4b97c9549bba"
+    },
+    {
+      "file": "ST_20mm_Vel0.13_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "A",
+      "n": 20585,
+      "path": "ST_20mm_Vel0.13_step5_0_1.6A_r3__A.f32",
+      "sha256": "93920931b15fef3b63848fe88eca812e1dc75071e653626b6ff9a342edcf86d1"
+    },
+    {
+      "file": "ST_20mm_Vel0.26_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "A",
+      "n": 10780,
+      "path": "ST_20mm_Vel0.26_step5_0_1.6A_r1__A.f32",
+      "sha256": "197ad0392a5d93d2da2d4dd68388e7917ebf978bfbac3289b52e74c99de1d65d"
+    },
+    {
+      "file": "ST_20mm_Vel0.26_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "A",
+      "n": 10779,
+      "path": "ST_20mm_Vel0.26_step5_0_1.6A_r2__A.f32",
+      "sha256": "870f5d80a6ebb8ff931e97001824027ca4fd876b1a389ffe7115a0a2dd156f4d"
+    },
+    {
+      "file": "ST_20mm_Vel0.26_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "A",
+      "n": 10788,
+      "path": "ST_20mm_Vel0.26_step5_0_1.6A_r3__A.f32",
+      "sha256": "19e212715134153858c6b123f5406cb6d16b704055d2f72d2a376f331be4c503"
+    },
+    {
+      "file": "ST_20mm_Vel0.52_step5_0_1.6A",
+      "split": "train",
+      "curve": "A",
+      "n": 9978,
+      "path": "ST_20mm_Vel0.52_step5_0_1.6A__A.f32",
+      "sha256": "ac4e0d3d40da9bb86086b6d4e646ad8700a825bf42b27306ccb050b4b625b07f"
+    },
+    {
+      "file": "ST_30mm_Vel0.05",
+      "split": "train",
+      "curve": "A",
+      "n": 12246,
+      "path": "ST_30mm_Vel0.05__A.f32",
+      "sha256": "42a84e5e73b84d2452d569911401b4f242991175fa53b55a57504a76346a31b5"
+    },
+    {
+      "file": "ST_30mm_Vel0.13",
+      "split": "train",
+      "curve": "A",
+      "n": 4707,
+      "path": "ST_30mm_Vel0.13__A.f32",
+      "sha256": "ff9ad0491a4fbd06e64911c33177494d8f6d6ef7e6eee413f8797eb909fccbf7"
+    },
+    {
+      "file": "ST_30mm_Vel0.13_step5_0_1.6A",
+      "split": "train",
+      "curve": "A",
+      "n": 23023,
+      "path": "ST_30mm_Vel0.13_step5_0_1.6A__A.f32",
+      "sha256": "c67cd68ebc246459f2f80319e9218ea575dbe616f14fc6a09fc1c73a076444fa"
+    },
+    {
+      "file": "ST_30mm_Vel0.26",
+      "split": "train",
+      "curve": "A",
+      "n": 2372,
+      "path": "ST_30mm_Vel0.26__A.f32",
+      "sha256": "19b1655a10075243d95812079bb1996e3ba8470e3b1463b08425e58be92716fa"
+    },
+    {
+      "file": "ST_30mm_Vel0.26_step5_0_1.6A",
+      "split": "train",
+      "curve": "A",
+      "n": 17593,
+      "path": "ST_30mm_Vel0.26_step5_0_1.6A__A.f32",
+      "sha256": "78c83f8154e9c49ad66b62d43dddf2e65be514f1fe5baa320b689d41518d1b97"
+    },
+    {
+      "file": "ST_30mm_Vel0.52_step5_0_1.6A",
+      "split": "train",
+      "curve": "A",
+      "n": 9319,
+      "path": "ST_30mm_Vel0.52_step5_0_1.6A__A.f32",
+      "sha256": "d7a5805fcdff8dfad64c8586d2e91d6e945e5ad17b64412271f8ac0a10bde369"
+    },
+    {
+      "file": "ST_50mm_Vel0.13",
+      "split": "train",
+      "curve": "A",
+      "n": 7849,
+      "path": "ST_50mm_Vel0.13__A.f32",
+      "sha256": "74c7d1858ef988fb742bdabddee01da14c8d897cb5e26d225a7f9957caeb1ee1"
+    },
+    {
+      "file": "ST_50mm_Vel0.13_step5_0_1.4A",
+      "split": "train",
+      "curve": "A",
+      "n": 25698,
+      "path": "ST_50mm_Vel0.13_step5_0_1.4A__A.f32",
+      "sha256": "e72c2e845f3fbf25562e13e067ea95964c929df1a41a1b837a33a538ba678d0e"
+    },
+    {
+      "file": "ST_50mm_Vel0.13_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "A",
+      "n": 50032,
+      "path": "ST_50mm_Vel0.13_step5_0_1.6A_r1__A.f32",
+      "sha256": "ac44d423fbdb025f2fed485e4deb5a07f48871d51db2c21b0ced33aaa7faa6e2"
+    },
+    {
+      "file": "ST_50mm_Vel0.13_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "A",
+      "n": 50033,
+      "path": "ST_50mm_Vel0.13_step5_0_1.6A_r2__A.f32",
+      "sha256": "b0e05a81fcccfdafeab3da6b37820611383785a570998a0d59493aec6101d8fd"
+    },
+    {
+      "file": "ST_50mm_Vel0.13_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "A",
+      "n": 50035,
+      "path": "ST_50mm_Vel0.13_step5_0_1.6A_r3__A.f32",
+      "sha256": "593519bc3d090055fea84bf351a6c955bc994ff96e8add6ea533a349ba3c6f80"
+    },
+    {
+      "file": "ST_50mm_Vel0.26",
+      "split": "train",
+      "curve": "A",
+      "n": 3940,
+      "path": "ST_50mm_Vel0.26__A.f32",
+      "sha256": "aff3f7f855bca50f693babd406159015f62eb17b019fc86c052cc32d6568443b"
+    },
+    {
+      "file": "ST_50mm_Vel0.26_step5_0_1.4A",
+      "split": "train",
+      "curve": "A",
+      "n": 13332,
+      "path": "ST_50mm_Vel0.26_step5_0_1.4A__A.f32",
+      "sha256": "04ede24189c6ea136772856fb658e21f071cd5696f1f5d0e854d9032aa147166"
+    },
+    {
+      "file": "ST_50mm_Vel0.26_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "A",
+      "n": 25501,
+      "path": "ST_50mm_Vel0.26_step5_0_1.6A_r1__A.f32",
+      "sha256": "f9c3447250c5a00329d6879981556748549e401ad8897fdf7f456e5dba3c47c6"
+    },
+    {
+      "file": "ST_50mm_Vel0.26_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "A",
+      "n": 25496,
+      "path": "ST_50mm_Vel0.26_step5_0_1.6A_r2__A.f32",
+      "sha256": "9ca5fbda4cc754fdbe653a32d1323b3277fc45b3390bef7a68d3c63a352b6ed5"
+    },
+    {
+      "file": "ST_50mm_Vel0.26_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "A",
+      "n": 25500,
+      "path": "ST_50mm_Vel0.26_step5_0_1.6A_r3__A.f32",
+      "sha256": "48b246dc0e50ac90fb9a8b8b66673811bc0f772001712d97f54ec264877b4727"
+    },
+    {
+      "file": "ST_5mm_Vel0.13",
+      "split": "train",
+      "curve": "A",
+      "n": 782,
+      "path": "ST_5mm_Vel0.13__A.f32",
+      "sha256": "6db2a0dd2452401cb0592b8097c1683915315cd95e49d32a2df9ff8d301bc71d"
+    },
+    {
+      "file": "ST_5mm_Vel0.13_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "A",
+      "n": 5870,
+      "path": "ST_5mm_Vel0.13_step5_0_1.6A_r1__A.f32",
+      "sha256": "ca25b49783c2fa2363a2f7a4a242312361d3b3215342adba9d72230be1c59607"
+    },
+    {
+      "file": "ST_5mm_Vel0.13_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "A",
+      "n": 5869,
+      "path": "ST_5mm_Vel0.13_step5_0_1.6A_r2__A.f32",
+      "sha256": "83ab0e5f215b6da20ea5908c2a7e184251a69c5d1a6f7de3eb0fbc1f5580d29e"
+    },
+    {
+      "file": "ST_5mm_Vel0.13_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "A",
+      "n": 5869,
+      "path": "ST_5mm_Vel0.13_step5_0_1.6A_r3__A.f32",
+      "sha256": "eebc874d476808e8a95763b90e4934d774efa433192cc7763a4d7de49678b298"
+    },
+    {
+      "file": "ST_10mm_Vel0.05",
+      "split": "train",
+      "curve": "E",
+      "n": 4076,
+      "path": "ST_10mm_Vel0.05__E.f32",
+      "sha256": "912cd206bb2ba22351fb80a773f75bc630a3162ecca1de7a6d1f666681a5e752"
+    },
+    {
+      "file": "ST_10mm_Vel0.13",
+      "split": "train",
+      "curve": "E",
+      "n": 1568,
+      "path": "ST_10mm_Vel0.13__E.f32",
+      "sha256": "6cb57e8a4ff024aa1581241d9e58d0739f458a7f0ff46cee29152d9bffb35f26"
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "split": "validation",
+      "curve": "E",
+      "n": 10780,
+      "path": "ST_10mm_Vel0.13_step5_0_1.6A_r1__E.f32",
+      "sha256": "f20e965047dfce68b5ea8e0167e7056f0762f214db44841014a51a529454d44f"
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "split": "validation",
+      "curve": "E",
+      "n": 10785,
+      "path": "ST_10mm_Vel0.13_step5_0_1.6A_r2__E.f32",
+      "sha256": "de3cb316dbab6bbbd1d803066dc8cfde2efbd3e5a85e8b5694b236ccd1412da6"
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "split": "validation",
+      "curve": "E",
+      "n": 10779,
+      "path": "ST_10mm_Vel0.13_step5_0_1.6A_r3__E.f32",
+      "sha256": "67b1d48a797603f1c0f624fe211082bc41fee9c10fd0e0f17ec7470d1ea9aca9"
+    },
+    {
+      "file": "ST_10mm_Vel0.26",
+      "split": "train",
+      "curve": "E",
+      "n": 2350,
+      "path": "ST_10mm_Vel0.26__E.f32",
+      "sha256": "b4ec426f3d06e43e5990985fa029388be7675bbbec4cb93a7d183c22b1fc05ba"
+    },
+    {
+      "file": "ST_20mm_Vel0.13_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "E",
+      "n": 20584,
+      "path": "ST_20mm_Vel0.13_step5_0_1.6A_r1__E.f32",
+      "sha256": "feb5cadea06fce48e6afe34ccf16912fe70389c22160404ca0093a381c2f5041"
+    },
+    {
+      "file": "ST_20mm_Vel0.13_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "E",
+      "n": 20584,
+      "path": "ST_20mm_Vel0.13_step5_0_1.6A_r2__E.f32",
+      "sha256": "9a4b308b0da2954a09803279b352adebeb83f4697cb6722598bf44055df7da0e"
+    },
+    {
+      "file": "ST_20mm_Vel0.13_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "E",
+      "n": 20585,
+      "path": "ST_20mm_Vel0.13_step5_0_1.6A_r3__E.f32",
+      "sha256": "815a70c8f474c1fdac3ef11c9e1ca9ef7e31ad0c182f6f71e269144a0ce0bfdf"
+    },
+    {
+      "file": "ST_20mm_Vel0.26_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "E",
+      "n": 10780,
+      "path": "ST_20mm_Vel0.26_step5_0_1.6A_r1__E.f32",
+      "sha256": "446a2f44a42f2e085565b1c49d5dfb6789f305074da6767b165755ab4510b2fe"
+    },
+    {
+      "file": "ST_20mm_Vel0.26_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "E",
+      "n": 10779,
+      "path": "ST_20mm_Vel0.26_step5_0_1.6A_r2__E.f32",
+      "sha256": "ad88c10be75949dfcf78874fe962fb42e6e40e22564f2bd9ea5ccba619a4522d"
+    },
+    {
+      "file": "ST_20mm_Vel0.26_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "E",
+      "n": 10788,
+      "path": "ST_20mm_Vel0.26_step5_0_1.6A_r3__E.f32",
+      "sha256": "54d8011eb0cb836a9de7f79db57cd8e221d0e2d691eb3aa6888f284ca0471f4e"
+    },
+    {
+      "file": "ST_20mm_Vel0.52_step5_0_1.6A",
+      "split": "train",
+      "curve": "E",
+      "n": 9978,
+      "path": "ST_20mm_Vel0.52_step5_0_1.6A__E.f32",
+      "sha256": "c95eb4e4e5f26ec6bcd2fcc5d94370f8dc51262191c469e020d817d67e96907e"
+    },
+    {
+      "file": "ST_30mm_Vel0.05",
+      "split": "train",
+      "curve": "E",
+      "n": 12246,
+      "path": "ST_30mm_Vel0.05__E.f32",
+      "sha256": "b4ea7698400909389d177c37382a777f12d6efae7102bc4239d71d586ff58845"
+    },
+    {
+      "file": "ST_30mm_Vel0.13",
+      "split": "train",
+      "curve": "E",
+      "n": 4707,
+      "path": "ST_30mm_Vel0.13__E.f32",
+      "sha256": "2af4f0ccf7fd03ab4c01052788b80071dec5ce5bd727e0448a2415224e5e5d28"
+    },
+    {
+      "file": "ST_30mm_Vel0.13_step5_0_1.6A",
+      "split": "train",
+      "curve": "E",
+      "n": 23023,
+      "path": "ST_30mm_Vel0.13_step5_0_1.6A__E.f32",
+      "sha256": "98064919afbe64cc03956a4d4e9ecdf7a484e87d39755bedefe8d23f3a0a15b1"
+    },
+    {
+      "file": "ST_30mm_Vel0.26",
+      "split": "train",
+      "curve": "E",
+      "n": 2372,
+      "path": "ST_30mm_Vel0.26__E.f32",
+      "sha256": "88cb2b07cd2a96ed3d7358ab16d3e3380ca5c8e118795956551dfa17ab4840b8"
+    },
+    {
+      "file": "ST_30mm_Vel0.26_step5_0_1.6A",
+      "split": "train",
+      "curve": "E",
+      "n": 17593,
+      "path": "ST_30mm_Vel0.26_step5_0_1.6A__E.f32",
+      "sha256": "4820fb567fc768f7c066598c28c7eb5690e89af442726bffad38e2e847042ff5"
+    },
+    {
+      "file": "ST_30mm_Vel0.52_step5_0_1.6A",
+      "split": "train",
+      "curve": "E",
+      "n": 9319,
+      "path": "ST_30mm_Vel0.52_step5_0_1.6A__E.f32",
+      "sha256": "07a22a59dc87fea3988bec4daee05ec4d1cdbe4f2ee1cd06c3a5350702f6a33a"
+    },
+    {
+      "file": "ST_50mm_Vel0.13",
+      "split": "train",
+      "curve": "E",
+      "n": 7849,
+      "path": "ST_50mm_Vel0.13__E.f32",
+      "sha256": "870029ab512eabed6bcadbb4043e4aac560a92ee610c01c4f3859abe2b40cf42"
+    },
+    {
+      "file": "ST_50mm_Vel0.13_step5_0_1.4A",
+      "split": "train",
+      "curve": "E",
+      "n": 25698,
+      "path": "ST_50mm_Vel0.13_step5_0_1.4A__E.f32",
+      "sha256": "924d5151a67ba8aa372fe5f3e46192ac49ee5e2e008e211bc69482cd2e377966"
+    },
+    {
+      "file": "ST_50mm_Vel0.13_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "E",
+      "n": 50032,
+      "path": "ST_50mm_Vel0.13_step5_0_1.6A_r1__E.f32",
+      "sha256": "dc48a5a9941634ecc02184d0e5d609c5da2909afcdd138ba6cfd9302d0488a67"
+    },
+    {
+      "file": "ST_50mm_Vel0.13_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "E",
+      "n": 50033,
+      "path": "ST_50mm_Vel0.13_step5_0_1.6A_r2__E.f32",
+      "sha256": "ceb8abafe346def67192d7f593ad8b1b9281f5d023a34156a530cd60d34be2d1"
+    },
+    {
+      "file": "ST_50mm_Vel0.13_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "E",
+      "n": 50035,
+      "path": "ST_50mm_Vel0.13_step5_0_1.6A_r3__E.f32",
+      "sha256": "a62e82488db92464e9a6d32be3e45cc77f773a311459e14a40c3086a49489610"
+    },
+    {
+      "file": "ST_50mm_Vel0.26",
+      "split": "train",
+      "curve": "E",
+      "n": 3940,
+      "path": "ST_50mm_Vel0.26__E.f32",
+      "sha256": "17b11827a58e6d3420085b5235aa01ef98f8e0ce32651db7c358dd51fba92ddd"
+    },
+    {
+      "file": "ST_50mm_Vel0.26_step5_0_1.4A",
+      "split": "train",
+      "curve": "E",
+      "n": 13332,
+      "path": "ST_50mm_Vel0.26_step5_0_1.4A__E.f32",
+      "sha256": "a0462d2a5c9e755c250108144a8fe9a2f0e4c44ae1565cd73fcf2ca6a907f7f4"
+    },
+    {
+      "file": "ST_50mm_Vel0.26_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "E",
+      "n": 25501,
+      "path": "ST_50mm_Vel0.26_step5_0_1.6A_r1__E.f32",
+      "sha256": "903b718018a5db86e66a58e855b2cc3b6575c2b4ab5c2815e802f31280bfe390"
+    },
+    {
+      "file": "ST_50mm_Vel0.26_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "E",
+      "n": 25496,
+      "path": "ST_50mm_Vel0.26_step5_0_1.6A_r2__E.f32",
+      "sha256": "109639dd9c7428ecde062ade98236dc2e258eb3611ccfa804ce6407e175c2ab0"
+    },
+    {
+      "file": "ST_50mm_Vel0.26_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "E",
+      "n": 25500,
+      "path": "ST_50mm_Vel0.26_step5_0_1.6A_r3__E.f32",
+      "sha256": "b99a9da79d943b22ea56d03a45de45280b4fe45613c3dbca4f0c76fb30e456f5"
+    },
+    {
+      "file": "ST_5mm_Vel0.13",
+      "split": "train",
+      "curve": "E",
+      "n": 782,
+      "path": "ST_5mm_Vel0.13__E.f32",
+      "sha256": "42fab7d51732518f4f4afbeee07ebe0583248dff521fb1a3ae8c2dcf85c169ff"
+    },
+    {
+      "file": "ST_5mm_Vel0.13_step5_0_1.6A_r1",
+      "split": "train",
+      "curve": "E",
+      "n": 5870,
+      "path": "ST_5mm_Vel0.13_step5_0_1.6A_r1__E.f32",
+      "sha256": "30de1db31022c45e8cab321a16fb90f106dfe78f0c4f4eb19d6ee5e8e7685e99"
+    },
+    {
+      "file": "ST_5mm_Vel0.13_step5_0_1.6A_r2",
+      "split": "train",
+      "curve": "E",
+      "n": 5869,
+      "path": "ST_5mm_Vel0.13_step5_0_1.6A_r2__E.f32",
+      "sha256": "77e6f646d7196bcc886d7f2f75f46d496c2e2f79d46e4642c44af2d87cdc4f27"
+    },
+    {
+      "file": "ST_5mm_Vel0.13_step5_0_1.6A_r3",
+      "split": "train",
+      "curve": "E",
+      "n": 5869,
+      "path": "ST_5mm_Vel0.13_step5_0_1.6A_r3__E.f32",
+      "sha256": "de60bda312a5156e0b29c5e84ba5bcd2d0a5a04be47e94e374b47977ab6a8ae5"
+    }
+  ],
+  "dtype": "native float32 little-endian on Windows",
+  "source": {
+    "v20_models.py": "f5cae063270a401516a4acdb7f171fd897b7f401391d449ae819d1aebb678143",
+    "v20_data.py": "65c9740ea39606627aae433c5968939339f5bf8cf44f2feabac75e52b45cc8ea"
+  },
+  "final_test_read": false
+}

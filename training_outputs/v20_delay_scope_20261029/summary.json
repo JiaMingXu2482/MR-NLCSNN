@@ -1,0 +1,383 @@
+{
+  "summary": {
+    "up": {
+      "measured": {
+        "n_events": 55,
+        "n_crossed": 55,
+        "clean_n": 55,
+        "median_ms": 22.813093964858602,
+        "mean_ms": 24.931039604044667,
+        "p10_ms": 18.56410209529763,
+        "p90_ms": 31.532178664638725,
+        "negative_n": 0,
+        "flags": {}
+      },
+      "paired_n": 55,
+      "paired_medians_ms": {
+        "measured": 22.813093964858602,
+        "A": 19.95062191486212,
+        "E": 13.981143003208041
+      },
+      "all_three_flat_n": 44,
+      "all_three_flat_medians_ms": {
+        "measured": 22.83067070777522,
+        "A": 19.97273891303205,
+        "E": 14.12426772897701
+      },
+      "paired_model_minus_measurement_ms": {
+        "A": -2.513268755523036,
+        "E": -7.875749354734587
+      }
+    },
+    "down": {
+      "measured": {
+        "n_events": 67,
+        "n_crossed": 67,
+        "clean_n": 67,
+        "median_ms": 26.024860210243812,
+        "mean_ms": 26.390369853157274,
+        "p10_ms": 19.981091487991925,
+        "p90_ms": 33.32669503187041,
+        "negative_n": 0,
+        "flags": {}
+      },
+      "paired_n": 66,
+      "paired_medians_ms": {
+        "measured": 25.951524962965273,
+        "A": 23.63451860536272,
+        "E": 21.51505373807051
+      },
+      "all_three_flat_n": 56,
+      "all_three_flat_medians_ms": {
+        "measured": 26.614151347658513,
+        "A": 24.337950727399424,
+        "E": 22.37968168176642
+      },
+      "paired_model_minus_measurement_ms": {
+        "A": -4.366391526144076,
+        "E": -5.230995614779538
+      }
+    }
+  },
+  "conditions": [
+    {
+      "condition": "ST_10mm_Vel0.05",
+      "direction": "down",
+      "n_measured": 1,
+      "measured_median_ms": 18.486519607841057,
+      "n_paired": 1,
+      "paired_measured_ms": 18.486519607841057,
+      "A_ms": 1.5873150626815076,
+      "E_ms": 17.66709081331679,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_10mm_Vel0.05",
+      "direction": "up",
+      "n_measured": 1,
+      "measured_median_ms": 27.53353418177418,
+      "n_paired": 1,
+      "paired_measured_ms": 27.53353418177418,
+      "A_ms": 22.082922155121036,
+      "E_ms": 14.135087395171276,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_10mm_Vel0.13",
+      "direction": "down",
+      "n_measured": 1,
+      "measured_median_ms": 22.400806840077188,
+      "n_paired": 1,
+      "paired_measured_ms": 22.400806840077188,
+      "A_ms": 10.989417115847354,
+      "E_ms": 14.690687159697303,
+      "A_flagged": 1,
+      "E_flagged": 1
+    },
+    {
+      "condition": "ST_10mm_Vel0.26",
+      "direction": "down",
+      "n_measured": 1,
+      "measured_median_ms": 27.512133507853402,
+      "n_paired": 1,
+      "paired_measured_ms": 27.512133507853402,
+      "A_ms": 20.56938752412795,
+      "E_ms": 18.19915541887282,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_10mm_Vel0.26",
+      "direction": "up",
+      "n_measured": 1,
+      "measured_median_ms": 38.04135019541335,
+      "n_paired": 1,
+      "paired_measured_ms": 38.04135019541335,
+      "A_ms": 41.18027815201757,
+      "E_ms": 16.098875399469094,
+      "A_flagged": 0,
+      "E_flagged": 1
+    },
+    {
+      "condition": "ST_20mm_Vel0.13_step5_0_1.6A",
+      "direction": "down",
+      "n_measured": 13,
+      "measured_median_ms": 24.594034267909613,
+      "n_paired": 12,
+      "paired_measured_ms": 22.849874127033885,
+      "A_ms": 27.79705862245749,
+      "E_ms": 18.168409813299878,
+      "A_flagged": 1,
+      "E_flagged": 2
+    },
+    {
+      "condition": "ST_20mm_Vel0.13_step5_0_1.6A",
+      "direction": "up",
+      "n_measured": 13,
+      "measured_median_ms": 22.561582095705734,
+      "n_paired": 13,
+      "paired_measured_ms": 22.561582095705734,
+      "A_ms": 19.77056331104323,
+      "E_ms": 13.788818108480273,
+      "A_flagged": 3,
+      "E_flagged": 5
+    },
+    {
+      "condition": "ST_30mm_Vel0.05",
+      "direction": "down",
+      "n_measured": 1,
+      "measured_median_ms": 21.800282734352876,
+      "n_paired": 1,
+      "paired_measured_ms": 21.800282734352876,
+      "A_ms": 22.67947784610192,
+      "E_ms": 15.83582339234825,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_30mm_Vel0.13",
+      "direction": "down",
+      "n_measured": 1,
+      "measured_median_ms": 21.40119122490525,
+      "n_paired": 1,
+      "paired_measured_ms": 21.40119122490525,
+      "A_ms": 8.403330638615905,
+      "E_ms": 12.828603565304103,
+      "A_flagged": 1,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_30mm_Vel0.13",
+      "direction": "up",
+      "n_measured": 1,
+      "measured_median_ms": 23.26669537184241,
+      "n_paired": 1,
+      "paired_measured_ms": 23.26669537184241,
+      "A_ms": 19.99485591120198,
+      "E_ms": 12.582959742016339,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_30mm_Vel0.13_step5_0_1.6A",
+      "direction": "down",
+      "n_measured": 4,
+      "measured_median_ms": 25.505526395631044,
+      "n_paired": 4,
+      "paired_measured_ms": 25.505526395631044,
+      "A_ms": 23.924328373159845,
+      "E_ms": 16.26801059584342,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_30mm_Vel0.13_step5_0_1.6A",
+      "direction": "up",
+      "n_measured": 2,
+      "measured_median_ms": 34.14787043041932,
+      "n_paired": 2,
+      "paired_measured_ms": 34.14787043041932,
+      "A_ms": 28.136429662290563,
+      "E_ms": 18.521725768629057,
+      "A_flagged": 1,
+      "E_flagged": 1
+    },
+    {
+      "condition": "ST_30mm_Vel0.26",
+      "direction": "down",
+      "n_measured": 1,
+      "measured_median_ms": 30.844206207073086,
+      "n_paired": 1,
+      "paired_measured_ms": 30.844206207073086,
+      "A_ms": 25.440873205175215,
+      "E_ms": 23.278625368585402,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_30mm_Vel0.26",
+      "direction": "up",
+      "n_measured": 1,
+      "measured_median_ms": 29.08684784175685,
+      "n_paired": 1,
+      "paired_measured_ms": 29.08684784175685,
+      "A_ms": 40.26228617446069,
+      "E_ms": 22.470302987262038,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_30mm_Vel0.26_step5_0_1.6A",
+      "direction": "down",
+      "n_measured": 4,
+      "measured_median_ms": 29.353386799436926,
+      "n_paired": 4,
+      "paired_measured_ms": 29.353386799436926,
+      "A_ms": 27.63304373653196,
+      "E_ms": 20.55924814535502,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_30mm_Vel0.26_step5_0_1.6A",
+      "direction": "up",
+      "n_measured": 2,
+      "measured_median_ms": 28.990974831420534,
+      "n_paired": 2,
+      "paired_measured_ms": 28.990974831420534,
+      "A_ms": 41.0097410126655,
+      "E_ms": 22.788744647716378,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_50mm_Vel0.13",
+      "direction": "down",
+      "n_measured": 1,
+      "measured_median_ms": 28.74465621375114,
+      "n_paired": 1,
+      "paired_measured_ms": 28.74465621375114,
+      "A_ms": 26.15191536312525,
+      "E_ms": 24.63974117403452,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_50mm_Vel0.13",
+      "direction": "up",
+      "n_measured": 1,
+      "measured_median_ms": 33.9505686110779,
+      "n_paired": 1,
+      "paired_measured_ms": 33.9505686110779,
+      "A_ms": 27.26259369871698,
+      "E_ms": 18.89495555780015,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_50mm_Vel0.13_step5_0_1.4A",
+      "direction": "down",
+      "n_measured": 3,
+      "measured_median_ms": 24.184258864434035,
+      "n_paired": 3,
+      "paired_measured_ms": 24.184258864434035,
+      "A_ms": 25.058522474765617,
+      "E_ms": 21.348372709750965,
+      "A_flagged": 0,
+      "E_flagged": 1
+    },
+    {
+      "condition": "ST_50mm_Vel0.13_step5_0_1.4A",
+      "direction": "up",
+      "n_measured": 1,
+      "measured_median_ms": 36.65039516597793,
+      "n_paired": 1,
+      "paired_measured_ms": 36.65039516597793,
+      "A_ms": 28.16432238605969,
+      "E_ms": 19.235066542897147,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_50mm_Vel0.13_step5_0_1.6A",
+      "direction": "down",
+      "n_measured": 18,
+      "measured_median_ms": 24.424366573721308,
+      "n_paired": 18,
+      "paired_measured_ms": 24.424366573721308,
+      "A_ms": 24.222730297176955,
+      "E_ms": 23.31216996885376,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_50mm_Vel0.13_step5_0_1.6A",
+      "direction": "up",
+      "n_measured": 18,
+      "measured_median_ms": 22.22374108916784,
+      "n_paired": 18,
+      "paired_measured_ms": 22.22374108916784,
+      "A_ms": 19.461158238225508,
+      "E_ms": 13.2245447158788,
+      "A_flagged": 0,
+      "E_flagged": 1
+    },
+    {
+      "condition": "ST_50mm_Vel0.26",
+      "direction": "down",
+      "n_measured": 1,
+      "measured_median_ms": 26.59559700305081,
+      "n_paired": 1,
+      "paired_measured_ms": 26.59559700305081,
+      "A_ms": 18.662187041262204,
+      "E_ms": 22.48488136149367,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_50mm_Vel0.26",
+      "direction": "up",
+      "n_measured": 1,
+      "measured_median_ms": 23.36387850467165,
+      "n_paired": 1,
+      "paired_measured_ms": 23.36387850467165,
+      "A_ms": 17.575860977171892,
+      "E_ms": 13.210168421267742,
+      "A_flagged": 0,
+      "E_flagged": 0
+    },
+    {
+      "condition": "ST_50mm_Vel0.26_step5_0_1.6A",
+      "direction": "down",
+      "n_measured": 17,
+      "measured_median_ms": 28.336001289982985,
+      "n_paired": 17,
+      "paired_measured_ms": 28.336001289982985,
+      "A_ms": 22.95409656903214,
+      "E_ms": 23.147321567932543,
+      "A_flagged": 3,
+      "E_flagged": 3
+    },
+    {
+      "condition": "ST_50mm_Vel0.26_step5_0_1.6A",
+      "direction": "up",
+      "n_measured": 13,
+      "measured_median_ms": 22.674919181034078,
+      "n_paired": 13,
+      "paired_measured_ms": 22.674919181034078,
+      "A_ms": 17.81407875749757,
+      "E_ms": 12.883113138539567,
+      "A_flagged": 2,
+      "E_flagged": 2
+    }
+  ],
+  "checks": {
+    "rising_known_130ms": true,
+    "falling_known_130ms": true,
+    "force_offset_invariance": true,
+    "no_final_test_input": true
+  },
+  "interpretation": "Measured-eligible common events; model endpoint flags retained; strict all-three-flat subset also reported."
+}
