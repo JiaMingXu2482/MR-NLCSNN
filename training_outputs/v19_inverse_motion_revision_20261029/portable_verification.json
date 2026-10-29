@@ -1,0 +1,8 @@
+{
+  "all_main_methods_identical": true,
+  "all_main_checks_identical": true,
+  "oracle_summary_identical": true,
+  "oracle_grid_levels_identical": true,
+  "training": false,
+  "dataset_CSV_access": false
+}

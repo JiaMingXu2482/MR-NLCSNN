@@ -1,0 +1,22 @@
+{
+  "multisine_low": {
+    "initial_command_change_A": 0.11920161247253414,
+    "first_window_force_error_N": -1.8762666136533994,
+    "remaining99_MAE_N": 7.581916067425642
+  },
+  "multisine_mixed": {
+    "initial_command_change_A": 0.386530590057373,
+    "first_window_force_error_N": 34.05542584967495,
+    "remaining99_MAE_N": 85.62276376801798
+  },
+  "sine_8Hz": {
+    "initial_command_change_A": 0.5347244262695312,
+    "first_window_force_error_N": 11.822332213933777,
+    "remaining99_MAE_N": 8.274699946643745
+  },
+  "sine_12Hz": {
+    "initial_command_change_A": 0.5843085765838623,
+    "first_window_force_error_N": 35.0050192032887,
+    "remaining99_MAE_N": 8.903693430146578
+  }
+}
