@@ -1,0 +1,686 @@
+{
+  "A|7": {
+    "RHF_RMS10mm_4Hz": {
+      "nrmse_pct": 15.343721574066441,
+      "sse": 9594598.0,
+      "sst": 407535424.0,
+      "samples": 5158,
+      "best_epoch": 126
+    },
+    "RLF_RMS10mm_2Hz_r1": {
+      "nrmse_pct": 35.59715352457991,
+      "sse": 31173360.0,
+      "sst": 246010176.0,
+      "samples": 19948,
+      "best_epoch": 126
+    },
+    "RLF_RMS10mm_4Hz": {
+      "nrmse_pct": 21.13166679512788,
+      "sse": 44214800.0,
+      "sst": 990148096.0,
+      "samples": 18492,
+      "best_epoch": 126
+    },
+    "RLF_RMS15mm_3Hz": {
+      "nrmse_pct": 16.063140502499472,
+      "sse": 37562040.0,
+      "sst": 1455754880.0,
+      "samples": 20295,
+      "best_epoch": 126
+    },
+    "SH_10mm_1.66Hz_1A_r1": {
+      "nrmse_pct": 8.31722573420822,
+      "sse": 388331.96875,
+      "sst": 56136608.0,
+      "samples": 422,
+      "best_epoch": 126
+    },
+    "SH_10mm_1.66Hz_1A_r2": {
+      "nrmse_pct": 8.366692547150297,
+      "sse": 846494.625,
+      "sst": 120925136.0,
+      "samples": 990,
+      "best_epoch": 126
+    },
+    "SH_10mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 2.5213478881116105,
+      "sse": 2565624.5,
+      "sst": 4035780608.0,
+      "samples": 607,
+      "best_epoch": 126
+    },
+    "SH_10mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 4.8833502474540875,
+      "sse": 2866418.0,
+      "sst": 1201998080.0,
+      "samples": 153,
+      "best_epoch": 126
+    },
+    "SH_30mm_1.66Hz_0A_r1": {
+      "nrmse_pct": 4.372051163365658,
+      "sse": 3676468.25,
+      "sst": 1923358976.0,
+      "samples": 439,
+      "best_epoch": 126
+    },
+    "SH_30mm_1.66Hz_0A_r2": {
+      "nrmse_pct": 3.117223056659902,
+      "sse": 4167980.0,
+      "sst": 4289334016.0,
+      "samples": 1005,
+      "best_epoch": 126
+    },
+    "SH_5mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 5.4796493861358435,
+      "sse": 1886401.125,
+      "sst": 628244224.0,
+      "samples": 609,
+      "best_epoch": 126
+    },
+    "SH_5mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 5.273333574149958,
+      "sse": 423360.875,
+      "sst": 152244016.0,
+      "samples": 149,
+      "best_epoch": 126
+    },
+    "SR_RMS10mm_1.66Hz_0A": {
+      "nrmse_pct": 39.46672120170721,
+      "sse": 19836068.0,
+      "sst": 127348400.0,
+      "samples": 19552,
+      "best_epoch": 126
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r1": {
+      "nrmse_pct": 13.956147449586418,
+      "sse": 57021276.0,
+      "sst": 2927560192.0,
+      "samples": 8780,
+      "best_epoch": 126
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r2": {
+      "nrmse_pct": 14.773609149849495,
+      "sse": 65055196.0,
+      "sst": 2980634880.0,
+      "samples": 8785,
+      "best_epoch": 126
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r3": {
+      "nrmse_pct": 13.500965430958686,
+      "sse": 55994704.0,
+      "sst": 3071972352.0,
+      "samples": 8779,
+      "best_epoch": 126
+    }
+  },
+  "A|17": {
+    "RHF_RMS10mm_4Hz": {
+      "nrmse_pct": 19.76465469585111,
+      "sse": 15920028.0,
+      "sst": 407535424.0,
+      "samples": 5158,
+      "best_epoch": 128
+    },
+    "RLF_RMS10mm_2Hz_r1": {
+      "nrmse_pct": 34.56167602830511,
+      "sse": 29386148.0,
+      "sst": 246010176.0,
+      "samples": 19948,
+      "best_epoch": 128
+    },
+    "RLF_RMS10mm_4Hz": {
+      "nrmse_pct": 23.14624776511057,
+      "sse": 53047064.0,
+      "sst": 990148096.0,
+      "samples": 18492,
+      "best_epoch": 128
+    },
+    "RLF_RMS15mm_3Hz": {
+      "nrmse_pct": 17.80226023481419,
+      "sse": 46135852.0,
+      "sst": 1455754880.0,
+      "samples": 20295,
+      "best_epoch": 128
+    },
+    "SH_10mm_1.66Hz_1A_r1": {
+      "nrmse_pct": 6.40182830180873,
+      "sse": 230066.9375,
+      "sst": 56136608.0,
+      "samples": 422,
+      "best_epoch": 128
+    },
+    "SH_10mm_1.66Hz_1A_r2": {
+      "nrmse_pct": 12.249681626848712,
+      "sse": 1814538.5,
+      "sst": 120925136.0,
+      "samples": 990,
+      "best_epoch": 128
+    },
+    "SH_10mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 2.749522824456264,
+      "sse": 3051000.0,
+      "sst": 4035780608.0,
+      "samples": 607,
+      "best_epoch": 128
+    },
+    "SH_10mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 4.147271522897515,
+      "sse": 2067420.0,
+      "sst": 1201998080.0,
+      "samples": 153,
+      "best_epoch": 128
+    },
+    "SH_30mm_1.66Hz_0A_r1": {
+      "nrmse_pct": 4.09762973788709,
+      "sse": 3229429.25,
+      "sst": 1923358976.0,
+      "samples": 439,
+      "best_epoch": 128
+    },
+    "SH_30mm_1.66Hz_0A_r2": {
+      "nrmse_pct": 3.49753432341072,
+      "sse": 5247033.5,
+      "sst": 4289334016.0,
+      "samples": 1005,
+      "best_epoch": 128
+    },
+    "SH_5mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 5.637307483677256,
+      "sse": 1996512.125,
+      "sst": 628244224.0,
+      "samples": 609,
+      "best_epoch": 128
+    },
+    "SH_5mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 3.1682911798571447,
+      "sse": 152823.59375,
+      "sst": 152244016.0,
+      "samples": 149,
+      "best_epoch": 128
+    },
+    "SR_RMS10mm_1.66Hz_0A": {
+      "nrmse_pct": 30.16431584948708,
+      "sse": 11587252.0,
+      "sst": 127348400.0,
+      "samples": 19552,
+      "best_epoch": 128
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r1": {
+      "nrmse_pct": 11.134239326056496,
+      "sse": 36293340.0,
+      "sst": 2927560192.0,
+      "samples": 8780,
+      "best_epoch": 128
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r2": {
+      "nrmse_pct": 12.827592066715395,
+      "sse": 49045488.0,
+      "sst": 2980634880.0,
+      "samples": 8785,
+      "best_epoch": 128
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r3": {
+      "nrmse_pct": 10.687450018134557,
+      "sse": 35088556.0,
+      "sst": 3071972352.0,
+      "samples": 8779,
+      "best_epoch": 128
+    }
+  },
+  "A|27": {
+    "RHF_RMS10mm_4Hz": {
+      "nrmse_pct": 17.64791492465994,
+      "sse": 12692646.0,
+      "sst": 407535424.0,
+      "samples": 5158,
+      "best_epoch": 108
+    },
+    "RLF_RMS10mm_2Hz_r1": {
+      "nrmse_pct": 32.59445243302827,
+      "sse": 26136080.0,
+      "sst": 246010176.0,
+      "samples": 19948,
+      "best_epoch": 108
+    },
+    "RLF_RMS10mm_4Hz": {
+      "nrmse_pct": 21.11630717032326,
+      "sse": 44150548.0,
+      "sst": 990148096.0,
+      "samples": 18492,
+      "best_epoch": 108
+    },
+    "RLF_RMS15mm_3Hz": {
+      "nrmse_pct": 16.045728564478257,
+      "sse": 37480652.0,
+      "sst": 1455754880.0,
+      "samples": 20295,
+      "best_epoch": 108
+    },
+    "SH_10mm_1.66Hz_1A_r1": {
+      "nrmse_pct": 8.533872244863028,
+      "sse": 408825.9375,
+      "sst": 56136608.0,
+      "samples": 422,
+      "best_epoch": 108
+    },
+    "SH_10mm_1.66Hz_1A_r2": {
+      "nrmse_pct": 13.710935089357054,
+      "sse": 2273268.5,
+      "sst": 120925136.0,
+      "samples": 990,
+      "best_epoch": 108
+    },
+    "SH_10mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 2.0402082472899514,
+      "sse": 1679873.375,
+      "sst": 4035780608.0,
+      "samples": 607,
+      "best_epoch": 108
+    },
+    "SH_10mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 4.524134237339689,
+      "sse": 2460224.5,
+      "sst": 1201998080.0,
+      "samples": 153,
+      "best_epoch": 108
+    },
+    "SH_30mm_1.66Hz_0A_r1": {
+      "nrmse_pct": 3.4094891474184505,
+      "sse": 2235831.0,
+      "sst": 1923358976.0,
+      "samples": 439,
+      "best_epoch": 108
+    },
+    "SH_30mm_1.66Hz_0A_r2": {
+      "nrmse_pct": 3.1448307960164645,
+      "sse": 4242134.5,
+      "sst": 4289334016.0,
+      "samples": 1005,
+      "best_epoch": 108
+    },
+    "SH_5mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 5.47209583234556,
+      "sse": 1881204.0,
+      "sst": 628244224.0,
+      "samples": 609,
+      "best_epoch": 108
+    },
+    "SH_5mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 5.436629623819704,
+      "sse": 449986.75,
+      "sst": 152244016.0,
+      "samples": 149,
+      "best_epoch": 108
+    },
+    "SR_RMS10mm_1.66Hz_0A": {
+      "nrmse_pct": 28.92689278544564,
+      "sse": 10656070.0,
+      "sst": 127348400.0,
+      "samples": 19552,
+      "best_epoch": 108
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r1": {
+      "nrmse_pct": 11.96119527569132,
+      "sse": 41884660.0,
+      "sst": 2927560192.0,
+      "samples": 8780,
+      "best_epoch": 108
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r2": {
+      "nrmse_pct": 12.8224987784083,
+      "sse": 49006548.0,
+      "sst": 2980634880.0,
+      "samples": 8785,
+      "best_epoch": 108
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r3": {
+      "nrmse_pct": 11.10883909187876,
+      "sse": 37910076.0,
+      "sst": 3071972352.0,
+      "samples": 8779,
+      "best_epoch": 108
+    }
+  },
+  "E|7": {
+    "RHF_RMS10mm_4Hz": {
+      "nrmse_pct": 16.14157990575701,
+      "sse": 10618360.0,
+      "sst": 407535424.0,
+      "samples": 5158,
+      "best_epoch": 127
+    },
+    "RLF_RMS10mm_2Hz_r1": {
+      "nrmse_pct": 32.04505025105192,
+      "sse": 25262422.0,
+      "sst": 246010176.0,
+      "samples": 19948,
+      "best_epoch": 127
+    },
+    "RLF_RMS10mm_4Hz": {
+      "nrmse_pct": 25.58251052618892,
+      "sse": 64801712.0,
+      "sst": 990148096.0,
+      "samples": 18492,
+      "best_epoch": 127
+    },
+    "RLF_RMS15mm_3Hz": {
+      "nrmse_pct": 18.446423890268754,
+      "sse": 49535052.0,
+      "sst": 1455754880.0,
+      "samples": 20295,
+      "best_epoch": 127
+    },
+    "SH_10mm_1.66Hz_1A_r1": {
+      "nrmse_pct": 8.35895175167463,
+      "sse": 392238.125,
+      "sst": 56136608.0,
+      "samples": 422,
+      "best_epoch": 127
+    },
+    "SH_10mm_1.66Hz_1A_r2": {
+      "nrmse_pct": 8.07985771237086,
+      "sse": 789448.875,
+      "sst": 120925136.0,
+      "samples": 990,
+      "best_epoch": 127
+    },
+    "SH_10mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 3.6280606442325065,
+      "sse": 5312227.0,
+      "sst": 4035780608.0,
+      "samples": 607,
+      "best_epoch": 127
+    },
+    "SH_10mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 6.808395583109663,
+      "sse": 5571772.0,
+      "sst": 1201998080.0,
+      "samples": 153,
+      "best_epoch": 127
+    },
+    "SH_30mm_1.66Hz_0A_r1": {
+      "nrmse_pct": 5.967859615069577,
+      "sse": 6850110.0,
+      "sst": 1923358976.0,
+      "samples": 439,
+      "best_epoch": 127
+    },
+    "SH_30mm_1.66Hz_0A_r2": {
+      "nrmse_pct": 5.51211200462598,
+      "sse": 13032446.0,
+      "sst": 4289334016.0,
+      "samples": 1005,
+      "best_epoch": 127
+    },
+    "SH_5mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 6.906857212182796,
+      "sse": 2997018.75,
+      "sst": 628244224.0,
+      "samples": 609,
+      "best_epoch": 127
+    },
+    "SH_5mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 5.192696559370645,
+      "sse": 410512.25,
+      "sst": 152244016.0,
+      "samples": 149,
+      "best_epoch": 127
+    },
+    "SR_RMS10mm_1.66Hz_0A": {
+      "nrmse_pct": 39.39754829523896,
+      "sse": 19766596.0,
+      "sst": 127348400.0,
+      "samples": 19552,
+      "best_epoch": 127
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r1": {
+      "nrmse_pct": 13.585795693373349,
+      "sse": 54035104.0,
+      "sst": 2927560192.0,
+      "samples": 8780,
+      "best_epoch": 127
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r2": {
+      "nrmse_pct": 13.498701843769426,
+      "sse": 54311624.0,
+      "sst": 2980634880.0,
+      "samples": 8785,
+      "best_epoch": 127
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r3": {
+      "nrmse_pct": 11.908655172238332,
+      "sse": 43565504.0,
+      "sst": 3071972352.0,
+      "samples": 8779,
+      "best_epoch": 127
+    }
+  },
+  "E|17": {
+    "RHF_RMS10mm_4Hz": {
+      "nrmse_pct": 16.24947579737748,
+      "sse": 10760788.0,
+      "sst": 407535424.0,
+      "samples": 5158,
+      "best_epoch": 100
+    },
+    "RLF_RMS10mm_2Hz_r1": {
+      "nrmse_pct": 31.789208976242065,
+      "sse": 24860652.0,
+      "sst": 246010176.0,
+      "samples": 19948,
+      "best_epoch": 100
+    },
+    "RLF_RMS10mm_4Hz": {
+      "nrmse_pct": 21.625075788004416,
+      "sse": 46303672.0,
+      "sst": 990148096.0,
+      "samples": 18492,
+      "best_epoch": 100
+    },
+    "RLF_RMS15mm_3Hz": {
+      "nrmse_pct": 16.41739870930938,
+      "sse": 39237104.0,
+      "sst": 1455754880.0,
+      "samples": 20295,
+      "best_epoch": 100
+    },
+    "SH_10mm_1.66Hz_1A_r1": {
+      "nrmse_pct": 9.122907200276813,
+      "sse": 467210.59375,
+      "sst": 56136608.0,
+      "samples": 422,
+      "best_epoch": 100
+    },
+    "SH_10mm_1.66Hz_1A_r2": {
+      "nrmse_pct": 10.92856170230644,
+      "sse": 1444250.75,
+      "sst": 120925136.0,
+      "samples": 990,
+      "best_epoch": 100
+    },
+    "SH_10mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 2.702034241688607,
+      "sse": 2946519.0,
+      "sst": 4035780608.0,
+      "samples": 607,
+      "best_epoch": 100
+    },
+    "SH_10mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 5.0133153198094105,
+      "sse": 3021021.5,
+      "sst": 1201998080.0,
+      "samples": 153,
+      "best_epoch": 100
+    },
+    "SH_30mm_1.66Hz_0A_r1": {
+      "nrmse_pct": 4.770322382972463,
+      "sse": 4376791.0,
+      "sst": 1923358976.0,
+      "samples": 439,
+      "best_epoch": 100
+    },
+    "SH_30mm_1.66Hz_0A_r2": {
+      "nrmse_pct": 3.971126485381298,
+      "sse": 6764213.5,
+      "sst": 4289334016.0,
+      "samples": 1005,
+      "best_epoch": 100
+    },
+    "SH_5mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 4.987557129067174,
+      "sse": 1562803.125,
+      "sst": 628244224.0,
+      "samples": 609,
+      "best_epoch": 100
+    },
+    "SH_5mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 4.061950845684229,
+      "sse": 251194.171875,
+      "sst": 152244016.0,
+      "samples": 149,
+      "best_epoch": 100
+    },
+    "SR_RMS10mm_1.66Hz_0A": {
+      "nrmse_pct": 35.24515048247752,
+      "sse": 15819481.0,
+      "sst": 127348400.0,
+      "samples": 19552,
+      "best_epoch": 100
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r1": {
+      "nrmse_pct": 12.160880265921186,
+      "sse": 43294812.0,
+      "sst": 2927560192.0,
+      "samples": 8780,
+      "best_epoch": 100
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r2": {
+      "nrmse_pct": 12.729260376582548,
+      "sse": 48296440.0,
+      "sst": 2980634880.0,
+      "samples": 8785,
+      "best_epoch": 100
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r3": {
+      "nrmse_pct": 12.276140352635172,
+      "sse": 46295736.0,
+      "sst": 3071972352.0,
+      "samples": 8779,
+      "best_epoch": 100
+    }
+  },
+  "E|27": {
+    "RHF_RMS10mm_4Hz": {
+      "nrmse_pct": 15.207102634095909,
+      "sse": 9424500.0,
+      "sst": 407535424.0,
+      "samples": 5158,
+      "best_epoch": 128
+    },
+    "RLF_RMS10mm_2Hz_r1": {
+      "nrmse_pct": 36.38331552559885,
+      "sse": 32565490.0,
+      "sst": 246010176.0,
+      "samples": 19948,
+      "best_epoch": 128
+    },
+    "RLF_RMS10mm_4Hz": {
+      "nrmse_pct": 22.779281602590277,
+      "sse": 51378356.0,
+      "sst": 990148096.0,
+      "samples": 18492,
+      "best_epoch": 128
+    },
+    "RLF_RMS15mm_3Hz": {
+      "nrmse_pct": 17.714613397327387,
+      "sse": 45682684.0,
+      "sst": 1455754880.0,
+      "samples": 20295,
+      "best_epoch": 128
+    },
+    "SH_10mm_1.66Hz_1A_r1": {
+      "nrmse_pct": 8.243894791043514,
+      "sse": 381514.5,
+      "sst": 56136608.0,
+      "samples": 422,
+      "best_epoch": 128
+    },
+    "SH_10mm_1.66Hz_1A_r2": {
+      "nrmse_pct": 9.7167538952178,
+      "sse": 1141718.375,
+      "sst": 120925136.0,
+      "samples": 990,
+      "best_epoch": 128
+    },
+    "SH_10mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 3.143549032984041,
+      "sse": 3988118.25,
+      "sst": 4035780608.0,
+      "samples": 607,
+      "best_epoch": 128
+    },
+    "SH_10mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 6.358379290959296,
+      "sse": 4859556.5,
+      "sst": 1201998080.0,
+      "samples": 153,
+      "best_epoch": 128
+    },
+    "SH_30mm_1.66Hz_0A_r1": {
+      "nrmse_pct": 4.815988063889214,
+      "sse": 4460989.0,
+      "sst": 1923358976.0,
+      "samples": 439,
+      "best_epoch": 128
+    },
+    "SH_30mm_1.66Hz_0A_r2": {
+      "nrmse_pct": 3.6394456189800266,
+      "sse": 5681465.0,
+      "sst": 4289334016.0,
+      "samples": 1005,
+      "best_epoch": 128
+    },
+    "SH_5mm_6.62Hz_0.4A_r1": {
+      "nrmse_pct": 6.142683727792225,
+      "sse": 2370526.5,
+      "sst": 628244224.0,
+      "samples": 609,
+      "best_epoch": 128
+    },
+    "SH_5mm_6.62Hz_0.4A_r2": {
+      "nrmse_pct": 4.384670204688723,
+      "sse": 292694.1875,
+      "sst": 152244016.0,
+      "samples": 149,
+      "best_epoch": 128
+    },
+    "SR_RMS10mm_1.66Hz_0A": {
+      "nrmse_pct": 30.13312079831008,
+      "sse": 11563298.0,
+      "sst": 127348400.0,
+      "samples": 19552,
+      "best_epoch": 128
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r1": {
+      "nrmse_pct": 13.1160986087594,
+      "sse": 50363416.0,
+      "sst": 2927560192.0,
+      "samples": 8780,
+      "best_epoch": 128
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r2": {
+      "nrmse_pct": 14.232823750275985,
+      "sse": 60379696.0,
+      "sst": 2980634880.0,
+      "samples": 8785,
+      "best_epoch": 128
+    },
+    "ST_10mm_Vel0.13_step5_0_1.6A_r3": {
+      "nrmse_pct": 12.158073006147795,
+      "sse": 45409508.0,
+      "sst": 3071972352.0,
+      "samples": 8779,
+      "best_epoch": 128
+    }
+  }
+}

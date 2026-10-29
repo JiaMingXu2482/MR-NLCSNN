@@ -1,0 +1,115 @@
+{
+  "source_directory": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v20_training\\v20",
+  "files": [
+    {
+      "path": "v20/analysis/analyze_3seed.py",
+      "bytes": 3943,
+      "sha256": "db0f699d992f0268db995cd6d18b76d731aed935e0fae4abe92e4f14c07860d7"
+    },
+    {
+      "path": "v20/analysis/check_condition_type.py",
+      "bytes": 1230,
+      "sha256": "d2e7ea3f04c3bad51586fe430f78fd8211fd4f8754f3055b36b0e24f1f322492"
+    },
+    {
+      "path": "v20/analysis/dump_3seed.py",
+      "bytes": 3645,
+      "sha256": "567eeb12e751136b751d2612dd7a6094f1e074cc3f7068c6a747fc92adc927bf"
+    },
+    {
+      "path": "v20/analysis/figures/A_vs_E_random_conditions.png",
+      "bytes": 593657,
+      "sha256": "add9cb9f323ba0c15b63c26fc49a0bad460248d5a1ce0d9763ce32d1c9f62df5"
+    },
+    {
+      "path": "v20/analysis/figures/ST_nonlinear_delay_A_vs_E.png",
+      "bytes": 437367,
+      "sha256": "c00ed4f5a2539254f4b1ed2ce39ecf264c1b124a347d32d0a96ce6c6e6ab8da1"
+    },
+    {
+      "path": "v20/analysis/infer_random.py",
+      "bytes": 3921,
+      "sha256": "446b45b09680f4a7040a705abf18b3d488e995ab900aa461e34c0f70d6d368bc"
+    },
+    {
+      "path": "v20/analysis/plot_ae.py",
+      "bytes": 5397,
+      "sha256": "2bf67b30602b560e3591a52e642c20c4661219fc250ffcfe85eba90182a2a732"
+    },
+    {
+      "path": "v20/analysis/plot_st_delay.py",
+      "bytes": 7127,
+      "sha256": "56ab6d7593b724430a079b4e8b763c36cc72e5443d30ae9a3fa1c7d6dda4b2f3"
+    },
+    {
+      "path": "v20/analysis/results/a_vs_e_random_metrics.json",
+      "bytes": 17556,
+      "sha256": "83074a5596999f005198ccf3e9d105c8f4c8ffa7ecf44417195ceef73a2ea12d"
+    },
+    {
+      "path": "v20/analysis/results/a_vs_e_random_preds.npz",
+      "bytes": 1237651,
+      "sha256": "e810c087032d47ab0ca960628b5693e0147abcb2d0879ddbe5938281f72fad98"
+    },
+    {
+      "path": "v20/analysis/results/results_3seed.json",
+      "bytes": 4675,
+      "sha256": "5dbc53887fe8ee6d1aa29dfdb6c0744ce94af95a7da88c00badea31873e35903"
+    },
+    {
+      "path": "v20/analysis/results/st_delay.json",
+      "bytes": 44080,
+      "sha256": "a4035da6518b3a457dfda8bb3e290e743886bff8d11e0ca3d64efc7e21595660"
+    },
+    {
+      "path": "v20/analysis/results/st_delay_preds.npz",
+      "bytes": 455351,
+      "sha256": "f77fb1e46e59947d9ee424f3ae21614c1fcd2a251026a90b7ff52dd2df191052"
+    },
+    {
+      "path": "v20/analysis/results/st_rolling_lag.json",
+      "bytes": 532554,
+      "sha256": "7bf28df831bdae22e8aca4898ca0c4b6fed94f3e3c17292617b3853a039bfdc2"
+    },
+    {
+      "path": "v20/analysis/st_delay.py",
+      "bytes": 5015,
+      "sha256": "9bb0fa3d2117ce59c877ab5d9a70d88c4d0558ed1a23f04b36b04da8e86d15a8"
+    },
+    {
+      "path": "v20/analysis/st_rolling_lag.py",
+      "bytes": 4953,
+      "sha256": "c0ddc17b18df51102471a0e060f09457f15d82c55ffcc7e937e6860d31c81def"
+    },
+    {
+      "path": "v20/EXPERIMENT_LOG_v20.md",
+      "bytes": 20649,
+      "sha256": "7911fe659087289e2598bfc931f933759d0c8e235fb11e9c5333dc6b1f85ce48"
+    },
+    {
+      "path": "v20/README_v20.md",
+      "bytes": 5677,
+      "sha256": "78399337bb86a3923fbf6c6a1b0ce079c91166ebd96fc0f879f4b26663057e39"
+    },
+    {
+      "path": "v20/run_v20_parallel.py",
+      "bytes": 4757,
+      "sha256": "4295cc7aa12bc906bc877a726803faaadbf723dad813841b2f599f0dbb4664a5"
+    },
+    {
+      "path": "v20/train_v20.py",
+      "bytes": 12923,
+      "sha256": "e2e9571f01a065d8a110056a121fcc48b586f1d5e533461520ea569fa046f90e"
+    },
+    {
+      "path": "v20/v20_data.py",
+      "bytes": 4305,
+      "sha256": "65c9740ea39606627aae433c5968939339f5bf8cf44f2feabac75e52b45cc8ea"
+    },
+    {
+      "path": "v20/v20_models.py",
+      "bytes": 8484,
+      "sha256": "f5cae063270a401516a4acdb7f171fd897b7f401391d449ae819d1aebb678143"
+    }
+  ]
+}

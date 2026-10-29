@@ -1,0 +1,200 @@
+{
+  "seeds": [
+    7,
+    17,
+    27
+  ],
+  "epochs": 130,
+  "metric": "best validation pooled NRMSE % (lower is better)",
+  "models": {
+    "A": {
+      "arch": "raw_gru",
+      "parameter_count": 3105,
+      "per_seed_pooled": {
+        "7": 11.7055,
+        "17": 10.9343,
+        "27": 10.5803
+      },
+      "pooled_mean": 11.0734,
+      "pooled_sd": 0.5754,
+      "per_seed_hf": {
+        "7": 3.5866,
+        "17": 3.4751,
+        "27": 3.2791
+      },
+      "hf_mean": 3.4469,
+      "hf_sd": 0.1557,
+      "worst_mean": 35.5409,
+      "best_epochs": {
+        "7": 126,
+        "17": 128,
+        "27": 108
+      }
+    },
+    "B": {
+      "arch": "nfl_gru",
+      "parameter_count": 4769,
+      "per_seed_pooled": {
+        "7": 12.395,
+        "17": 10.5134,
+        "27": 10.0586
+      },
+      "pooled_mean": 10.989,
+      "pooled_sd": 1.2387,
+      "per_seed_hf": {
+        "7": 3.9766,
+        "17": 2.9997,
+        "27": 3.1073
+      },
+      "hf_mean": 3.3612,
+      "hf_sd": 0.5357,
+      "worst_mean": 33.542,
+      "best_epochs": {
+        "7": 127,
+        "17": 116,
+        "27": 83
+      }
+    },
+    "D": {
+      "arch": "parallel",
+      "parameter_count": 3521,
+      "per_seed_pooled": {
+        "7": 11.947,
+        "17": 11.5303,
+        "27": 10.7418
+      },
+      "pooled_mean": 11.4064,
+      "pooled_sd": 0.6121,
+      "per_seed_hf": {
+        "7": 4.1875,
+        "17": 3.2582,
+        "27": 3.1355
+      },
+      "hf_mean": 3.5271,
+      "hf_sd": 0.5752,
+      "worst_mean": 36.5395,
+      "best_epochs": {
+        "7": 119,
+        "17": 123,
+        "27": 122
+      }
+    },
+    "E": {
+      "arch": "nfl_small_gru",
+      "parameter_count": 2073,
+      "per_seed_pooled": {
+        "7": 12.0472,
+        "17": 10.9604,
+        "27": 11.5776
+      },
+      "pooled_mean": 11.5284,
+      "pooled_sd": 0.5451,
+      "per_seed_hf": {
+        "7": 4.8731,
+        "17": 3.5958,
+        "27": 4.3734
+      },
+      "hf_mean": 4.2808,
+      "hf_sd": 0.6437,
+      "worst_mean": 37.0087,
+      "best_epochs": {
+        "7": 127,
+        "17": 100,
+        "27": 128
+      }
+    },
+    "G": {
+      "arch": "raw_small_gru",
+      "parameter_count": 1033,
+      "per_seed_pooled": {
+        "7": 10.7596,
+        "17": 12.7414,
+        "27": 12.9922
+      },
+      "pooled_mean": 12.1644,
+      "pooled_sd": 1.223,
+      "per_seed_hf": {
+        "7": 3.8112,
+        "17": 4.6373,
+        "27": 4.6838
+      },
+      "hf_mean": 4.3775,
+      "hf_sd": 0.4909,
+      "worst_mean": 40.6455,
+      "best_epochs": {
+        "7": 107,
+        "17": 102,
+        "27": 114
+      }
+    }
+  },
+  "paired": {
+    "A-B": {
+      "per_seed": {
+        "7": -0.6895,
+        "17": 0.4209,
+        "27": 0.5217
+      },
+      "mean": 0.0844,
+      "sd": 0.6721,
+      "se": 0.388,
+      "t_df2": 0.217,
+      "t_crit_p05_df2": 4.303,
+      "significant_at_p05": false
+    },
+    "G-E": {
+      "per_seed": {
+        "7": -1.2876,
+        "17": 1.7809,
+        "27": 1.4145
+      },
+      "mean": 0.6359,
+      "sd": 1.6759,
+      "se": 0.9676,
+      "t_df2": 0.657,
+      "t_crit_p05_df2": 4.303,
+      "significant_at_p05": false
+    },
+    "A-G": {
+      "per_seed": {
+        "7": 0.9459,
+        "17": -1.8071,
+        "27": -2.4118
+      },
+      "mean": -1.091,
+      "sd": 1.7898,
+      "se": 1.0333,
+      "t_df2": -1.056,
+      "t_crit_p05_df2": 4.303,
+      "significant_at_p05": false
+    },
+    "B-E": {
+      "per_seed": {
+        "7": 0.3478,
+        "17": -0.4471,
+        "27": -1.519
+      },
+      "mean": -0.5394,
+      "sd": 0.9368,
+      "se": 0.5409,
+      "t_df2": -0.997,
+      "t_crit_p05_df2": 4.303,
+      "significant_at_p05": false
+    }
+  },
+  "factorial": {
+    "cells": {
+      "A": "(raw,hidden16)",
+      "G": "(raw,hidden8)",
+      "B": "(NFL,hidden16)",
+      "E": "(NFL,hidden8)"
+    },
+    "input_effect_at_h16_A_minus_B": 0.0844,
+    "input_effect_at_h8_G_minus_E": 0.6359,
+    "width_effect_on_raw_A_minus_G": -1.091,
+    "width_effect_on_nfl_B_minus_E": -0.5394,
+    "interaction": -0.5515,
+    "note": "sign convention: value = first minus second; negative means the first model has lower NRMSE. Every cell confounds input type with parameter count, so these effects cannot separate feature value from capacity."
+  },
+  "note": "n=3 seeds; df=2; critical t at p=0.05 is 4.303. No comparison here reaches significance. Model spread is comparable to within-model seed sd, so no ranking should be declared from this run."
+}
