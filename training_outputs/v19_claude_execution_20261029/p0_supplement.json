@@ -1,0 +1,122 @@
+{
+  "end_direction_cluster_bootstrap": {
+    "groups": 36,
+    "difference_N": 6.398929490531412,
+    "ci95": [
+      -3.8437766006779777,
+      17.353234734597198
+    ],
+    "valid": 1998,
+    "correction": "Resample whole groups jointly; preserves groups with both movement directions"
+  },
+  "repeated_low_speed_bins": [
+    {
+      "bin": [
+        617,
+        0.0,
+        54
+      ],
+      "files": [
+        "ST_20mm_Vel0.13_step5_0_1.6A_r2",
+        "ST_20mm_Vel0.13_step5_0_1.6A_r3",
+        "ST_20mm_Vel0.26_step5_0_1.6A_r2"
+      ],
+      "midpoint_range_N": 66.79397191362693
+    },
+    {
+      "bin": [
+        617,
+        0.0,
+        55
+      ],
+      "files": [
+        "ST_20mm_Vel0.26_step5_0_1.6A_r3",
+        "ST_5mm_Vel0.13_step5_0_1.6A_r2",
+        "ST_5mm_Vel0.13_step5_0_1.6A_r3"
+      ],
+      "midpoint_range_N": 57.72425290805174
+    },
+    {
+      "bin": [
+        610,
+        0.0,
+        35
+      ],
+      "files": [
+        "ST_50mm_Vel0.13_step5_0_1.4A",
+        "ST_50mm_Vel0.26_step5_0_1.4A"
+      ],
+      "midpoint_range_N": 46.92330895855548
+    },
+    {
+      "bin": [
+        617,
+        0.0,
+        47
+      ],
+      "files": [
+        "ST_50mm_Vel0.13_step5_0_1.6A_r1",
+        "ST_50mm_Vel0.13_step5_0_1.6A_r2"
+      ],
+      "midpoint_range_N": 3.7938185115317253
+    },
+    {
+      "bin": [
+        617,
+        0.0,
+        48
+      ],
+      "files": [
+        "ST_50mm_Vel0.13_step5_0_1.6A_r3",
+        "ST_50mm_Vel0.26_step5_0_1.6A_r1"
+      ],
+      "midpoint_range_N": 2.27709223778956
+    }
+  ],
+  "low_speed_pair_files": 45,
+  "low_speed_speed_imbalance_median_mm_s": 0.5824793064101552,
+  "acquisition_order": {
+    "SH": {
+      "files": 185,
+      "first": "2026/03/30 14:26:01.038308",
+      "last": "2026/04/30 12:20:27.677178",
+      "adjacent_abs_delta_median_N": 9.304382594862986,
+      "adjacent_abs_delta_max_N": 73.74162497397154,
+      "note": "Changing test conditions; not a pure sensor drift experiment"
+    },
+    "ST": {
+      "files": 29,
+      "first": "2026/04/30 14:28:36.626859",
+      "last": "2026/06/11 12:31:59.190923",
+      "adjacent_abs_delta_median_N": 8.309260281078721,
+      "adjacent_abs_delta_max_N": 38.55855943215582,
+      "note": "Changing test conditions; not a pure sensor drift experiment"
+    },
+    "SR": {
+      "files": 17,
+      "first": "2026/03/30 16:42:22.483010",
+      "last": "2026/03/30 16:55:03.289121",
+      "adjacent_abs_delta_median_N": 18.738002163554256,
+      "adjacent_abs_delta_max_N": 48.939075528764306,
+      "note": "Changing test conditions; not a pure sensor drift experiment"
+    },
+    "RLF": {
+      "files": 9,
+      "first": "2026/04/16 14:11:37.660415",
+      "last": "2026/04/30 15:16:46.009950",
+      "adjacent_abs_delta_median_N": 19.392987893955265,
+      "adjacent_abs_delta_max_N": 39.962102787648575,
+      "note": "Changing test conditions; not a pure sensor drift experiment"
+    },
+    "RHF": {
+      "files": 8,
+      "first": "2026/04/16 14:24:50.372739",
+      "last": "2026/04/16 14:31:22.328136",
+      "adjacent_abs_delta_median_N": 21.93446782348994,
+      "adjacent_abs_delta_max_N": 57.25685582304709,
+      "note": "Changing test conditions; not a pure sensor drift experiment"
+    }
+  },
+  "reference_gate": "inconclusive; no relabeling or P2 training",
+  "limitation": "Finite-speed pairs are not v->0 extrapolations. Midpoints include viscous asymmetry, hysteresis and measurement offsets; cannot identify gas spring separately from this audit."
+}

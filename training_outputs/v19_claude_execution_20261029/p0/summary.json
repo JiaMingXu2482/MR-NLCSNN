@@ -1,0 +1,208 @@
+{
+  "regression": {
+    "SH": {
+      "n": 26,
+      "groups": 26,
+      "columns": [
+        "intercept",
+        "F0_N"
+      ],
+      "rank": 2,
+      "parameters": 2,
+      "design_condition": 1.000000000000002,
+      "slope": 7.036944218599053,
+      "ci95": [
+        -0.8432683772726689,
+        17.144435862770827
+      ],
+      "bootstrap_valid": 2000,
+      "motion_mean_residual_rmse_N": 322.7065666643702
+    },
+    "ST": {
+      "n": 29,
+      "groups": 19,
+      "columns": [
+        "intercept",
+        "F0_N"
+      ],
+      "rank": 2,
+      "parameters": 2,
+      "design_condition": 1.0000000000000004,
+      "slope": 10.371206551023159,
+      "ci95": [
+        0.6947340047172396,
+        21.627446649740126
+      ],
+      "bootstrap_valid": 2000,
+      "motion_mean_residual_rmse_N": 412.3222054481383
+    },
+    "SR": {
+      "n": 17,
+      "groups": 17,
+      "columns": [
+        "intercept",
+        "F0_N"
+      ],
+      "rank": 2,
+      "parameters": 2,
+      "design_condition": 1.0000000000000002,
+      "slope": 0.5194631170347103,
+      "ci95": [
+        -0.35047995328544906,
+        1.5432088151135364
+      ],
+      "bootstrap_valid": 2000,
+      "motion_mean_residual_rmse_N": 23.35289328902612
+    },
+    "RLF": {
+      "n": 9,
+      "groups": 8,
+      "columns": [
+        "intercept",
+        "F0_N"
+      ],
+      "rank": 2,
+      "parameters": 2,
+      "design_condition": 1.0,
+      "slope": -0.6394780515810027,
+      "ci95": [
+        -2.192762153427008,
+        3.3348771862409117
+      ],
+      "bootstrap_valid": 2000,
+      "motion_mean_residual_rmse_N": 35.901460736386
+    },
+    "RHF": {
+      "n": 8,
+      "groups": 8,
+      "columns": [
+        "intercept",
+        "F0_N"
+      ],
+      "rank": 2,
+      "parameters": 2,
+      "design_condition": 1.0000000000000002,
+      "slope": 1.4135925069611888,
+      "ci95": [
+        -0.26246465856847573,
+        3.4580530319253526
+      ],
+      "bootstrap_valid": 2000,
+      "motion_mean_residual_rmse_N": 40.5749857882858
+    },
+    "random_adjusted": {
+      "n": 34,
+      "groups": 33,
+      "columns": [
+        "intercept",
+        "F0_N",
+        "motion_temperature_C",
+        "motion_x_abs_mm",
+        "motion_current_A",
+        "motion_v_rms_mm_s",
+        "motion_v_mean_mm_s",
+        "category_RLF",
+        "category_SR"
+      ],
+      "rank": 9,
+      "parameters": 9,
+      "design_condition": 17.950287723280844,
+      "slope": 0.0549879739224484,
+      "ci95": [
+        -0.3455201308912298,
+        0.3981087661400839
+      ],
+      "bootstrap_valid": 2000,
+      "motion_mean_residual_rmse_N": 11.157917275044566
+    }
+  },
+  "end_direction": {
+    "eligible_files": 40,
+    "eligible_groups": 36,
+    "negative_direction": {
+      "n": 31,
+      "mean": 1.9537478638955241,
+      "median": -1.144712231908528,
+      "min": -29.999535049368802,
+      "max": 41.821993716210415,
+      "std": 16.761028843195234
+    },
+    "positive_direction": {
+      "n": 6,
+      "mean": 8.352677354426936,
+      "median": 8.348390353780701,
+      "min": -4.019282549649972,
+      "max": 26.170367278072064,
+      "std": 10.22666876380141
+    },
+    "mean_difference_N": 6.398929490531412,
+    "ci95": [
+      -3.8645240231872036,
+      16.786876480843812
+    ]
+  },
+  "initial_offset_spread_by_category": {
+    "SH": {
+      "n": 185,
+      "mean": -212.05355711856942,
+      "median": -209.9937658533088,
+      "min": -268.21816626414017,
+      "max": -152.55564292518673,
+      "std": 29.75766911543783
+    },
+    "ST": {
+      "n": 29,
+      "mean": -224.13891631934058,
+      "median": -225.12633161910088,
+      "min": -262.60087809549657,
+      "max": -179.6477052739237,
+      "std": 20.5673582985409
+    },
+    "SR": {
+      "n": 17,
+      "mean": -157.10141847094363,
+      "median": -160.6674205905066,
+      "min": -173.65861271564967,
+      "max": -124.28447185579208,
+      "std": 14.190470106338354
+    },
+    "RLF": {
+      "n": 9,
+      "mean": -198.75203138105263,
+      "median": -203.49281902212365,
+      "min": -218.16228156035527,
+      "max": -165.05831710107415,
+      "std": 16.210766970892614
+    },
+    "RHF": {
+      "n": 8,
+      "mean": -189.16584045638936,
+      "median": -189.8810622229567,
+      "min": -212.77889275811685,
+      "max": -155.52203693506976,
+      "std": 17.62606664803156
+    }
+  },
+  "low_speed_pairs": 60,
+  "paired_files": 45,
+  "low_speed_gap_abs_N": {
+    "n": 60,
+    "mean": 70.51253328346539,
+    "median": 74.94735362032904,
+    "min": 0.9313229315893636,
+    "max": 147.31145169294507,
+    "std": 45.879525777579715
+  },
+  "acquisition_timestamps": 248,
+  "slope_gate": "inconclusive",
+  "end_direction_gate": false,
+  "reference_change_authorized_by_evidence": false,
+  "reason": "R1 additionally requires identifiable repeatable low-speed midpoint; not automatically inferred from a correlation.",
+  "train_files": 248,
+  "validation_or_final_csv_read": false,
+  "training_started": false,
+  "data_modified": false,
+  "manifest_sha256": "e3a8c984f6415beeabfab05b8178ec32b2172e2542570d41110dffeb1b1c1ced",
+  "plan_sha256": "7f7a4574bf0e1c0bd0b8e0a16dcb4340589facd0c4b2b20d393c9d60b2f3efb9",
+  "script_sha256": "d487b3343ed5a886a5aec7bcb615db21431d56d8aae47150e2dedace90c7c569"
+}

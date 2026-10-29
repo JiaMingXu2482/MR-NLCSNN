@@ -1,0 +1,11 @@
+{
+  "source_plan_commit": "9802e70",
+  "checkpoint_sha256": "3a407a77e8f0b9167282fdbfc77923dac23fcd0430fa498432e36e31f97423c7",
+  "raw_manifest_sha256": "e3a8c984f6415beeabfab05b8178ec32b2172e2542570d41110dffeb1b1c1ced",
+  "training_started": false,
+  "final_test_access": false,
+  "existing_weights_or_labels_modified": false,
+  "CarSim_modified": false,
+  "frozen_capacity_original_sha256": "04ce83d140c948b10c730465d357c760d24be0516ed16b56a9c81be27496c65b",
+  "portable_capacity_change": "Remove unused train_a_local import only; all model logic retained"
+}

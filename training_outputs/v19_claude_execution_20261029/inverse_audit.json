@@ -1,0 +1,330 @@
+{
+  "tests": {
+    "one_step_matches_shared_forward": true,
+    "closed_form_matches_ten_EMA_steps": true,
+    "reachable_current_recovery": true,
+    "reachable_force_residual_under_1N": true,
+    "monotone_both_velocity_signs": true,
+    "zero_velocity_holds_previous_applied_current": true,
+    "unreachable_flag_and_residual": true,
+    "state_not_mutated": true,
+    "weights_unchanged": true
+  },
+  "synthetic_results": {
+    "single_step": {
+      "multisine_low": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 32.876839866638186,
+          "rms": 58.05842509796957,
+          "max_abs": 193.63511657714844,
+          "bias": -29.999296340942383
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.5099886566400528,
+          "rms": 0.6259952525128809,
+          "max_abs": 1.3999269008636475,
+          "bias": 0.13891591310501097
+        },
+        "current_total_variation_A": 16.58355467319488,
+        "surrogate_residual_N": {
+          "n": 100,
+          "mae": 13.831358375549316,
+          "rms": 20.80750784949825,
+          "max_abs": 78.83441162109375,
+          "bias": -1.0257858657836914
+        },
+        "reachable_fraction": 0.24,
+        "saturation_fraction": 0.73
+      },
+      "multisine_mixed": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 77.20347171306611,
+          "rms": 115.87958971118594,
+          "max_abs": 410.91888427734375,
+          "bias": -20.279130358695983
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.6094581626355648,
+          "rms": 0.7435259055565121,
+          "max_abs": 1.3998817205429077,
+          "bias": 0.1502264828979969
+        },
+        "current_total_variation_A": 46.71104648113251,
+        "surrogate_residual_N": {
+          "n": 100,
+          "mae": 81.23051738739014,
+          "rms": 135.49398995565343,
+          "max_abs": 421.1119384765625,
+          "bias": -6.318143539428711
+        },
+        "reachable_fraction": 0.22,
+        "saturation_fraction": 0.73
+      },
+      "sine_8Hz": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 11.146993474960327,
+          "rms": 15.919619879682706,
+          "max_abs": 38.937591552734375,
+          "bias": -10.112594785690307
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.637348457723856,
+          "rms": 0.7824046344199486,
+          "max_abs": 1.3981380462646484,
+          "bias": 0.12954241469502448
+        },
+        "current_total_variation_A": 50.66412856578829,
+        "surrogate_residual_N": {
+          "n": 100,
+          "mae": 17.402754020690917,
+          "rms": 25.683350233372824,
+          "max_abs": 73.57512664794922,
+          "bias": 0.09003154754638672
+        },
+        "reachable_fraction": 0.14,
+        "saturation_fraction": 0.75
+      },
+      "sine_12Hz": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 13.700775194168092,
+          "rms": 19.27126590271009,
+          "max_abs": 58.15611267089844,
+          "bias": -10.450022993087769
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.6594960331916809,
+          "rms": 0.7892140011668197,
+          "max_abs": 1.3985769748687744,
+          "bias": 0.20580114483833312
+        },
+        "current_total_variation_A": 72.32499775886541,
+        "surrogate_residual_N": {
+          "n": 100,
+          "mae": 35.80951930999756,
+          "rms": 45.06879185933682,
+          "max_abs": 96.97677612304688,
+          "bias": 0.7404568862915039
+        },
+        "reachable_fraction": 0.08,
+        "saturation_fraction": 0.86
+      }
+    },
+    "window10": {
+      "multisine_low": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 10.667394647598266,
+          "rms": 18.42615312249524,
+          "max_abs": 73.01812744140625,
+          "bias": -7.901516427993775
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.2714333753287792,
+          "rms": 0.3896201480453591,
+          "max_abs": 1.2862203121185303,
+          "bias": 0.04763073697686195
+        },
+        "current_total_variation_A": 17.13005234599113,
+        "surrogate_residual_N": {
+          "n": 100,
+          "mae": 4.506487865447998,
+          "rms": 13.3589010096369,
+          "max_abs": 76.73672485351562,
+          "bias": -2.3251326942443846
+        },
+        "reachable_fraction": 0.77,
+        "saturation_fraction": 0.23
+      },
+      "multisine_mixed": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 43.11798350811004,
+          "rms": 67.14128238300914,
+          "max_abs": 241.6278076171875,
+          "bias": -13.171828875541687
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.45439850732684134,
+          "rms": 0.618968980738148,
+          "max_abs": 1.3998943567276,
+          "bias": 0.12570351853966713
+        },
+        "current_total_variation_A": 40.113632154464725,
+        "surrogate_residual_N": {
+          "n": 100,
+          "mae": 45.95975564956665,
+          "rms": 95.25033582770841,
+          "max_abs": 382.4093017578125,
+          "bias": 3.6967006492614747
+        },
+        "reachable_fraction": 0.57,
+        "saturation_fraction": 0.43
+      },
+      "sine_8Hz": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 7.471865606307984,
+          "rms": 11.538390752895554,
+          "max_abs": 38.93761444091797,
+          "bias": -6.398812513351441
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.5137808792293072,
+          "rms": 0.6420459669053619,
+          "max_abs": 1.3981397151947021,
+          "bias": 0.16514308884739876
+        },
+        "current_total_variation_A": 43.1665842473507,
+        "surrogate_residual_N": {
+          "n": 100,
+          "mae": 12.059253196716309,
+          "rms": 23.13727898970518,
+          "max_abs": 73.47095489501953,
+          "bias": -0.8445119094848633
+        },
+        "reachable_fraction": 0.48,
+        "saturation_fraction": 0.52
+      },
+      "sine_12Hz": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 10.748896646499634,
+          "rms": 15.398919114109287,
+          "max_abs": 40.1605110168457,
+          "bias": -8.464443922042847
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.5902104240655899,
+          "rms": 0.7316603032712097,
+          "max_abs": 1.3985819816589355,
+          "bias": 0.22714411795139314
+        },
+        "current_total_variation_A": 64.51748687624935,
+        "surrogate_residual_N": {
+          "n": 100,
+          "mae": 25.209675369262694,
+          "rms": 38.143561362184236,
+          "max_abs": 96.788330078125,
+          "bias": -0.970421371459961
+        },
+        "reachable_fraction": 0.31,
+        "saturation_fraction": 0.69
+      }
+    },
+    "untrained_inv_head_reference": {
+      "multisine_low": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 20.914275026321413,
+          "rms": 28.050223278684204,
+          "max_abs": 67.62828063964844,
+          "bias": 8.473464040756225
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.3884052136540413,
+          "rms": 0.4335297766098825,
+          "max_abs": 0.6761685609817505,
+          "bias": -0.10306667894124985
+        },
+        "current_total_variation_A": 0.10715967416763306
+      },
+      "multisine_mixed": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 47.43447308063507,
+          "rms": 78.85408806088314,
+          "max_abs": 389.70977783203125,
+          "bias": -12.69196801662445
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.39231101781129835,
+          "rms": 0.43737116123504743,
+          "max_abs": 0.6769422888755798,
+          "bias": -0.08286043018102646
+        },
+        "current_total_variation_A": 0.32757407426834106
+      },
+      "sine_8Hz": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 4.480971632003784,
+          "rms": 6.316192342736122,
+          "max_abs": 20.922027587890625,
+          "bias": -0.23275824546813964
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.39241556495428087,
+          "rms": 0.43636700516075,
+          "max_abs": 0.6639254689216614,
+          "bias": -0.06513883382081985
+        },
+        "current_total_variation_A": 0.11873477697372437
+      },
+      "sine_12Hz": {
+        "actual_rollout_mean_error_N": {
+          "n": 100,
+          "mae": 7.928715296983719,
+          "rms": 12.517597590592851,
+          "max_abs": 50.53630828857422,
+          "bias": -0.7476104056835174
+        },
+        "current_error_A": {
+          "n": 100,
+          "mae": 0.38400900006294253,
+          "rms": 0.4270624923108299,
+          "max_abs": 0.6636484861373901,
+          "bias": -0.03429319143295288
+        },
+        "current_total_variation_A": 0.21699541807174683
+      }
+    }
+  },
+  "PC_CPU_timings": {
+    "forward_prepare_force_commit": {
+      "median_us": 1134.0999755859375,
+      "p95_us": 1888.6192626953125,
+      "max_us": 2085.2
+    },
+    "inverse10_24bisections": {
+      "median_us": 14210.2001953125,
+      "p95_us": 15935.6845703125,
+      "max_us": 19335.6
+    }
+  },
+  "torch_version": "2.11.0+cu128",
+  "cpu": "Intel64 Family 6 Model 151 Stepping 5, GenuineIntel",
+  "threads": 1,
+  "checkpoint_sha256": "3a407a77e8f0b9167282fdbfc77923dac23fcd0430fa498432e36e31f97423c7",
+  "model_parameter_count": 21041,
+  "inverse_added_parameters": 0,
+  "checkpoint": "D:\\OneDrive - mail.scut.edu.cn\\\u5468\u62a5\\4.6\\4.7All\\DLC_0.85_100\\PMPC\\SUV_DLC_PMPC\\Simulink_Model\\scratchpad\\v19_bd_local_20261027\\sessions\\v19_capacity_four_balanced_300_20261028\\A\\final.pth",
+  "force_scale": 7662.43017578125,
+  "tau_ms": 12.52971363067627,
+  "steps": 10,
+  "dt_s": 0.001,
+  "iterations": 24,
+  "span_tol_N": 1.0,
+  "training_started": false,
+  "dataset_CSV_read": false,
+  "inv_head_trained": false,
+  "scope": "Synthetic model-consistency audit only; no measured inverse-accuracy or NI timing claim",
+  "sources": {
+    "test_shared_window_inverse.py": "41c417325af99d7424dc3a9debebe2a1b76246e80cf4a119dd29a4a5613cbef3",
+    "shared_window_inverse.py": "2790bbc3c478b9c42763d8e4c73b080f68b108a213d3bf386b724bea4c0576ab"
+  }
+}

@@ -1,0 +1,105 @@
+"""Report saved statistics only. No inference, training or data relabeling."""
+import json,hashlib,shutil
+from pathlib import Path
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+HERE=Path(__file__).resolve().parent
+OUT=HERE/'claude_execution_20261029'
+p0=json.loads((HERE/'p0_reference_audit_20261028/summary.json').read_text())
+supp=json.loads((OUT/'p0_supplement.json').read_text())
+inv=json.loads((OUT/'inverse_audit.json').read_text())
+rec=json.loads((OUT/'synthetic_rollout.json').read_text())
+labels=['multisine_low','multisine_mixed','sine_8Hz','sine_12Hz']
+fig,axes=plt.subplots(2,2,figsize=(12,7),sharex=True)
+for j,(name,ax) in enumerate(zip(labels,axes.flat)):
+    t=[r['time_s'] for r in rec]
+    ax.plot(t,[r['target_mean_N'][j] for r in rec],color='black',label='Known-current rollout target',lw=1.7)
+    for method,color,label in [('single_step','#d95f02','1 ms inverse'),('window10','#0072b2','10 ms frozen-context inverse')]:
+        ax.plot(t,[r['methods'][method]['actual_mean_N'][j] for r in rec],color=color,label=label,lw=1)
+    ax.set(title=name,xlabel='Time (s)',ylabel='10 ms mean force (N)'); ax.grid(alpha=.2)
+axes[0,0].legend(fontsize=8)
+fig.suptitle('Frozen A model: synthetic one-window counterfactual audit\nIdentical committed history; actual recurrent rollout used for scoring')
+fig.tight_layout(); fig.savefig(OUT/'inverse_rollout_comparison.png',dpi=180); plt.close(fig)
+rows=[]
+for name in labels:
+    one=inv['synthetic_results']['single_step'][name]; ten=inv['synthetic_results']['window10'][name]
+    rows.append(f"| {name} | {one['actual_rollout_mean_error_N']['mae']:.3f} | {ten['actual_rollout_mean_error_N']['mae']:.3f} | {ten['current_error_A']['mae']:.3f} | {100*ten['saturation_fraction']:.1f}% |")
+adj=p0['regression']['random_adjusted']; end=supp['end_direction_cluster_bootstrap']
+readme=f'''# Claude 方案执行记录：P0 与 P4 的首轮实现/审查
+
+日期：2026-10-29（Asia/Shanghai）。方案来源：`train/nlcsnn-v3-5pct`，提交 `9802e70`，`docs/REVIEW_2026-10-28_v19_bottleneck_and_plan.md`。
+
+## 结论
+
+P0 已执行，但没有得到足以把逐文件初始 F0 改为公共气弹簧项的证据。P1/P2 不启动，旧标签、原始数据和权重不变。
+P4 共享数值逆解已实现，9 项一致性检查通过；冻结 10 ms 上下文仍有明显滚动误差，尚不满足接入 CarSim 的验收条件。未宣称完成整个 P0–P4 方案。
+
+## P0：仅训练集原始记录
+
+- 248 个训练原始文件逐个校验 SHA256；没有打开验证或最终测试 CSV。
+- 主分析为随机类 34 文件、33 条件组，回归的是**未扣 F0 的原始运动平均力**，控制类别、温度、绝对位置、平均电流、速度均值和 RMS。斜率 {adj['slope']:.4f}，分组 bootstrap 95% CI [{adj['ci95'][0]:.4f}, {adj['ci95'][1]:.4f}]。接近零的点估计不能证明静摩擦假说；未通过预登记的等价区间判据，也不能据此确认传感器零漂。
+- 初末位置/电流/温度匹配的结束静态记录 40 个、36 条件组。末运动方向对应的平均力差 {end['difference_N']:.3f} N，95% CI [{end['ci95'][0]:.3f}, {end['ci95'][1]:.3f}]，跨零。补充统计按整个条件组共同抽样，修正初版对两方向分别抽样的问题；初版证据保留，最终解释使用补充值。
+- SH/ST 有 60 个有限低速配对格、45 个文件；两侧力差绝对值中位数 {p0['low_speed_gap_abs_N']['median']:.3f} N。速度范围 1–10 mm/s，**并非 v→0 极限**，带宽还包含黏性、滞回和测量影响。
+- 跨文件同位置/电流/温度格仅 5 个，低速中点极差分别约 66.79、57.72、46.92、3.79、2.28 N，工况和运动历史仍不同，不能直接认定中点就是可重复的气弹簧预载。
+- 所有 248 个文件提取到采集头时间戳。SR/RLF/RHF 相邻初始 F0 绝对变化中位数分别 18.74/19.39/21.93 N；试验条件随时间改变，不能用这条曲线单独归因于漂移或摩擦。
+- 整数周期主分析仅 26/185 个 SH 文件满足至少两个完整周期要求。覆盖率不足；其他 SH 没有被当作有效整数周期证据。
+
+初版审查、预登记及逐文件统计在 `p0/`；补充在 `p0_supplement.json`。上述阈值是本次操作性门槛，不是物理定律。当前只能说“基准定义值得继续查”，不能把“静摩擦卡滞是根因”写成定论。
+
+## P4：共享正模型的 10 ms 窗均值逆解
+
+实现 `code/shared_window_inverse.py`，没有新增可训练参数。正模型仍是 A（GRU 2×16、MLP 48），包含未训练逆头共 21041 参数；Stage 1 训练参数 17200。权重 SHA256：`{inv['checkpoint_sha256']}`。
+
+- 电流接口单位 A，力接口单位 N；仅在正模型支持的 0–1.6 A 内求解，不外推到 2.1 A。
+- 10 ms 目标明确为接下来 10 个 1 ms 样本的**均值力**。解析推进 CurrentLag，冻结 c/s/b 和运动状态，用 24 次二分求根。
+- 每个候选电流只查询，不推进 live GRU 或电流状态；正模型使用实际施加电流每 1 ms 提交一次状态。
+- 返回可达上下界、目标裁剪、原目标残差、饱和、局部灵敏度。窗内端点力差 ≤1 N 时保留上一实际电流；这是控制权不足策略，不是统计可辨识性证明。
+- 9 项检查覆盖单步一致性、十步 EMA 一致性、可达电流恢复、可达力残差 <1 N、双速度符号单调性、零速保持、不可达目标标记、状态不变和权重不变，全部通过。
+- **精确求根只针对冻结代理映射**；实际 10 ms 内位移、速度、GRU 和系数继续变化。完整滚动不保证单调，不能沿用冻结映射的精确性结论。
+
+### 动态合成测试结果（不是真实试验逆模型精度）
+
+每组 100 个窗口；温度 30°C，初始位移中心 250 mm；前 1 s 以 0.8 A 预热，随后电流在 0.2–1.4 A 之间按 10 ms 变化。目标由**同一个已冻结正模型**按已知电流和未来运动滚动生成。各方法每窗从相同真实历史出发，误差由该窗实际 GRU 滚动评分；不是控制器整段自由闭环。
+
+| 合成运动 | 单步逆解力 MAE (N) | 10 ms 逆解力 MAE (N) | 10 ms 电流 MAE (A) | 10 ms 饱和率 |
+|---|---:|---:|---:|---:|
+{chr(10).join(rows)}
+
+表中为全窗口结果，包含近零速与代理映射不可达目标；没有冒用方案中尚未落实的灵敏度 w≥0.2 来宣称通过可辨识样本验收。单步方法也以同一窗均值目标求解，用于比较控制保持造成的差异，不是其自生成单步目标一致性测试。
+
+两种多正弦激励及 8/12 Hz 正弦的具体公式、起止时刻在测试代码中固定。单步和 10 ms 方法都使用测试时刻已知状态；未来真实运动只用于目标生成和评分，未泄露进冻结求逆器。`untrained_inv_head_reference` 仅保存未训练参照，不能作为已训练逆头性能或优劣结论。
+
+### 时间与部署
+
+本地 PC、单 CPU 线程、Python/PyTorch FP32，100 次测量：正向 prepare/force/commit 中位数 {inv['PC_CPU_timings']['forward_prepare_force_commit']['median_us']:.1f} µs；10 ms 逆解中位数 {inv['PC_CPU_timings']['inverse10_24bisections']['median_us']:.1f} µs。它们含 Python/张量框架开销，**不是 NI/S32/MEX 实测，也不证明 C 部署一定不达标**。当前实现不满足 Python 运行方式下的提议时间预算，尚无 NI 实时性结论。
+
+尚未做：新标签训练、多 seed/CV、逆头训练、实测数据逆精度验收、NI 部署、CarSim 接口替换。现有有限恒流正弦周期功审查结论保留，本次不将它推广为变电流全域无源保证。
+
+## 复现与下一步边界
+
+1. 仓库已有 A 权重：`training_outputs/v19_capacity_four_20261028/training_delivery/sessions/A/final.pth`，应先校验上述 SHA256。
+2. `python code/test_inverse_portable.py <A-final.pth>`：只需要 PyTorch，使用随附冻结源码，无数据加载器、无训练入口，结果另存 `portable_replay/`。
+3. `original_code/` 保存本次本地执行入口及其依赖环境指向；P0 原始 CSV 属于用户本地试验记录，本包不重复上传原始数据。
+
+后续正向训练受 P1 证据门槛限制：当前数据不能可靠区分气弹簧预载、静摩擦状态与测量零偏。应优先获取同安装位置、同温度/电流下双向缓慢接近并停稳的重复参考，或独立无载零点证据；不能直接用验证残差校正标签。
+逆向下一步应先比较可部署的未来运动/系数预测与全滚动离线参考，明确近换向点的可达性，再决定是否导出查表/C 代码。由于本次冻结方案仍有明显误差，未把它覆盖到现有 Simulink 模型。
+'''
+(OUT/'README.md').write_text(readme,encoding='utf-8')
+p0out=OUT/'p0'; p0out.mkdir(exist_ok=True)
+for p in (HERE/'p0_reference_audit_20261028').iterdir():
+    if p.is_file(): shutil.copy2(p,p0out/p.name)
+original=OUT/'original_code'; original.mkdir(exist_ok=True)
+for name in ['execute_p0_reference_audit.py','supplement_p0_reference.py','p0_reference_plan_20261028.md','test_shared_window_inverse.py','shared_window_inverse.py','report_claude_execution.py']:
+    shutil.copy2(HERE/name,original/name)
+def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+provenance=dict(source_plan_commit='9802e70',checkpoint_sha256=inv['checkpoint_sha256'],
+    raw_manifest_sha256=p0['manifest_sha256'],training_started=False,final_test_access=False,
+    existing_weights_or_labels_modified=False,CarSim_modified=False,
+    frozen_capacity_original_sha256=sha(HERE/'model_v19_capacity.py'),
+    portable_capacity_change='Remove unused train_a_local import only; all model logic retained')
+(OUT/'provenance.json').write_text(json.dumps(provenance,indent=2),encoding='utf-8')
+manifest={str(p.relative_to(OUT)).replace('\\','/'):sha(p) for p in sorted(OUT.rglob('*'))
+          if p.is_file() and '__pycache__' not in p.parts and p.name!='SHA256.json'}
+(OUT/'SHA256.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+print('Report saved:',OUT)
