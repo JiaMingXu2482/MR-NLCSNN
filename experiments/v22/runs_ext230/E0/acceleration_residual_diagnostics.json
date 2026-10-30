@@ -1,0 +1,8 @@
+{
+  "residual_rms": 0.006236124783754349,
+  "pcc_with_acceleration": -0.06552296389967288,
+  "pcc_with_velocity": -0.00910231903875745,
+  "pcc_with_displacement": 0.12030501605018352,
+  "n_samples": 114163,
+  "note": "residual = prediction - measurement, normalised force units"
+}

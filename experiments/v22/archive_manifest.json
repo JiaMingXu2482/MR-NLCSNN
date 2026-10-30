@@ -1,0 +1,1672 @@
+{
+  "snapshot_date": "2026-10-30",
+  "scope": "Existing V22 training and diagnostic artifacts; no retraining",
+  "sources": [
+    "D:\\v22_ae_hybrid",
+    "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22"
+  ],
+  "files": [
+    {
+      "path": "_e0_surface.log",
+      "sha256": "3405a2341e3f5476a3401507132a6f7e9b05e7b46df5f96f2ac02d6983e597db",
+      "bytes": 673,
+      "source": "D:\\v22_ae_hybrid\\_e0_surface.log"
+    },
+    {
+      "path": "_e0s2.log",
+      "sha256": "d89bfbb347b3287f4aa52e957602991cd05bb9ed1f095bd09bd8c6b53a7a1f1c",
+      "bytes": 215,
+      "source": "D:\\v22_ae_hybrid\\_e0s2.log"
+    },
+    {
+      "path": "_final_metrics.log",
+      "sha256": "7af381e25967a116a33d61e812f2cd4aaa44c1f1e770ad61f5b50291658c5af3",
+      "bytes": 1257,
+      "source": "D:\\v22_ae_hybrid\\_final_metrics.log"
+    },
+    {
+      "path": "_formal_stdout.log",
+      "sha256": "713a4d17c06b892632989120116273f9e716b907b4e1646dffce710d1a88b0b1",
+      "bytes": 5413,
+      "source": "D:\\v22_ae_hybrid\\_formal_stdout.log"
+    },
+    {
+      "path": "_inv_acc.log",
+      "sha256": "bfbb4a623e3dd3626d716529ba4d931c3f391b9c54ec7c010735ac94c3c9a4df",
+      "bytes": 612,
+      "source": "D:\\v22_ae_hybrid\\_inv_acc.log"
+    },
+    {
+      "path": "_smoke_stdout.log",
+      "sha256": "554c1a64370d3d329aef323d0a5f61dcd06144ffb08631d05d379a01a80474b9",
+      "bytes": 1229,
+      "source": "D:\\v22_ae_hybrid\\_smoke_stdout.log"
+    },
+    {
+      "path": "audit_v22.py",
+      "sha256": "4018ee12c244fc5f2c8fed8cd158c91ec4261b7314fc68cf41a739b91fca8567",
+      "bytes": 4920,
+      "source": "D:\\v22_ae_hybrid\\audit_v22.py"
+    },
+    {
+      "path": "audit_v22_prerequisites.json",
+      "sha256": "ef18a8682d36e41a1342076b18eb6f9544ae1c56056dbc4147e0237ef03a4267",
+      "bytes": 6375,
+      "source": "D:\\v22_ae_hybrid\\audit_v22_prerequisites.json"
+    },
+    {
+      "path": "check_inverse_accuracy.py",
+      "sha256": "a2a1fa1e7a55d6a0eb210c3b80de8bf69348f60acf1ce6ffcfbe065026ebb8e4",
+      "bytes": 4998,
+      "source": "D:\\v22_ae_hybrid\\check_inverse_accuracy.py"
+    },
+    {
+      "path": "check_inverse_authority.py",
+      "sha256": "62bbfce0a11b1d134b70054cc91fbf1d1ab1a18ae599886d1f92e741e198f875",
+      "bytes": 3693,
+      "source": "D:\\v22_ae_hybrid\\check_inverse_authority.py"
+    },
+    {
+      "path": "E0_step_lag_events.csv",
+      "sha256": "52249e186cb51259b07358b932959101ae9662467ce51e727b1f602493a2f43a",
+      "bytes": 5265,
+      "source": "D:\\v22_ae_hybrid\\E0_step_lag_events.csv"
+    },
+    {
+      "path": "ext_compare.py",
+      "sha256": "584ae8552de58cd6184804d3cb7eb9b0a85d53c25eed00c42cd4188a93300947",
+      "bytes": 2482,
+      "source": "D:\\v22_ae_hybrid\\ext_compare.py"
+    },
+    {
+      "path": "extend_v22.py",
+      "sha256": "09aafe452a4c29b354ff3471da99920831855d170102b3ddda6a1b24343568b4",
+      "bytes": 11384,
+      "source": "D:\\v22_ae_hybrid\\extend_v22.py"
+    },
+    {
+      "path": "fig_E0_lag_surface/E0_lag_surface_3d.png",
+      "sha256": "d8c826e7b34cdd81dabbc468cb1fc17baf53554601f0e9a9300ddb21b8eddff3",
+      "bytes": 768191,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_lag_surface\\E0_lag_surface_3d.png"
+    },
+    {
+      "path": "fig_E0_lag_surface/E0_lag_surface_3d_230ep.png",
+      "sha256": "07f35ddcc0f49c80297b42aaeeb30d2b4c64546859de10393769b636def535b9",
+      "bytes": 713197,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_lag_surface\\E0_lag_surface_3d_230ep.png"
+    },
+    {
+      "path": "fig_E0_lag_surface/e0_step_events.json",
+      "sha256": "9fe59ec0cb8775efa5e11da250945c9b2a4afd9921e7f2dff6e7420fdc0a180b",
+      "bytes": 29319,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_lag_surface\\e0_step_events.json"
+    },
+    {
+      "path": "fig_E0_lag_surface/e0_step_events_230ep.json",
+      "sha256": "9e58bcfd8335e1d9defb19e3b60fc5d49c4c574ec91c816639506e3f607c29b7",
+      "bytes": 18876,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_lag_surface\\e0_step_events_230ep.json"
+    },
+    {
+      "path": "fig_E0_validation/E0_validation_RHF.png",
+      "sha256": "367559ab2c03ed782c6f194a8a3d6f8267a0d8d787fb076e8d32e5abccce91ec",
+      "bytes": 73907,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_validation\\E0_validation_RHF.png"
+    },
+    {
+      "path": "fig_E0_validation/E0_validation_RLF.png",
+      "sha256": "3a6df687b77b0558b182e90d369ec883955df764b4760512f7aeee7a869c49e4",
+      "bytes": 291933,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_validation\\E0_validation_RLF.png"
+    },
+    {
+      "path": "fig_E0_validation/E0_validation_SH.png",
+      "sha256": "ef3dde9135fe8471ec4489275d7a509399eaf27c19901195724e4eaa8560b0c3",
+      "bytes": 177535,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_validation\\E0_validation_SH.png"
+    },
+    {
+      "path": "fig_E0_validation/E0_validation_SR.png",
+      "sha256": "d343779be827bfdcbdebc5ba8cf7679e11ac6d3e44a34f447fba61c3007365e2",
+      "bytes": 85703,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_validation\\E0_validation_SR.png"
+    },
+    {
+      "path": "fig_E0_validation/E0_validation_ST.png",
+      "sha256": "17319797dfa3d1ced1668f4e58bc0d97ed767f6e9f106922615a7daa1db8cbdd",
+      "bytes": 296926,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_validation\\E0_validation_ST.png"
+    },
+    {
+      "path": "fig_E0_validation/E0_validation_summary.json",
+      "sha256": "78785db15191a302a3423693b261f3e8b016149f875b98b2dcfcfdfb0bb65dd3",
+      "bytes": 1616,
+      "source": "D:\\v22_ae_hybrid\\fig_E0_validation\\E0_validation_summary.json"
+    },
+    {
+      "path": "fig_EGTA_validation/EGTA_validation_RHF.png",
+      "sha256": "8aae9db3a1cd3b6dc0054ee72f91df31b84e30b69663508bdb8e26200c36b991",
+      "bytes": 76130,
+      "source": "D:\\v22_ae_hybrid\\fig_EGTA_validation\\EGTA_validation_RHF.png"
+    },
+    {
+      "path": "fig_EGTA_validation/EGTA_validation_RLF.png",
+      "sha256": "d91c9bec14f7b4c3bb4e94966aa78973ea4e57888c4f7c0651f28d86de6eeb2c",
+      "bytes": 295532,
+      "source": "D:\\v22_ae_hybrid\\fig_EGTA_validation\\EGTA_validation_RLF.png"
+    },
+    {
+      "path": "fig_EGTA_validation/EGTA_validation_SH.png",
+      "sha256": "04aeb091174db58c03232f4ba0a0f29164a73f51da66cd15fc03b5d2cec0036c",
+      "bytes": 179349,
+      "source": "D:\\v22_ae_hybrid\\fig_EGTA_validation\\EGTA_validation_SH.png"
+    },
+    {
+      "path": "fig_EGTA_validation/EGTA_validation_SR.png",
+      "sha256": "96bc54f33e40e417aa2fc626f5628f20b49d7ba62c4361ef670f60589c0f163b",
+      "bytes": 87835,
+      "source": "D:\\v22_ae_hybrid\\fig_EGTA_validation\\EGTA_validation_SR.png"
+    },
+    {
+      "path": "fig_EGTA_validation/EGTA_validation_ST.png",
+      "sha256": "e105de463b15eec7f5268bcbaa7ae930bab1073099a4c663361dec8d03f72b63",
+      "bytes": 293340,
+      "source": "D:\\v22_ae_hybrid\\fig_EGTA_validation\\EGTA_validation_ST.png"
+    },
+    {
+      "path": "fig_EGTA_validation/EGTA_validation_summary.json",
+      "sha256": "9254ca90431c2dfe9a16f27b81a0129ac0946e59b0dd0d5dffa426872c2f5daa",
+      "bytes": 1574,
+      "source": "D:\\v22_ae_hybrid\\fig_EGTA_validation\\EGTA_validation_summary.json"
+    },
+    {
+      "path": "final_metrics.py",
+      "sha256": "b304b4290170e2cae5175b6b29dbf5606313375ad1307e48b8fc88d902bb156b",
+      "bytes": 9425,
+      "source": "D:\\v22_ae_hybrid\\final_metrics.py"
+    },
+    {
+      "path": "inverse_accuracy_fixed.json",
+      "sha256": "fa436c34b865ae69830630077c8d57e43ba69bde6416f8174537f0d88078070c",
+      "bytes": 1499,
+      "source": "D:\\v22_ae_hybrid\\inverse_accuracy_fixed.json"
+    },
+    {
+      "path": "inverse_authority.json",
+      "sha256": "6c42014607b05ab63581acfd7c209740049881fa8e4589fb3c666a0f46704c84",
+      "bytes": 1322,
+      "source": "D:\\v22_ae_hybrid\\inverse_authority.json"
+    },
+    {
+      "path": "make_figures.py",
+      "sha256": "15bb57b2bde3820d19ff4b6c146c6f62801cc6818eb6d55b653a267515261e92",
+      "bytes": 5257,
+      "source": "D:\\v22_ae_hybrid\\make_figures.py"
+    },
+    {
+      "path": "plot_e0_lag_surface.py",
+      "sha256": "db2fefd6e21427e5e56c92d690e19e375af3a4bdeb637722fa5d743f76ee7e48",
+      "bytes": 5768,
+      "source": "D:\\v22_ae_hybrid\\plot_e0_lag_surface.py"
+    },
+    {
+      "path": "plot_e0_surface2.py",
+      "sha256": "8337bff227f392da77deecf1c676ea50e8c8b79785c854bbaabb6fd5e001922c",
+      "bytes": 5765,
+      "source": "D:\\v22_ae_hybrid\\plot_e0_surface2.py"
+    },
+    {
+      "path": "plot_e0_validation.py",
+      "sha256": "d451e4f8c8e5419479e00a2aaa42239425fc4849c4423d1a59218d4baa04c879",
+      "bytes": 3735,
+      "source": "D:\\v22_ae_hybrid\\plot_e0_validation.py"
+    },
+    {
+      "path": "plot_validation.py",
+      "sha256": "1aed20a5d1d43d109350baa91cd4dcb9a17124fccd15fa6a1d409d2eb607d629",
+      "bytes": 4129,
+      "source": "D:\\v22_ae_hybrid\\plot_validation.py"
+    },
+    {
+      "path": "run_v22_all.py",
+      "sha256": "9a55d60008fd8918014f04bcbec637109a03d6ef2830d5f08668f67520bd7bd2",
+      "bytes": 10979,
+      "source": "D:\\v22_ae_hybrid\\run_v22_all.py"
+    },
+    {
+      "path": "runs_ext230/_E0.log",
+      "sha256": "f4e90fe6c5199142f0d1afe5f7d5af7711178a86407a3fadb363a7a50f140366",
+      "bytes": 525,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\_E0.log"
+    },
+    {
+      "path": "runs_ext230/_EGTA.log",
+      "sha256": "5c93491991fb9b5c49b4796010df062457c5440181ef70b08383100df238bc73",
+      "bytes": 532,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\_EGTA.log"
+    },
+    {
+      "path": "runs_ext230/E0/acceleration_residual_diagnostics.json",
+      "sha256": "0ce23fd975d46d758906d59a0c5caae2e49190af101c89a7e3dbc6403091d3c1",
+      "bytes": 287,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "runs_ext230/E0/best.pth",
+      "sha256": "0410a41306cd4fb81704c8e2a2c442189f66800a9d66bdea45fc02a3c1ff6492",
+      "bytes": 11832,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\best.pth"
+    },
+    {
+      "path": "runs_ext230/E0/hysteresis_metrics.csv",
+      "sha256": "6f2da34191bb9b9bc41447fe870d6ccb2eaeb5ebf4222f212123ab911b9de154",
+      "bytes": 3170,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "runs_ext230/E0/inverse_100hz_report.json",
+      "sha256": "0e64fdfa573d65f8fd67a5de62ba610a522d6258e8f8dd5a0c2f4aead2ba36ac",
+      "bytes": 104,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\inverse_100hz_report.json"
+    },
+    {
+      "path": "runs_ext230/E0/last.pth",
+      "sha256": "7f9b20f22bfc160540e44cebd026c377ef5930399b3badad1b4fb5d73d2d6b40",
+      "bytes": 11832,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\last.pth"
+    },
+    {
+      "path": "runs_ext230/E0/metrics.jsonl",
+      "sha256": "797ac0789a8ffdc42546670da444441036e127b4cc3904f51747288e985bf1d4",
+      "bytes": 270726,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\metrics.jsonl"
+    },
+    {
+      "path": "runs_ext230/E0/monotonicity_report.json",
+      "sha256": "f2cac68d279988ec81868a8ba346af2dff273423d72329de697cbfa16f8571ce",
+      "bytes": 34,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\monotonicity_report.json"
+    },
+    {
+      "path": "runs_ext230/E0/per_condition_metrics.csv",
+      "sha256": "3b0fde8ca0e65867064e848340056dc11e21be489c29d5c911083f0735e0c09a",
+      "bytes": 104,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\per_condition_metrics.csv"
+    },
+    {
+      "path": "runs_ext230/E0/per_file_metrics.csv",
+      "sha256": "a417315798d5ae2bafecf6462860c5882e30825a7e86a7da893033aac733c518",
+      "bytes": 1172,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\per_file_metrics.csv"
+    },
+    {
+      "path": "runs_ext230/E0/resource_report.json",
+      "sha256": "dbdb19354fd317b3e96e8690b9093dbe80d67442da005daa74daccf4c381703f",
+      "bytes": 337,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\resource_report.json"
+    },
+    {
+      "path": "runs_ext230/E0/run_config.json",
+      "sha256": "ea90854b6e111d47c7ee298669df190697eb1f79e5ec2a1d14e000b1b98729ce",
+      "bytes": 1380,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\run_config.json"
+    },
+    {
+      "path": "runs_ext230/E0/step_response_metrics_250N.csv",
+      "sha256": "1004bb44538761258d9005053a9544f28ffb08dd445efd91b2940e92448f7ac5",
+      "bytes": 1540,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "runs_ext230/E0/step_response_metrics_50N.csv",
+      "sha256": "e3fcdd70ca6e794d58435b103cbfcd9f1738a6723c0e88f8f2e2906437d309b6",
+      "bytes": 2004,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "runs_ext230/E0/summary.json",
+      "sha256": "8dce6ea74ed284b9ebda1e69be37b118eaf7b88478b299da69212dd181f06f92",
+      "bytes": 1703,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\E0\\summary.json"
+    },
+    {
+      "path": "runs_ext230/EGTA/acceleration_residual_diagnostics.json",
+      "sha256": "37e3b999b6d1e01a3b39bd27c38dc98070ecf4af98ea78eb9a462e220c1d56c9",
+      "bytes": 288,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "runs_ext230/EGTA/best.pth",
+      "sha256": "228f8e31ed93bfcaf3932c1b117aa4b6c6afc6b85eade764f91db5f7b383b11b",
+      "bytes": 14839,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\best.pth"
+    },
+    {
+      "path": "runs_ext230/EGTA/hysteresis_metrics.csv",
+      "sha256": "53e68b7ddc4bc3ae72a429c81e158e66aa7c6198f325b8104534cf6a4dec2028",
+      "bytes": 3165,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "runs_ext230/EGTA/inverse_100hz_report.json",
+      "sha256": "7676233ebf9db0c119444f25a561579c9daa264f8d5f114560d89f6da12d02bf",
+      "bytes": 436,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\inverse_100hz_report.json"
+    },
+    {
+      "path": "runs_ext230/EGTA/last.pth",
+      "sha256": "5fa717da07ecadbe286e7dfe6a80ab753eed3cd5c9c7b0241cd5f9ddaf1d5159",
+      "bytes": 14839,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\last.pth"
+    },
+    {
+      "path": "runs_ext230/EGTA/metrics.jsonl",
+      "sha256": "518282e7270647eb368481de8ff51485bd49867968373f02d8891e9e4829a490",
+      "bytes": 276839,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\metrics.jsonl"
+    },
+    {
+      "path": "runs_ext230/EGTA/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\monotonicity_report.json"
+    },
+    {
+      "path": "runs_ext230/EGTA/per_condition_metrics.csv",
+      "sha256": "2de2cebaa1a230a6403574492b56ea6ae6c4613cbe8bd82ddc27053714ababdf",
+      "bytes": 104,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\per_condition_metrics.csv"
+    },
+    {
+      "path": "runs_ext230/EGTA/per_file_metrics.csv",
+      "sha256": "e7dac246733c0ec8fc04d98ee5a098b855f1251b7e49dff20ce32b0556b8b6bf",
+      "bytes": 1173,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\per_file_metrics.csv"
+    },
+    {
+      "path": "runs_ext230/EGTA/resource_report.json",
+      "sha256": "8e80c9620e59f020b0350e240f0c4d958afc7384378322971309d417a7fbe272",
+      "bytes": 415,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\resource_report.json"
+    },
+    {
+      "path": "runs_ext230/EGTA/run_config.json",
+      "sha256": "bda341d43eb5974699d926ea777790e30a253a096b74f217ce3d22a8503e4999",
+      "bytes": 1461,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\run_config.json"
+    },
+    {
+      "path": "runs_ext230/EGTA/step_response_metrics_250N.csv",
+      "sha256": "f451ae013bccd43de2d9f027a433e6aedae725822e8fc4aa0012a948bc488ae2",
+      "bytes": 1702,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "runs_ext230/EGTA/step_response_metrics_50N.csv",
+      "sha256": "7b196a85208961c3cd8a336e1897170626e4cdcfc14eae44c82d28595d506610",
+      "bytes": 2010,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "runs_ext230/EGTA/summary.json",
+      "sha256": "e3c4e1b84e92682546381f6adac6cbbd9371c9349158bf21a68085739533b2a6",
+      "bytes": 2259,
+      "source": "D:\\v22_ae_hybrid\\runs_ext230\\EGTA\\summary.json"
+    },
+    {
+      "path": "runs_seed7/AGT/acceleration_residual_diagnostics.json",
+      "sha256": "a7c2bc6862b000661be1867ccb2f182388a290755938f5abe3ee5cac3b07dec5",
+      "bytes": 286,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "runs_seed7/AGT/best.pth",
+      "sha256": "b117c4db119f4d4e5ee9bf08f5f27f5be48592f124559a6409f97e2194d1a90f",
+      "bytes": 18685,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\best.pth"
+    },
+    {
+      "path": "runs_seed7/AGT/figures/1_prediction_timeseries.png",
+      "sha256": "77a2cd2d5a4465c10fe2c2630af907a604abdd38d051d8a3d17a295df4bab3c4",
+      "bytes": 62423,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\figures\\1_prediction_timeseries.png"
+    },
+    {
+      "path": "runs_seed7/AGT/figures/2_force_velocity_cloud.png",
+      "sha256": "585c4b7237a14874d365bf44b81f64eeb5deac1a9c4c5b31a92f9677bd75db12",
+      "bytes": 39434,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\figures\\2_force_velocity_cloud.png"
+    },
+    {
+      "path": "runs_seed7/AGT/figures/3_force_displacement_loop.png",
+      "sha256": "d38880957c070ae33dce9502c108d9eba93828e42aaf3b7caac44f6390388b5d",
+      "bytes": 63416,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\figures\\3_force_displacement_loop.png"
+    },
+    {
+      "path": "runs_seed7/AGT/figures/4_step_response.png",
+      "sha256": "898e32b4035f2d702b9fc78f65c9e0f4a4b0f7781531dd9aa7986db24d97276a",
+      "bytes": 85958,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\figures\\4_step_response.png"
+    },
+    {
+      "path": "runs_seed7/AGT/figures/5_fv_acceleration_coloured.png",
+      "sha256": "8449d823dc02759d288179026ccc70bb3b1f51d46f901986d755b523358e4edd",
+      "bytes": 49767,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\figures\\5_fv_acceleration_coloured.png"
+    },
+    {
+      "path": "runs_seed7/AGT/hysteresis_metrics.csv",
+      "sha256": "7970e1421095dd6b071c3476d94650b957eb037aa077fc7187c95adc3dbed210",
+      "bytes": 3154,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/AGT/inverse_100hz_report.json",
+      "sha256": "44f48929516f133410cb7c04b1782dcb4c78da321f795bf81dd48a4790cd8904",
+      "bytes": 436,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\inverse_100hz_report.json"
+    },
+    {
+      "path": "runs_seed7/AGT/last.pth",
+      "sha256": "1b13b4fd73ef4b5411fe8bb792dd5201ac5717dfab9e4c590e8d2b5e23757b8a",
+      "bytes": 18685,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\last.pth"
+    },
+    {
+      "path": "runs_seed7/AGT/metrics.jsonl",
+      "sha256": "e9522224da27847f68dc4029c61e5ecb5e5abf0e6ba4ba11377015f0f3565e91",
+      "bytes": 355939,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\metrics.jsonl"
+    },
+    {
+      "path": "runs_seed7/AGT/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\monotonicity_report.json"
+    },
+    {
+      "path": "runs_seed7/AGT/per_condition_metrics.csv",
+      "sha256": "38a6bbb0f16a6f5b359c69e9930113a1f25ec52e31414762c42fe56f84753ea4",
+      "bytes": 146,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\per_condition_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/AGT/per_file_metrics.csv",
+      "sha256": "a205cb107cc68a3d2017a5ebcab3220c3e63ccb36b69706c5f9d5a03bc84f25a",
+      "bytes": 1173,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\per_file_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/AGT/resource_report.json",
+      "sha256": "5933c9f665bcf5526d84373b356263626a374ed65d117b84e604bcdacfb0fc76",
+      "bytes": 538,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\resource_report.json"
+    },
+    {
+      "path": "runs_seed7/AGT/run_config.json",
+      "sha256": "d449471faab5bb7b19ada96d452d049fe1c683f006b3725d7c7e236591b8c9f4",
+      "bytes": 1463,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\run_config.json"
+    },
+    {
+      "path": "runs_seed7/AGT/step_response_metrics_250N.csv",
+      "sha256": "ee25e2900d50a50a9c2ec5270bebd2f23532efa1d95c144fd487f1d028d76744",
+      "bytes": 1622,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "runs_seed7/AGT/step_response_metrics_50N.csv",
+      "sha256": "d5aa97e5dabcf170e2da1119e3baf8c5b114ee41309ff4b6cc1123a3dbd3f06e",
+      "bytes": 2008,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "runs_seed7/AGT/summary.json",
+      "sha256": "1bc2f0e062f3abb33010108a53044237918189069f0b964383180c532fd2f141",
+      "bytes": 2243,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\AGT\\summary.json"
+    },
+    {
+      "path": "runs_seed7/batch_status.json",
+      "sha256": "b22a9dd79adccac07fcf5dc091b1e11740a8212683bef057a400de0fd8712884",
+      "bytes": 217,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\batch_status.json"
+    },
+    {
+      "path": "runs_seed7/E0/acceleration_residual_diagnostics.json",
+      "sha256": "984b7aa49bdbec4526636edb15a9e2bfdf0964293922b1b1fee8f3404d4cfeac",
+      "bytes": 288,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "runs_seed7/E0/best.pth",
+      "sha256": "dbfb844ff117161cc78c634e307c5215ff88abf769880691e4d72433179351b4",
+      "bytes": 11832,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\best.pth"
+    },
+    {
+      "path": "runs_seed7/E0/figures/1_prediction_timeseries.png",
+      "sha256": "13eaec046c7850d72085f61ca2351aa219a9ec1fe966bb368e25e4e73ec583d6",
+      "bytes": 62617,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\figures\\1_prediction_timeseries.png"
+    },
+    {
+      "path": "runs_seed7/E0/figures/2_force_velocity_cloud.png",
+      "sha256": "737edc46629ee389bdc0f9ad5d6ad4f70b6e2bd4dd38ae18189b9fbd22442305",
+      "bytes": 38977,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\figures\\2_force_velocity_cloud.png"
+    },
+    {
+      "path": "runs_seed7/E0/figures/3_force_displacement_loop.png",
+      "sha256": "42eb676f50d8026c88692f10c58f66bf20d390fee014cfa28a448010a2f71a1b",
+      "bytes": 63275,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\figures\\3_force_displacement_loop.png"
+    },
+    {
+      "path": "runs_seed7/E0/figures/4_step_response.png",
+      "sha256": "3be82605024273717326b9ecf4e59f2ceb7230de4e3b2ac808f731502c2d2390",
+      "bytes": 82992,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\figures\\4_step_response.png"
+    },
+    {
+      "path": "runs_seed7/E0/figures/5_fv_acceleration_coloured.png",
+      "sha256": "e8a2d85f50cb75bb15b9b542b8af9be5905f0a7b89db8e0092e152797d1624fd",
+      "bytes": 49830,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\figures\\5_fv_acceleration_coloured.png"
+    },
+    {
+      "path": "runs_seed7/E0/hysteresis_metrics.csv",
+      "sha256": "96d0f870c203272c26a2d7b6f3d6376c6b8dc4d62be6f705c387534d279fe2eb",
+      "bytes": 3166,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/E0/inverse_100hz_report.json",
+      "sha256": "0e64fdfa573d65f8fd67a5de62ba610a522d6258e8f8dd5a0c2f4aead2ba36ac",
+      "bytes": 104,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\inverse_100hz_report.json"
+    },
+    {
+      "path": "runs_seed7/E0/last.pth",
+      "sha256": "9c6452d58f926150a3532abaebde0edbc3544399d68f55a9171a881981c8e5df",
+      "bytes": 11832,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\last.pth"
+    },
+    {
+      "path": "runs_seed7/E0/metrics.jsonl",
+      "sha256": "9d9c9ec16153d30604d5292f16746b12318977f0bc55b6dcec40ade410f5a763",
+      "bytes": 352402,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\metrics.jsonl"
+    },
+    {
+      "path": "runs_seed7/E0/monotonicity_report.json",
+      "sha256": "04f5e076be5e5f216140643e7737dc6306efd8528d36d01485c896ef4d472f68",
+      "bytes": 76,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\monotonicity_report.json"
+    },
+    {
+      "path": "runs_seed7/E0/per_condition_metrics.csv",
+      "sha256": "0c6c07c5795c6e84fc2bb4ffa5210b077718f9352d84424b6cd7c794b1daa5a7",
+      "bytes": 146,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\per_condition_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/E0/per_file_metrics.csv",
+      "sha256": "3a4bc15fb8502d1e462c26934badf3b62db0768649bd6346d99a0f05bb48e6e2",
+      "bytes": 1173,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\per_file_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/E0/resource_report.json",
+      "sha256": "53036f662fb114b231285a1224ab386f3a9546a3e97cd5bc2ebaa9df74235a5e",
+      "bytes": 478,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\resource_report.json"
+    },
+    {
+      "path": "runs_seed7/E0/run_config.json",
+      "sha256": "d9bd2f10170ac652e141b9a7c0e0d3db51a95c0df72f45144b697e41d3a07b7b",
+      "bytes": 1404,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\run_config.json"
+    },
+    {
+      "path": "runs_seed7/E0/step_response_metrics_250N.csv",
+      "sha256": "bf13dffe1dc5d1f89b0acc2a3f79386481b5fe584988b49f896ce1100e9bd4f5",
+      "bytes": 1617,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "runs_seed7/E0/step_response_metrics_50N.csv",
+      "sha256": "5053b49a5cb853c2de2a5ae78c448ad45e1fe85fa55cc60b7d146ca92272adfb",
+      "bytes": 2001,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "runs_seed7/E0/summary.json",
+      "sha256": "3a74b7c2f3e63f0c115c57f5426dc6cc1d8d2717119ada6ea2fc082562b6d1c2",
+      "bytes": 1769,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\E0\\summary.json"
+    },
+    {
+      "path": "runs_seed7/EG/acceleration_residual_diagnostics.json",
+      "sha256": "67ae259753290ba940ca314235ed15c1c5676bc969f0c62f5510afac3e56a47d",
+      "bytes": 289,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "runs_seed7/EG/best.pth",
+      "sha256": "8e7cec2c0f78c208dbd1214ec87fbc482717fe9385a62512c3305167970841db",
+      "bytes": 14339,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\best.pth"
+    },
+    {
+      "path": "runs_seed7/EG/figures/1_prediction_timeseries.png",
+      "sha256": "7103b1d22d03198529cce25bdd929250d678795c7859e2c599d67685035653b8",
+      "bytes": 61918,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\figures\\1_prediction_timeseries.png"
+    },
+    {
+      "path": "runs_seed7/EG/figures/2_force_velocity_cloud.png",
+      "sha256": "0597c47d61d3cdfda32fce48047d34b069d2af9c768361ce660e3d9b449b81a5",
+      "bytes": 38814,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\figures\\2_force_velocity_cloud.png"
+    },
+    {
+      "path": "runs_seed7/EG/figures/3_force_displacement_loop.png",
+      "sha256": "8330af4a83e77090c76b7812fa71aebe338e3ed62d92ca25409cafded7bd9442",
+      "bytes": 63350,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\figures\\3_force_displacement_loop.png"
+    },
+    {
+      "path": "runs_seed7/EG/figures/4_step_response.png",
+      "sha256": "ba32652ac1e7a54858cdc4bf59e7bc0842b7a61928a583e96953e888a716247d",
+      "bytes": 84271,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\figures\\4_step_response.png"
+    },
+    {
+      "path": "runs_seed7/EG/figures/5_fv_acceleration_coloured.png",
+      "sha256": "9edbb6a568dc8e0158daf241dba201c3ee3924fd94ecd7dd8022833dd6b24f39",
+      "bytes": 49939,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\figures\\5_fv_acceleration_coloured.png"
+    },
+    {
+      "path": "runs_seed7/EG/hysteresis_metrics.csv",
+      "sha256": "98f81bec9c85a1d4fd15b0c68f89e758ba669666c1016d6be7d28f5014278c8e",
+      "bytes": 3157,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EG/inverse_100hz_report.json",
+      "sha256": "823b2b855cd206e4fdde77dbb81b2186118a241a8d2923ea03814ac0caad36f5",
+      "bytes": 436,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\inverse_100hz_report.json"
+    },
+    {
+      "path": "runs_seed7/EG/last.pth",
+      "sha256": "9f3ce7423f1e7b85879c28e074db00b7fe8ba2adcc9555ad4be54734ceb771f6",
+      "bytes": 14339,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\last.pth"
+    },
+    {
+      "path": "runs_seed7/EG/metrics.jsonl",
+      "sha256": "6a8fbddddca84acef55c4d8942ac5eb53c5d190fba7f397fce50489d78213ae0",
+      "bytes": 352425,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\metrics.jsonl"
+    },
+    {
+      "path": "runs_seed7/EG/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\monotonicity_report.json"
+    },
+    {
+      "path": "runs_seed7/EG/per_condition_metrics.csv",
+      "sha256": "48fac2b3c274155d64d367b22a5c6afe4ab29d090b37aa1843c1f12386b5d903",
+      "bytes": 146,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\per_condition_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EG/per_file_metrics.csv",
+      "sha256": "6db3c45c0ed472727652b21c0a9ce7b49f6b675255227503d7c07945e928908b",
+      "bytes": 1173,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\per_file_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EG/resource_report.json",
+      "sha256": "7a5f5316a9c962a09b470abb4e8fc09fd5e8e55f77a11ec8ffad56fecdc36494",
+      "bytes": 518,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\resource_report.json"
+    },
+    {
+      "path": "runs_seed7/EG/run_config.json",
+      "sha256": "0102ce4d5a3582fd707156cb8677b092bb2d7a1607fdc359c0d046b99f298555",
+      "bytes": 1442,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\run_config.json"
+    },
+    {
+      "path": "runs_seed7/EG/step_response_metrics_250N.csv",
+      "sha256": "b023f3aa33ee1ec03bbaf64bf2e13bb38fb56011ca8b29d4b9b2d1bbad6ba7ac",
+      "bytes": 1629,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "runs_seed7/EG/step_response_metrics_50N.csv",
+      "sha256": "8e2830e96c36fc97d801bd5d29afb926a52080ca7a7b131d71de8f8068b1a96f",
+      "bytes": 2096,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "runs_seed7/EG/summary.json",
+      "sha256": "6544d1fe870f90cbf1cccb2f352863d7ceaf34754c4dec1fd36c0c3c1b818235",
+      "bytes": 2210,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EG\\summary.json"
+    },
+    {
+      "path": "runs_seed7/EGT/acceleration_residual_diagnostics.json",
+      "sha256": "e45bb105af14d3229dd8c2329f7f572e3bf345b835e275a2a06275be3035c69e",
+      "bytes": 288,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "runs_seed7/EGT/best.pth",
+      "sha256": "75626b56bd5add85bb6c83f8d097deb917a362ea6070002f2c712343295845f9",
+      "bytes": 14589,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\best.pth"
+    },
+    {
+      "path": "runs_seed7/EGT/figures/1_prediction_timeseries.png",
+      "sha256": "3e04b4cfaef71b92d51ed9d07f2736fb9ff4050d1c10a23c5bedd77a6edf9b74",
+      "bytes": 61936,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\figures\\1_prediction_timeseries.png"
+    },
+    {
+      "path": "runs_seed7/EGT/figures/2_force_velocity_cloud.png",
+      "sha256": "7374bb283e46ffb5b473c643a54ba9c23fefae56c5e42f37646a519eb9a4b6c5",
+      "bytes": 38858,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\figures\\2_force_velocity_cloud.png"
+    },
+    {
+      "path": "runs_seed7/EGT/figures/3_force_displacement_loop.png",
+      "sha256": "44f5d8fd144cab932a555475d2715acc2cb84254117ca9e31f8d5cc4dcbba8c6",
+      "bytes": 63425,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\figures\\3_force_displacement_loop.png"
+    },
+    {
+      "path": "runs_seed7/EGT/figures/4_step_response.png",
+      "sha256": "c614160504dfba5d66e3a14b4d2ffa213d4820bdd41da1379b30002186c55a62",
+      "bytes": 84352,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\figures\\4_step_response.png"
+    },
+    {
+      "path": "runs_seed7/EGT/figures/5_fv_acceleration_coloured.png",
+      "sha256": "3ee2ddc1803684ad816115f6373a734d4dbaf6382f7716e72923c02499873550",
+      "bytes": 49958,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\figures\\5_fv_acceleration_coloured.png"
+    },
+    {
+      "path": "runs_seed7/EGT/hysteresis_metrics.csv",
+      "sha256": "cbf4c4fee490646220cd456f88ff592f5737267dbc30365eef5dc3fc7a612502",
+      "bytes": 3162,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EGT/inverse_100hz_report.json",
+      "sha256": "4a44b2d48068a089a94752e867370b5ef3d7d284d920f750e007be0c39636023",
+      "bytes": 437,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\inverse_100hz_report.json"
+    },
+    {
+      "path": "runs_seed7/EGT/last.pth",
+      "sha256": "a3d41e69b2d0b6bad85725de47008b4173090c70ab2821a5487ab8edf79c6d49",
+      "bytes": 14589,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\last.pth"
+    },
+    {
+      "path": "runs_seed7/EGT/metrics.jsonl",
+      "sha256": "cb9344dd60c596d984acf3a10311360c37487435b2cbd4548405a8984705eb07",
+      "bytes": 356261,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\metrics.jsonl"
+    },
+    {
+      "path": "runs_seed7/EGT/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\monotonicity_report.json"
+    },
+    {
+      "path": "runs_seed7/EGT/per_condition_metrics.csv",
+      "sha256": "97120bdebbe703a02964f3e80a255253cc922ad4641a12cc377800fc1ad8bbe7",
+      "bytes": 146,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\per_condition_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EGT/per_file_metrics.csv",
+      "sha256": "2dd2c4248e80342ec2dc677baf33b34e8b13e333ef4ab51d9e4db1af065b07f0",
+      "bytes": 1173,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\per_file_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EGT/resource_report.json",
+      "sha256": "7e4fe3f2db059d4d1847c0543b228b69c1e93145e92b465273682d07af1a6411",
+      "bytes": 538,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\resource_report.json"
+    },
+    {
+      "path": "runs_seed7/EGT/run_config.json",
+      "sha256": "daebeeed61d287d62a4325be1181de69022f5e0f0f3e91600ffb0817e511520c",
+      "bytes": 1463,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\run_config.json"
+    },
+    {
+      "path": "runs_seed7/EGT/step_response_metrics_250N.csv",
+      "sha256": "dbd24d7ebe5b5b3c18c14dd57ca4ac32507798d689bcefdf8dbfadc7ebb3e843",
+      "bytes": 1627,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "runs_seed7/EGT/step_response_metrics_50N.csv",
+      "sha256": "3cece371e4e316f58c55a40e822ea523d8338b2b86bf38de075acdc5870290dc",
+      "bytes": 2093,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "runs_seed7/EGT/summary.json",
+      "sha256": "a8dd2675d3eef951283fb139853118538c4430d5e1c1c5c714bb9dd4a16020d7",
+      "bytes": 2245,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGT\\summary.json"
+    },
+    {
+      "path": "runs_seed7/EGTA/acceleration_residual_diagnostics.json",
+      "sha256": "e0c47a4990d12d99bf0eb9b16ae5dd3fd9e59ed72287e6018dc8014b556ef837",
+      "bytes": 288,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "runs_seed7/EGTA/best.pth",
+      "sha256": "73b2f4faecab420d5d2c358ca5f9d33614d100a1d633dbbbbe0145e576e1134b",
+      "bytes": 14839,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\best.pth"
+    },
+    {
+      "path": "runs_seed7/EGTA/figures/1_prediction_timeseries.png",
+      "sha256": "32ca416455cbcfb3a6e04427a03740ce050b4d293fb5b1e8a153f4c88888785d",
+      "bytes": 64459,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\figures\\1_prediction_timeseries.png"
+    },
+    {
+      "path": "runs_seed7/EGTA/figures/2_force_velocity_cloud.png",
+      "sha256": "b1098a751e03b2df4f952b56dce0626402ec9c31874205be30d170cd1ab4db79",
+      "bytes": 39865,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\figures\\2_force_velocity_cloud.png"
+    },
+    {
+      "path": "runs_seed7/EGTA/figures/3_force_displacement_loop.png",
+      "sha256": "95c08dc9e8e39237354d280e2da918bf6a8f4d3e38d654e786f5a6c4c7d7f657",
+      "bytes": 65932,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\figures\\3_force_displacement_loop.png"
+    },
+    {
+      "path": "runs_seed7/EGTA/figures/4_step_response.png",
+      "sha256": "ac18eb887372659c1868980bc29b63abb74a13780dfb35b6d1612cb77c76484f",
+      "bytes": 85113,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\figures\\4_step_response.png"
+    },
+    {
+      "path": "runs_seed7/EGTA/figures/5_fv_acceleration_coloured.png",
+      "sha256": "33bb5b2378de2110478e05b8d8c9ce0d1aa62f9d38aeaf9c99952244c0a7aa81",
+      "bytes": 50251,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\figures\\5_fv_acceleration_coloured.png"
+    },
+    {
+      "path": "runs_seed7/EGTA/hysteresis_metrics.csv",
+      "sha256": "e4f9ff20b7ca1d29ec74b65ae65947a9683429dec2bd2ea0dfcf6a68f9d85d95",
+      "bytes": 3166,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EGTA/inverse_100hz_report.json",
+      "sha256": "4060ab05a90389c4af6acb20cc30a5a577ffcca3706b257f81d79827713cfa73",
+      "bytes": 437,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\inverse_100hz_report.json"
+    },
+    {
+      "path": "runs_seed7/EGTA/last.pth",
+      "sha256": "3d0081d7bbba50d93193c1976c5a3cd6a62670e2ece9bb0ed804ced86f22385b",
+      "bytes": 14839,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\last.pth"
+    },
+    {
+      "path": "runs_seed7/EGTA/metrics.jsonl",
+      "sha256": "3bf0d35c4917a9ef3ff65a540a7fa1717fdb13b2694ea292fd1b2379c7a1ec36",
+      "bytes": 359900,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\metrics.jsonl"
+    },
+    {
+      "path": "runs_seed7/EGTA/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\monotonicity_report.json"
+    },
+    {
+      "path": "runs_seed7/EGTA/per_condition_metrics.csv",
+      "sha256": "408ce0a5d3924a1de259968bcce1484b17976eecad2f687d778a64bcd972e950",
+      "bytes": 146,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\per_condition_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EGTA/per_file_metrics.csv",
+      "sha256": "5c4d48dd1ba2dfdf40e78b77e2480b2048c262715900dbf82a65243da4f6e5fa",
+      "bytes": 1174,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\per_file_metrics.csv"
+    },
+    {
+      "path": "runs_seed7/EGTA/resource_report.json",
+      "sha256": "1d6685c71a9a3e02b771f7f5a378368ce6900e9b54f558c78f9298b60527b0f9",
+      "bytes": 553,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\resource_report.json"
+    },
+    {
+      "path": "runs_seed7/EGTA/run_config.json",
+      "sha256": "089ec56fe93c5999b4b54cd364bc75185bdc26b20cc6cdb68920a8943e19c191",
+      "bytes": 1480,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\run_config.json"
+    },
+    {
+      "path": "runs_seed7/EGTA/step_response_metrics_250N.csv",
+      "sha256": "2da8230975c2a090ccbc8e41458e75c04351085591814f74a029d917bbf50f8c",
+      "bytes": 1703,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "runs_seed7/EGTA/step_response_metrics_50N.csv",
+      "sha256": "7e0c72e1e8d066b3d96f0ed7d75e39d8ece10c3cd7b0995e6b4e8f58a55a5f3b",
+      "bytes": 2011,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "runs_seed7/EGTA/summary.json",
+      "sha256": "405bce5a309cba37f06c66b8fa515dd7b1803e77d179c18f7a2468ebedd41939",
+      "bytes": 2278,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\EGTA\\summary.json"
+    },
+    {
+      "path": "runs_seed7/failed_or_missing_runs.csv",
+      "sha256": "2d9344feae970014cafb11121ae6c1fd62097d6f9cbad9c817b20945a62ed924",
+      "bytes": 68,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\failed_or_missing_runs.csv"
+    },
+    {
+      "path": "runs_seed7/gpu_parallel_log/gpu_1s.csv",
+      "sha256": "4a31e918d69e3a40ae7bfc4769f85f15e242ad460fdfb2a419df950e72a54625",
+      "bytes": 81763,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\gpu_parallel_log\\gpu_1s.csv"
+    },
+    {
+      "path": "runs_seed7/launch_config.json",
+      "sha256": "9106d29a1a85a938619a34cbe82a5c8f036b45f70a67b29f16b5b9e42cc5c262",
+      "bytes": 375,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\launch_config.json"
+    },
+    {
+      "path": "runs_seed7/logs/AGT.log",
+      "sha256": "ba608715d2280415f12b8c4868ca710f923a35a4920b21d0fa09ea32c0a73148",
+      "bytes": 1126,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\logs\\AGT.log"
+    },
+    {
+      "path": "runs_seed7/logs/E0.log",
+      "sha256": "5bc9844a42053b9881ef7d86ee4da336c93a5fe0e31e4df5dcace2f7babb2463",
+      "bytes": 930,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\logs\\E0.log"
+    },
+    {
+      "path": "runs_seed7/logs/EG.log",
+      "sha256": "2c158e8fc58fe5fff34414ecce58a97c43504f3c9317c2aa074e83c44c4c3efc",
+      "bytes": 940,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\logs\\EG.log"
+    },
+    {
+      "path": "runs_seed7/logs/EGT.log",
+      "sha256": "ac3ca9b198899e3d9ab1a414835361d90ef7c74d913f7576ef7267165db7b482",
+      "bytes": 1126,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\logs\\EGT.log"
+    },
+    {
+      "path": "runs_seed7/logs/EGTA.log",
+      "sha256": "d5b13e89d1b2cb6366c93680d05f5cf69f833f6bcd8435b6c0d76cd8f4fde5bd",
+      "bytes": 1312,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\logs\\EGTA.log"
+    },
+    {
+      "path": "runs_seed7/model_parameter_counts.csv",
+      "sha256": "f3bf1e8daafb45dc7955031a591672122e7a559725c52ee24326269ff60d9fec",
+      "bytes": 225,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\model_parameter_counts.csv"
+    },
+    {
+      "path": "runs_seed7/paired_file_differences.csv",
+      "sha256": "687a5e3adb51d47ccaae0158a882097693252f693f199d9491a446c0f47a48ee",
+      "bytes": 1125,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\paired_file_differences.csv"
+    },
+    {
+      "path": "runs_seed7/summary_all.csv",
+      "sha256": "c83366e50e8723c25b1b0f2e5bb02312a7640a265d0dec92b6bfe6b7e56c6384",
+      "bytes": 1499,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\summary_all.csv"
+    },
+    {
+      "path": "runs_seed7/summary_all.json",
+      "sha256": "cac44d51544dd349bb85f3daab306189ecf7ee754ededd66062fd72e84216be6",
+      "bytes": 3299,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\summary_all.json"
+    },
+    {
+      "path": "runs_seed7/summary_unified.csv",
+      "sha256": "5479ad2c90367810e9ebeb202ee923ab5bd9ab4169b1f36be3bd9d7d909ccff4",
+      "bytes": 906,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\summary_unified.csv"
+    },
+    {
+      "path": "runs_seed7/summary_unified.json",
+      "sha256": "9d8e2eb2e3d0a6b690601eec7769e7d96a3c0cf291ae2111e790c8425f056e81",
+      "bytes": 3087,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\summary_unified.json"
+    },
+    {
+      "path": "runs_seed7/V22_FINAL_REPORT.md",
+      "sha256": "1ee6dcdf4756d2640099df7b48012c61567a3ba3a6b13160372af50c3add5c5f",
+      "bytes": 12607,
+      "source": "D:\\v22_ae_hybrid\\runs_seed7\\V22_FINAL_REPORT.md"
+    },
+    {
+      "path": "smoke_seed7/AGT/acceleration_residual_diagnostics.json",
+      "sha256": "810f8a0e6adfe5417bc9e0f14c85e761ddf9058c11ec3ede3f7e35f4202efd15",
+      "bytes": 285,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "smoke_seed7/AGT/best.pth",
+      "sha256": "63ba4a42ee8d49d58d9bd1ba22e13b26b7a968ceec9d66b2f495823780d0c721",
+      "bytes": 18685,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\best.pth"
+    },
+    {
+      "path": "smoke_seed7/AGT/hysteresis_metrics.csv",
+      "sha256": "d31b5e5c8005f1f60153ce5ea8ecfcfd74488ceb618f49e8f7966abe8bfcb181",
+      "bytes": 3215,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/AGT/inverse_100hz_report.json",
+      "sha256": "b9b7f7b244524ec6f3d30e271d8cd2c6be31932a52293512d99a5d4ea9195e0e",
+      "bytes": 435,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\inverse_100hz_report.json"
+    },
+    {
+      "path": "smoke_seed7/AGT/last.pth",
+      "sha256": "77a7007d39ea0c0ee77d260af36e0745c95db801c71241de088aca33c9ffa02e",
+      "bytes": 18685,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\last.pth"
+    },
+    {
+      "path": "smoke_seed7/AGT/metrics.jsonl",
+      "sha256": "1cae18fbd7e6bcbac4d5822aada56d4378ef24808a8ca01c7e50b178f637c314",
+      "bytes": 5507,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\metrics.jsonl"
+    },
+    {
+      "path": "smoke_seed7/AGT/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\monotonicity_report.json"
+    },
+    {
+      "path": "smoke_seed7/AGT/per_condition_metrics.csv",
+      "sha256": "bcbd4be84207d7e46d178a54beeae78f91bb4994dd973e26913566cae83f8131",
+      "bytes": 151,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\per_condition_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/AGT/per_file_metrics.csv",
+      "sha256": "bda194e56e7785bb18d57dc0b890e559358321c00e962561f8b2d6d63c5010f1",
+      "bytes": 1201,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\per_file_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/AGT/resource_report.json",
+      "sha256": "be936ca89cd9b98a86543e78e2714edaf4c0cc0cadfadd978b50b57fcb34a2eb",
+      "bytes": 539,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\resource_report.json"
+    },
+    {
+      "path": "smoke_seed7/AGT/run_config.json",
+      "sha256": "17e0aa44036a17f3cdb6765f75d80f79b698f0048f0264fde4c139e4a2bb8c22",
+      "bytes": 1461,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\run_config.json"
+    },
+    {
+      "path": "smoke_seed7/AGT/step_response_metrics_250N.csv",
+      "sha256": "f7989efa93e14a8480c40c42ea65df0637ec4bb9b93a5c361de745b46c79012e",
+      "bytes": 1174,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "smoke_seed7/AGT/step_response_metrics_50N.csv",
+      "sha256": "34488c2e7cea6af0ebccea19117fae22b46b9f74ae159e7d8bb8a752c9a32db0",
+      "bytes": 1809,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "smoke_seed7/AGT/summary.json",
+      "sha256": "89afcbfc2e7858fe9056d2ff7b7f40726e092c57930953bf83a5460a59a5fca2",
+      "bytes": 2230,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\AGT\\summary.json"
+    },
+    {
+      "path": "smoke_seed7/batch_status.json",
+      "sha256": "36ed0a358bf94f1326c9436a3a12404c1a66070320a1c97deeb30b7bc61ebfff",
+      "bytes": 217,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\batch_status.json"
+    },
+    {
+      "path": "smoke_seed7/E0/acceleration_residual_diagnostics.json",
+      "sha256": "0210dbbd52307837f65e478b6b27cd50aa80429c0e5e4823912de75663dc2358",
+      "bytes": 287,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "smoke_seed7/E0/best.pth",
+      "sha256": "45983e889e71f8337e9f21d85c539fa6029c2bbff38c8df77b02b7d6bcf313e5",
+      "bytes": 11832,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\best.pth"
+    },
+    {
+      "path": "smoke_seed7/E0/hysteresis_metrics.csv",
+      "sha256": "6a263e2c1ff5ebb19c6e68ba5789511902d127a9246257eae0608ce5afb5f281",
+      "bytes": 3215,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/E0/inverse_100hz_report.json",
+      "sha256": "0e64fdfa573d65f8fd67a5de62ba610a522d6258e8f8dd5a0c2f4aead2ba36ac",
+      "bytes": 104,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\inverse_100hz_report.json"
+    },
+    {
+      "path": "smoke_seed7/E0/last.pth",
+      "sha256": "879e5faa2c6ff34588cb67bacf680284d909c7577a32f0ee14317df7163c736e",
+      "bytes": 11832,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\last.pth"
+    },
+    {
+      "path": "smoke_seed7/E0/metrics.jsonl",
+      "sha256": "22f3770ffd78a964162d09d1f293a6ac451f25fbeb5d93f5de283af2ca15da7b",
+      "bytes": 5445,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\metrics.jsonl"
+    },
+    {
+      "path": "smoke_seed7/E0/monotonicity_report.json",
+      "sha256": "04f5e076be5e5f216140643e7737dc6306efd8528d36d01485c896ef4d472f68",
+      "bytes": 76,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\monotonicity_report.json"
+    },
+    {
+      "path": "smoke_seed7/E0/per_condition_metrics.csv",
+      "sha256": "80c16f6d277fe05881b8bc6902e7b76964ac9601ddceffca66573bc30b9e6f90",
+      "bytes": 150,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\per_condition_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/E0/per_file_metrics.csv",
+      "sha256": "c8b565fd055417fdbf43fb634d3797ad17d923782080d18552b76fd59aadeebe",
+      "bytes": 1200,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\per_file_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/E0/resource_report.json",
+      "sha256": "d50c13694e982ad642201a3fc8da1099f45c14086a9daa0d8abb03c876c30097",
+      "bytes": 478,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\resource_report.json"
+    },
+    {
+      "path": "smoke_seed7/E0/run_config.json",
+      "sha256": "b7b1c3ffa3d67c316868bef3be52dc8ca71b68362053042d2dcd5477f1d9f694",
+      "bytes": 1402,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\run_config.json"
+    },
+    {
+      "path": "smoke_seed7/E0/step_response_metrics_250N.csv",
+      "sha256": "32830c5bfff76cb9d127e330c21b33f28a57611340330eb0871fbaf2602e0bc0",
+      "bytes": 1181,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "smoke_seed7/E0/step_response_metrics_50N.csv",
+      "sha256": "910809976c1c6a628be1233b4a8e0a137a37392e6b6a7f793c765f17ffb8db75",
+      "bytes": 1972,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "smoke_seed7/E0/summary.json",
+      "sha256": "d0dbff631ebb69e5676b6c07a1af4ffaec24d116d272e6e66cc52e796fb3f668",
+      "bytes": 1760,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\E0\\summary.json"
+    },
+    {
+      "path": "smoke_seed7/EG/acceleration_residual_diagnostics.json",
+      "sha256": "8c00495128e6fdcb6deaff85e72841755bdfdd0dbf6355681ae68f155c47c202",
+      "bytes": 288,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "smoke_seed7/EG/best.pth",
+      "sha256": "03c0bb4cd66f5263242ce468a6d8a1e64750fa1d9d027bf3c978e5bdae88df75",
+      "bytes": 14339,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\best.pth"
+    },
+    {
+      "path": "smoke_seed7/EG/hysteresis_metrics.csv",
+      "sha256": "6b18c713a4177832cc05b1826192ebafd3aee2e24f0de9337be7c54fef73832b",
+      "bytes": 3215,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EG/inverse_100hz_report.json",
+      "sha256": "b590a96f96ab781c953f0c294da6ca956915c594117b739450c42b4b81d52488",
+      "bytes": 436,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\inverse_100hz_report.json"
+    },
+    {
+      "path": "smoke_seed7/EG/last.pth",
+      "sha256": "25145e611c039c7a4c8d9be6dd0afda55299d66c94f81bb6ae91cbc5fa7ff7e9",
+      "bytes": 14339,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\last.pth"
+    },
+    {
+      "path": "smoke_seed7/EG/metrics.jsonl",
+      "sha256": "a646d100893dc3466ab28429be14a6eb78d5780f3e9f85dfce80c5406b901083",
+      "bytes": 5438,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\metrics.jsonl"
+    },
+    {
+      "path": "smoke_seed7/EG/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\monotonicity_report.json"
+    },
+    {
+      "path": "smoke_seed7/EG/per_condition_metrics.csv",
+      "sha256": "95a9572462723e5ce050c2e2ab505f7ea7fe1591ab973808e978c9ab83d64a2b",
+      "bytes": 150,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\per_condition_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EG/per_file_metrics.csv",
+      "sha256": "cf3775745a23fc876c9e584df6577d08916d9436bff820537f362d934a50f7f6",
+      "bytes": 1200,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\per_file_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EG/resource_report.json",
+      "sha256": "d4d28c0c046429fcdd86cd41b956b0410e7fee5ac5e8f9e528bbff8f5758e5fd",
+      "bytes": 517,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\resource_report.json"
+    },
+    {
+      "path": "smoke_seed7/EG/run_config.json",
+      "sha256": "9bbc1299a65f17ca9f9d5bba1eff1407f83d7335b06b2dd6433d662296923ade",
+      "bytes": 1440,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\run_config.json"
+    },
+    {
+      "path": "smoke_seed7/EG/step_response_metrics_250N.csv",
+      "sha256": "e095aebc352e7197bc2dff514c77aed1f8dddf8174e580c981292f77167a3267",
+      "bytes": 789,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "smoke_seed7/EG/step_response_metrics_50N.csv",
+      "sha256": "90a8305e30587ac8b88c48a4864fe0ed9d31623eb04e2df8431eb54bc6331f2b",
+      "bytes": 1957,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "smoke_seed7/EG/summary.json",
+      "sha256": "5e02b2e6e92d40f65b21072defc3319619ca7f4f7fa511a52e5b30708f45d7e8",
+      "bytes": 2201,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EG\\summary.json"
+    },
+    {
+      "path": "smoke_seed7/EGT/acceleration_residual_diagnostics.json",
+      "sha256": "a90b38a8f5c79dd263f737adc8f9303422c8eaa9351630524ffdf779a141dd12",
+      "bytes": 287,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "smoke_seed7/EGT/best.pth",
+      "sha256": "0f3a149f79970a3626be4f290c61b8146c0297928df376ddc4268b59fb123539",
+      "bytes": 14589,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\best.pth"
+    },
+    {
+      "path": "smoke_seed7/EGT/hysteresis_metrics.csv",
+      "sha256": "9dfd7fc974801c5325ecaa753ec842b8aa3c90721ea7dfb7866f1c366bdfee43",
+      "bytes": 3215,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EGT/inverse_100hz_report.json",
+      "sha256": "6a6111ab96a443bd6d8aeaa4252b5197f470742ffc5f7a437d26a1545aee7e54",
+      "bytes": 436,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\inverse_100hz_report.json"
+    },
+    {
+      "path": "smoke_seed7/EGT/last.pth",
+      "sha256": "1bba41bf8261d05f784e16170741b9ca98cdff8f6b6d14bba1d090233934fa8e",
+      "bytes": 14589,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\last.pth"
+    },
+    {
+      "path": "smoke_seed7/EGT/metrics.jsonl",
+      "sha256": "57ddda794cc6637fdf4aa04abbbdd750b7c10bfb4381a08c28cd0b2099cf7354",
+      "bytes": 5509,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\metrics.jsonl"
+    },
+    {
+      "path": "smoke_seed7/EGT/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\monotonicity_report.json"
+    },
+    {
+      "path": "smoke_seed7/EGT/per_condition_metrics.csv",
+      "sha256": "609b92aa890c97e1108499b5c9b8050162e1c90e205a08f07fb0a1e92ec574e7",
+      "bytes": 150,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\per_condition_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EGT/per_file_metrics.csv",
+      "sha256": "cc75898555f7424d9c85198a2ecf73ec595883c5dfc237a46733668c221246a2",
+      "bytes": 1200,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\per_file_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EGT/resource_report.json",
+      "sha256": "0d206128d3a26a3d8e5b298dfda8c3dfdc7828e367ebc7cc09665d65af276102",
+      "bytes": 537,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\resource_report.json"
+    },
+    {
+      "path": "smoke_seed7/EGT/run_config.json",
+      "sha256": "23d2b025b83df8b56895e2d74a6f69bb2095fa73a1faf7b902abe16633dc03f4",
+      "bytes": 1461,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\run_config.json"
+    },
+    {
+      "path": "smoke_seed7/EGT/step_response_metrics_250N.csv",
+      "sha256": "acc496dfdfca93659cd68211e619be8937806b505be30588020b0fc98a7a1236",
+      "bytes": 787,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "smoke_seed7/EGT/step_response_metrics_50N.csv",
+      "sha256": "ba258899076c06968f5332cad6aab50a3f8d16f6d5057bc0bd496edd2906f7e7",
+      "bytes": 1951,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "smoke_seed7/EGT/summary.json",
+      "sha256": "6080a9742895fb02bf35ebe6d49e803a6b102598956edc6da8852e74a2ef118a",
+      "bytes": 2235,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGT\\summary.json"
+    },
+    {
+      "path": "smoke_seed7/EGTA/acceleration_residual_diagnostics.json",
+      "sha256": "28b6434cc0a0015b9a769def2ada367f48be2afe10a1cb84892005e4b72b0172",
+      "bytes": 286,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\acceleration_residual_diagnostics.json"
+    },
+    {
+      "path": "smoke_seed7/EGTA/best.pth",
+      "sha256": "2ba23364017ccb020cb9c1a8fdbca5a0372f5674f9e4b5371525fd3b03e20b3a",
+      "bytes": 14839,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\best.pth"
+    },
+    {
+      "path": "smoke_seed7/EGTA/hysteresis_metrics.csv",
+      "sha256": "12dd8f26eb6ba56534199c5661757b30b64d33015dddd81e36ea696042842969",
+      "bytes": 3215,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\hysteresis_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EGTA/inverse_100hz_report.json",
+      "sha256": "0ccae666434728cd6f50d30fb4e0018fed92f56e7a3c13c39932d969af8cac7c",
+      "bytes": 434,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\inverse_100hz_report.json"
+    },
+    {
+      "path": "smoke_seed7/EGTA/last.pth",
+      "sha256": "d935d53bc3dad648246b5607b846e63715c008beb79458c2ba9545f4dd7be556",
+      "bytes": 14839,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\last.pth"
+    },
+    {
+      "path": "smoke_seed7/EGTA/metrics.jsonl",
+      "sha256": "fa826d87f5a9a9ac82ae1f451063b2dddbb964af2bed9364ab6935fee71ee082",
+      "bytes": 5561,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\metrics.jsonl"
+    },
+    {
+      "path": "smoke_seed7/EGTA/monotonicity_report.json",
+      "sha256": "fdaaf8ddb4f17d62ec527ced2320bc4590ad53cb75fdd77341ecdcdfa292e892",
+      "bytes": 117,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\monotonicity_report.json"
+    },
+    {
+      "path": "smoke_seed7/EGTA/per_condition_metrics.csv",
+      "sha256": "f9b6afe52f34256c14803722a21cb1c6b5fd912005b5d31c42a7f833b6bf6f9d",
+      "bytes": 150,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\per_condition_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EGTA/per_file_metrics.csv",
+      "sha256": "e42222f8c20806c673c7a0abc6ced56bf7e480a691bd10f8ae682a3e4bbd5acb",
+      "bytes": 1200,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\per_file_metrics.csv"
+    },
+    {
+      "path": "smoke_seed7/EGTA/resource_report.json",
+      "sha256": "1f85664adad0da9ec45f7740b108f71b560813cdeb703599cdc85d31f2ec76ad",
+      "bytes": 553,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\resource_report.json"
+    },
+    {
+      "path": "smoke_seed7/EGTA/run_config.json",
+      "sha256": "da3c58f3427d1bb0aa709580c24f0b63e82aaa168d923cecb402a4d59db5614e",
+      "bytes": 1478,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\run_config.json"
+    },
+    {
+      "path": "smoke_seed7/EGTA/step_response_metrics_250N.csv",
+      "sha256": "ce0d40d1e41d5cef97be90552525880e0876e56c455bf9cb66a42382b1320983",
+      "bytes": 786,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\step_response_metrics_250N.csv"
+    },
+    {
+      "path": "smoke_seed7/EGTA/step_response_metrics_50N.csv",
+      "sha256": "19881ebc08afdef041076c37dad2314b05aa580b85936820e035b6e561ae8b46",
+      "bytes": 1951,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\step_response_metrics_50N.csv"
+    },
+    {
+      "path": "smoke_seed7/EGTA/summary.json",
+      "sha256": "b1f15d29cf9457254a9317391df277e15c99ac2558489aa90dbf77057f71f060",
+      "bytes": 2265,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\EGTA\\summary.json"
+    },
+    {
+      "path": "smoke_seed7/failed_or_missing_runs.csv",
+      "sha256": "2d9344feae970014cafb11121ae6c1fd62097d6f9cbad9c817b20945a62ed924",
+      "bytes": 68,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\failed_or_missing_runs.csv"
+    },
+    {
+      "path": "smoke_seed7/gpu_parallel_log/gpu_1s.csv",
+      "sha256": "b74ff086212081d1b1178f66c9a38d5f6e43e480d5dad08fdb92dad58ec80500",
+      "bytes": 2076,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\gpu_parallel_log\\gpu_1s.csv"
+    },
+    {
+      "path": "smoke_seed7/launch_config.json",
+      "sha256": "1f80bdb623d5fe280454aefe1e8232a28b2c0c144dea50b462d2107777a4d5d8",
+      "bytes": 372,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\launch_config.json"
+    },
+    {
+      "path": "smoke_seed7/logs/AGT.log",
+      "sha256": "7eeb0b3717ef305287217725d58e63974f052e0848d485c24e552cb3d52d82a1",
+      "bytes": 330,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\logs\\AGT.log"
+    },
+    {
+      "path": "smoke_seed7/logs/E0.log",
+      "sha256": "ce52152d74abae5c2cc00a875c0d772930f5b99de8f7e3fb1d47fb5fa5dd5c46",
+      "bytes": 275,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\logs\\E0.log"
+    },
+    {
+      "path": "smoke_seed7/logs/EG.log",
+      "sha256": "4b00f0e5527a45a03c09bad2636070847ad3cf8e97d22ad5ab757714cf0f92dd",
+      "bytes": 291,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\logs\\EG.log"
+    },
+    {
+      "path": "smoke_seed7/logs/EGT.log",
+      "sha256": "66177c824ce5aea14c54b73bcab9a75ef72b95ce2c7c7131c10be0ae1f3a57d8",
+      "bytes": 330,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\logs\\EGT.log"
+    },
+    {
+      "path": "smoke_seed7/logs/EGTA.log",
+      "sha256": "e56946105fa986d7e11691a6d75951991b69da5645ac1eb16cac9abe6944e414",
+      "bytes": 373,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\logs\\EGTA.log"
+    },
+    {
+      "path": "smoke_seed7/model_parameter_counts.csv",
+      "sha256": "f3bf1e8daafb45dc7955031a591672122e7a559725c52ee24326269ff60d9fec",
+      "bytes": 225,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\model_parameter_counts.csv"
+    },
+    {
+      "path": "smoke_seed7/paired_file_differences.csv",
+      "sha256": "7ff1ce77dd8009a5daebcc90a67db06c1c9851bcd8654bba4a751cb850f82eb1",
+      "bytes": 1191,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\paired_file_differences.csv"
+    },
+    {
+      "path": "smoke_seed7/summary_all.csv",
+      "sha256": "e1a8f4445ad3c6e8600b5bfe6b904e7a076d25fcde9d923d2f644373851c0fed",
+      "bytes": 1477,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\summary_all.csv"
+    },
+    {
+      "path": "smoke_seed7/summary_all.json",
+      "sha256": "9c3cdd871eb88e925ceb7d670826489998ae0452cd32b0d39993710897a501cc",
+      "bytes": 3277,
+      "source": "D:\\v22_ae_hybrid\\smoke_seed7\\summary_all.json"
+    },
+    {
+      "path": "test_v22.py",
+      "sha256": "3bee7ac8221410cafa77a0d869a81e0c29d7172462e821d6f55edaf2c91344e5",
+      "bytes": 6794,
+      "source": "D:\\v22_ae_hybrid\\test_v22.py"
+    },
+    {
+      "path": "train_v22.py",
+      "sha256": "41968e039e902c07ef7948bdddff0bfac0aa471501b885e20f13195f351a5c9d",
+      "bytes": 24755,
+      "source": "D:\\v22_ae_hybrid\\train_v22.py"
+    },
+    {
+      "path": "v20_data.py",
+      "sha256": "5866276cb3e179ed803e4484fb94da12a11d1fce6bc7c4d5964a6fd1d6e2a083",
+      "bytes": 5778,
+      "source": "D:\\v22_ae_hybrid\\v20_data.py"
+    },
+    {
+      "path": "v22_models.py",
+      "sha256": "88ca0195eea1d4fa48456e4ea0fe33cac45f9298b43ab1eb4fade2fc23a565c0",
+      "bytes": 9081,
+      "source": "D:\\v22_ae_hybrid\\v22_models.py"
+    },
+    {
+      "path": "V22_FINAL_REPORT.md",
+      "sha256": "1ee6dcdf4756d2640099df7b48012c61567a3ba3a6b13160372af50c3add5c5f",
+      "bytes": 12607,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_FINAL_REPORT.md"
+    },
+    {
+      "path": "specs/00_AGENT_TASK.md",
+      "sha256": "c135dacba9bb906b61664a53bd28046d6e9a32bdd0ccdb9c11d5ba194245b3e1",
+      "bytes": 8930,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\00_AGENT_TASK.md"
+    },
+    {
+      "path": "specs/01_MODEL_SPEC.md",
+      "sha256": "d88fa083ab203edeebdd99b827fd508d2af70fdaa61dbde08468b4346e3159ea",
+      "bytes": 5718,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\01_MODEL_SPEC.md"
+    },
+    {
+      "path": "specs/02_TRAINING_PROTOCOL.md",
+      "sha256": "992e18a7a412348689be95643fef1cf6bee060582a71caba5522a39c6e70ca4c",
+      "bytes": 10973,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\02_TRAINING_PROTOCOL.md"
+    },
+    {
+      "path": "specs/03_ABLATION_MATRIX.md",
+      "sha256": "9862c7de7bec6ce392133d03a3a857904c157f8101a5dc012975b378951ec9d2",
+      "bytes": 2815,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\03_ABLATION_MATRIX.md"
+    },
+    {
+      "path": "specs/04_ACCEPTANCE_CHECKLIST.md",
+      "sha256": "48b17783b93e2e7216bd927b7c2d67d42f5b540020e706bb593bd3b998ed5df5",
+      "bytes": 3221,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\04_ACCEPTANCE_CHECKLIST.md"
+    },
+    {
+      "path": "specs/historical_baselines.json",
+      "sha256": "eb7779068e0d3179b3dff38a4fed68be57d96955fa01baf7f19f1462a2d6db2c",
+      "bytes": 781,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\historical_baselines.json"
+    },
+    {
+      "path": "specs/README.md",
+      "sha256": "767b0aefee19b34d03cddaf9cfa3506195396e57fe8245cc121f67f84e8cf190",
+      "bytes": 2464,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\README.md"
+    },
+    {
+      "path": "specs/run_config_template.json",
+      "sha256": "65f1f281ffbf34e8ad3daa363ed31bb4b369261e7152e63145ff22366d292e2f",
+      "bytes": 2714,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\run_config_template.json"
+    },
+    {
+      "path": "specs/V22_AGENT_BRIEF.md",
+      "sha256": "4f4c031868e587f05d4a04dc4b6d456354d39175e975ea19ec08c86e04bfdc35",
+      "bytes": 1707,
+      "source": "D:\\OneDrive - mail.scut.edu.cn\\Thesis\\MR_NLCSNN\\v22\\V22_AE_Hybrid_Training_Pack\\V22_AGENT_BRIEF.md"
+    }
+  ],
+  "excluded": [
+    "Python caches",
+    "duplicate training-pack ZIP",
+    "bundled reference PDF and duplicate V20 references",
+    "external raw/processed dataset"
+  ]
+}

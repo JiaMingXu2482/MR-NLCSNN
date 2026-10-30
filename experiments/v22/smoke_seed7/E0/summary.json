@@ -1,0 +1,66 @@
+{
+  "model": "E0",
+  "seed": 7,
+  "completed_epochs": 2,
+  "required_epochs": 2,
+  "status": "PASS",
+  "best_epoch": 2,
+  "params": {
+    "total": 2073,
+    "groups": {
+      "gru": 1416,
+      "trunk": 640,
+      "head_force": 17
+    }
+  },
+  "validation": {
+    "pooled_nrmse_pct": 67.03387549121562,
+    "per_type_pct": {
+      "SH_": 74.99230785179606,
+      "ST_": 46.07965976495622,
+      "RLF_": 80.15425643967544,
+      "RHF_": 57.149081643962305,
+      "SR_": 156.8736686754338
+    },
+    "hf_nrmse_pct": 74.66561492828933,
+    "worst_file_pct": 156.8736686754338
+  },
+  "step_250N": {
+    "n": 14,
+    "lag_true_median": 11.5,
+    "lag_pred_median": 3.5,
+    "lag_err_median": -8.5
+  },
+  "step_50N": {
+    "n": 24,
+    "lag_true_median": 37.0,
+    "lag_pred_median": 20.0,
+    "lag_err_median": -10.0
+  },
+  "hysteresis_cycles": 34,
+  "hysteresis_rel_error_mean": 0.5557586912576712,
+  "monotonicity": {
+    "status": "NOT_APPLICABLE",
+    "note": "E0 has no current gain path"
+  },
+  "inverse": {
+    "status": "NOT_APPLICABLE",
+    "note": "E0 has no candidate-current path; forward baseline only"
+  },
+  "acceleration": {
+    "residual_rms": 0.04061264172196388,
+    "pcc_with_acceleration": 0.043612338700839144,
+    "pcc_with_velocity": -0.24126066392007967,
+    "pcc_with_displacement": -0.03838273097491205,
+    "n_samples": 114163,
+    "note": "residual = prediction - measurement, normalised force units"
+  },
+  "tau_ms": null,
+  "b_a": null,
+  "final_test_read": false,
+  "limitations": [
+    "single seed 7: architecture screening only",
+    "step metric is I10->F90 (V20-compatible), not force rise time",
+    "inverse timing is a Python CPU reference, not ECU WCET"
+  ]
+}

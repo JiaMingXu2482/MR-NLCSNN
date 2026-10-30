@@ -1,0 +1,17 @@
+{
+  "tag": "smoke",
+  "models": [
+    "AGT",
+    "E0",
+    "EG",
+    "EGT",
+    "EGTA"
+  ],
+  "seed": 7,
+  "epochs": 2,
+  "max_parallel_start": 5,
+  "python": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "data": "D:/v20_data/Parsed_v19_F42_I42",
+  "final_test_read": false,
+  "started": "2026-10-30T15:40:55.232484+08:00"
+}

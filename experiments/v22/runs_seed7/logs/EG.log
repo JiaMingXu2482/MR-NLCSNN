@@ -1,0 +1,17 @@
+EG params=2187 seed=7 train=259 val=16 device=cuda:0
+epoch=1/130 val=70.122% train_loss=0.016029 (12.5s)
+epoch=11/130 val=23.608% train_loss=0.001151 (12.9s)
+epoch=21/130 val=16.589% train_loss=0.000594 (12.9s)
+epoch=31/130 val=17.639% train_loss=0.000392 (12.7s)
+epoch=41/130 val=14.940% train_loss=0.000300 (12.8s)
+epoch=51/130 val=13.151% train_loss=0.000243 (13.0s)
+epoch=61/130 val=15.559% train_loss=0.000202 (13.0s)
+epoch=71/130 val=13.112% train_loss=0.000170 (12.7s)
+epoch=81/130 val=12.789% train_loss=0.000153 (13.1s)
+epoch=91/130 val=12.701% train_loss=0.000139 (12.8s)
+epoch=101/130 val=12.864% train_loss=0.000134 (12.7s)
+epoch=111/130 val=12.827% train_loss=0.000129 (9.5s)
+epoch=121/130 val=12.812% train_loss=0.000126 (9.3s)
+epoch=130/130 val=12.813% train_loss=0.000125 (9.5s)
+{"model": "EG", "best_epoch": 78, "tau_ms": null, "b_a": null}
+POOLED 12.4490  WORST 35.23  STEP250 0.5  INV 11.267203940078602

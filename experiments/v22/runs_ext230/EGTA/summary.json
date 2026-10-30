@@ -1,0 +1,82 @@
+{
+  "model": "EGTA",
+  "seed": 7,
+  "run_type": "EXTENSION",
+  "completed_epochs": 230,
+  "epochs_run": 100,
+  "base_run": "D:/v22_ae_hybrid/runs_seed7/EGTA",
+  "status": "PASS",
+  "best_epoch": 189,
+  "params": {
+    "total": 2189,
+    "groups": {
+      "tau_raw": 1,
+      "b_a": 1,
+      "gru": 1416,
+      "trunk": 640,
+      "head_base": 17,
+      "head_gain": 17,
+      "G": 97
+    }
+  },
+  "validation": {
+    "pooled_nrmse_pct": 10.764975570943655,
+    "per_type_pct": {
+      "SH_": 4.382474316736959,
+      "ST_": 12.359470488918099,
+      "RLF_": 19.22192384233631,
+      "RHF_": 15.279108815585404,
+      "SR_": 34.62283497873398
+    },
+    "hf_nrmse_pct": 3.5425465141928583,
+    "worst_file_pct": 34.62283497873398
+  },
+  "base_validation_pooled": 11.339692692664352,
+  "delta_vs_base": -0.5747171217206972,
+  "step_250N": {
+    "n": 21,
+    "lag_err_median": 1.0
+  },
+  "step_50N": {
+    "n": 25,
+    "lag_err_median": 1.0
+  },
+  "hysteresis_rel_error_mean": 0.014230521207789898,
+  "monotonicity": {
+    "violations": 0,
+    "comparisons": 3600,
+    "tolerance": 1e-05,
+    "n_states": 36,
+    "n_current_points": 101
+  },
+  "inverse": {
+    "status": "PASS",
+    "file": "SH_10mm_1.66Hz_1A_r1",
+    "dt_s": 0.01,
+    "iterations": 24,
+    "n_steps": 243,
+    "n_saturated": 243,
+    "saturated_fraction": 1.0,
+    "residual_mean_N": 0.0,
+    "residual_max_N": 0.0,
+    "time_mean_ms": 2.038986424995977,
+    "time_p95_ms": 2.866489859297871,
+    "time_p99_ms": 3.8056440697982903,
+    "benchmark": "Python reference (torch on CUDA, 1 sample per trial); not an ECU WCET measurement"
+  },
+  "acceleration": {
+    "residual_rms": 0.006521987728774548,
+    "pcc_with_acceleration": -0.013437830954583374,
+    "pcc_with_velocity": -0.06396570317735126,
+    "pcc_with_displacement": 0.07748900414800095,
+    "n_samples": 114163,
+    "note": "residual = prediction - measurement, normalised force units"
+  },
+  "tau_ms": 15.874114036560059,
+  "b_a": 0.023639606311917305,
+  "final_test_read": false,
+  "limitations": [
+    "extension of a single-seed run; warm restart at the resume point",
+    "not comparable to the 130-epoch matrix as a separate architecture"
+  ]
+}

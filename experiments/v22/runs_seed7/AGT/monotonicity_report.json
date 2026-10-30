@@ -1,0 +1,7 @@
+{
+  "violations": 0,
+  "comparisons": 3600,
+  "tolerance": 1e-05,
+  "n_states": 36,
+  "n_current_points": 101
+}

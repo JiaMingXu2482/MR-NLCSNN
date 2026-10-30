@@ -1,0 +1,46 @@
+{
+  "EG": {
+    "steps": 243,
+    "n_saturated": 30,
+    "sat_frac": 0.12345679012345678,
+    "residual_median_N": 9.910563670995037e-06,
+    "residual_p95_N": 4.34637069563246e-05,
+    "current_err_median_A": 0.21737744808197035,
+    "current_err_p95_A": 0.5376289677619932,
+    "latency_p50_ms": 23.532700026407838,
+    "latency_p99_ms": 33.07029400020838
+  },
+  "EGT": {
+    "steps": 243,
+    "n_saturated": 104,
+    "sat_frac": 0.4279835390946502,
+    "residual_median_N": 1.0949159337474224e-05,
+    "residual_p95_N": 3.930389792818488e-05,
+    "current_err_median_A": 0.25789530277252193,
+    "current_err_p95_A": 0.7878112363815305,
+    "latency_p50_ms": 27.630900032818317,
+    "latency_p99_ms": 40.942174051888244
+  },
+  "AGT": {
+    "steps": 243,
+    "n_saturated": 23,
+    "sat_frac": 0.09465020576131687,
+    "residual_median_N": 1.511548179196579e-05,
+    "residual_p95_N": 5.287762614178993e-05,
+    "current_err_median_A": 0.08891230821609508,
+    "current_err_p95_A": 0.5730333626270284,
+    "latency_p50_ms": 30.525399837642908,
+    "latency_p99_ms": 38.6464000865817
+  },
+  "EGTA": {
+    "steps": 243,
+    "n_saturated": 72,
+    "sat_frac": 0.2962962962962963,
+    "residual_median_N": 8.915303629225364e-06,
+    "residual_p95_N": 4.258793339002142e-05,
+    "current_err_median_A": 0.22434715032577524,
+    "current_err_p95_A": 0.6342385351657868,
+    "latency_p50_ms": 30.703499913215637,
+    "latency_p99_ms": 40.892562023363986
+  }
+}

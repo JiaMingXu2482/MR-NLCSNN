@@ -1,0 +1,22 @@
+{
+  "params": {
+    "total": 2189,
+    "groups": {
+      "tau_raw": 1,
+      "b_a": 1,
+      "gru": 1416,
+      "trunk": 640,
+      "head_base": 17,
+      "head_gain": 17,
+      "G": 97
+    }
+  },
+  "weight_bytes": 14839,
+  "train_seconds": 54.83507280005142,
+  "seconds_per_epoch": 27.41753640002571,
+  "cuda_peak_allocated_MiB": 107.9130859375,
+  "cuda_peak_reserved_MiB": 166.0,
+  "gpu": "NVIDIA GeForce RTX 4060 Ti",
+  "throughput_samples_per_s": 55115.12697393858,
+  "note": "throughput = train samples x epochs / wall clock"
+}

@@ -1,0 +1,53 @@
+{
+  "model": "EG",
+  "backbone": "E",
+  "use_g": true,
+  "use_tau": false,
+  "use_acc": false,
+  "seed": 7,
+  "epochs_total": 2,
+  "data": "D:/v20_data/Parsed_v19_F42_I42",
+  "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "n_train_files": 259,
+  "n_validation_files": 16,
+  "norm": {
+    "x_ref": 279.1340026855469,
+    "x_scale": 63.970001220703125,
+    "f_scale": 7664.259765625,
+    "v_scale": 1000.0,
+    "a_scale": 50000.0,
+    "i_scale": 1.6,
+    "t_ref": 40.0,
+    "t_scale": 40.0
+  },
+  "params": {
+    "total": 2187,
+    "groups": {
+      "gru": 1416,
+      "trunk": 640,
+      "head_base": 17,
+      "head_gain": 17,
+      "G": 97
+    }
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.0001
+  },
+  "schedule": "5-epoch linear warmup + cosine to 0.01*base_lr",
+  "grad_clip": 1.0,
+  "loss": "plain (f/f_scale - pred)^2 MSE, edge mask",
+  "batch": "one full file per step, states reset per file",
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4060 Ti",
+  "final_test_read": false,
+  "code": {
+    "v22_models.py": "88ca0195eea1d4fa",
+    "v20_data.py": "5866276cb3e179ed",
+    "train_v22.py": "41968e039e902c07",
+    "git": null
+  },
+  "causality": "observer uses I[t-1]; candidate current only via G->q->gain",
+  "config_sha256": "10ea5f7d07c178dce5b6f379769bb704ad8f98950173f9714db515b7d87ffc49"
+}

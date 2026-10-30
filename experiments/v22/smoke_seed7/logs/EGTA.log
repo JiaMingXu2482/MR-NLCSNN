@@ -1,0 +1,5 @@
+EGTA params=2189 seed=7 train=259 val=16 device=cuda:0
+epoch=1/130 val=70.090% train_loss=0.016026 (36.9s) tau=11.00ms b_a=-0.0042
+epoch=2/130 val=55.237% train_loss=0.011526 (17.9s) tau=10.97ms b_a=-0.0128
+{"model": "EGTA", "best_epoch": 2, "tau_ms": 10.973684310913086, "b_a": -0.012839156202971935}
+POOLED 55.2369  WORST 146.69  STEP250 -2.0  INV 5.037525971420109

@@ -1,0 +1,15 @@
+{
+  "params": {
+    "total": 2073,
+    "groups": {
+      "gru": 1416,
+      "trunk": 640,
+      "head_force": 17
+    }
+  },
+  "weight_bytes": 11832,
+  "train_seconds": 495.8336732001044,
+  "seconds_per_epoch": 4.958336732001044,
+  "cuda_peak_allocated_MiB": 107.8935546875,
+  "throughput_samples_per_s": 304763.6902607368
+}

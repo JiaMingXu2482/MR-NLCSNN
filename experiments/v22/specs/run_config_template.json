@@ -1,0 +1,114 @@
+{
+  "project": "V22_AE_Hybrid",
+  "model": "EGT",
+  "seed": 7,
+  "epochs": 130,
+  "data_root": "D:/v20_data/Parsed_v19_F42_I42",
+  "expected_manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "expected_split": {
+    "train_files": 259,
+    "validation_files": 16,
+    "final_test_files": 10,
+    "final_test_access": false
+  },
+  "observer": {
+    "input_order": [
+      "x_t",
+      "v_t",
+      "a_t",
+      "I_prev_t",
+      "T_t"
+    ],
+    "current_history": "I_prev[t]=clip(abs(I[t-1])/1.6,0,1); I_prev[0]=0",
+    "nfl_current_source": "I_prev_t_only",
+    "candidate_current_route": "G_to_q_to_current_gain_only"
+  },
+  "backbone": {
+    "A": {
+      "gru_input": 5,
+      "gru_hidden": 16,
+      "gru_layers": 2,
+      "fusion_dim": 16
+    },
+    "E": {
+      "nfl_dim": 31,
+      "gru_input": 31,
+      "gru_hidden": 8,
+      "gru_layers": 2,
+      "fusion_dim": 16
+    }
+  },
+  "current_gain": {
+    "enabled": true,
+    "current_abs_clip_A": [
+      0.0,
+      1.6
+    ],
+    "g_network": [
+      1,
+      8,
+      8,
+      1
+    ],
+    "g_positive_monotone": true,
+    "current_direction": "decreasing_gain_with_increasing_abs_current; re-audit before training",
+    "delta_force_activation": "softplus",
+    "force_modulation": "v_norm * delta_force * q"
+  },
+  "time_delay": {
+    "mode": "global_tau",
+    "tau_init_s": 0.011,
+    "tau_bounds_s": [
+      0.001,
+      0.05
+    ],
+    "discretization": "alpha=1-exp(-dt/tau)",
+    "state_init": "q[0]=g[0]"
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 5,
+    "scheduler": "cosine",
+    "gradient_clip": 1.0,
+    "loss": "plain_force_MSE",
+    "precision": "FP32",
+    "device": "CUDA_REQUIRED",
+    "max_parallel_gpu_processes": 5,
+    "full_file_sequence": true,
+    "formal_runs": 5,
+    "seed_note": "Only AGT, E0, EG, EGT, EGTA are trained; all use seed 7. Do not launch other model variants.",
+    "target_parallel_gpu_processes": 5,
+    "gpu_parallel_fallback": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "minimum_free_vram_gib_after_smoke": 1.0,
+    "gpu_monitor_interval_seconds": 1,
+    "gpu_note": "Default to five simultaneous model runs after a 5-process smoke test; reduce concurrency only if OOM or less than ~1 GiB free VRAM."
+  },
+  "evaluation": {
+    "primary": "validation_pooled_NRMSE_SSE_over_SST",
+    "step_thresholds_N": [
+      250,
+      50
+    ],
+    "inverse_control_dt_s": 0.01,
+    "inverse_current_range_A": [
+      0.0,
+      1.6
+    ],
+    "parameter_hard_limit": 3500
+  },
+  "seed_policy": "single_fixed_seed_screening",
+  "models": [
+    "AGT",
+    "E0",
+    "EG",
+    "EGT",
+    "EGTA"
+  ]
+}

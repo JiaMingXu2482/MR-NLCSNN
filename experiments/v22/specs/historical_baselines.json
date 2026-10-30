@@ -1,0 +1,19 @@
+{
+  "source": "EXPERIMENT_LOG_v20(4).md, V20 formal 3-seed validation results",
+  "note": "Historical references only. V22 must rerun A0/E0 under strict I[t-1] observer causality; do not claim strict paired comparability unless the historical input timing is verified identical.",
+  "A_raw_gru": {
+    "parameters": 3105,
+    "validation_pooled_nrmse_mean_pct": 11.07,
+    "validation_pooled_nrmse_sd_pct": 0.58
+  },
+  "E_nfl_small_gru": {
+    "parameters": 2073,
+    "validation_pooled_nrmse_mean_pct": 11.53,
+    "validation_pooled_nrmse_sd_pct": 0.55
+  },
+  "M3_raw_gru_csb_monotonic_G": {
+    "parameters": 11049,
+    "validation_pooled_nrmse_reference_pct": 9.29,
+    "note": "High-capacity historical reference; excluded from V22 due to the 3500-parameter hard limit."
+  }
+}

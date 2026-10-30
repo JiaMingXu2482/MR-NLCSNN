@@ -1,0 +1,5 @@
+EG params=2187 seed=7 train=259 val=16 device=cuda:0
+epoch=1/130 val=70.122% train_loss=0.016029 (11.6s)
+epoch=2/130 val=55.376% train_loss=0.011536 (10.0s)
+{"model": "EG", "best_epoch": 2, "tau_ms": null, "b_a": null}
+POOLED 55.3756  WORST 147.76  STEP250 -3.0  INV 11.542294160462916

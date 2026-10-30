@@ -1,0 +1,17 @@
+EGTA params=2189 seed=7 train=259 val=16 device=cuda:0
+epoch=1/130 val=70.090% train_loss=0.016026 (51.5s) tau=11.00ms b_a=-0.0042
+epoch=11/130 val=22.017% train_loss=0.001082 (38.0s) tau=10.93ms b_a=+0.0028
+epoch=21/130 val=14.761% train_loss=0.000584 (38.2s) tau=11.09ms b_a=+0.0131
+epoch=31/130 val=14.470% train_loss=0.000365 (37.9s) tau=11.59ms b_a=+0.0173
+epoch=41/130 val=12.180% train_loss=0.000257 (26.9s) tau=12.27ms b_a=+0.0190
+epoch=51/130 val=11.611% train_loss=0.000198 (18.5s) tau=12.98ms b_a=+0.0196
+epoch=61/130 val=14.179% train_loss=0.000171 (17.8s) tau=13.59ms b_a=+0.0203
+epoch=71/130 val=12.246% train_loss=0.000145 (17.8s) tau=14.07ms b_a=+0.0200
+epoch=81/130 val=11.598% train_loss=0.000134 (18.3s) tau=14.44ms b_a=+0.0199
+epoch=91/130 val=11.475% train_loss=0.000121 (17.8s) tau=14.71ms b_a=+0.0202
+epoch=101/130 val=11.478% train_loss=0.000117 (17.9s) tau=14.88ms b_a=+0.0201
+epoch=111/130 val=11.456% train_loss=0.000113 (17.8s) tau=14.96ms b_a=+0.0202
+epoch=121/130 val=11.416% train_loss=0.000110 (18.7s) tau=15.00ms b_a=+0.0204
+epoch=130/130 val=11.467% train_loss=0.000109 (9.5s) tau=15.01ms b_a=+0.0204
+{"model": "EGTA", "best_epoch": 127, "tau_ms": 15.004769325256348, "b_a": 0.020396582782268524}
+POOLED 11.3397  WORST 32.82  STEP250 1.0  INV 6.802372103556982

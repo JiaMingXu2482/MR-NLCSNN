@@ -1,0 +1,27 @@
+START AGT (parallel=1)
+START E0 (parallel=2)
+START EG (parallel=3)
+START EGT (parallel=4)
+START EGTA (parallel=5)
+[E0] epoch=1/130 val=91.625% train_loss=0.023285 (9.7s)
+[EG] epoch=1/130 val=70.122% train_loss=0.016029 (11.6s)
+[E0] epoch=2/130 val=67.034% train_loss=0.017317 (8.7s)
+COMPLETE E0 (1/5)
+[EG] epoch=2/130 val=55.376% train_loss=0.011536 (10.0s)
+COMPLETE EG (2/5)
+[AGT] epoch=1/130 val=81.610% train_loss=0.016185 (36.0s) tau=11.00ms
+[EGT] epoch=1/130 val=70.115% train_loss=0.016028 (36.5s) tau=11.00ms
+[EGTA] epoch=1/130 val=70.090% train_loss=0.016026 (36.9s) tau=11.00ms b_a=-0.0042
+[AGT] epoch=2/130 val=90.170% train_loss=0.014409 (16.9s) tau=10.98ms
+[EGT] epoch=2/130 val=55.340% train_loss=0.011536 (17.7s) tau=10.97ms
+[EGTA] epoch=2/130 val=55.237% train_loss=0.011526 (17.9s) tau=10.97ms b_a=-0.0128
+COMPLETE AGT (3/5)
+COMPLETE EGT (4/5)
+COMPLETE EGTA (5/5)
+
+DONE 5/5 in 1.4 min (workers=5)
+AGT   pool= 81.610 worst= 268.56 params=3220 step250=0.0
+E0    pool= 67.034 worst= 156.87 params=2073 step250=-8.5
+EG    pool= 55.376 worst= 147.76 params=2187 step250=-3.0
+EGT   pool= 55.340 worst= 147.63 params=2188 step250=-2.0
+EGTA  pool= 55.237 worst= 146.69 params=2189 step250=-2.0

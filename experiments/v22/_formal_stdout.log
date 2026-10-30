@@ -1,0 +1,87 @@
+START AGT (parallel=1)
+START E0 (parallel=2)
+START EG (parallel=3)
+START EGT (parallel=4)
+START EGTA (parallel=5)
+[E0] epoch=1/130 val=91.625% train_loss=0.023285 (10.3s)
+[EG] epoch=1/130 val=70.122% train_loss=0.016029 (12.5s)
+[AGT] epoch=1/130 val=81.610% train_loss=0.016185 (49.0s) tau=11.00ms
+[EGT] epoch=1/130 val=70.115% train_loss=0.016028 (50.5s) tau=11.00ms
+[EGTA] epoch=1/130 val=70.090% train_loss=0.016026 (51.5s) tau=11.00ms b_a=-0.0042
+[E0] epoch=11/130 val=27.982% train_loss=0.001368 (10.5s)
+[EG] epoch=11/130 val=23.608% train_loss=0.001151 (12.9s)
+[E0] epoch=21/130 val=17.604% train_loss=0.000709 (10.9s)
+[EG] epoch=21/130 val=16.589% train_loss=0.000594 (12.9s)
+[E0] epoch=31/130 val=15.418% train_loss=0.000427 (10.6s)
+[EG] epoch=31/130 val=17.639% train_loss=0.000392 (12.7s)
+[AGT] epoch=11/130 val=23.530% train_loss=0.001284 (35.6s) tau=10.80ms
+[E0] epoch=41/130 val=13.409% train_loss=0.000249 (10.2s)
+[EGT] epoch=11/130 val=23.359% train_loss=0.001146 (37.7s) tau=10.89ms
+[EGTA] epoch=11/130 val=22.017% train_loss=0.001082 (38.0s) tau=10.93ms b_a=+0.0028
+[E0] epoch=51/130 val=11.642% train_loss=0.000177 (10.0s)
+[EG] epoch=41/130 val=14.940% train_loss=0.000300 (12.8s)
+[E0] epoch=61/130 val=13.030% train_loss=0.000153 (10.3s)
+[EG] epoch=51/130 val=13.151% train_loss=0.000243 (13.0s)
+[E0] epoch=71/130 val=11.730% train_loss=0.000131 (10.3s)
+[AGT] epoch=21/130 val=16.746% train_loss=0.000946 (36.2s) tau=10.98ms
+[EG] epoch=61/130 val=15.559% train_loss=0.000202 (13.0s)
+[EGT] epoch=21/130 val=16.140% train_loss=0.000589 (38.0s) tau=11.22ms
+[EGTA] epoch=21/130 val=14.761% train_loss=0.000584 (38.2s) tau=11.09ms b_a=+0.0131
+[E0] epoch=81/130 val=11.064% train_loss=0.000125 (10.9s)
+[EG] epoch=71/130 val=13.112% train_loss=0.000170 (12.7s)
+[E0] epoch=91/130 val=10.681% train_loss=0.000112 (10.3s)
+[E0] epoch=101/130 val=10.629% train_loss=0.000111 (10.2s)
+[EG] epoch=81/130 val=12.789% train_loss=0.000153 (13.1s)
+[AGT] epoch=31/130 val=19.537% train_loss=0.000654 (35.5s) tau=11.35ms
+[E0] epoch=111/130 val=10.768% train_loss=0.000106 (10.3s)
+[EG] epoch=91/130 val=12.701% train_loss=0.000139 (12.8s)
+[EGT] epoch=31/130 val=17.194% train_loss=0.000386 (37.8s) tau=11.90ms
+[EGTA] epoch=31/130 val=14.470% train_loss=0.000365 (37.9s) tau=11.59ms b_a=+0.0173
+[E0] epoch=121/130 val=10.629% train_loss=0.000103 (10.1s)
+[EG] epoch=101/130 val=12.864% train_loss=0.000134 (12.7s)
+[E0] epoch=130/130 val=10.649% train_loss=0.000103 (10.3s)
+COMPLETE E0 (1/5)
+[EG] epoch=111/130 val=12.827% train_loss=0.000129 (9.5s)
+[AGT] epoch=41/130 val=16.951% train_loss=0.000439 (25.2s) tau=12.09ms
+[EGT] epoch=41/130 val=14.266% train_loss=0.000293 (26.8s) tau=12.70ms
+[EG] epoch=121/130 val=12.812% train_loss=0.000126 (9.3s)
+[EGTA] epoch=41/130 val=12.180% train_loss=0.000257 (26.9s) tau=12.27ms b_a=+0.0190
+[EG] epoch=130/130 val=12.813% train_loss=0.000125 (9.5s)
+COMPLETE EG (2/5)
+[AGT] epoch=51/130 val=13.210% train_loss=0.000342 (17.0s) tau=13.05ms
+[EGT] epoch=51/130 val=12.432% train_loss=0.000238 (17.9s) tau=13.57ms
+[EGTA] epoch=51/130 val=11.611% train_loss=0.000198 (18.5s) tau=12.98ms b_a=+0.0196
+[AGT] epoch=61/130 val=17.023% train_loss=0.000283 (16.7s) tau=13.80ms
+[EGT] epoch=61/130 val=14.979% train_loss=0.000198 (17.8s) tau=14.33ms
+[EGTA] epoch=61/130 val=14.179% train_loss=0.000171 (17.8s) tau=13.59ms b_a=+0.0203
+[AGT] epoch=71/130 val=13.218% train_loss=0.000254 (16.8s) tau=14.33ms
+[EGT] epoch=71/130 val=12.457% train_loss=0.000167 (17.9s) tau=14.93ms
+[EGTA] epoch=71/130 val=12.246% train_loss=0.000145 (17.8s) tau=14.07ms b_a=+0.0200
+[AGT] epoch=81/130 val=13.119% train_loss=0.000241 (17.0s) tau=14.68ms
+[EGT] epoch=81/130 val=12.164% train_loss=0.000150 (17.7s) tau=15.42ms
+[EGTA] epoch=81/130 val=11.598% train_loss=0.000134 (18.3s) tau=14.44ms b_a=+0.0199
+[AGT] epoch=91/130 val=13.097% train_loss=0.000228 (17.0s) tau=14.88ms
+[EGT] epoch=91/130 val=12.086% train_loss=0.000137 (17.6s) tau=15.74ms
+[EGTA] epoch=91/130 val=11.475% train_loss=0.000121 (17.8s) tau=14.71ms b_a=+0.0202
+[AGT] epoch=101/130 val=13.199% train_loss=0.000220 (16.9s) tau=14.99ms
+[EGT] epoch=101/130 val=12.234% train_loss=0.000131 (17.6s) tau=15.95ms
+[EGTA] epoch=101/130 val=11.478% train_loss=0.000117 (17.9s) tau=14.88ms b_a=+0.0201
+[AGT] epoch=111/130 val=13.251% train_loss=0.000213 (17.0s) tau=15.05ms
+[EGT] epoch=111/130 val=12.222% train_loss=0.000126 (17.7s) tau=16.06ms
+[EGTA] epoch=111/130 val=11.456% train_loss=0.000113 (17.8s) tau=14.96ms b_a=+0.0202
+[AGT] epoch=121/130 val=13.097% train_loss=0.000209 (16.9s) tau=15.08ms
+[EGT] epoch=121/130 val=12.210% train_loss=0.000124 (17.7s) tau=16.10ms
+[EGTA] epoch=121/130 val=11.416% train_loss=0.000110 (18.7s) tau=15.00ms b_a=+0.0204
+[AGT] epoch=130/130 val=13.177% train_loss=0.000208 (17.4s) tau=15.09ms
+COMPLETE AGT (3/5)
+[EGT] epoch=130/130 val=12.205% train_loss=0.000123 (15.6s) tau=16.12ms
+COMPLETE EGT (4/5)
+[EGTA] epoch=130/130 val=11.467% train_loss=0.000109 (9.5s) tau=15.01ms b_a=+0.0204
+COMPLETE EGTA (5/5)
+
+DONE 5/5 in 52.1 min (workers=5)
+AGT   pool= 13.031 worst=  46.27 params=3220 step250=0.0
+E0    pool= 10.595 worst=  34.98 params=2073 step250=0.5
+EG    pool= 12.449 worst=  35.23 params=2187 step250=0.5
+EGT   pool= 11.778 worst=  35.47 params=2188 step250=1.0
+EGTA  pool= 11.340 worst=  32.82 params=2189 step250=1.0

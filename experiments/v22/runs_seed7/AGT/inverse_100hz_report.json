@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "file": "SH_10mm_1.66Hz_1A_r1",
+  "dt_s": 0.01,
+  "iterations": 24,
+  "n_steps": 243,
+  "n_saturated": 243,
+  "saturated_fraction": 1.0,
+  "residual_mean_N": 0.0,
+  "residual_max_N": 0.0,
+  "time_mean_ms": 4.9002827145159245,
+  "time_p95_ms": 8.32244986668229,
+  "time_p99_ms": 11.317487927153685,
+  "benchmark": "Python reference (torch on CUDA, 1 sample per trial); not an ECU WCET measurement"
+}

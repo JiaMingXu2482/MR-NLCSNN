@@ -1,0 +1,63 @@
+{
+  "model": "E0",
+  "seed": 7,
+  "run_type": "EXTENSION",
+  "completed_epochs": 230,
+  "epochs_run": 100,
+  "base_run": "D:/v22_ae_hybrid/runs_seed7/E0",
+  "status": "PASS",
+  "best_epoch": 210,
+  "params": {
+    "total": 2073,
+    "groups": {
+      "gru": 1416,
+      "trunk": 640,
+      "head_force": 17
+    }
+  },
+  "validation": {
+    "pooled_nrmse_pct": 10.293139998239548,
+    "per_type_pct": {
+      "SH_": 4.159091760880019,
+      "ST_": 11.332808824467417,
+      "RLF_": 19.23494284210319,
+      "RHF_": 14.859746585894765,
+      "SR_": 34.774183763661405
+    },
+    "hf_nrmse_pct": 3.847399670263929,
+    "worst_file_pct": 34.774183763661405
+  },
+  "base_validation_pooled": 10.594997446967472,
+  "delta_vs_base": -0.3018574487279242,
+  "step_250N": {
+    "n": 19,
+    "lag_err_median": 1.0
+  },
+  "step_50N": {
+    "n": 25,
+    "lag_err_median": 0.0
+  },
+  "hysteresis_rel_error_mean": 0.013453787344268563,
+  "monotonicity": {
+    "status": "NOT_APPLICABLE"
+  },
+  "inverse": {
+    "status": "NOT_APPLICABLE",
+    "note": "E0 has no candidate-current path; forward baseline only"
+  },
+  "acceleration": {
+    "residual_rms": 0.006236124783754349,
+    "pcc_with_acceleration": -0.06552296389967288,
+    "pcc_with_velocity": -0.00910231903875745,
+    "pcc_with_displacement": 0.12030501605018352,
+    "n_samples": 114163,
+    "note": "residual = prediction - measurement, normalised force units"
+  },
+  "tau_ms": null,
+  "b_a": null,
+  "final_test_read": false,
+  "limitations": [
+    "extension of a single-seed run; warm restart at the resume point",
+    "not comparable to the 130-epoch matrix as a separate architecture"
+  ]
+}

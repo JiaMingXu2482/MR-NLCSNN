@@ -1,0 +1,83 @@
+{
+  "model": "AGT",
+  "seed": 7,
+  "completed_epochs": 2,
+  "required_epochs": 2,
+  "status": "PASS",
+  "best_epoch": 1,
+  "params": {
+    "total": 3220,
+    "groups": {
+      "tau_raw": 1,
+      "gru": 2736,
+      "trunk": 352,
+      "head_base": 17,
+      "head_gain": 17,
+      "G": 97
+    }
+  },
+  "validation": {
+    "pooled_nrmse_pct": 81.61012124820431,
+    "per_type_pct": {
+      "SH_": 78.48667463473534,
+      "ST_": 64.26666728947346,
+      "RLF_": 117.88122698758075,
+      "RHF_": 96.87119701034462,
+      "SR_": 268.5553039891751
+    },
+    "hf_nrmse_pct": 80.7682146361558,
+    "worst_file_pct": 268.5553039891751
+  },
+  "step_250N": {
+    "n": 14,
+    "lag_true_median": 49.5,
+    "lag_pred_median": 43.0,
+    "lag_err_median": 0.0
+  },
+  "step_50N": {
+    "n": 22,
+    "lag_true_median": 43.0,
+    "lag_pred_median": 41.5,
+    "lag_err_median": 0.0
+  },
+  "hysteresis_cycles": 34,
+  "hysteresis_rel_error_mean": 0.7439059239119556,
+  "monotonicity": {
+    "violations": 0,
+    "comparisons": 3600,
+    "tolerance": 1e-05,
+    "n_states": 36,
+    "n_current_points": 101
+  },
+  "inverse": {
+    "status": "PASS",
+    "file": "SH_10mm_1.66Hz_1A_r1",
+    "dt_s": 0.01,
+    "iterations": 24,
+    "n_steps": 243,
+    "n_saturated": 243,
+    "saturated_fraction": 1.0,
+    "residual_mean_N": 0.0,
+    "residual_max_N": 0.0,
+    "time_mean_ms": 3.368252684235757,
+    "time_p95_ms": 5.43803002219647,
+    "time_p99_ms": 7.2839140053838465,
+    "benchmark": "Python reference (torch on CUDA, 1 sample per trial); not an ECU WCET measurement"
+  },
+  "acceleration": {
+    "residual_rms": 0.049443695694208145,
+    "pcc_with_acceleration": 0.02214327858304684,
+    "pcc_with_velocity": -0.7696233828018509,
+    "pcc_with_displacement": 0.18327967838674739,
+    "n_samples": 114163,
+    "note": "residual = prediction - measurement, normalised force units"
+  },
+  "tau_ms": 10.996183395385742,
+  "b_a": null,
+  "final_test_read": false,
+  "limitations": [
+    "single seed 7: architecture screening only",
+    "step metric is I10->F90 (V20-compatible), not force rise time",
+    "inverse timing is a Python CPU reference, not ECU WCET"
+  ]
+}

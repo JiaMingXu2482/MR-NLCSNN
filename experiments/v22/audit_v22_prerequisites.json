@@ -1,0 +1,268 @@
+{
+ "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+ "manifest_ok": true,
+ "split_counts": {
+  "train": 259,
+  "validation": 16,
+  "excluded": 9,
+  "duplicate": 7,
+  "final_test": 10
+ },
+ "n_train": 259,
+ "n_validation": 16,
+ "train_families": {
+  "RH": 8,
+  "RL": 18,
+  "SH": 186,
+  "SR": 17,
+  "ST": 30
+ },
+ "val_families": {
+  "RH": 1,
+  "RL": 3,
+  "SH": 8,
+  "SR": 1,
+  "ST": 3
+ },
+ "n_train_samples": 1511121,
+ "n_val_samples": 138861,
+ "norm": {
+  "x_ref": 279.1340026855469,
+  "x_scale": 63.970001220703125,
+  "f_scale": 7664.259765625,
+  "v_scale": 1000.0,
+  "a_scale": 50000.0,
+  "i_scale": 1.6,
+  "t_ref": 40.0,
+  "t_scale": 40.0
+ },
+ "direction": {
+  "pairs": [
+   {
+    "group": [
+     "10mm",
+     "1.66Hz"
+    ],
+    "low_name": "SH_10mm_1.66Hz_0A_r1",
+    "high_name": "SH_10mm_1.66Hz_1.6A",
+    "low_max_A": 0.004000000189989805,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 5.913787766330327,
+    "slope_16A": 1.0183671986359908,
+    "decreases": true
+   },
+   {
+    "group": [
+     "10mm",
+     "1.66Hz"
+    ],
+    "low_name": "SH_10mm_1.66Hz_0A_r2",
+    "high_name": "SH_10mm_1.66Hz_1.6A",
+    "low_max_A": 0.004000000189989805,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 5.921635722836497,
+    "slope_16A": 1.0183671986359908,
+    "decreases": true
+   },
+   {
+    "group": [
+     "10mm",
+     "4.71Hz"
+    ],
+    "low_name": "SH_10mm_4.71Hz_0A",
+    "high_name": "SH_10mm_4.71Hz_1.6A",
+    "low_max_A": 0.004000000189989805,
+    "high_max_A": 1.593999981880188,
+    "slope_0A": 7.8515234686895035,
+    "slope_16A": 0.9191126633702783,
+    "decreases": true
+   },
+   {
+    "group": [
+     "30mm",
+     "0.41Hz"
+    ],
+    "low_name": "SH_30mm_0.41Hz_0A_r1",
+    "high_name": "SH_30mm_0.41Hz_1.6A",
+    "low_max_A": 0.007000000216066837,
+    "high_max_A": 1.593999981880188,
+    "slope_0A": 5.2092540641607545,
+    "slope_16A": 1.2924348499802791,
+    "decreases": true
+   },
+   {
+    "group": [
+     "30mm",
+     "0.41Hz"
+    ],
+    "low_name": "SH_30mm_0.41Hz_0A_r2",
+    "high_name": "SH_30mm_0.41Hz_1.6A",
+    "low_max_A": 0.004000000189989805,
+    "high_max_A": 1.593999981880188,
+    "slope_0A": 5.722279432251239,
+    "slope_16A": 1.2924348499802791,
+    "decreases": true
+   },
+   {
+    "group": [
+     "30mm",
+     "0.83Hz"
+    ],
+    "low_name": "SH_30mm_0.83Hz_0A_r1",
+    "high_name": "SH_30mm_0.83Hz_1.6A",
+    "low_max_A": 0.004999999888241291,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 6.00804969329879,
+    "slope_16A": 0.9455468123553858,
+    "decreases": true
+   },
+   {
+    "group": [
+     "30mm",
+     "0.83Hz"
+    ],
+    "low_name": "SH_30mm_0.83Hz_0A_r2",
+    "high_name": "SH_30mm_0.83Hz_1.6A",
+    "low_max_A": 0.004000000189989805,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 6.327730457068031,
+    "slope_16A": 0.9455468123553858,
+    "decreases": true
+   },
+   {
+    "group": [
+     "30mm",
+     "1.66Hz"
+    ],
+    "low_name": "SH_30mm_1.66Hz_0A_r1",
+    "high_name": "SH_30mm_1.66Hz_1.6A",
+    "low_max_A": 0.006000000052154064,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 7.671071295983219,
+    "slope_16A": 0.9346932755478069,
+    "decreases": true
+   },
+   {
+    "group": [
+     "30mm",
+     "1.66Hz"
+    ],
+    "low_name": "SH_30mm_1.66Hz_0A_r2",
+    "high_name": "SH_30mm_1.66Hz_1.6A",
+    "low_max_A": 0.004000000189989805,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 8.019302538793147,
+    "slope_16A": 0.9346932755478069,
+    "decreases": true
+   },
+   {
+    "group": [
+     "30mm",
+     "4.97Hz"
+    ],
+    "low_name": "SH_30mm_4.97Hz_0A",
+    "high_name": "SH_30mm_4.97Hz_1.6A",
+    "low_max_A": 0.006000000052154064,
+    "high_max_A": 1.6009999513626099,
+    "slope_0A": 5.268066033563146,
+    "slope_16A": 1.0800610665070136,
+    "decreases": true
+   },
+   {
+    "group": [
+     "50mm",
+     "0.41Hz"
+    ],
+    "low_name": "SH_50mm_0.41Hz_0A_r1",
+    "high_name": "SH_50mm_0.41Hz_1.6A",
+    "low_max_A": 0.006000000052154064,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 5.861510428335362,
+    "slope_16A": 0.9463192989393316,
+    "decreases": true
+   },
+   {
+    "group": [
+     "50mm",
+     "0.41Hz"
+    ],
+    "low_name": "SH_50mm_0.41Hz_0A_r2",
+    "high_name": "SH_50mm_0.41Hz_1.6A",
+    "low_max_A": 0.004000000189989805,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 5.913542002743852,
+    "slope_16A": 0.9463192989393316,
+    "decreases": true
+   },
+   {
+    "group": [
+     "50mm",
+     "0.83Hz"
+    ],
+    "low_name": "SH_50mm_0.83Hz_0A_r1",
+    "high_name": "SH_50mm_0.83Hz_1.6A",
+    "low_max_A": 0.004999999888241291,
+    "high_max_A": 1.5950000286102295,
+    "slope_0A": 7.0843127509528685,
+    "slope_16A": 0.8697466823111757,
+    "decreases": true
+   },
+   {
+    "group": [
+     "50mm",
+     "0.83Hz"
+    ],
+    "low_name": "SH_50mm_0.83Hz_0A_r2",
+    "high_name": "SH_50mm_0.83Hz_1.6A",
+    "low_max_A": 0.004999999888241291,
+    "high_max_A": 1.5950000286102295,
+    "slope_0A": 7.231260358892218,
+    "slope_16A": 0.8697466823111757,
+    "decreases": true
+   },
+   {
+    "group": [
+     "50mm",
+     "1.66Hz"
+    ],
+    "low_name": "SH_50mm_1.66Hz_0A_r1",
+    "high_name": "SH_50mm_1.66Hz_1.6A",
+    "low_max_A": 0.004999999888241291,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 7.495253370247147,
+    "slope_16A": 0.9646068240808221,
+    "decreases": true
+   },
+   {
+    "group": [
+     "50mm",
+     "1.66Hz"
+    ],
+    "low_name": "SH_50mm_1.66Hz_0A_r2",
+    "high_name": "SH_50mm_1.66Hz_1.6A",
+    "low_max_A": 0.004999999888241291,
+    "high_max_A": 1.593000054359436,
+    "slope_0A": 7.861838353519176,
+    "slope_16A": 0.9646068240808221,
+    "decreases": true
+   },
+   {
+    "group": [
+     "5mm",
+     "4.71Hz"
+    ],
+    "low_name": "SH_5mm_4.71Hz_0A",
+    "high_name": "SH_5mm_4.71Hz_1.6A",
+    "low_max_A": 0.004000000189989805,
+    "high_max_A": 1.590999960899353,
+    "slope_0A": 6.118573394209168,
+    "slope_16A": 0.9095422372284229,
+    "decreases": true
+   }
+  ],
+  "n_pairs": 17,
+  "n_decreasing": 17,
+  "fraction": 1.0,
+  "verdict": "支持 g = 1 - G_pos(i)（g 随电流单调不增）"
+ }
+}

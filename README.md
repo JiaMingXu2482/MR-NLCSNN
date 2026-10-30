@@ -44,3 +44,8 @@ python AA03Validate/validate_legacy_repro.py \
 The experimental dataset is configured separately through `train_config.py`, command-line arguments, or the `CDC_PROCESSED_GROUPS` environment variable.
 
 See [`CLAUDE.md`](CLAUDE.md) and [`training_work_log.md`](training_work_log.md) for detailed architecture, deployment settings, data-quality findings, and experiment history.
+
+
+## V22 experiment archive
+
+See [experiments/v22](experiments/v22/README.md) for the five-model seed-7 matrix, 130-epoch checkpoints, separate E0/EGTA extensions to 230 epochs, validation metrics, figures and provenance. These use a different dataset split from the legacy results above; compare within the documented experiment.

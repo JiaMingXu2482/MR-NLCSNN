@@ -1,0 +1,5 @@
+AGT params=3220 seed=7 train=259 val=16 device=cuda:0
+epoch=1/130 val=81.610% train_loss=0.016185 (36.0s) tau=11.00ms
+epoch=2/130 val=90.170% train_loss=0.014409 (16.9s) tau=10.98ms
+{"model": "AGT", "best_epoch": 1, "tau_ms": 10.996183395385742, "b_a": null}
+POOLED 81.6101  WORST 268.56  STEP250 0.0  INV 7.2839140053838465

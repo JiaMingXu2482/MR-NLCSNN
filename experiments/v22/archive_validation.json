@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "imported_files_sha256_verified": 276,
+  "checkpoints_loaded": 14,
+  "runs": [
+    {
+      "group": "runs_seed7",
+      "model": "AGT",
+      "metric_rows": 130,
+      "parameters": 3220,
+      "checkpoint_epochs": {
+        "best.pth": 65,
+        "last.pth": 130
+      }
+    },
+    {
+      "group": "runs_seed7",
+      "model": "E0",
+      "metric_rows": 130,
+      "parameters": 2073,
+      "checkpoint_epochs": {
+        "best.pth": 127,
+        "last.pth": 130
+      }
+    },
+    {
+      "group": "runs_seed7",
+      "model": "EG",
+      "metric_rows": 130,
+      "parameters": 2187,
+      "checkpoint_epochs": {
+        "best.pth": 78,
+        "last.pth": 130
+      }
+    },
+    {
+      "group": "runs_seed7",
+      "model": "EGT",
+      "metric_rows": 130,
+      "parameters": 2188,
+      "checkpoint_epochs": {
+        "best.pth": 78,
+        "last.pth": 130
+      }
+    },
+    {
+      "group": "runs_seed7",
+      "model": "EGTA",
+      "metric_rows": 130,
+      "parameters": 2189,
+      "checkpoint_epochs": {
+        "best.pth": 127,
+        "last.pth": 130
+      }
+    },
+    {
+      "group": "runs_ext230",
+      "model": "E0",
+      "metric_rows": 100,
+      "parameters": 2073,
+      "checkpoint_epochs": {
+        "best.pth": 210,
+        "last.pth": 230
+      }
+    },
+    {
+      "group": "runs_ext230",
+      "model": "EGTA",
+      "metric_rows": 100,
+      "parameters": 2189,
+      "checkpoint_epochs": {
+        "best.pth": 189,
+        "last.pth": 230
+      }
+    }
+  ],
+  "acceptance_test_exit_code": 0,
+  "final_test_data_opened_during_archive": false,
+  "training_started": false
+}

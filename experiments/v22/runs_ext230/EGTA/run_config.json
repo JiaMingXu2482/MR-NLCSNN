@@ -1,0 +1,53 @@
+{
+  "model": "EGTA",
+  "seed": 7,
+  "run_type": "EXTENSION",
+  "base_run": "D:/v22_ae_hybrid/runs_seed7/EGTA",
+  "resumed_from_epoch": 130,
+  "epochs_total": 230,
+  "extra_epochs": 100,
+  "data": "D:/v20_data/Parsed_v19_F42_I42",
+  "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "norm": {
+    "x_ref": 279.1340026855469,
+    "x_scale": 63.970001220703125,
+    "f_scale": 7664.259765625,
+    "v_scale": 1000.0,
+    "a_scale": 50000.0,
+    "i_scale": 1.6,
+    "t_ref": 40.0,
+    "t_scale": 40.0
+  },
+  "params": {
+    "total": 2189,
+    "groups": {
+      "tau_raw": 1,
+      "b_a": 1,
+      "gru": 1416,
+      "trunk": 640,
+      "head_base": 17,
+      "head_gain": 17,
+      "G": 97
+    }
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.0001
+  },
+  "schedule": "5-epoch warmup + cosine recomputed over epochs_total=230",
+  "lr_at_131": 0.0001236738747840199,
+  "lr_at_130_old_schedule": 0.00012571324561646088,
+  "note": "warm restart: LR jumps at the resume point by design",
+  "base_best_pooled_pct": 11.339692692664352,
+  "grad_clip": 1.0,
+  "device": "cuda:0",
+  "final_test_read": false,
+  "code": {
+    "v22_models.py": "88ca0195eea1d4fa",
+    "v20_data.py": "5866276cb3e179ed",
+    "train_v22.py": "41968e039e902c07",
+    "git": null
+  },
+  "config_sha256": "248eba3f76f771757147b31060c81f13aa2131060473ebf5cc32708d69220bba"
+}

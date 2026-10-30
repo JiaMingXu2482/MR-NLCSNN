@@ -1,0 +1,17 @@
+AGT params=3220 seed=7 train=259 val=16 device=cuda:0
+epoch=1/130 val=81.610% train_loss=0.016185 (49.0s) tau=11.00ms
+epoch=11/130 val=23.530% train_loss=0.001284 (35.6s) tau=10.80ms
+epoch=21/130 val=16.746% train_loss=0.000946 (36.2s) tau=10.98ms
+epoch=31/130 val=19.537% train_loss=0.000654 (35.5s) tau=11.35ms
+epoch=41/130 val=16.951% train_loss=0.000439 (25.2s) tau=12.09ms
+epoch=51/130 val=13.210% train_loss=0.000342 (17.0s) tau=13.05ms
+epoch=61/130 val=17.023% train_loss=0.000283 (16.7s) tau=13.80ms
+epoch=71/130 val=13.218% train_loss=0.000254 (16.8s) tau=14.33ms
+epoch=81/130 val=13.119% train_loss=0.000241 (17.0s) tau=14.68ms
+epoch=91/130 val=13.097% train_loss=0.000228 (17.0s) tau=14.88ms
+epoch=101/130 val=13.199% train_loss=0.000220 (16.9s) tau=14.99ms
+epoch=111/130 val=13.251% train_loss=0.000213 (17.0s) tau=15.05ms
+epoch=121/130 val=13.097% train_loss=0.000209 (16.9s) tau=15.08ms
+epoch=130/130 val=13.177% train_loss=0.000208 (17.4s) tau=15.09ms
+{"model": "AGT", "best_epoch": 65, "tau_ms": 14.05855655670166, "b_a": null}
+POOLED 13.0313  WORST 46.27  STEP250 0.0  INV 11.317487927153685
