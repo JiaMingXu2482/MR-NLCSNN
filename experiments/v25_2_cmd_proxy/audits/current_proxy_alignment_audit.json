@@ -1,0 +1,14 @@
+{
+  "assumption": "I_act[k] ~= I_cmd[k-1]",
+  "base_definition": "clip(|I_meas_100Hz[k]|,0,1.6)",
+  "base_verified": true,
+  "target_definition": "clip(|I_meas_100Hz[k+1]|,0,1.6)",
+  "target_verified": true,
+  "delta_definition": "target - base",
+  "last_sample_dropped": true,
+  "future_leak_into_input": false,
+  "decision_index": "k = 0..N-2",
+  "sample_count_per_file": 407,
+  "sign": "signed measured current kept for diagnostics only; proxy uses |I|",
+  "note": "proxy labels are an engineering assumption, not measured ECU commands"
+}

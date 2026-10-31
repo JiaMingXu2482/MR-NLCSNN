@@ -1,0 +1,41 @@
+=== 1. data_manifest_audit.json ===
+  sha match True | split {'train': 259, 'validation': 16, 'final_test': 10} | family True
+  -> data_manifest_audit.json
+
+=== 2. feature_timing_audit.json ===
+  受电流影响的特征槽: [21, 23]
+  期望（从 cond_inv 结构推出）: [21, 23]
+  -> feature_timing_audit.json
+
+=== 3. current_proxy_alignment_audit.json ===
+  base[k] == clip(|I_meas[k]|)      : True
+  target[k] == clip(|I_meas[k+1]|)  : True
+  最后一个样本被丢弃               : True
+  改 1 kHz 样本 1001（即 k+1）是否改变 x[k] : False
+  -> current_proxy_alignment_audit.json
+
+=== 4. preprocessing_audit.json ===
+  所有通道同一索引 [::10] : True
+  FIR/IIR/filtfilt 使用   : 无
+  -> preprocessing_audit.json
+
+=== 5. alias_energy_audit.json ===
+  各通道 50 Hz 以上能量占比（直接抽取 / 原 FIR 后）:
+   SH   I 1.37%/0.00%  F 0.00%/0.00%
+   ST   I 0.00%/0.00%  F 0.00%/0.00%
+   RLF  I 0.00%/0.00%  F 0.00%/0.00%
+   SR   I 3.58%/0.00%  F 0.00%/0.00%
+   RHF  I 0.00%/0.00%  F 0.00%/0.00%
+  最差: I 3.58%  F 0.00%
+  -> alias_energy_audit.json
+
+=== 6. architecture_audit.json ===
+  参数量 2073 {'gru': 1416, 'trunk': 640, 'head': 17}
+  输入 31 / GRU(31,8,2) / skip 8+31=39 / MLP16 / linear head: 已由同一份 model_def 保证
+  -> architecture_audit.json
+
+=== 7. deployment_contract.json ===
+  -> deployment_contract.json
+
+=== Phase 0 结论 ===
+  全部通过

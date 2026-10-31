@@ -1,0 +1,189 @@
+{
+  "method": "periodogram of the raw 1 kHz channel; everything above 50 Hz folds back into 0-50 Hz under [::10] decimation",
+  "per_condition": {
+    "SH": {
+      "x": {
+        "frac_above_50hz": 5.9406737543894496e-08,
+        "frac_with_fir": 1.551848824824314e-07
+      },
+      "v": {
+        "frac_above_50hz": 2.241272777753824e-05,
+        "frac_with_fir": 5.049785154127015e-07
+      },
+      "a": {
+        "frac_above_50hz": 0.0007086580620891028,
+        "frac_with_fir": 2.027299102309297e-05
+      },
+      "I": {
+        "frac_above_50hz": 0.013733303548272699,
+        "frac_with_fir": 6.944433341995372e-06
+      },
+      "T": {
+        "frac_above_50hz": 0.005240802138539848,
+        "frac_with_fir": 4.370740218179834e-06
+      },
+      "F": {
+        "frac_above_50hz": 2.2207598544331606e-07,
+        "frac_with_fir": 6.157026387749491e-09
+      }
+    },
+    "ST": {
+      "x": {
+        "frac_above_50hz": 2.996788277644975e-07,
+        "frac_with_fir": 7.097058135225166e-09
+      },
+      "v": {
+        "frac_above_50hz": 0.00011750132649178809,
+        "frac_with_fir": 3.278548985463514e-06
+      },
+      "a": {
+        "frac_above_50hz": 0.0012360145912312629,
+        "frac_with_fir": 5.3014544676209806e-05
+      },
+      "I": {
+        "frac_above_50hz": 8.894890208367528e-07,
+        "frac_with_fir": 1.6669960480574052e-08
+      },
+      "T": {
+        "frac_above_50hz": 2.2854539034839806e-05,
+        "frac_with_fir": 6.098331746190826e-08
+      },
+      "F": {
+        "frac_above_50hz": 6.499145448022919e-06,
+        "frac_with_fir": 1.8295224221007715e-07
+      }
+    },
+    "RLF": {
+      "x": {
+        "frac_above_50hz": 2.230712072147908e-07,
+        "frac_with_fir": 3.840951521093488e-09
+      },
+      "v": {
+        "frac_above_50hz": 8.948070003072511e-05,
+        "frac_with_fir": 2.109262731753209e-06
+      },
+      "a": {
+        "frac_above_50hz": 0.003159966291010499,
+        "frac_with_fir": 0.00010267737708430317
+      },
+      "I": {
+        "frac_above_50hz": 5.723967024700163e-06,
+        "frac_with_fir": 1.246878435767373e-07
+      },
+      "T": {
+        "frac_above_50hz": 0.0009743951050753158,
+        "frac_with_fir": 2.620571735195377e-07
+      },
+      "F": {
+        "frac_above_50hz": 3.0421430707965255e-07,
+        "frac_with_fir": 7.058386132852552e-09
+      }
+    },
+    "SR": {
+      "x": {
+        "frac_above_50hz": 2.025855188159259e-07,
+        "frac_with_fir": 3.248658165413364e-09
+      },
+      "v": {
+        "frac_above_50hz": 7.579156291065396e-05,
+        "frac_with_fir": 1.7301799438473664e-06
+      },
+      "a": {
+        "frac_above_50hz": 0.002501051649249006,
+        "frac_with_fir": 7.71021943994043e-05
+      },
+      "I": {
+        "frac_above_50hz": 0.03575336083766468,
+        "frac_with_fir": 8.44632523818137e-06
+      },
+      "T": {
+        "frac_above_50hz": 0.0006967131181508329,
+        "frac_with_fir": 8.263895522698634e-08
+      },
+      "F": {
+        "frac_above_50hz": 1.5861316717869173e-07,
+        "frac_with_fir": 3.4927920796991024e-09
+      }
+    },
+    "RHF": {
+      "x": {
+        "frac_above_50hz": 2.2654062475394138e-07,
+        "frac_with_fir": 4.1586507263084e-09
+      },
+      "v": {
+        "frac_above_50hz": 9.768125416291595e-05,
+        "frac_with_fir": 2.5102156572607257e-06
+      },
+      "a": {
+        "frac_above_50hz": 0.003824372339435256,
+        "frac_with_fir": 0.00013152573188594392
+      },
+      "I": {
+        "frac_above_50hz": 1.1046236825806554e-05,
+        "frac_with_fir": 2.5079659513911784e-07
+      },
+      "T": {
+        "frac_above_50hz": 0.007219185988313713,
+        "frac_with_fir": 3.385722149048581e-08
+      },
+      "F": {
+        "frac_above_50hz": 3.1044623885199353e-07,
+        "frac_with_fir": 7.355905545345307e-09
+      }
+    }
+  },
+  "worst_I_frac_above_50hz": 0.03575336083766468,
+  "worst_F_frac_above_50hz": 6.499145448022919e-06,
+  "fir_reference": "the same measure after the old 61-tap 40 Hz FIR, for comparison",
+  "note": "the old FIR only reached -13.8 dB at 50 Hz, so it did not remove this band either",
+  "edge_local": {
+    "SH": {
+      "n_edges": 0,
+      "edge_local_I_above_50hz_median": null,
+      "edge_local_I_above_50hz_p90": null,
+      "edge_local_F_above_50hz_median": null,
+      "label_shift_direct_vs_fir_A_median": 0.0014165228123057718,
+      "label_shift_direct_vs_fir_A_p95": 0.009197833034488827,
+      "label_shift_direct_vs_fir_A_max": 1.5897189529607028
+    },
+    "ST": {
+      "n_edges": 271,
+      "edge_local_I_above_50hz_median": 9.610583077684938e-06,
+      "edge_local_I_above_50hz_p90": 1.4554883763557642e-05,
+      "edge_local_F_above_50hz_median": 1.2034531861162308e-05,
+      "label_shift_direct_vs_fir_A_median": 0.001191415800263003,
+      "label_shift_direct_vs_fir_A_p95": 0.03644714020527066,
+      "label_shift_direct_vs_fir_A_max": 1.5979842310544332
+    },
+    "RLF": {
+      "n_edges": 951,
+      "edge_local_I_above_50hz_median": 1.0718435064402032e-05,
+      "edge_local_I_above_50hz_p90": 1.630504141040424e-05,
+      "edge_local_F_above_50hz_median": 7.112256463861665e-05,
+      "label_shift_direct_vs_fir_A_median": 0.010195848427075438,
+      "label_shift_direct_vs_fir_A_p95": 0.7646226476672503,
+      "label_shift_direct_vs_fir_A_max": 1.5951630536528947
+    },
+    "SR": {
+      "n_edges": 0,
+      "edge_local_I_above_50hz_median": null,
+      "edge_local_I_above_50hz_p90": null,
+      "edge_local_F_above_50hz_median": null,
+      "label_shift_direct_vs_fir_A_median": 0.001114761315054863,
+      "label_shift_direct_vs_fir_A_p95": 0.0036179536002553577,
+      "label_shift_direct_vs_fir_A_max": 1.5877205890071786
+    },
+    "RHF": {
+      "n_edges": 257,
+      "edge_local_I_above_50hz_median": 1.3976852857162862e-05,
+      "edge_local_I_above_50hz_p90": 5.145750079719852e-05,
+      "edge_local_F_above_50hz_median": 6.058173889430915e-05,
+      "label_shift_direct_vs_fir_A_median": 0.013847851469249555,
+      "label_shift_direct_vs_fir_A_p95": 1.0373629683185295,
+      "label_shift_direct_vs_fir_A_max": 1.5974350323459061
+    }
+  },
+  "edge_local_worst_median_frac": 1.3976852857162862e-05,
+  "acceptance_criterion": "edge-local >50 Hz energy median must stay below 20%; whole-file averages are reported too but understate transient aliasing",
+  "verdict": "ACCEPTABLE"
+}

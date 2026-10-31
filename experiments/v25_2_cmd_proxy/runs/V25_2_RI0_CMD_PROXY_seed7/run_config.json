@@ -1,0 +1,52 @@
+{
+  "experiment_id": "V25_2_RI0_CMD_PROXY_seed7",
+  "seed": 7,
+  "epochs_total": 180,
+  "data": "D:/v20_data/Parsed_v19_F42_I42",
+  "n_train_files": 259,
+  "n_validation_files": 16,
+  "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "architecture": "identical to V25 (GRU(31,8,2) + skip 39 + MLP16 + linear delta head)",
+  "params": 2073,
+  "timing": {
+    "control_rate_hz": 100,
+    "base": "clip(|I_meas[k]|,0,1.6) proxy of I_cmd[k-1]",
+    "target": "clip(|I_meas[k+1]|,0,1.6) proxy of I_cmd[k]",
+    "runtime": "I_cmd[k]=clip(I_cmd[k-1]+delta,0,1.6)",
+    "drop_last_sample": true,
+    "no_cross_file": true
+  },
+  "preprocessing": {
+    "method": "x[::10] direct decimation, phase 0",
+    "fir": false,
+    "iir": false,
+    "filter_delay_added_ms": 0.0
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.0001
+  },
+  "schedule": "5-epoch linear warmup + cosine to 0.01*base_lr over 180",
+  "batch": "one full file per step, GRU state reset per file",
+  "grad_clip": 1.0,
+  "device": "cuda",
+  "norm": {
+    "x_ref": 279.1340026855469,
+    "x_scale": 63.970001220703125,
+    "f_scale": 7664.259765625,
+    "v_scale": 1000.0,
+    "a_scale": 50000.0,
+    "i_scale": 1.6,
+    "t_ref": 40.0,
+    "t_scale": 40.0
+  },
+  "loss": "MSE((base+delta-target)/1.6) on the unclipped raw prediction",
+  "sampling": {
+    "mode": "baseline"
+  },
+  "best_rule": "lowest validation pooled NRMSE (inherited from V25/V24-I0)",
+  "warm_start": false,
+  "final_test_read": false,
+  "config_sha256": "df72564fe26c93bc1aadb570b9ff2352470fbb4d1ed20da2f0831fdfe55d6fce"
+}

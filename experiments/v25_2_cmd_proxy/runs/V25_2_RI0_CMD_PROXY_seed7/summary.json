@@ -1,0 +1,127 @@
+{
+  "experiment_id": "V25_2_RI0_CMD_PROXY_seed7",
+  "seed": 7,
+  "completed_epochs": 180,
+  "best_epoch": 179,
+  "best_by_val_mae_epoch": 120,
+  "params": 2073,
+  "checkpoint_bytes": 11704,
+  "param_memory_bytes": 8292,
+  "validation": {
+    "n": 13572,
+    "mae": 0.038777682930231094,
+    "rmse": 0.09118928015232086,
+    "median": 0.011091291904449463,
+    "p95": 0.17695024609565735,
+    "p99": 0.4325332045555115,
+    "bias": -0.0010146400891244411,
+    "macro_mae": 0.02363726496696472,
+    "pooled_nrmse": 12.681448050854707,
+    "raw_mae": 0.0396634042263031,
+    "raw_out_of_range": 0.046124373710580605,
+    "clip_activation": 0.046124373710580605,
+    "dI_mean": -0.00010517270129639655,
+    "dI_rms": 0.17413067817687988,
+    "dI_p95": 0.3727789521217346,
+    "dI_max": 1.5953090190887451,
+    "dI_ref_p95": 0.2979999780654907,
+    "total_variation": 925.4644165039062,
+    "total_variation_ref": 602.716064453125,
+    "tv_ratio": 1.5354898783785151,
+    "per_type": {
+      "SH": {
+        "n": 1150,
+        "mae": 0.00450683431699872,
+        "rmse": 0.005955948494374752,
+        "p95": 0.012278785929083824,
+        "bias": 2.1586211005342193e-06,
+        "persistence_mae": 0.0016495662275701761,
+        "persistence_rmse": 0.002414630725979805
+      },
+      "ST": {
+        "n": 3175,
+        "mae": 0.023714037612080574,
+        "rmse": 0.07489033043384552,
+        "p95": 0.10047440975904465,
+        "bias": 0.000435664172982797,
+        "persistence_mae": 0.02264314889907837,
+        "persistence_rmse": 0.10241547971963882
+      },
+      "RLF": {
+        "n": 6415,
+        "mae": 0.05711492896080017,
+        "rmse": 0.1056944727897644,
+        "p95": 0.23182038962841034,
+        "bias": -0.005502699408680201,
+        "persistence_mae": 0.06879375874996185,
+        "persistence_rmse": 0.1563156396150589
+      },
+      "SR": {
+        "n": 2136,
+        "mae": 0.007859482429921627,
+        "rmse": 0.008784310892224312,
+        "p95": 0.014659255743026733,
+        "bias": 0.007807338610291481,
+        "persistence_mae": 0.0008146067848429084,
+        "persistence_rmse": 0.0011192895472049713
+      },
+      "RHF": {
+        "n": 696,
+        "mae": 0.08999375998973846,
+        "rmse": 0.18249909579753876,
+        "p95": 0.4595268964767456,
+        "bias": 0.004981225356459618,
+        "persistence_mae": 0.1248290166258812,
+        "persistence_rmse": 0.2609414756298065
+      }
+    },
+    "zero_current": {
+      "n": 4781,
+      "pred_mean": 0.011118331924080849,
+      "pred_median": 0.007863769307732582,
+      "pred_p95": 0.03178250789642334,
+      "false_turn_on_005": 0.0349299309767831,
+      "false_turn_on_010": 0.010667224430035557
+    },
+    "persistence": {
+      "mae": 0.04448290914297104,
+      "rmse": 0.13227100670337677,
+      "median": 0.0020000000949949026,
+      "p95": 0.2980000078678131,
+      "p99": 0.6372900009155273,
+      "bias": 6.410249625332654e-05
+    }
+  },
+  "timing": {
+    "cpu": {
+      "device": "cpu",
+      "n": 400,
+      "mean_ms": 0.18216024502180517,
+      "p50_ms": 0.17540017142891884,
+      "p95_ms": 0.25375017430633245,
+      "p99_ms": 0.47655578702688195,
+      "max_ms": 1.098700100556016,
+      "note": "Python/PyTorch single-step reference; NOT an MCU WCET"
+    },
+    "rate_hz": 100,
+    "budget_ms": 10.0,
+    "cuda": {
+      "device": "cuda",
+      "n": 400,
+      "mean_ms": 0.3299374954076484,
+      "p50_ms": 0.3035000991076231,
+      "p95_ms": 0.5324300727806971,
+      "p99_ms": 0.7548330374993377,
+      "max_ms": 1.1005999986082315,
+      "note": "Python/PyTorch single-step reference; NOT an MCU WCET"
+    }
+  },
+  "train_seconds": 212.10558050009422,
+  "final_test_read": false,
+  "limitations": [
+    "labels are PROXY commands derived from measured current under I_act[k] ~= I_cmd[k-1]; real ECU command accuracy is unverified",
+    "single seed 7",
+    "SR and RHF validation each have exactly 1 file",
+    "no digital filter: the physical system delay is unchanged"
+  ]
+}

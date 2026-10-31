@@ -1,0 +1,116 @@
+{
+  "version": "V25.2",
+  "experiment_id": "V25_2_RI0_CMD_PROXY_seed7",
+  "purpose": "100 Hz residual inverse model using previous ECU command; no measured-current feedback at deployment",
+  "seed": 7,
+  "max_epochs": 180,
+  "sampling": "baseline",
+  "device": "cuda",
+  "data_root": "D:\\v20_data\\Parsed_v19_F42_I42",
+  "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "split": {
+    "train_files": 259,
+    "validation_files": 16,
+    "final_test_files": 10,
+    "final_test_access": false,
+    "train_family_counts": {
+      "SH": 186,
+      "ST": 30,
+      "RLF": 18,
+      "SR": 17,
+      "RHF": 8
+    },
+    "validation_family_counts": {
+      "SH": 8,
+      "ST": 3,
+      "RLF": 3,
+      "SR": 1,
+      "RHF": 1
+    }
+  },
+  "timing": {
+    "control_rate_hz": 100,
+    "control_period_ms": 10.0,
+    "user_engineering_assumption": "I_act[k] approximately equals I_cmd[k-1]",
+    "decision_index": "k",
+    "offline_base_proxy": "clip(abs(I_meas_100Hz[k]), 0.0, 1.6)",
+    "offline_target_proxy": "clip(abs(I_meas_100Hz[k+1]), 0.0, 1.6)",
+    "delta_target": "target_proxy[k] - base_proxy[k]",
+    "runtime_base": "I_cmd[k-1]",
+    "runtime_output": "clip(I_cmd[k-1] + delta_I_pred[k], 0.0, 1.6)",
+    "future_label_must_not_enter_input": true,
+    "drop_last_control_sample_each_file": true,
+    "no_cross_file_rollover": true
+  },
+  "preprocessing": {
+    "raw_rate_hz": 1000,
+    "direct_decimation_factor": 10,
+    "phase": 0,
+    "filter": "none",
+    "fir": false,
+    "iir": false,
+    "zero_phase_filter": false,
+    "same_sample_indices_for_all_synchronized_channels": true,
+    "causal_features_only": true,
+    "alias_energy_audit_required": true,
+    "if_alias_risk_high": "stop and report; do not silently add a filter"
+  },
+  "input": {
+    "feature_dimension": 31,
+    "feature_map": "must be recovered from the existing V24/V25 source code; never guess",
+    "all_current_history_features_runtime_source": "stored ECU command history",
+    "offline_proxy_mapping": "I_cmd[k-j] approximated by clip(abs(I_meas[k-j+1]),0,1.6)",
+    "mechanical_and_force_features": "decision-time k, direct-sampled raw synchronized channels",
+    "no_future_sample_in_features": true
+  },
+  "architecture": {
+    "gru_layers": 2,
+    "gru_hidden_size": 8,
+    "skip_concat": true,
+    "skip_concat_dimensions": [
+      8,
+      31,
+      39
+    ],
+    "mlp_hidden_size": 16,
+    "output_size": 1,
+    "output_activation": "linear",
+    "output_semantics": "delta_current_command_A",
+    "expected_trainable_parameters": 2073,
+    "train_from_scratch": true,
+    "warm_start": false
+  },
+  "loss": {
+    "type": "normalized_mse_on_unclipped_current_command_proxy",
+    "formula": "mean(((base_proxy[k] + delta_pred[k] - target_proxy[k]) / 1.6)^2)",
+    "clip_before_loss": false,
+    "additional_regularizers": []
+  },
+  "training_inheritance": {
+    "optimizer_scheduler_batch_sequence_gradient_clip": "inherit original V25 configuration exactly; log deviations",
+    "formal_runs": 1,
+    "smoke_epochs": 2,
+    "formal_epochs_max": 180
+  },
+  "baselines": {
+    "primary": "persistence: predicted command[k] = base_proxy[k]",
+    "historical_only": [
+      "V24_I0_SUP",
+      "V25_RI0_RESIDUAL"
+    ],
+    "historical_comparison_warning": "old filtered timing/labels are not directly equivalent; re-evaluate separately or mark non-comparable"
+  },
+  "stop_gates": [
+    "manifest or split mismatch",
+    "current sign/physical meaning unclear",
+    "current-history feature lag mapping unclear",
+    "k/k+1 proxy alignment cannot be proven",
+    "future leakage in any input",
+    "unacceptable aliasing in direct 100 Hz sampling",
+    "parameter count differs from 2073 without source-level explanation",
+    "smoke test failure",
+    "final_test accessed"
+  ],
+  "output_root": "D:\\v25_2_cmd_proxy",
+  "run_id": "V25_2_RI0_CMD_PROXY_seed7"
+}

@@ -1,0 +1,26 @@
+{
+  "module": "model_def.py (byte-identical copy of the frozen CDC_INV_V25_RI0 definition)",
+  "gru": {
+    "input_size": 31,
+    "hidden": 8,
+    "layers": 2,
+    "batch_first": true
+  },
+  "skip_concat": {
+    "gru_out": 8,
+    "input": 31,
+    "total": 39
+  },
+  "mlp_hidden": 16,
+  "output_activation": "linear",
+  "output_semantics": "delta current A",
+  "params_total": 2073,
+  "params_groups": {
+    "gru": 1416,
+    "trunk": 640,
+    "head": 17
+  },
+  "params_ok": true,
+  "warm_start": false,
+  "note": "architecture unchanged from V25; only the data timing and the removal of the FIR differ"
+}

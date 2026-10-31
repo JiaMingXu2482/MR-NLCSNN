@@ -1,0 +1,268 @@
+{
+  "recomputed": {
+    "mae": 0.038777682930231094,
+    "rmse": 0.09118928015232086,
+    "p95": 0.17695024609565735,
+    "p99": 0.4325332045555115,
+    "nrmse": 12.681448041545492,
+    "mae_passed": true
+  },
+  "per_condition": {
+    "SH": {
+      "n": 1150,
+      "mae": 0.00450683431699872,
+      "pers_mae": 0.0016495662275701761,
+      "p95": 0.012278785929083824
+    },
+    "ST": {
+      "n": 3175,
+      "mae": 0.023714037612080574,
+      "pers_mae": 0.02264314889907837,
+      "p95": 0.10047440975904465
+    },
+    "RLF": {
+      "n": 6415,
+      "mae": 0.05711492896080017,
+      "pers_mae": 0.06879375874996185,
+      "p95": 0.23182038962841034
+    },
+    "SR": {
+      "n": 2136,
+      "mae": 0.007859482429921627,
+      "pers_mae": 0.0008146067848429084,
+      "p95": 0.014659255743026733
+    },
+    "RHF": {
+      "n": 696,
+      "mae": 0.08999375998973846,
+      "pers_mae": 0.1248290166258812,
+      "p95": 0.4595268964767456
+    }
+  },
+  "persistence": {
+    "mae": 0.04448290914297104,
+    "rmse": 0.13227100670337677,
+    "p95": 0.2980000078678131,
+    "p99": 0.6372900009155273,
+    "bias": 6.410249625332654e-05
+  },
+  "delay": {
+    "n_edges": 30,
+    "cmd_vs_raw_median_ms": 1.2866595766545252,
+    "target_vs_raw_median_ms": -5.791505222951354,
+    "cmd_vs_target_median_ms": 9.51242446899414,
+    "note": "target is clip(|I_meas[k+1]|), so it sits one control step AFTER raw sample k by construction; a command lag of about +10 ms vs raw is the intended plant-response step, not a digital filter delay"
+  },
+  "edges": [
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 1.166,
+      "lag_cmd_vs_raw": -0.48062387409952834,
+      "lag_target_vs_raw": -1.030655536086833,
+      "lag_cmd_vs_target": 0.5500316619873047
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 1.625,
+      "lag_cmd_vs_raw": -4.50111709426082,
+      "lag_target_vs_raw": -4.850638731223711,
+      "lag_cmd_vs_target": 0.3495216369628906
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 2.109,
+      "lag_cmd_vs_raw": 5.888293985529813,
+      "lag_target_vs_raw": -3.813434835270968,
+      "lag_cmd_vs_target": 9.701728820800781
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 2.571,
+      "lag_cmd_vs_raw": 1.5816812329867425,
+      "lag_target_vs_raw": -7.948147792281812,
+      "lag_cmd_vs_target": 9.529829025268555
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 3.041,
+      "lag_cmd_vs_raw": 4.590745440687272,
+      "lag_target_vs_raw": -5.157236584459213,
+      "lag_cmd_vs_target": 9.747982025146484
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 6.025,
+      "lag_cmd_vs_raw": 0.28023193911863586,
+      "lag_target_vs_raw": -9.382873071867692,
+      "lag_cmd_vs_target": 9.663105010986328
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 6.497,
+      "lag_cmd_vs_raw": 3.5913095019397545,
+      "lag_target_vs_raw": -5.8462515332164955,
+      "lag_cmd_vs_target": 9.43756103515625
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 6.968,
+      "lag_cmd_vs_raw": -2.5323241164123544,
+      "lag_target_vs_raw": -3.056844990435792,
+      "lag_cmd_vs_target": 0.5245208740234375
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 7.441,
+      "lag_cmd_vs_raw": 1.3817967072977666,
+      "lag_target_vs_raw": -8.181649337624108,
+      "lag_cmd_vs_target": 9.563446044921875
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r1",
+      "t": 7.913,
+      "lag_cmd_vs_raw": 2.9572577726009186,
+      "lag_target_vs_raw": -6.788816903912753,
+      "lag_cmd_vs_target": 9.746074676513672
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 1.16,
+      "lag_cmd_vs_raw": 5.463142687166078,
+      "lag_target_vs_raw": -4.29151505819525,
+      "lag_cmd_vs_target": 9.754657745361328
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 1.625,
+      "lag_cmd_vs_raw": -3.496903714357291,
+      "lag_target_vs_raw": -3.8727706043109045,
+      "lag_cmd_vs_target": 0.3758668899536133
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 2.102,
+      "lag_cmd_vs_raw": 3.3782392150270013,
+      "lag_target_vs_raw": -6.410035549987647,
+      "lag_cmd_vs_target": 9.788274765014648
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 2.577,
+      "lag_cmd_vs_raw": -3.4809372485131718,
+      "lag_target_vs_raw": -3.917958504006336,
+      "lag_cmd_vs_target": 0.43702125549316406
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 3.039,
+      "lag_cmd_vs_raw": -2.7836028738423835,
+      "lag_target_vs_raw": -3.3434096975728522,
+      "lag_cmd_vs_target": 0.5598068237304688
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 6.024,
+      "lag_cmd_vs_raw": 1.1915224460112839,
+      "lag_target_vs_raw": -8.533094558383247,
+      "lag_cmd_vs_target": 9.724617004394531
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 6.496,
+      "lag_cmd_vs_raw": -4.483261444456765,
+      "lag_target_vs_raw": -4.8461345218493435,
+      "lag_cmd_vs_target": 0.3628730773925781
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 6.967,
+      "lag_cmd_vs_raw": -1.7569742340191041,
+      "lag_target_vs_raw": -2.179928793345276,
+      "lag_cmd_vs_target": 0.4229545593261719
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 7.441,
+      "lag_cmd_vs_raw": 2.0238451607053065,
+      "lag_target_vs_raw": -7.480949913757584,
+      "lag_cmd_vs_target": 9.50479507446289
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r2",
+      "t": 7.914,
+      "lag_cmd_vs_raw": 1.744812608845514,
+      "lag_target_vs_raw": -7.922583936564642,
+      "lag_cmd_vs_target": 9.667396545410156
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 1.162,
+      "lag_cmd_vs_raw": 3.2943072592868106,
+      "lag_target_vs_raw": -6.560367080007623,
+      "lag_cmd_vs_target": 9.854674339294434
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 1.625,
+      "lag_cmd_vs_raw": -3.916468167455056,
+      "lag_target_vs_raw": -4.283990407140115,
+      "lag_cmd_vs_target": 0.3675222396850586
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 2.106,
+      "lag_cmd_vs_raw": -0.3589780492836425,
+      "lag_target_vs_raw": -9.870448843961377,
+      "lag_cmd_vs_target": 9.511470794677734
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 2.57,
+      "lag_cmd_vs_raw": 3.0508921445218107,
+      "lag_target_vs_raw": -6.4481808840426424,
+      "lag_cmd_vs_target": 9.499073028564453
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 3.042,
+      "lag_cmd_vs_raw": 3.0402043598614092,
+      "lag_target_vs_raw": -6.695856736329997,
+      "lag_cmd_vs_target": 9.736061096191406
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 6.025,
+      "lag_cmd_vs_raw": 0.41782679098201214,
+      "lag_target_vs_raw": -9.232880453891035,
+      "lag_cmd_vs_target": 9.650707244873047
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 6.496,
+      "lag_cmd_vs_raw": -5.073535135489138,
+      "lag_target_vs_raw": -5.438315561514528,
+      "lag_cmd_vs_target": 0.3647804260253906
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 6.968,
+      "lag_cmd_vs_raw": -2.4455129508345053,
+      "lag_target_vs_raw": -2.9047071341841146,
+      "lag_cmd_vs_target": 0.4591941833496094
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 7.441,
+      "lag_cmd_vs_raw": 1.457265597127666,
+      "lag_target_vs_raw": -8.05611254618288,
+      "lag_cmd_vs_target": 9.513378143310547
+    },
+    {
+      "file": "ST_10mm_Vel0.13_step5_0_1.6A_r3",
+      "t": 7.911,
+      "lag_cmd_vs_raw": 4.005024229403631,
+      "lag_target_vs_raw": -5.736758912686213,
+      "lag_cmd_vs_target": 9.741783142089844
+    }
+  ]
+}

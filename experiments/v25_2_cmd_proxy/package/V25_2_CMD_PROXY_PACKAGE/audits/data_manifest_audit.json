@@ -1,0 +1,51 @@
+{
+  "data_root": "D:/v20_data/Parsed_v19_F42_I42",
+  "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "expected": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "match": true,
+  "split": {
+    "train": 259,
+    "validation": 16,
+    "final_test": 10
+  },
+  "split_ok": true,
+  "family_counts": {
+    "train": {
+      "RHF": 8,
+      "RLF": 18,
+      "SH": 186,
+      "SR": 17,
+      "ST": 30
+    },
+    "validation": {
+      "RHF": 1,
+      "RLF": 3,
+      "SH": 8,
+      "SR": 1,
+      "ST": 3
+    }
+  },
+  "family_expected": {
+    "train": {
+      "SH": 186,
+      "ST": 30,
+      "RLF": 18,
+      "SR": 17,
+      "RHF": 8
+    },
+    "validation": {
+      "SH": 8,
+      "ST": 3,
+      "RLF": 3,
+      "SR": 1,
+      "RHF": 1
+    }
+  },
+  "family_ok": true,
+  "loaded": [
+    259,
+    16
+  ],
+  "final_test_read": false,
+  "final_test_access_count": 0
+}

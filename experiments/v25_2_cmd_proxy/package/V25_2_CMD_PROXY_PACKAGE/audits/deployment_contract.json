@@ -1,0 +1,23 @@
+{
+  "control_rate_hz": 100,
+  "control_period_ms": 10.0,
+  "runtime_inputs": {
+    "motion": [
+      "x (mm)",
+      "v (mm/s)",
+      "a (mm/s^2)"
+    ]
+  },
+  "runtime_current": "I_cmd[k-1] — the command this ECU itself sent one period ago. NO measured current feedback is required.",
+  "runtime_force": "F_des[k] (N) — desired damping force from the upper-level controller, divided by f_scale",
+  "output": "I_cmd[k] = clip(I_cmd[k-1] + delta_hat[k], 0, 1.6)",
+  "sampling": "x/v/a/I/T/F sampled at 1 kHz and decimated by taking every 10th sample at phase 0; NO filter is needed, so there is no filter to match",
+  "history": "one control step (10 ms): I_cmd[k-1]",
+  "state_reset": "GRU hidden state and I_cmd history reset at every power-up / new recording",
+  "ecu_requirements": [
+    "100 Hz task rate with the previous command kept in RAM",
+    "1 kHz acquisition of x/v/a and F_des at the same phase-0 index",
+    "no current sensor required (this is the point of V25.2)"
+  ],
+  "caveat": "labels are proxy commands derived from measured current under the one-step assumption; real ECU command accuracy is unverified"
+}

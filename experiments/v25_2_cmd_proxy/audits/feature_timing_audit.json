@@ -1,0 +1,57 @@
+{
+  "input_dim": 31,
+  "motion_features": [
+    "x",
+    "v",
+    "a",
+    "v_dup",
+    "x*v",
+    "tanh(2vp)",
+    "tanh(vp/0.1)",
+    "vn*|v|",
+    "vn^3",
+    "a*vn",
+    "sign",
+    "x^2",
+    "x^3",
+    "|a|",
+    "a*v",
+    "|a|*sign",
+    "slow",
+    "x*slow",
+    "|x|*slow",
+    "sign*|x|"
+  ],
+  "condition_features": [
+    "F_des",
+    "I_past",
+    "v*F_des",
+    "v*I_past",
+    "F_des*tanh(vp/0.1)",
+    "F_des*vn*|v|",
+    "F_des*sign",
+    "a*F_des",
+    "F_des*|a|",
+    "F_des*x*slow",
+    "F_des*|x|*slow"
+  ],
+  "current_dependent_slots_found": [
+    21,
+    23
+  ],
+  "current_dependent_slots_expected": [
+    21,
+    23
+  ],
+  "match": true,
+  "slot21": "I_past -> now proxy/1.6 = clip(|I_meas[k]|,0,1.6)/1.6",
+  "slot23": "v*I_past -> v * proxy/1.6",
+  "all_other_slots": "depend only on x/v/a or F_des, verified by perturbation",
+  "time_index": {
+    "motion": "k",
+    "F_des": "k",
+    "current": "k (proxy of command k-1)",
+    "label": "k+1 measured, LABEL ONLY"
+  },
+  "note": "the check is a perturbation test on the real builder, not a code-reading assumption"
+}

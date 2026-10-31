@@ -1,0 +1,12 @@
+{
+  "checks": 22,
+  "all_pass": true,
+  "params": 2073,
+  "notes": [
+    "proxy labels verified against clip(|I_meas|) directly",
+    "no future leakage: perturbing k+1 changes only the label",
+    "delta can be positive, negative and exactly zero",
+    "loss uses the unclipped I_raw",
+    "final_test not read"
+  ]
+}

@@ -1,0 +1,20 @@
+请执行 V25.2-RI0-CMD 训练包，完整阅读 task/V25_2_TRAINING_PACKAGE.md 和 config。目标是在 100 Hz ECU 上仅使用上一拍已发出的电流指令，不依赖实测线圈电流反馈。
+
+关键定义（不得改写）：
+- 用户工程假设：I_act[k] ≈ I_cmd[k-1]。
+- 离线代理基准：I_base_proxy[k] = clip(abs(I_meas_100Hz[k]), 0, 1.6)。
+- 离线代理标签：I_target_proxy[k] = clip(abs(I_meas_100Hz[k+1]), 0, 1.6)。
+- delta_target[k] = target_proxy[k] - base_proxy[k]。
+- 部署：I_cmd[k] = clip(I_cmd[k-1] + delta_I_pred[k], 0, 1.6)。
+- 输入机械/力状态对齐 decision index k；I_meas[k+1] 只能用于标签，绝不能进入 X[k]。
+- 所有 current-history 特征都必须映射成 ECU command history；离线按 I_cmd[k-j] ≈ I_meas[k-j+1] 构造。逐项从源代码确认，不能猜 feature index。
+- 100 Hz 控制周期；原始 1 kHz 数据直接按相位 0 抽取 [::10]，本版本不对任何动态通道使用 FIR/IIR/零相位滤波。先做 alias energy audit；若混叠风险不可接受，停止并汇报，不得自行加滤波器。
+- 保留 GRU 2×8 + skip concat(8+31=39) + MLP16 + linear delta head，参数量必须 2073。
+- 只跑一个模型、seed 7、Baseline sampling、CUDA、最多 180 epochs。训练优化器/scheduler 等沿用原 V25，所有改动必须记录。
+- 数据 manifest SHA 0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff；259 train / 16 validation / 10 final_test。final_test 绝对禁止读取。
+- V24-I0 和 V25 RI0 checkpoint 只作冻结历史参考，不 warm-start，不覆盖。
+- 先 Phase 0 审计，再 2-epoch smoke，全部通过才正式训练。
+- 报告 proxy-command MAE/RMSE/P95/P99、五工况、zero-current false turn-on、clipping、TV、CPU latency、收敛状态。必须与 persistence 同一 mask 对比。
+- 明确声明训练标签是 proxy command，不是真实 ECU 指令；没有 HIL 实际 command/current 同步日志，不得宣称真实指令精度已验证。
+
+先检查本地 V25/V24 训练代码和数据结构，生成审计文件。任何 manifest、时序、current feature mapping、因果性或参数量不明确时立即停止并报告。不得重写一套猜测版 dataloader，不得猜列名、特征索引或归一化统计。正式输出到 D:\\v25_2_cmd_proxy\\。

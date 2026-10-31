@@ -1,0 +1,16 @@
+{
+  "raw_rate_hz": 1000,
+  "target_rate_hz": 100,
+  "factor": 10,
+  "phase": 0,
+  "method": "x[::10] direct decimation",
+  "fir_used": false,
+  "iir_used": false,
+  "zero_phase_used": false,
+  "filtfilt_used": false,
+  "centered_difference_used": false,
+  "filter_delay_added_ms": 0.0,
+  "same_index_all_channels": true,
+  "causal": "F_des uses sample k; current feature uses sample k; label uses k+1 only",
+  "note": "removing the digital filter does NOT mean the physical system has zero delay; it only removes the filter's own group delay"
+}
