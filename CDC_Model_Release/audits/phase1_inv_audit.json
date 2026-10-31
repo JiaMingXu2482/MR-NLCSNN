@@ -1,0 +1,170 @@
+{
+  "release_name": "CDC_INV_V25_RI0",
+  "source_checkpoint": "D:/v25_residual/runs/V25_RI0_RESIDUAL_seed7/best.pth",
+  "sha256": "617aa0ae860373626008dfefbc6eb3f5e130d0bdac959c95a7bc1c3c56a67436",
+  "size_bytes": 11768,
+  "strict_load": true,
+  "architecture": {
+    "class_name": "ResidualI0",
+    "model_id": "V25_RI0_RESIDUAL",
+    "gru": {
+      "input_size": 31,
+      "hidden_size": 8,
+      "num_layers": 2,
+      "batch_first": true
+    },
+    "skip_concat": {
+      "parts": [
+        "gru_out",
+        "input"
+      ],
+      "dims": [
+        8,
+        31
+      ],
+      "concat_dim": 39
+    },
+    "trunk": {
+      "in_features": 39,
+      "out_features": 16,
+      "activation": "ReLU"
+    },
+    "head": {
+      "in_features": 16,
+      "out_features": 1,
+      "activation": "LINEAR (no sigmoid)"
+    },
+    "output_semantics": "delta current in A (unbounded, can be negative)",
+    "residual_equation": "I_cmd = clip(I_meas_100Hz[k-1] + delta, 0, 1.6)",
+    "params": {
+      "gru": 1416,
+      "trunk": 640,
+      "head": 17
+    },
+    "params_total": 2073,
+    "normalization_complete": true,
+    "normalization_keys": [
+      "a_scale",
+      "f_scale",
+      "i_scale",
+      "t_ref",
+      "t_scale",
+      "v_scale",
+      "x_ref",
+      "x_scale"
+    ],
+    "train_infer_consistency": {
+      "forward_used_in_training": "ResidualI0.forward(x)",
+      "step_api_available": true,
+      "forward_vs_step_max_abs_diff": 1.0132789611816406e-06,
+      "note": "step() reproduces forward() to float32 precision"
+    }
+  },
+  "run_config": {
+    "experiment_id": "V25_RI0_RESIDUAL_seed7",
+    "model": "ResidualI0",
+    "seed": 7,
+    "epochs_total": 130,
+    "data": "D:/v20_data/Parsed_v19_F42_I42",
+    "n_train_files": 259,
+    "n_validation_files": 16,
+    "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+    "architecture": "GRU(31,8,2) -> concat(8+31=39) -> Linear(39,16)+ReLU -> Linear(16,1) LINEAR (no activation) -> delta_I",
+    "params": {
+      "total": 2073,
+      "groups": {
+        "gru": 1416,
+        "trunk": 640,
+        "head": 17
+      }
+    },
+    "residual_equation": {
+      "base": "I_meas_100Hz[k-1] same file",
+      "raw": "I_base + delta",
+      "clip": [
+        0.0,
+        1.6
+      ],
+      "recursive_predicted_base": false
+    },
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.0003,
+      "weight_decay": 0.0001
+    },
+    "schedule": "5-epoch linear warmup + cosine to 0.01*base_lr",
+    "batch": "one full file per step, state and base reset per file",
+    "grad_clip": 1.0,
+    "device": "cuda",
+    "rate_hz": 100,
+    "norm": {
+      "x_ref": 279.1340026855469,
+      "x_scale": 63.970001220703125,
+      "f_scale": 7664.259765625,
+      "v_scale": 1000.0,
+      "a_scale": 50000.0,
+      "i_scale": 1.6,
+      "t_ref": 40.0,
+      "t_scale": 40.0
+    },
+    "loss": "mean(((I_raw - I_target)/1.6)^2), NO clip before loss",
+    "sampling": {
+      "mode": "baseline"
+    },
+    "warm_start_from_v24_i0": false,
+    "best_checkpoint_rule": "lowest validation pooled NRMSE (uncentred), inherited from V24-I0 train_v24_i0.py",
+    "head_init": "zeros -> delta == 0 at step 0, i.e. starts at Persistence",
+    "final_test_read": false,
+    "config_sha256": "730e4bb203cfc422c516c4c962fd722d98d6696a15a319548d4023b6147ce669"
+  },
+  "recorded": {
+    "mae_A": 0.030007101595401764,
+    "rmse_A": 0.06675798445940018,
+    "p95_A": 0.13843627274036407,
+    "p99_A": 0.31678539514541626,
+    "pooled_nrmse": 9.29476517422139,
+    "best_epoch": 130,
+    "params": 2073
+  },
+  "motion_features": [
+    "x",
+    "v",
+    "a",
+    "v_dup",
+    "x*v",
+    "tanh(2v+)",
+    "tanh(v+/0.1)",
+    "vn*|v|",
+    "vn^3",
+    "a*vn",
+    "sign",
+    "x^2",
+    "x^3",
+    "|a|",
+    "a*v",
+    "|a|*sign",
+    "slow",
+    "x*slow",
+    "|x|*slow",
+    "sign*|x|"
+  ],
+  "condition_features": [
+    "F_des",
+    "I[k-1]",
+    "v*F_des",
+    "v*I[k-1]",
+    "F_des*tanh(v+/0.1)",
+    "F_des*vn*|v|",
+    "F_des*sign",
+    "a*F_des",
+    "F_des*|a|",
+    "F_des*x*slow",
+    "F_des*|x|*slow"
+  ],
+  "output": {
+    "units": "A",
+    "semantics": "delta over previous measured current",
+    "equation": "I_cmd = clip(I_meas[k-1] + delta, 0, 1.6)"
+  },
+  "final_test_read": false
+}

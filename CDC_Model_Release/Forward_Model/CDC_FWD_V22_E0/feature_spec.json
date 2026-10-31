@@ -1,0 +1,283 @@
+{
+  "release": "CDC_FWD_V22_E0",
+  "input_rate_hz": 1000,
+  "raw_input": {
+    "channels": [
+      "x_mm",
+      "v_mm_s",
+      "a_mm_s2",
+      "I_A",
+      "T_C"
+    ],
+    "note": "raw sensor units; the model normalises internally"
+  },
+  "normalisation": {
+    "x": "(x - x_ref)/x_scale",
+    "v": "v/v_scale",
+    "a": "a/a_scale",
+    "i": "clip(|I|/i_scale, 0, 1)",
+    "T": "(T - t_ref)/t_scale"
+  },
+  "current_history_rule": "the 5-channel input carries I[t]; inside the model the current column is shifted by one sample, so every current term uses I[t-1]. I[t-1] at t=0 is 0.",
+  "feature_order": [
+    {
+      "index": 0,
+      "name": "x",
+      "formula": "obs_x",
+      "group": "motion",
+      "raw_source": "(x - x_ref)/x_scale",
+      "time_index": "t"
+    },
+    {
+      "index": 1,
+      "name": "v",
+      "formula": "obs_v",
+      "group": "motion",
+      "raw_source": "v/v_scale",
+      "time_index": "t"
+    },
+    {
+      "index": 2,
+      "name": "a",
+      "formula": "obs_a",
+      "group": "motion",
+      "raw_source": "a/a_scale",
+      "time_index": "t"
+    },
+    {
+      "index": 3,
+      "name": "i",
+      "formula": "obs_i",
+      "group": "current",
+      "raw_source": "clip(|I|/i_scale, 0, 1) evaluated at t-1",
+      "time_index": "t-1"
+    },
+    {
+      "index": 4,
+      "name": "T",
+      "formula": "obs_T",
+      "group": "environment",
+      "raw_source": "(T - t_ref)/t_scale",
+      "time_index": "t"
+    },
+    {
+      "index": 5,
+      "name": "v_dup",
+      "formula": "v",
+      "group": "motion",
+      "raw_source": "v  (second copy, kept for order fidelity)",
+      "time_index": "t"
+    },
+    {
+      "index": 6,
+      "name": "x_v",
+      "formula": "x*v",
+      "group": "motion",
+      "raw_source": "x*v",
+      "time_index": "t"
+    },
+    {
+      "index": 7,
+      "name": "v_i",
+      "formula": "v*i",
+      "group": "cross",
+      "raw_source": "v*i",
+      "time_index": "t"
+    },
+    {
+      "index": 8,
+      "name": "v_T",
+      "formula": "v*T",
+      "group": "cross",
+      "raw_source": "v*T",
+      "time_index": "t"
+    },
+    {
+      "index": 9,
+      "name": "tanh_2vp",
+      "formula": "tanh(2*vp)",
+      "group": "motion",
+      "raw_source": "vp=max(v,0)",
+      "time_index": "t"
+    },
+    {
+      "index": 10,
+      "name": "tanh_vp",
+      "formula": "tanh(vp/0.1)",
+      "group": "motion",
+      "raw_source": "vp=max(v,0)",
+      "time_index": "t"
+    },
+    {
+      "index": 11,
+      "name": "i_tanh_vp",
+      "formula": "i*tanh(vp/0.1)",
+      "group": "cross",
+      "raw_source": "vp=max(v,0)",
+      "time_index": "t"
+    },
+    {
+      "index": 12,
+      "name": "vn_av",
+      "formula": "vn*|v|",
+      "group": "motion",
+      "raw_source": "vn=-min(v,0)",
+      "time_index": "t"
+    },
+    {
+      "index": 13,
+      "name": "vn3",
+      "formula": "vn^3",
+      "group": "motion",
+      "raw_source": "vn=-min(v,0)",
+      "time_index": "t"
+    },
+    {
+      "index": 14,
+      "name": "a_vn",
+      "formula": "a*vn",
+      "group": "motion",
+      "raw_source": "vn=-min(v,0)",
+      "time_index": "t"
+    },
+    {
+      "index": 15,
+      "name": "i_vn_av",
+      "formula": "i*vn*|v|",
+      "group": "cross",
+      "raw_source": "vn=-min(v,0)",
+      "time_index": "t"
+    },
+    {
+      "index": 16,
+      "name": "sign",
+      "formula": "tanh(v/0.1)",
+      "group": "motion",
+      "raw_source": "sign(v) soft",
+      "time_index": "t"
+    },
+    {
+      "index": 17,
+      "name": "i_sign",
+      "formula": "i*tanh(v/0.1)",
+      "group": "cross",
+      "raw_source": "sign",
+      "time_index": "t"
+    },
+    {
+      "index": 18,
+      "name": "x2",
+      "formula": "x^2",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 19,
+      "name": "x3",
+      "formula": "x^3",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 20,
+      "name": "a_i",
+      "formula": "a*i",
+      "group": "cross",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 21,
+      "name": "abs_a",
+      "formula": "|a|",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 22,
+      "name": "a_v",
+      "formula": "a*v",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 23,
+      "name": "abs_a_sign",
+      "formula": "|a|*tanh(v/0.1)",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 24,
+      "name": "i_abs_a",
+      "formula": "i*|a|",
+      "group": "cross",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 25,
+      "name": "slow",
+      "formula": "exp(-|v|/0.1)",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 26,
+      "name": "x_slow",
+      "formula": "x*exp(-|v|/0.1)",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 27,
+      "name": "absx_slow",
+      "formula": "|x|*exp(-|v|/0.1)",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 28,
+      "name": "i_x_slow",
+      "formula": "i*x*exp(-|v|/0.1)",
+      "group": "cross",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 29,
+      "name": "i_absx_slow",
+      "formula": "i*|x|*exp(-|v|/0.1)",
+      "group": "cross",
+      "raw_source": "-",
+      "time_index": "t"
+    },
+    {
+      "index": 30,
+      "name": "sign_absx",
+      "formula": "tanh(v/0.1)*|x|",
+      "group": "motion",
+      "raw_source": "-",
+      "time_index": "t"
+    }
+  ],
+  "feature_count": 31,
+  "output": {
+    "units": "N",
+    "rule": "F = model_output * f_scale",
+    "normalised_range": "roughly -1..1"
+  },
+  "state": {
+    "gru_initial": "zeros, per file",
+    "window": "none (whole sequence)",
+    "update": "standard GRU, one step per 1 ms"
+  }
+}

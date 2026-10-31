@@ -1,0 +1,78 @@
+{
+  "release_name": "CDC_FWD_V22_E0",
+  "role": "forward damping-force predictor",
+  "version": "V22-E0",
+  "frozen": true,
+  "source": {
+    "project": "V22 AE-hybrid matrix",
+    "run_dir": "D:/v22_ae_hybrid/runs_seed7/E0",
+    "checkpoint": "best.pth",
+    "checkpoint_epoch": 127,
+    "run_config": "source_run_config.json",
+    "seed": 7,
+    "epochs_trained": 130
+  },
+  "architecture": {
+    "module": "model_def.py :: V22Model(model_id='E0')",
+    "gru": {
+      "input_size": 31,
+      "hidden_size": 8,
+      "num_layers": 2,
+      "batch_first": true
+    },
+    "trunk": {
+      "layers": [
+        "Linear(39,16)",
+        "ReLU"
+      ],
+      "in_features": 39,
+      "out_features": 16
+    },
+    "head": {
+      "layers": [
+        "Linear(16,1)"
+      ],
+      "activation": "linear",
+      "out_features": 1
+    },
+    "skip_concat": {
+      "parts": [
+        "gru_output_8",
+        "nfl_features_31"
+      ],
+      "concat_dim": 39
+    },
+    "uses_monotonic_G": false,
+    "uses_tau": false,
+    "uses_acc_residual": false
+  },
+  "parameters": {
+    "total": 2073,
+    "gru": 1416,
+    "trunk": 640,
+    "head_force": 17
+  },
+  "io": {
+    "input": "u (B,T,5) = [x, v, a, I, T] at 1 kHz, raw units",
+    "output": "normalised force (B,T); multiply by f_scale for newtons",
+    "history": "I is shifted one sample inside the model, so the current channel is I[t-1]; no fixed window, zero GRU state per file"
+  },
+  "metrics": {
+    "pooled_nrmse_pct": 10.594998,
+    "convention": "100*sqrt(sum e^2 / sum y^2), uncentred, newtons",
+    "per_condition_pct": {
+      "SH": 4.7411,
+      "ST": 11.5174,
+      "RLF": 19.6818,
+      "SR": 34.9814,
+      "RHF": 15.2199
+    }
+  },
+  "files": {
+    "model_def": "model_def.py",
+    "normalization": "normalization.json",
+    "feature_spec": "feature_spec.json",
+    "training_artifacts": "training_artifacts/ (逐轮 metrics.jsonl + 诊断 CSV/JSON + figures，只读追溯用)",
+    "golden_vectors": "golden_vectors.npz + golden_vectors_meta.json"
+  }
+}

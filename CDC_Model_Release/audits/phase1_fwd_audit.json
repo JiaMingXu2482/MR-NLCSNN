@@ -1,0 +1,131 @@
+{
+  "release_name": "CDC_FWD_V22_E0",
+  "source_checkpoint": "D:/v22_ae_hybrid/runs_seed7/E0/best.pth",
+  "sha256": "dbfb844ff117161cc78c634e307c5215ff88abf769880691e4d72433179351b4",
+  "size_bytes": 11832,
+  "strict_load": true,
+  "architecture": {
+    "class_name": "V22Model",
+    "model_id": "E0",
+    "backbone": "E",
+    "gru": {
+      "input_size": 31,
+      "hidden_size": 8,
+      "num_layers": 2,
+      "batch_first": true
+    },
+    "trunk": {
+      "in_features": 39,
+      "out_features": 16,
+      "activation": "ReLU"
+    },
+    "head": {
+      "in_features": 16,
+      "out_features": 1,
+      "activation": "linear"
+    },
+    "uses_g": false,
+    "uses_tau": false,
+    "uses_acc": false,
+    "forward_signature": "forward(u: (B,T,5)) -> (B,T) normalised force",
+    "input_channels": [
+      "x_mm",
+      "a_mm_s2->v_mm_s",
+      "a_mm_s2",
+      "I_A",
+      "T_C"
+    ],
+    "params": {
+      "gru": 1416,
+      "trunk": 640,
+      "head_force": 17
+    },
+    "params_total": 2073,
+    "normalization_complete": true,
+    "normalization_keys": [
+      "a_scale",
+      "f_scale",
+      "i_scale",
+      "t_ref",
+      "t_scale",
+      "v_scale",
+      "x_ref",
+      "x_scale"
+    ],
+    "train_infer_consistency": {
+      "forward_used_in_training": "V22Model.forward(u)",
+      "step_api_available": false,
+      "note": "the release uses forward(u) over a full sequence; a per-sample loop is numerically identical because the GRU is causal"
+    }
+  },
+  "run_config": {
+    "model": "E0",
+    "backbone": "E",
+    "use_g": false,
+    "use_tau": false,
+    "use_acc": false,
+    "seed": 7,
+    "epochs_total": 130,
+    "data": "D:/v20_data/Parsed_v19_F42_I42",
+    "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+    "n_train_files": 259,
+    "n_validation_files": 16,
+    "norm": {
+      "x_ref": 279.1340026855469,
+      "x_scale": 63.970001220703125,
+      "f_scale": 7664.259765625,
+      "v_scale": 1000.0,
+      "a_scale": 50000.0,
+      "i_scale": 1.6,
+      "t_ref": 40.0,
+      "t_scale": 40.0
+    },
+    "params": {
+      "total": 2073,
+      "groups": {
+        "gru": 1416,
+        "trunk": 640,
+        "head_force": 17
+      }
+    },
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.0003,
+      "weight_decay": 0.0001
+    },
+    "schedule": "5-epoch linear warmup + cosine to 0.01*base_lr",
+    "grad_clip": 1.0,
+    "loss": "plain (f/f_scale - pred)^2 MSE, edge mask",
+    "batch": "one full file per step, states reset per file",
+    "device": "cuda:0",
+    "gpu": "NVIDIA GeForce RTX 4060 Ti",
+    "final_test_read": false,
+    "code": {
+      "v22_models.py": "88ca0195eea1d4fa",
+      "v20_data.py": "5866276cb3e179ed",
+      "train_v22.py": "41968e039e902c07",
+      "git": null
+    },
+    "causality": "observer uses I[t-1]; candidate current only via G->q->gain",
+    "config_sha256": "0b68374567114cdadf7ef3ff31a75df5085dedb6da1dd321cee37d663665ec93"
+  },
+  "recorded": {
+    "pooled_nrmse": 10.594997446967472,
+    "best_epoch": 127,
+    "params": 2073,
+    "per_type": {
+      "SH_": 4.74107314389107,
+      "ST_": 11.517356725546591,
+      "RLF_": 19.68175530579794,
+      "RHF_": 15.219919477218724,
+      "SR_": 34.98140940213569
+    }
+  },
+  "feature_names_fwd": "nfl_v22(observer_input(u)) 31 slots (see feature_spec.json)",
+  "output": {
+    "units": "N",
+    "conversion": "force_N = output * f_scale",
+    "sign": "same sign as measured damping force"
+  },
+  "final_test_read": false
+}

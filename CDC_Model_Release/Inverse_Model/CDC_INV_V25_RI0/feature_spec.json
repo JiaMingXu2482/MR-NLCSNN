@@ -1,0 +1,195 @@
+{
+  "release": "CDC_INV_V25_RI0",
+  "input_rate_hz": 100,
+  "preprocessing": {
+    "filter": "61-tap causal windowed-sinc low-pass, 40 Hz (coefficients in fir_61tap_40hz.json)",
+    "decimation": "take every 10th filtered sample starting at index 0",
+    "group_delay_ms": 30.0,
+    "note": "the SAME filtered/decimated x, v, a, I, T, F must be used; the 30 ms delay is common to inputs and label so it cancels"
+  },
+  "motion_features": [
+    {
+      "index": 0,
+      "name": "x",
+      "time_index": "k"
+    },
+    {
+      "index": 1,
+      "name": "v",
+      "time_index": "k"
+    },
+    {
+      "index": 2,
+      "name": "a",
+      "time_index": "k"
+    },
+    {
+      "index": 3,
+      "name": "v_dup",
+      "time_index": "k"
+    },
+    {
+      "index": 4,
+      "name": "x*v",
+      "time_index": "k"
+    },
+    {
+      "index": 5,
+      "name": "tanh(2*vp)",
+      "time_index": "k"
+    },
+    {
+      "index": 6,
+      "name": "tanh(vp/0.1)",
+      "time_index": "k"
+    },
+    {
+      "index": 7,
+      "name": "vn*|v|",
+      "time_index": "k"
+    },
+    {
+      "index": 8,
+      "name": "vn^3",
+      "time_index": "k"
+    },
+    {
+      "index": 9,
+      "name": "a*vn",
+      "time_index": "k"
+    },
+    {
+      "index": 10,
+      "name": "sign",
+      "time_index": "k"
+    },
+    {
+      "index": 11,
+      "name": "x^2",
+      "time_index": "k"
+    },
+    {
+      "index": 12,
+      "name": "x^3",
+      "time_index": "k"
+    },
+    {
+      "index": 13,
+      "name": "|a|",
+      "time_index": "k"
+    },
+    {
+      "index": 14,
+      "name": "a*v",
+      "time_index": "k"
+    },
+    {
+      "index": 15,
+      "name": "|a|*sign",
+      "time_index": "k"
+    },
+    {
+      "index": 16,
+      "name": "slow",
+      "time_index": "k"
+    },
+    {
+      "index": 17,
+      "name": "x*slow",
+      "time_index": "k"
+    },
+    {
+      "index": 18,
+      "name": "|x|*slow",
+      "time_index": "k"
+    },
+    {
+      "index": 19,
+      "name": "sign*|x|",
+      "time_index": "k"
+    }
+  ],
+  "condition_features": [
+    {
+      "index": 20,
+      "name": "F_des",
+      "formula": "F_meas_decimated[k]/f_scale",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 21,
+      "name": "I_past",
+      "formula": "I_meas_decimated[k-1]/i_scale  (SIGNED, not clipped)",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 22,
+      "name": "v*F_des",
+      "formula": "v*F_des",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 23,
+      "name": "v*I_past",
+      "formula": "v*I_past",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 24,
+      "name": "F_des*tanh(vp/0.1)",
+      "formula": "-",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 25,
+      "name": "F_des*vn*|v|",
+      "formula": "-",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 26,
+      "name": "F_des*sign",
+      "formula": "sign=tanh(v/0.1)",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 27,
+      "name": "a*F_des",
+      "formula": "-",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 28,
+      "name": "F_des*|a|",
+      "formula": "-",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 29,
+      "name": "F_des*x*slow",
+      "formula": "slow=exp(-|v|/0.1)",
+      "time_index": "k / k-1"
+    },
+    {
+      "index": 30,
+      "name": "F_des*|x|*slow",
+      "formula": "-",
+      "time_index": "k / k-1"
+    }
+  ],
+  "feature_count": 31,
+  "residual_base": {
+    "definition": "I_base[k] = clip(|I_meas_100Hz[k-1]|, 0, 1.6)  [A]",
+    "NOTE": "this is DIFFERENT from feature slot 1 (I_past), which is the SIGNED, unclipped I/1.6. Both derive from the same sensor sample at k-1 but are transformed differently; do not merge them in the C port."
+  },
+  "output": {
+    "units": "A",
+    "semantics": "delta current",
+    "equation": "I_cmd[k] = clip(I_base[k] + delta[k], 0.0, 1.6)"
+  },
+  "state": {
+    "gru_initial": "zeros, per file",
+    "base_initial": "undefined at k=0; the first control step of every file is excluded from training and metrics",
+    "window": "none (whole sequence), one step per 10 ms"
+  }
+}

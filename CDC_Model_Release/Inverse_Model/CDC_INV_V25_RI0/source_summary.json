@@ -1,0 +1,133 @@
+{
+  "experiment_id": "V25_RI0_RESIDUAL_seed7",
+  "seed": 7,
+  "completed_epochs": 130,
+  "best_epoch": 130,
+  "best_by_val_mae_epoch": 112,
+  "params": {
+    "total": 2073,
+    "groups": {
+      "gru": 1416,
+      "trunk": 640,
+      "head": 17
+    }
+  },
+  "validation": {
+    "n": 13600,
+    "mae": 0.030007101595401764,
+    "rmse": 0.06675798445940018,
+    "median": 0.009577108547091484,
+    "p95": 0.13843627274036407,
+    "p99": 0.31678539514541626,
+    "bias": -2.1171288608456962e-05,
+    "macro_mae": 0.021117717027664185,
+    "pooled_nrmse": 9.29476517422139,
+    "delta_mae": 0.03115338459610939,
+    "delta_rmse": 0.06770531833171844,
+    "delta_p95": 0.14315548539161682,
+    "raw_mae": 0.03115338459610939,
+    "raw_out_of_range": 0.08051470588235295,
+    "clip_activation": 0.08051470588235295,
+    "dI_mean": -0.00014071536133997142,
+    "dI_rms": 0.15820902585983276,
+    "dI_p95": 0.33234578371047974,
+    "dI_max": 1.4706499576568604,
+    "dI_ref_p95": 0.29657089710235596,
+    "total_variation": 820.02099609375,
+    "total_variation_ref": 585.4738159179688,
+    "tv_ratio": 1.4006108792551772,
+    "per_type": {
+      "SH": {
+        "n": 1178,
+        "mae": 0.006864310707896948,
+        "rmse": 0.013485695235431194,
+        "p95": 0.019869284704327583,
+        "bias": 0.0008291711565107107,
+        "nrmse": 2.3128053655739804,
+        "nrmse_degenerate": false
+      },
+      "ST": {
+        "n": 3175,
+        "mae": 0.01822279579937458,
+        "rmse": 0.053069520741701126,
+        "p95": 0.06541472673416138,
+        "bias": 0.0009070989908650517,
+        "nrmse": 7.552628361460487,
+        "nrmse_degenerate": false
+      },
+      "RLF": {
+        "n": 6415,
+        "mae": 0.04338877648115158,
+        "rmse": 0.0794939249753952,
+        "p95": 0.18486127257347107,
+        "bias": -0.0037765935994684696,
+        "nrmse": 9.10679744358153,
+        "nrmse_degenerate": false
+      },
+      "SR": {
+        "n": 2136,
+        "mae": 0.007143876049667597,
+        "rmse": 0.008131581358611584,
+        "p95": 0.014835402369499207,
+        "bias": 0.007128507364541292,
+        "nrmse": 567.9450869643103,
+        "nrmse_degenerate": true
+      },
+      "RHF": {
+        "n": 696,
+        "mae": 0.06976258009672165,
+        "rmse": 0.12442094087600708,
+        "p95": 0.29863792657852173,
+        "bias": 0.006976471748203039,
+        "nrmse": 25.98964503382361,
+        "nrmse_degenerate": false
+      }
+    },
+    "zero_current": {
+      "n": 4767,
+      "pred_mean": 0.009653949178755283,
+      "pred_median": 0.006575496401637793,
+      "pred_p95": 0.03320835158228874,
+      "false_turn_on_005": 0.03251520872666247,
+      "above_010": 0.007551919446192574
+    },
+    "persistence": {
+      "mae": 0.04316001757979393,
+      "rmse": 0.12407159805297852,
+      "p95": 0.2967150807380676,
+      "p99": 0.5896637439727783,
+      "bias": -1.4741350241820328e-05
+    }
+  },
+  "timing": {
+    "cpu": {
+      "device": "cpu",
+      "n": 400,
+      "mean_ms": 0.18510799971409142,
+      "p50_ms": 0.1733499811962247,
+      "p95_ms": 0.2916951198130843,
+      "p99_ms": 0.4804870486259459,
+      "max_ms": 1.3373999390751123,
+      "note": "Python/PyTorch single-step reference; NOT an MCU WCET"
+    },
+    "rate_hz": 100,
+    "budget_ms": 10.0,
+    "cuda": {
+      "device": "cuda",
+      "n": 400,
+      "mean_ms": 0.34553275210782886,
+      "p50_ms": 0.3000999568030238,
+      "p95_ms": 0.5838947952724985,
+      "p99_ms": 0.9189758938737211,
+      "max_ms": 1.1599999852478504,
+      "note": "Python/PyTorch single-step reference; NOT an MCU WCET"
+    }
+  },
+  "train_seconds": 185.15804580016993,
+  "final_test_read": false,
+  "limitations": [
+    "single seed 7",
+    "requires previous-tick MEASURED current feedback at deployment",
+    "NRMSE is degenerate for SR and fixed-current SH files; MAE is the primary metric"
+  ]
+}

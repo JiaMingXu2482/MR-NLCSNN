@@ -1,0 +1,394 @@
+{
+  "release_name": "CDC Model Release",
+  "release_version": "1.0.0",
+  "frozen_at": "2026-10-30",
+  "status": "FROZEN",
+  "policy": "No retraining, no weight edit, no structure change, no feature change in this directory. New experiments must use a new directory and version.",
+  "models": {
+    "forward": {
+      "release_name": "CDC_FWD_V22_E0",
+      "version": "V22-E0",
+      "checkpoint": "Forward_Model/CDC_FWD_V22_E0/best.pth",
+      "sha256": "dbfb844ff117161cc78c634e307c5215ff88abf769880691e4d72433179351b4",
+      "size_bytes": 11832,
+      "params": 2073,
+      "seed": 7,
+      "epochs_trained": 130,
+      "best_epoch_in_checkpoint": 127,
+      "validation": {
+        "pooled_nrmse_pct": 10.594997542352644,
+        "per_condition_pct": {
+          "SH": 4.741073296721454,
+          "ST": 11.517356889710747,
+          "RLF": 19.681754518867738,
+          "SR": 34.98140940213569,
+          "RHF": 15.219920283324948
+        },
+        "metric_convention": "100*sqrt(sum e^2 / sum y^2), uncentred, newtons"
+      },
+      "recompute": {
+        "cuda_pooled": 10.594997542352644,
+        "cpu_pooled": 10.594783822158906,
+        "note": "CPU vs CUDA float32 differ by 2.1e-4 pp; both reproduce the recorded 10.5950%"
+      }
+    },
+    "inverse": {
+      "release_name": "CDC_INV_V25_RI0",
+      "version": "V25-RI0",
+      "checkpoint": "Inverse_Model/CDC_INV_V25_RI0/best.pth",
+      "sha256": "617aa0ae860373626008dfefbc6eb3f5e130d0bdac959c95a7bc1c3c56a67436",
+      "size_bytes": 11768,
+      "params": 2073,
+      "seed": 7,
+      "epochs_trained": 130,
+      "best_epoch_in_checkpoint": 130,
+      "validation": {
+        "mae_A": 0.030007101595401764,
+        "rmse_A": 0.06675798445940018,
+        "p95_A": 0.13843627274036407,
+        "p99_A": 0.31678539514541626,
+        "per_condition_mae_A": {
+          "SH": 0.006864310707896948,
+          "ST": 0.01822279579937458,
+          "RLF": 0.04338877648115158,
+          "SR": 0.007143876049667597,
+          "RHF": 0.06976258009672165
+        },
+        "pooled_nrmse_pct": 9.2948
+      },
+      "recompute": {
+        "cuda_mae": 0.030007101595401764,
+        "cpu_mae": 0.029993603006005287,
+        "note": "CPU vs CUDA float32 differ by 1.3e-5 A"
+      },
+      "deployment_requirement": "previous-tick MEASURED current must be available every control period",
+      "residual_equation": "I_cmd = clip(clip(|I_meas[k-1]|,0,1.6) + delta, 0, 1.6)"
+    }
+  },
+  "load_test": {
+    "verdict": "PASS",
+    "forward": "PASS",
+    "inverse": "PASS",
+    "record": "audits/load_test.json",
+    "golden_forward_max_abs_force_error_N": 0.000400543212890625,
+    "golden_inverse_max_abs_delta_error_A": 6.332993507385254e-08
+  },
+  "interface_spec": {
+    "file": "MODEL_INTERFACE_SPEC.md",
+    "known_inconsistencies": [
+      "motion preprocessing differs: forward uses raw 1 kHz, inverse uses 61-tap FIR 40 Hz + decimation (30 ms group delay)",
+      "current transform differs: forward clip(|I|/1.6,0,1) at t-1; inverse feature uses signed I/1.6, residual base uses clip(|I|,0,1.6)",
+      "rate differs: 1 kHz vs 100 Hz (cascade needs 10x ZOH)",
+      "inverse has no temperature input"
+    ]
+  },
+  "final_test_read": 0,
+  "file_count": 61,
+  "files": [
+    {
+      "path": "MODEL_INTERFACE_SPEC.md",
+      "size_bytes": 10243,
+      "sha256": "23fe54c27333d1cc66cd9a9a9be13e37c9557152e08b66d9c8f27af0255b71c7"
+    },
+    {
+      "path": "MODEL_RELEASE_REPORT.md",
+      "size_bytes": 11584,
+      "sha256": "3ad3cfb048dbf39881ff32e466d9e1d60fe53371e2b34bfa1e96a15bb08f2181"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/MODEL_REPORT.md",
+      "size_bytes": 3407,
+      "sha256": "176ba0b0394c1b278e8e13687fecdb3a272b77822294ca5415051d65c2702596"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/best.pth",
+      "size_bytes": 11832,
+      "sha256": "dbfb844ff117161cc78c634e307c5215ff88abf769880691e4d72433179351b4"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/feature_spec.json",
+      "size_bytes": 6008,
+      "sha256": "1f13204cc3cdf03e1d44916d0685b5d7aa8d8e1422615a3427531575b7b56b60"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/golden_vectors.npz",
+      "size_bytes": 29336,
+      "sha256": "d382ce752e04228e91d63fef5dbf6c1a037d0e28227d80d14845cf33fea862f2"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/golden_vectors_meta.json",
+      "size_bytes": 208187,
+      "sha256": "9e6d55d75b401aea567628c2729bc5e45ef8e5e36c8270522403f4df8e003c9b"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/model_config.json",
+      "size_bytes": 2019,
+      "sha256": "787f5a936dab201b3ff64138e85c7047ddb358e027515fb7a9a08e398634687a"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/model_def.py",
+      "size_bytes": 9720,
+      "sha256": "b27c5c5a172b200e388f82b4d30bcad73121b215c8e18aa53f041efa258d7d18"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/normalization.json",
+      "size_bytes": 810,
+      "sha256": "7172aa216e5a678a880ce17974c555d7ccff2a5259e82a061a36d60c58925ec3"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/source_run_config.json",
+      "size_bytes": 1404,
+      "sha256": "d9bd2f10170ac652e141b9a7c0e0d3db51a95c0df72f45144b697e41d3a07b7b"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/source_summary.json",
+      "size_bytes": 1769,
+      "sha256": "3a74b7c2f3e63f0c115c57f5426dc6cc1d8d2717119ada6ea2fc082562b6d1c2"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/README.md",
+      "size_bytes": 775,
+      "sha256": "f68c359e3be5b938582021576f272c52f4c83bbeae619185e0a50f0fd321d03f"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/acceleration_residual_diagnostics.json",
+      "size_bytes": 288,
+      "sha256": "984b7aa49bdbec4526636edb15a9e2bfdf0964293922b1b1fee8f3404d4cfeac"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/hysteresis_metrics.csv",
+      "size_bytes": 3166,
+      "sha256": "96d0f870c203272c26a2d7b6f3d6376c6b8dc4d62be6f705c387534d279fe2eb"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/inverse_100hz_report.json",
+      "size_bytes": 104,
+      "sha256": "0e64fdfa573d65f8fd67a5de62ba610a522d6258e8f8dd5a0c2f4aead2ba36ac"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/metrics.jsonl",
+      "size_bytes": 352402,
+      "sha256": "9d9c9ec16153d30604d5292f16746b12318977f0bc55b6dcec40ade410f5a763"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/monotonicity_report.json",
+      "size_bytes": 76,
+      "sha256": "04f5e076be5e5f216140643e7737dc6306efd8528d36d01485c896ef4d472f68"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/per_condition_metrics.csv",
+      "size_bytes": 146,
+      "sha256": "0c6c07c5795c6e84fc2bb4ffa5210b077718f9352d84424b6cd7c794b1daa5a7"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/per_file_metrics.csv",
+      "size_bytes": 1173,
+      "sha256": "3a4bc15fb8502d1e462c26934badf3b62db0768649bd6346d99a0f05bb48e6e2"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/resource_report.json",
+      "size_bytes": 478,
+      "sha256": "53036f662fb114b231285a1224ab386f3a9546a3e97cd5bc2ebaa9df74235a5e"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/step_response_metrics_250N.csv",
+      "size_bytes": 1617,
+      "sha256": "bf13dffe1dc5d1f89b0acc2a3f79386481b5fe584988b49f896ce1100e9bd4f5"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/step_response_metrics_50N.csv",
+      "size_bytes": 2001,
+      "sha256": "5053b49a5cb853c2de2a5ae78c448ad45e1fe85fa55cc60b7d146ca92272adfb"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/figures/1_prediction_timeseries.png",
+      "size_bytes": 62617,
+      "sha256": "13eaec046c7850d72085f61ca2351aa219a9ec1fe966bb368e25e4e73ec583d6"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/figures/2_force_velocity_cloud.png",
+      "size_bytes": 38977,
+      "sha256": "737edc46629ee389bdc0f9ad5d6ad4f70b6e2bd4dd38ae18189b9fbd22442305"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/figures/3_force_displacement_loop.png",
+      "size_bytes": 63275,
+      "sha256": "42eb676f50d8026c88692f10c58f66bf20d390fee014cfa28a448010a2f71a1b"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/figures/4_step_response.png",
+      "size_bytes": 82992,
+      "sha256": "3be82605024273717326b9ecf4e59f2ceb7230de4e3b2ac808f731502c2d2390"
+    },
+    {
+      "path": "Forward_Model/CDC_FWD_V22_E0/training_artifacts/figures/5_fv_acceleration_coloured.png",
+      "size_bytes": 49830,
+      "sha256": "e8a2d85f50cb75bb15b9b542b8af9be5905f0a7b89db8e0092e152797d1624fd"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/MODEL_REPORT.md",
+      "size_bytes": 4761,
+      "sha256": "69c761ba85dfb13e42a0069a8c2a01b940f382aa5fe0792c3cd782d19ccb2679"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/best.pth",
+      "size_bytes": 11768,
+      "sha256": "617aa0ae860373626008dfefbc6eb3f5e130d0bdac959c95a7bc1c3c56a67436"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/feature_def.py",
+      "size_bytes": 4816,
+      "sha256": "efc81eed04e1f4388c1906efb1580670ce59e6bb4205e76b57b42614bf4a9cc5"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/feature_spec.json",
+      "size_bytes": 4094,
+      "sha256": "ae5cb289c2fe9cb3ca5a08ec3864c264c3bd448ca8750a5894c511b05af4f45f"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/fir_61tap_40hz.json",
+      "size_bytes": 2240,
+      "sha256": "168a32c60e2d6112cb9151c2b5e19464b2be2266f1338b3ae7ef94760e79d15e"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/golden_vectors.npz",
+      "size_bytes": 21454,
+      "sha256": "5e1b25d5051157252d5ce72d7d95a0dae3e9b4ed7a947336d1976897a1c103f6"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/golden_vectors_meta.json",
+      "size_bytes": 134611,
+      "sha256": "2232db8d04cc94a5835777511ebdef02f2878e153640b56f7797141362c1e27c"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/model_config.json",
+      "size_bytes": 2410,
+      "sha256": "eeb9a527a98543b527b29908fe6bf1ce9a586ac1a999007f7b16d7bd142ce29f"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/model_def.py",
+      "size_bytes": 1972,
+      "sha256": "7e7ac7918d531ab2651f3eb79006135c734f6bd7fab6f3a4b6dcc6d18b476433"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/normalization.json",
+      "size_bytes": 811,
+      "sha256": "108848a585447b18c8552f3bbfcd54437f02392142c143937652d996b95bea1f"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/source_run_config.json",
+      "size_bytes": 1718,
+      "sha256": "9592adea2b8ccdd487157da9e030e3bf1ee7fa1b02c304e580c9879f97a6e8d2"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/source_summary.json",
+      "size_bytes": 3992,
+      "sha256": "9741d60e8b0d2838a157f9509eab334b9ed88246f0a9642a8ef19c6dbea18d42"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/training_artifacts/README.md",
+      "size_bytes": 776,
+      "sha256": "b17425abc0c2ffc9c68ffb2c797f69927732655841c01efe6adcc1a6b7ea40f2"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/training_artifacts/metrics.jsonl",
+      "size_bytes": 45802,
+      "sha256": "14104027d0698dde47dbc8d924fd7dc3169237cbc8c2bf8681396b1356bb7b72"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/training_artifacts/per_condition_metrics.csv",
+      "size_bytes": 429,
+      "sha256": "df458f770f3754a38dd2750821df32569cac791101c92cd520c6c88108a30624"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/training_artifacts/per_file_metrics.csv",
+      "size_bytes": 1287,
+      "sha256": "83334e5aae2cc3b5a666655b6b5b8ed8ac87b7225dbfee3f21cdfc5c026e3ee7"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/training_artifacts/persistence_comparison.csv",
+      "size_bytes": 184,
+      "sha256": "8c11435b19fab3ed528c2afd5bd0b60bf5358fb9582456133574b0cfddafb233"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/training_artifacts/zero_current_metrics.json",
+      "size_bytes": 238,
+      "sha256": "fd2537762c05555dc302f864d1b7ebd58d54bc57eabd412f1fad3773c10fa4dc"
+    },
+    {
+      "path": "Inverse_Model/CDC_INV_V25_RI0/training_artifacts/figures/v25_overview.png",
+      "size_bytes": 91566,
+      "sha256": "0c7595546955c0953d15586bf9ce5f52c670976b70c4c968ad97f7a2b2e86642"
+    },
+    {
+      "path": "audits/load_test.json",
+      "size_bytes": 1354,
+      "sha256": "d7305f35a1dc3ac68698179c8a403a40a7217044c444992cc972330da146f3a0"
+    },
+    {
+      "path": "audits/phase1_fwd_audit.json",
+      "size_bytes": 3618,
+      "sha256": "dc146b2db8d9083d21b9d152e2da848a5ff7bd03e4f1d4edafb3a2c63ca075f4"
+    },
+    {
+      "path": "audits/phase1_inv_audit.json",
+      "size_bytes": 4434,
+      "sha256": "b0a5593603715840b191fb136200d6e7781692b8e3b7e18779737575c985ebdd"
+    },
+    {
+      "path": "audits/phase2_fwd_recompute.json",
+      "size_bytes": 3920,
+      "sha256": "5b9ad3367695a410eb67efe4e54a541f8e2c7aa841fe14763f2736e2461be17f"
+    },
+    {
+      "path": "audits/phase2_inv_recompute.json",
+      "size_bytes": 2169,
+      "sha256": "3a949123c1314e1073e2077b1b6a05ab6a155711f73266d8f6cde1316f6fe15c"
+    },
+    {
+      "path": "scripts/add_training_artifacts.py",
+      "size_bytes": 3621,
+      "sha256": "f7222a076d0f3618155b348f89cf5cafd21f0b9822e1368bc865546c5fb3bfdb"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "size_bytes": 8113,
+      "sha256": "fbfd78c7fb7e52f095033cfb307d4676bb133c0f52ce24a24f4664f066a79199"
+    },
+    {
+      "path": "scripts/gen_reports.py",
+      "size_bytes": 11779,
+      "sha256": "53f61adcd098dd15d976791b7299ae5cb508c9a5ab4bd45975bd87abfa6d007c"
+    },
+    {
+      "path": "scripts/gen_specs.py",
+      "size_bytes": 8825,
+      "sha256": "ab3f3b7cc4a869a5f9a400a0adc15c104b6ae24a0321a0bda9f4e0521d6cc487"
+    },
+    {
+      "path": "scripts/phase2_fwd_recompute.py",
+      "size_bytes": 3363,
+      "sha256": "2f837240bd983531919f3f588f242a295ac1121d333cd5d62c766deb414c3ab1"
+    },
+    {
+      "path": "scripts/phase2_inv_recompute.py",
+      "size_bytes": 4862,
+      "sha256": "5a95f095d8376ba2f9cf676fab5ab0f511887cd91ef1fea62d50fe53647f1f73"
+    },
+    {
+      "path": "scripts/phase5_loadtest.py",
+      "size_bytes": 6585,
+      "sha256": "617f6f7a4609f9b5ef1c2f75cb84a919bb10b0039e8a1d8a905a9b3973816dfd"
+    },
+    {
+      "path": "scripts/phase5_manifest.py",
+      "size_bytes": 7438,
+      "sha256": "68ac86244c8cb39fb61a81083f0ed08e8305fe4808d2f4c659bcbfe9981e2a89"
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "size_bytes": 2851,
+      "sha256": "9e5ed58108e88380f9a603737f8c1ee9eb1ff35e6e74db05ec6f8253c8f48d57"
+    }
+  ]
+}

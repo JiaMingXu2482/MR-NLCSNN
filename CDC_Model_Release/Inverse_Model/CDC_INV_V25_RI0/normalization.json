@@ -1,0 +1,32 @@
+{
+  "release": "CDC_INV_V25_RI0",
+  "source": "checkpoint['norm'] (the exact values used at train and eval time; NOT recomputed)",
+  "values": {
+    "x_ref": 279.1340026855469,
+    "x_scale": 63.970001220703125,
+    "f_scale": 7664.259765625,
+    "v_scale": 1000.0,
+    "a_scale": 50000.0,
+    "i_scale": 1.6,
+    "t_ref": 40.0,
+    "t_scale": 40.0
+  },
+  "units": {
+    "x_ref": "mm",
+    "x_scale": "mm",
+    "v_scale": "mm/s",
+    "a_scale": "mm/s^2",
+    "i_scale": "A",
+    "t_ref": "degC",
+    "t_scale": "degC",
+    "f_scale": "N"
+  },
+  "usage": {
+    "x": "(x - x_ref) / x_scale",
+    "v": "v / v_scale",
+    "a": "a / a_scale",
+    "current_e0_convention": "clip(|I| / i_scale, 0, 1)",
+    "temperature": "(T - t_ref) / t_scale",
+    "force": "F / f_scale  (inverse: force_N = output * f_scale)"
+  }
+}

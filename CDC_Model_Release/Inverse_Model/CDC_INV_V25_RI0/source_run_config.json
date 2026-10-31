@@ -1,0 +1,57 @@
+{
+  "experiment_id": "V25_RI0_RESIDUAL_seed7",
+  "model": "ResidualI0",
+  "seed": 7,
+  "epochs_total": 130,
+  "data": "D:/v20_data/Parsed_v19_F42_I42",
+  "n_train_files": 259,
+  "n_validation_files": 16,
+  "manifest_sha256": "0766763e7fb77880ffa04f2d93bcf629bfeb817e51c571188eee1ea83262e2ff",
+  "architecture": "GRU(31,8,2) -> concat(8+31=39) -> Linear(39,16)+ReLU -> Linear(16,1) LINEAR (no activation) -> delta_I",
+  "params": {
+    "total": 2073,
+    "groups": {
+      "gru": 1416,
+      "trunk": 640,
+      "head": 17
+    }
+  },
+  "residual_equation": {
+    "base": "I_meas_100Hz[k-1] same file",
+    "raw": "I_base + delta",
+    "clip": [
+      0.0,
+      1.6
+    ],
+    "recursive_predicted_base": false
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.0001
+  },
+  "schedule": "5-epoch linear warmup + cosine to 0.01*base_lr",
+  "batch": "one full file per step, state and base reset per file",
+  "grad_clip": 1.0,
+  "device": "cuda",
+  "rate_hz": 100,
+  "norm": {
+    "x_ref": 279.1340026855469,
+    "x_scale": 63.970001220703125,
+    "f_scale": 7664.259765625,
+    "v_scale": 1000.0,
+    "a_scale": 50000.0,
+    "i_scale": 1.6,
+    "t_ref": 40.0,
+    "t_scale": 40.0
+  },
+  "loss": "mean(((I_raw - I_target)/1.6)^2), NO clip before loss",
+  "sampling": {
+    "mode": "baseline"
+  },
+  "warm_start_from_v24_i0": false,
+  "best_checkpoint_rule": "lowest validation pooled NRMSE (uncentred), inherited from V24-I0 train_v24_i0.py",
+  "head_init": "zeros -> delta == 0 at step 0, i.e. starts at Persistence",
+  "final_test_read": false,
+  "config_sha256": "730e4bb203cfc422c516c4c962fd722d98d6696a15a319548d4023b6147ce669"
+}

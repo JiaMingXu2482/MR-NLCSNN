@@ -1,0 +1,37 @@
+{
+  "fwd": {
+    "release": "CDC_FWD_V22_E0",
+    "loaded_from": "D:/CDC_Model_Release\\Forward_Model\\CDC_FWD_V22_E0\\best.pth",
+    "sha256": "dbfb844ff117161cc78c634e307c5215ff88abf769880691e4d72433179351b4",
+    "strict_load": true,
+    "params": 2073,
+    "pooled_nrmse": 10.594783822158906,
+    "expected": 10.594997446967472,
+    "abs_diff_pp": 0.00021362480856623733,
+    "golden_max_abs_force_error_N": 0.000400543212890625,
+    "golden_n": 1200,
+    "verdict": "PASS"
+  },
+  "inv": {
+    "release": "CDC_INV_V25_RI0",
+    "loaded_from": "D:/CDC_Model_Release\\Inverse_Model\\CDC_INV_V25_RI0\\best.pth",
+    "sha256": "617aa0ae860373626008dfefbc6eb3f5e130d0bdac959c95a7bc1c3c56a67436",
+    "strict_load": true,
+    "params": 2073,
+    "mae": 0.029993603006005287,
+    "rmse": 0.06675662845373154,
+    "expected_mae": 0.0300069,
+    "abs_diff_A": 1.3296993994712375e-05,
+    "golden_max_abs_delta_error_A": 6.332993507385254e-08,
+    "golden_max_abs_cmd_error_A": 5.960464477539063e-08,
+    "golden_n": 150,
+    "verdict": "PASS"
+  },
+  "environment": {
+    "python": "3.11.8",
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "note": "models loaded from the release directory only; no file from the original training project was imported for the model definition"
+  },
+  "final_test_read": false
+}
